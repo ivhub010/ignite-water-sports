@@ -39,3 +39,102 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ---------------------------------------------------------------------------
+# Media not used by the site.
+#
+# public/images is ~1.5 GB: a WordPress media library plus the
+# siteground-optimizer cache (auto-generated WebP/resize variants). Only the
+# files the pages actually reference are committed; everything else stays on
+# local disk. Nothing here is deleted — this only controls what git tracks.
+#
+# The '!…/**/' line re-includes directories: git cannot re-include a file
+# whose parent directory is excluded.
+# ---------------------------------------------------------------------------
+/public/images/**
+!/public/images/**/
+!/public/images/2024/03/activities_hero_banner.png
+!/public/images/2024/03/contact_hero_banner.png
+!/public/images/2024/03/dot-bg.png
+!/public/images/2024/03/evenet_hero_banner.png
+!/public/images/2024/03/exploring_bg-1.png
+!/public/images/2024/03/faq_img1.png
+!/public/images/2024/03/hey_bg.png
+!/public/images/2024/03/lessons_hero_banner.png
+!/public/images/2024/03/map-bg.png
+!/public/images/2024/03/round-right.png
+!/public/images/2024/03/service-exploring_img.png
+!/public/images/2024/03/service_hero_banner.png
+!/public/images/2024/03/team_hero_banner.png
+!/public/images/2024/03/team_section3_img1.png
+!/public/images/2024/03/team_section3_img2.png
+!/public/images/2024/03/team_section3_img3.png
+!/public/images/2024/03/team_section3_img4.png
+!/public/images/2024/03/team_section3_img5.png
+!/public/images/2024/03/team_section3_img6.png
+!/public/images/2026/02/bigsurf_wave_board_img1-150x150.png
+!/public/images/2026/02/canoe_paddles_img1-150x150.png
+!/public/images/2026/02/exploring_bg.png
+!/public/images/2026/02/favicon.png
+!/public/images/2026/02/footer_img1.png
+!/public/images/2026/02/footer_img2.png
+!/public/images/2026/02/footer_img3.png
+!/public/images/2026/02/footer_img4.png
+!/public/images/2026/02/footer_img5.png
+!/public/images/2026/02/hero_banner1.png
+!/public/images/2026/02/home_hero_banner2.png
+!/public/images/2026/02/kaya_withpaddles_img1-150x150.png
+!/public/images/2026/02/location_1.png
+!/public/images/2026/02/location_2.png
+!/public/images/2026/02/location_3.png
+!/public/images/2026/02/location_4.png
+!/public/images/2026/02/location_5.png
+!/public/images/2026/02/page-banner.png
+!/public/images/2026/02/sdcvrfr03.png
+!/public/images/2026/02/swimsuit_rash_guards_img1-1-150x150.png
+!/public/images/2026/02/waterproof_smart_watch_img1-150x150.png
+!/public/images/2026/05/getintouch-bottonleft-img.png
+!/public/images/2026/05/getintouch-center-img.png
+!/public/images/2026/05/getintouch-img.png
+!/public/images/2026/05/home3-aboutimg-01.png
+!/public/images/2026/05/home3-aboutimg-02.png
+!/public/images/2026/05/home3-aboutimg-03.png
+!/public/images/2026/05/home3-banner-img.png
+!/public/images/2026/05/home3-banner-img2-scaled.png
+!/public/images/2026/05/home3-heroshape.png
+!/public/images/2026/05/home3-map.png
+!/public/images/2026/05/home3-video.mp4
+!/public/images/2026/05/home3-videobg-scaled.jpg
+!/public/images/2026/05/howit-works-img.png
+!/public/images/2026/05/section-topshape-scaled.png
+!/public/images/2026/05/testimonial-image.png
+!/public/images/2026/05/testimonial-profile.png
+!/public/images/2026/05/video-rightimage.png
+!/public/images/deals-exact/efoil-fly.png
+!/public/images/deals-exact/kayak-palm.jpg
+!/public/images/deals-exact/kids-party.png
+!/public/images/deals-exact/reset-wellness.jpg
+!/public/images/deals-exact/sup-deals.jpg
+!/public/images/deals-exact/team-burj.jpeg
+!/public/images/elementor/css/post-18e1c1.css
+!/public/images/elementor/css/post-3027e7.css
+!/public/images/elementor/css/post-343696e3.css
+!/public/images/elementor/css/post-36b1ab.css
+!/public/images/elementor/css/post-42396e3.css
+!/public/images/elementor/css/post-51135330.css
+!/public/images/elementor/css/post-6338407f.css
+!/public/images/elementor/css/post-65303891.css
+!/public/images/elementor/css/post-66123891.css
+!/public/images/elementor/css/post-66193891.css
+!/public/images/elementor/css/post-672421ea.css
+!/public/images/elementor/css/post-896e3.css
+!/public/images/ignite-logo-light.png
+!/public/images/ignite-logo.png
+
+# Reference copy of the Wavesurfer theme dump (54 MB single HTML file).
+/theme_reference/
+
+# Never commit database credentials.
+test-db.php
+*.sql
+.env*.local

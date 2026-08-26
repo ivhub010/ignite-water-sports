@@ -1,0 +1,203 @@
+/* ------------------------------------------------------------------
+   Product archive — shop and product-category pages.
+
+   Self-contained: this owns the grid and the card, so the pages do not
+   depend on the WooCommerce plugin stylesheets or on a `.woocommerce`
+   ancestor class. Colours and type come from the Elementor kit tokens the
+   rest of the site already uses, so the cards stay on the site's design.
+
+   Scoped to `.ig-shop`, which wraps the archive on those three pages.
+   ------------------------------------------------------------------ */
+
+.ig-shop {
+  --shop-accent: var(--e-global-color-accent, #24D2DD);
+  --shop-ink: var(--e-global-color-primary, #000000);
+  --shop-text: var(--e-global-color-text, #13161A);
+}
+
+/* ---- grid --------------------------------------------------------
+   Bootstrap ships a bare `.columns-3` rule setting `columns: 3`, and the
+   list carries that class. Multi-column flows content column by column, so
+   cards of unequal height get split — image in one column, title in the
+   next. Grid keeps each card whole and lets the count follow the viewport. */
+.ig-shop ul.products {
+  column-count: initial;
+  columns: initial;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 40px 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ig-shop ul.products::before,
+.ig-shop ul.products::after {
+  content: none;
+  display: none;
+}
+
+.ig-shop ul.products li.product {
+  width: auto;
+  float: none;
+  margin: 0;
+  clear: none;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- card --------------------------------------------------------- */
+.ig-shop .sisf-e-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.ig-shop .shop-image-wrap {
+  position: relative;   /* anchors the add-to-cart overlay */
+  overflow: hidden;
+  display: block;
+  width: 100%;
+}
+
+.ig-shop .shop-image-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.ig-shop li.product:hover .shop-image-wrap img {
+  transform: scale(1.04);
+}
+
+/* The link overlay the theme lays across the thumbnail. */
+.ig-shop .shop-image-wrap > .woocommerce-LoopProduct-link {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+}
+
+/* ---- add-to-cart button over the image ---------------------------- */
+.ig-shop .sisf-woo-product-image-inner {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 90%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: center;
+  transform: translateY(75px);
+  transition: transform 0.35s ease;
+}
+
+.ig-shop li.product:hover .sisf-woo-product-image-inner {
+  transform: translateY(-15px);
+}
+
+.ig-shop .sisf-woo-product-image-inner .button {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 10px 24px;
+  border: 0;
+  border-radius: 50px;
+  background: var(--shop-accent);
+  color: #ffffff;
+  font-family: "Work Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.ig-shop .sisf-woo-product-image-inner .button:hover {
+  background: #ffffff;
+  color: var(--shop-accent);
+}
+
+/* Touch devices have no hover, so keep the button reachable. */
+@media (hover: none) {
+  .ig-shop .sisf-woo-product-image-inner {
+    transform: translateY(-12px);
+  }
+}
+
+/* ---- card text ----------------------------------------------------- */
+.ig-shop .shop-content-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 21px 0 0;
+  flex: 1 1 auto;
+}
+
+.ig-shop .posted_in {
+  order: -1;
+  font-family: "Work Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--shop-text);
+  opacity: 0.75;
+  margin: 0 0 6px;
+}
+
+.ig-shop .woocommerce-loop-product__title {
+  font-family: "Cormorant Infant", Georgia, serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--shop-ink);
+  margin: 0 0 12px;
+}
+
+.ig-shop .woocommerce-loop-product__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ig-shop .woocommerce-loop-product__title a:hover {
+  color: var(--shop-accent);
+}
+
+.ig-shop .price {
+  display: block;
+  margin: auto 0 0;
+  font-family: "Work Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--shop-accent);
+}
+
+.ig-shop .price .woocommerce-Price-amount {
+  white-space: nowrap;
+}
+
+/* ---- responsive ---------------------------------------------------- */
+@media (max-width: 700px) {
+  .ig-shop ul.products {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 16px;
+  }
+  .ig-shop .woocommerce-loop-product__title { font-size: 19px; }
+  .ig-shop .price { font-size: 19px; }
+}
+
+@media (max-width: 359px) {
+  .ig-shop ul.products {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ig-shop .shop-image-wrap img,
+  .ig-shop .sisf-woo-product-image-inner,
+  .ig-shop .sisf-woo-product-image-inner .button { transition: none; }
+  .ig-shop li.product:hover .shop-image-wrap img { transform: none; }
+}

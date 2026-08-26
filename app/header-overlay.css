@@ -1,0 +1,86 @@
+/* ------------------------------------------------------------------
+   Transparent header — used only where <SiteHeader transparent />
+   is rendered (the home page), so the hero video runs full-bleed
+   behind the logo and navigation.
+
+   Selectors deliberately mirror the Elementor rules they override so
+   they win on specificity regardless of stylesheet load order.
+   Nothing here applies to the default (solid) header.
+   ------------------------------------------------------------------ */
+
+/* Lift the header out of the flow so the hero starts at the top of the page. */
+.site-header--overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+/* Drop the white plates off the desktop top bar and the main bar. */
+.site-header--overlay .elementor-3436 .elementor-element.elementor-element-346619f:not(.elementor-motion-effects-element-type-background),
+.site-header--overlay .elementor-3436 .elementor-element.elementor-element-b3f0d8b:not(.elementor-motion-effects-element-type-background),
+.site-header--overlay .elementor-3436 .elementor-element.elementor-element-869bc8d:not(.elementor-motion-effects-element-type-background) {
+  background-color: transparent;
+}
+
+/* Hairline separating the top bar from the nav, so the two rows still read apart. */
+.site-header--overlay .elementor-3436 .elementor-element.elementor-element-346619f {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Light type over the video.
+   The three nav widgets each carry their own 4-class colour rule, so these
+   selectors repeat that shape with the overlay class in front to outrank them. */
+.site-header--overlay .elementor-3436,
+.site-header--overlay .elementor-3436 .ekit-stylish-list-content-text,
+.site-header--overlay .elementor-3436 .ekit-mini-cart-text,
+.site-header--overlay .elementor-3436 .ekit-basket-item-count,
+.site-header--overlay .elementor-3436 .icon-cart11 {
+  color: #ffffff;
+}
+
+.site-header--overlay .elementor-3436 .elementor-element.elementor-element-5311dc9 .elementskit-navbar-nav > li > a,
+.site-header--overlay .elementor-3436 .elementor-element.elementor-element-4182f22 .elementskit-navbar-nav > li > a,
+.site-header--overlay .elementor-3436 .elementor-element.elementor-element-7f71db2 .elementskit-navbar-nav > li > a {
+  color: #ffffff;
+}
+
+.site-header--overlay .elementor-3436 .elementor-element.elementor-element-5311dc9 .elementskit-navbar-nav > li > a:hover,
+.site-header--overlay .elementor-3436 .elementor-element.elementor-element-4182f22 .elementskit-navbar-nav > li > a:hover,
+.site-header--overlay .elementor-3436 .elementor-element.elementor-element-7f71db2 .elementskit-navbar-nav > li > a:hover {
+  color: var(--e-global-color-accent, #24D2DD);
+}
+
+/* Search trigger sits on the video too. The panel it opens keeps its own colours. */
+.site-header--overlay .elementor-3436 .elementor-element.elementor-element-ffec855 .ekit_navsearch-button,
+.site-header--overlay .elementor-3436 .elementor-element.elementor-element-ffec855 .ekit_navsearch-button i {
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+.site-header--overlay .elementor-3436 .elementor-element.elementor-element-ffec855 .ekit_navsearch-button:hover,
+.site-header--overlay .elementor-3436 .elementor-element.elementor-element-ffec855 .ekit_navsearch-button:hover i {
+  color: var(--e-global-color-accent, #24D2DD);
+  fill: var(--e-global-color-accent, #24D2DD);
+}
+
+.site-header--overlay .elementor-3436 .ekit-stylish-list-content-icon > svg path {
+  fill: #ffffff;
+}
+
+/* Hamburger bars on tablet/mobile. */
+.site-header--overlay .elementor-3436 .elementskit-menu-hamburger .elementskit-menu-hamburger-icon {
+  background-color: #ffffff;
+}
+
+/* Submenus keep their own solid panel — they sit off the video. */
+.site-header--overlay .elementor-3436 .elementskit-submenu-panel > li > a {
+  color: var(--e-global-color-text, #13161A);
+}
+
+/* The hero used a -195px pull to tuck under the old in-flow header.
+   The header no longer occupies flow, so the hero starts at zero. */
+.elementor-6724 .elementor-element.elementor-element-dca2b48.elementor-element-dca2b48 {
+  --margin-top: 0px;
+}
