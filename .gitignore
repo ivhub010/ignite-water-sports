@@ -138,3 +138,7 @@ next-env.d.ts
 test-db.php
 *.sql
 .env*.local
+
+# No PHP runtime in this project.
+*.php
+.DS_Store
