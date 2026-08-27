@@ -41,7 +41,7 @@ export const supYoga: PageContent = {
         },
         {
           "type": "image",
-          "src": "/media/2024/01/supyoga2.png",
+          "src": "/watersports/2024/01/supyoga2.png",
           "alt": ""
         }
       ]

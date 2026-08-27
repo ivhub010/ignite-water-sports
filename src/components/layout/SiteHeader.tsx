@@ -8,7 +8,7 @@ type SiteHeaderProps = {
 };
 
 export default function SiteHeader({ transparent = false }: SiteHeaderProps) {
-  const logo = transparent ? '/media/ignite-logo-light.png' : '/media/ignite-logo.png';
+  const logo = transparent ? '/watersports/ignite-logo-light.png' : '/watersports/ignite-logo.png';
   return (
     <>
       <link rel="stylesheet" id="elementor-post-3436-css" href="/theme/styles/post-343696e3.css?ver=1787278549" media="all" />

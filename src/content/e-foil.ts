@@ -24,25 +24,25 @@ export const eFoil: PageContent = {
           "type": "feature",
           "title": "Calm and Glassy Waters",
           "description": "The sparkling waters of Palm Jumeirah are known for their perpetual calm and glassy surface. This is due to the strict regulation that forbids jet skis and motorized boats in the area. As a result, our e-foiling sessions provide a consistently smooth and serene ride, allowing you to fully enjoy this futuristic water sport.",
-          "image": "/media/2024/02/1-2.png"
+          "image": "/watersports/2024/02/1-2.png"
         },
         {
           "type": "feature",
           "title": "Safety and Thrills",
           "description": "With no competing watercraft, you can experience the thrill of e-foiling with a peace of mind. Our certified instructors will guide you through the essentials, ensuring your safety and providing you with an unforgettable adventure.",
-          "image": "/media/2024/02/3-1.png"
+          "image": "/watersports/2024/02/3-1.png"
         },
         {
           "type": "feature",
           "title": "Uninterrupted Views",
           "description": "The absence of jet skis and boats ensures that you can immerse yourself in the unspoiled beauty of Palm Jumeirah. Whether you’re soaring above the azure waters or admiring the stunning skyline, nothing will obstruct your view.",
-          "image": "/media/2024/02/2-1.png"
+          "image": "/watersports/2024/02/2-1.png"
         },
         {
           "type": "feature",
           "title": "A Truly Unique Experience",
           "description": "E-foiling on Palm Jumeirah is unlike any other water sport experience in Dubai. Whether you’re a novice looking to try something new or an experienced e-foiler seeking an exclusive environment, IGNITE water sports has you covered.",
-          "image": "/media/2024/02/4.png"
+          "image": "/watersports/2024/02/4.png"
         },
         {
           "type": "cta",

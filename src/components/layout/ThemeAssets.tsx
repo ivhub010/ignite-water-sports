@@ -63,10 +63,10 @@ export default function ThemeAssets() {
       <noscript>&lt;style&gt;.woocommerce-product-gallery{'{'} opacity: 1 !important; {'}'}&lt;/style&gt;</noscript>
       <meta name="generator" content="Elementor 4.0.9; features: e_font_icon_svg, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap" />
       <style dangerouslySetInnerHTML={{ __html: "\n\t\t\t\t.ekit-btt__button svg {\n\t\t\t\t\twidth: 1em;\n\t\t\t\t\theight: 1em;\n\t\t\t\t\tfill: currentColor;\n\t\t\t\t\tmargin: auto;\n\t\t\t\t}\n\t\t\t\t.ekit-btt__button {\n\t\t\t\t\tdisplay: flex !important;\n\t\t\t\t\talign-items: center;\n\t\t\t\t\tjustify-content: center;\n\t\t\t\t}\n\t\t\t" }} />
-      <link rel="icon" href="/media/2026/02/favicon.png"  />
-      <link rel="icon" href="/media/2026/02/favicon.png"  />
-      <link rel="apple-touch-icon" href="/media/2026/02/favicon.png" />
-      <meta name="msapplication-TileImage" content="/media/2026/02/favicon.png" />
+      <link rel="icon" href="/watersports/2026/02/favicon.png"  />
+      <link rel="icon" href="/watersports/2026/02/favicon.png"  />
+      <link rel="apple-touch-icon" href="/watersports/2026/02/favicon.png" />
+      <meta name="msapplication-TileImage" content="/watersports/2026/02/favicon.png" />
     </>
   );
 }

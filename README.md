@@ -17,7 +17,7 @@ src/
   styles/                 globals + the two stylesheets this project owns
   types/                  the content model
 public/
-  media/                  all site imagery
+  watersports/            all site imagery
   fonts/                  webfonts
   theme/                  inherited Elementor / theme runtime
     styles/               generated per-page Elementor CSS
@@ -25,6 +25,10 @@ public/
     wavesurfer/  woocommerce/  contact-form-7/
     wp/                   WordPress core JS (jQuery and friends)
 ```
+
+`public/watersports` is the site's media library, carried over from the
+WordPress install's `wp-content/uploads` — it holds every file the pages
+reference, including the theme artwork that was never in WordPress.
 
 `public/` is the right home for all of this: these are static files fetched by
 URL at runtime, not modules you can import. What changed is the shape — the

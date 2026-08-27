@@ -224,25 +224,25 @@ export const standUpPaddleBoarding: PageContent = {
           "type": "feature",
           "title": "Tranquil Waters",
           "description": "Palm Jumeirah is a unique location in Dubai where the serene waters are always calm and flat. This is because the authorities strictly prohibit the use of jet skis and motorized boats in the area. As a result, you can enjoy a peaceful and unhurried paddle boarding experience, free from the turbulence caused by motorized watercraft.",
-          "image": "/media/2024/02/1-2.png"
+          "image": "/watersports/2024/02/1-2.png"
         },
         {
           "type": "feature",
           "title": "Unobstructed Views",
           "description": "With the absence of jet skis and boats, you can fully immerse yourself in the breathtaking views that Palm Jumeirah has to offer. Whether you’re admiring the majestic skyline, the clear blue sky, or the mesmerizing waters, nothing will obstruct your view.",
-          "image": "/media/2024/02/2-1.png"
+          "image": "/watersports/2024/02/2-1.png"
         },
         {
           "type": "feature",
           "title": "Safety and Peace of Mind",
           "description": "Paddle boarding in tranquil waters not only enhances your experience but also ensures your safety. You can focus on honing your paddle boarding skills and enjoying the moment without concerns about boat traffic.",
-          "image": "/media/2024/02/3-1.png"
+          "image": "/watersports/2024/02/3-1.png"
         },
         {
           "type": "feature",
           "title": "A Truly Unique Experience",
           "description": "The exclusivity of a calm and serene environment sets IGNITE water sports apart from other paddle boarding locations in Dubai. It’s the perfect setting for beginners to learn the sport and for experienced paddlers to relish the tranquillity of the surroundings.",
-          "image": "/media/2024/02/4.png"
+          "image": "/watersports/2024/02/4.png"
         },
         {
           "type": "cta",

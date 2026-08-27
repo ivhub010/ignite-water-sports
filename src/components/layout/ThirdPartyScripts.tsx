@@ -12,7 +12,7 @@ import ScriptInjector from './ScriptInjector';
  * content is copied verbatim from the original layout, escaping included.
  */
 const SCRIPTS = `<script type="speculationrules">
-{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/media/*","/vendor/*","/vendor/plugins/*","/theme/wavesurfer/*","/*\\\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\\"nofollow\\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/watersports/*","/vendor/*","/vendor/plugins/*","/theme/wavesurfer/*","/*\\\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\\"nofollow\\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 <\/script>
 <script>
 				const lazyloadRunObserver = () => {
