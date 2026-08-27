@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Script from 'next/script';
 
 import '@/styles/globals.css';
+import '@/styles/fonts.css';
 import '@/styles/header-overlay.css';
 import '@/styles/shop-grid.css';
 

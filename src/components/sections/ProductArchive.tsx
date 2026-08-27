@@ -153,7 +153,6 @@ export default function ProductArchive({
   <link rel="stylesheet" id="widget-image-gallery-css" href="/theme/elementor/assets/css/widget-image-gallery.minfb3d.css?ver=4.0.9" media="all" />
   <style id="core-block-supports-inline-css" dangerouslySetInnerHTML={{__html: "\n.wp-container-woocommerce-product-filters-is-layout-29c7295b{flex-wrap:nowrap;flex-direction:column;align-items:stretch;}\n/*# sourceURL=core-block-supports-inline-css */\n" }} />
   <link rel="stylesheet" id="elementor-post-8-css" href="/theme/styles/post-896e3.css?ver=1787278549" media="all" />
-  <link rel="stylesheet" id="elementor-gf-worksans-css" href="https://fonts.googleapis.com/css?family=Work+Sans:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&display=swap" media="all" />
   <div style={{position: 'absolute', margin: '-1px', padding: 0, height: 1, width: 1, overflow: 'hidden', clipPath: 'inset(50%)', border: 0, wordWrap: 'normal !important'}}><p id="a11y-speak-intro-text" className="a11y-speak-intro-text" hidden>Notifications</p><div id="a11y-speak-assertive" className="a11y-speak-region" aria-live="assertive" aria-relevant="additions text" aria-atomic="true" /><div id="a11y-speak-polite" className="a11y-speak-region" aria-live="polite" aria-relevant="additions text" aria-atomic="true" /></div>
       <SiteFooter />
     </>

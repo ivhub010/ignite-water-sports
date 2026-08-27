@@ -1,0 +1,70 @@
+/* ------------------------------------------------------------------
+   Aaux Pro — the IGNITE brand typeface.
+
+   Taken from the WordPress site, which self-hosts it and sets
+   "Aaux ProMedium" on body copy and "Aaux ProBold" on headings. The
+   originals are TTF; served here as woff2 — 64 KB for all four weights,
+   down from 163 KB.
+
+   Registered as one family with real weights, rather than the separate
+   per-weight families WordPress used, so `font-weight` behaves normally.
+
+   Applying it needs exactly one lever. Every font-family rule in the
+   Elementor bundle resolves through the kit's four typography custom
+   properties, so redefining those switches the entire site — headings,
+   navigation, buttons and body alike. `body.elementor-kit-8` outranks the
+   kit's own `.elementor-kit-8` block, so this wins regardless of the
+   order the stylesheets happen to load in.
+   ------------------------------------------------------------------ */
+
+@font-face {
+  font-family: 'Aaux Pro';
+  src: url('/fonts/aaux-prolight.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aaux Pro';
+  src: url('/fonts/aaux-promedium.woff2') format('woff2');
+  font-weight: 400 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aaux Pro';
+  src: url('/fonts/aaux-probold.woff2') format('woff2');
+  font-weight: 600 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aaux Pro';
+  src: url('/fonts/aaux-probold-italic.woff2') format('woff2');
+  font-weight: 600 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --ignite-font: 'Aaux Pro', 'Helvetica Neue', Arial, sans-serif;
+}
+
+body.elementor-kit-8 {
+  --e-global-typography-primary-font-family: 'Aaux Pro';
+  --e-global-typography-secondary-font-family: 'Aaux Pro';
+  --e-global-typography-text-font-family: 'Aaux Pro';
+  --e-global-typography-accent-font-family: 'Aaux Pro';
+
+  /* Headings are Bold on the WordPress site; the kit shipped them at 500. */
+  --e-global-typography-primary-font-weight: 700;
+  --e-global-typography-secondary-font-weight: 700;
+}
+
+/* Anything outside the Elementor kit — the shop archive, the footer chrome. */
+body {
+  font-family: var(--ignite-font);
+}

@@ -109,7 +109,7 @@
   border-radius: 50px;
   background: var(--shop-accent);
   color: #ffffff;
-  font-family: "Work Sans", sans-serif;
+  font-family: var(--ignite-font);
   font-size: 15px;
   line-height: 1.4;
   text-align: center;
@@ -140,7 +140,7 @@
 
 .ig-shop .posted_in {
   order: -1;
-  font-family: "Work Sans", sans-serif;
+  font-family: var(--ignite-font);
   font-size: 14px;
   line-height: 1.5;
   color: var(--shop-text);
@@ -149,7 +149,7 @@
 }
 
 .ig-shop .woocommerce-loop-product__title {
-  font-family: "Cormorant Infant", Georgia, serif;
+  font-family: var(--ignite-font);
   font-size: 22px;
   font-weight: 400;
   line-height: 1.25;
@@ -169,7 +169,7 @@
 .ig-shop .price {
   display: block;
   margin: auto 0 0;
-  font-family: "Work Sans", sans-serif;
+  font-family: var(--ignite-font);
   font-size: 22px;
   font-weight: 400;
   color: var(--shop-accent);

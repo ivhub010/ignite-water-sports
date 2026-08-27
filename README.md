@@ -59,6 +59,19 @@ Two pages stay as hand-written markup because they are bespoke layouts rather
 than the standard content template: `app/page.tsx` (the home page) and
 `app/contact-us/page.tsx` (info boxes plus the enquiry form).
 
+## Typography
+
+The whole site is set in **Aaux Pro**, the brand typeface the WordPress site
+uses — Medium for body copy, Bold for headings. All four weights are
+self-hosted as woff2 in `public/fonts` (64 KB total, converted from the TTFs in
+the WordPress media library). There are no external font requests.
+
+`styles/fonts.css` is the single place this is set. Every font-family rule in
+the Elementor bundle resolves through the kit's typography custom properties, so
+redefining those four values on `body.elementor-kit-8` switches headings,
+navigation, buttons and body copy together. The generated per-widget stylesheets
+in `public/theme/styles` had the old faces hardcoded and were repointed too.
+
 ## Shop
 
 `src/content/products.ts` holds the catalogue. `/shop` renders all of it;

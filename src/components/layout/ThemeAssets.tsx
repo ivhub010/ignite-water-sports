@@ -14,7 +14,6 @@ export default function ThemeAssets() {
     <>
       <meta httpEquiv="content-type" content="text/html;charset=UTF-8" />
       <meta name="robots" content="noindex, nofollow" />
-      <link rel="dns-prefetch" href="http://fonts.googleapis.com/" />
       <link rel="alternate" type="application/rss+xml" title="Wavesurfer » Feed" href="/feed" />
       <link rel="alternate" type="application/rss+xml" title="Wavesurfer » Comments Feed" href="/comments/feed/index.html" />
       <style id="wp-img-auto-sizes-contain-inline-css" dangerouslySetInnerHTML={{ __html: "\nimg:is([sizes=auto i],[sizes^=\"auto,\" i]){contain-intrinsic-size:3000px 1500px}\n/*# sourceURL=wp-img-auto-sizes-contain-inline-css */\n" }} />
@@ -52,8 +51,7 @@ export default function ThemeAssets() {
       <link rel="stylesheet" id="bootstrap-5.3.2-css" href="/theme/wavesurfer/assets/css/bootstrap.min4e44.css?ver=1.3" media="all" />
       <link rel="stylesheet" id="sis-select2-css" href="/theme/wavesurfer/assets/css/select2.min4e44.css?ver=1.3" media="all" />
       <link rel="stylesheet" id="wavesurfer-style-css" href="/theme/wavesurfer/style4e44.css?ver=1.3" media="all" />
-      <link rel="stylesheet" id="elementor-gf-cormorantinfant-css" href="/fonts/cormorant-infant.css" media="all" />
-      <link rel="stylesheet" id="elementor-gf-worksans-css" href="/fonts/work-sans.css" media="all" />
+
       <link rel="stylesheet" id="elementor-icons-ekiticons-css" href="/theme/elementskit-lite/modules/elementskit-icon-pack/assets/css/ekiticons5219.css?ver=3.9.6" media="all" />
       <link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd" />
       <meta name="generator" content="WordPress 7.1" />
