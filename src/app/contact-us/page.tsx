@@ -10,7 +10,7 @@ export default function contactUsPage() {
   return (
     <>
 
-      <link rel="stylesheet" id="elementor-post-30-css" href="/images/elementor/css/post-3027e7.css?ver=1787332087" media="all" />
+      <link rel="stylesheet" id="elementor-post-30-css" href="/theme/styles/post-3027e7.css?ver=1787332087" media="all" />
       <SiteHeader />
   
   <div data-elementor-type="wp-page" data-elementor-id={30} className="elementor elementor-30">
@@ -203,9 +203,9 @@ export default function contactUsPage() {
 
   </div>
       <SiteFooter />
-  <link rel="stylesheet" id="wc-blocks-style-css" href="/vendor/plugins/woocommerce/assets/client/blocks/wc-blocksf655.css?ver=wc-10.7.0" media="all" />
-  <link rel="stylesheet" id="e-swiper-css" href="/vendor/plugins/elementor/assets/css/conditionals/e-swiper.minfb3d.css?ver=4.0.9" media="all" />
-  <link rel="stylesheet" id="widget-image-gallery-css" href="/vendor/plugins/elementor/assets/css/widget-image-gallery.minfb3d.css?ver=4.0.9" media="all" />
+  <link rel="stylesheet" id="wc-blocks-style-css" href="/theme/woocommerce/assets/client/blocks/wc-blocksf655.css?ver=wc-10.7.0" media="all" />
+  <link rel="stylesheet" id="e-swiper-css" href="/theme/elementor/assets/css/conditionals/e-swiper.minfb3d.css?ver=4.0.9" media="all" />
+  <link rel="stylesheet" id="widget-image-gallery-css" href="/theme/elementor/assets/css/widget-image-gallery.minfb3d.css?ver=4.0.9" media="all" />
 </>
   );
 }

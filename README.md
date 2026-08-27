@@ -17,9 +17,19 @@ src/
   styles/                 globals + the two stylesheets this project owns
   types/                  the content model
 public/
-  images/ uploads/        site media
-  vendor/ lib/ fonts/     theme runtime inherited from WordPress
+  media/                  all site imagery
+  fonts/                  webfonts
+  theme/                  inherited Elementor / theme runtime
+    styles/               generated per-page Elementor CSS
+    elementor/  elementskit/  elementskit-lite/
+    wavesurfer/  woocommerce/  contact-form-7/
+    wp/                   WordPress core JS (jQuery and friends)
 ```
+
+`public/` is the right home for all of this: these are static files fetched by
+URL at runtime, not modules you can import. What changed is the shape — the
+tree no longer mirrors WordPress's `wp-content/plugins` layout, and stylesheets
+are no longer served out of an images folder.
 
 ## How a page works
 
@@ -61,7 +71,7 @@ connect them; nothing else needs to change.
 
 ## Inherited theme runtime
 
-`public/vendor` and `public/lib` hold the Elementor / ElementsKit / theme bundles
+`public/theme` holds the Elementor / ElementsKit / theme bundles
 the migrated markup still depends on. This is not a WordPress install, but the
 markup is Elementor's, and these scripts supply the behaviour it expects:
 
@@ -80,6 +90,10 @@ Check pages in a real browser before removing anything further.
 
 Replacing this runtime means replacing the Elementor markup it animates — a
 rewrite of the section components, not a file deletion.
+
+WordPress's emoji script has been removed. It replaced native emoji with images
+fetched from `s.w.org`, which meant a third-party request on every page and
+broken images whenever wordpress.org was unreachable.
 
 ## Commands
 

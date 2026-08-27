@@ -9,7 +9,7 @@ export const pinkIsPunk: PageContent = {
       "blocks": [
         {
           "type": "image",
-          "src": "/uploads/2025/06/Swim_Run-11th-Oct-25-grid-post-768x768.png",
+          "src": "/media/2025/06/Swim_Run-11th-Oct-25-grid-post-768x768.png",
           "alt": ""
         },
         {
@@ -19,7 +19,7 @@ export const pinkIsPunk: PageContent = {
         },
         {
           "type": "image",
-          "src": "/uploads/2025/06/Pink-Moonlit-Yoga-13th-Oct-25-grid-post-768x768.png",
+          "src": "/media/2025/06/Pink-Moonlit-Yoga-13th-Oct-25-grid-post-768x768.png",
           "alt": ""
         },
         {
@@ -29,7 +29,7 @@ export const pinkIsPunk: PageContent = {
         },
         {
           "type": "image",
-          "src": "/uploads/2025/06/Pink-Paddle-18th-Oct-25-grid-post-768x768.png",
+          "src": "/media/2025/06/Pink-Paddle-18th-Oct-25-grid-post-768x768.png",
           "alt": ""
         },
         {

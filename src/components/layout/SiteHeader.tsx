@@ -8,10 +8,10 @@ type SiteHeaderProps = {
 };
 
 export default function SiteHeader({ transparent = false }: SiteHeaderProps) {
-  const logo = transparent ? '/images/ignite-logo-light.png' : '/images/ignite-logo.png';
+  const logo = transparent ? '/media/ignite-logo-light.png' : '/media/ignite-logo.png';
   return (
     <>
-      <link rel="stylesheet" id="elementor-post-3436-css" href="/images/elementor/css/post-343696e3.css?ver=1787278549" media="all" />
+      <link rel="stylesheet" id="elementor-post-3436-css" href="/theme/styles/post-343696e3.css?ver=1787278549" media="all" />
     <div className={`ekit-template-content-markup ekit-template-content-header ekit-template-content-theme-support${transparent ? ' site-header--overlay' : ''}`}>
       <div data-elementor-type="wp-post" data-elementor-id={3436} className="elementor elementor-3436">
         <div className="elementor-element elementor-element-346619f e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-parent" data-id="346619f" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">

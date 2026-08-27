@@ -240,25 +240,25 @@ export const kayak: PageContent = {
           "type": "feature",
           "title": "Calm and Tranquil Waters",
           "description": "Palm Jumeirah is a unique haven for kayakers. Thanks to stringent regulations that prohibit the use of jet skis and motorized boats in the area, the water remains consistently calm and flat. This means you can enjoy a kayaking experience that is not only serene but also safe.",
-          "image": "/uploads/2024/02/1-2.png"
+          "image": "/media/2024/02/1-2.png"
         },
         {
           "type": "feature",
           "title": "Uninterrupted Exploration",
           "description": "With no jet skis or boats to contend with, you’ll have the freedom to explore the stunning surroundings of Palm Jumeirah without interruptions. Glide peacefully through the clear waters, immersing yourself in the picturesque views that this iconic location has to offer.",
-          "image": "/uploads/2024/02/2-1.png"
+          "image": "/media/2024/02/2-1.png"
         },
         {
           "type": "feature",
           "title": "Safety and Peace of Mind",
           "description": "Kayaking in a tranquil environment ensures your safety and provides a sense of calm, making it an ideal choice for kayakers of all levels. You can focus on the beauty of your surroundings and the joy of kayaking without concerns about boat traffic.",
-          "image": "/uploads/2024/02/3-1.png"
+          "image": "/media/2024/02/3-1.png"
         },
         {
           "type": "feature",
           "title": "A Truly Unique Experience",
           "description": "The exclusive calm waters of Palm Jumeirah make IGNITE water sports the go-to destination for a memorable kayaking adventure. Whether you’re a beginner seeking a gentle introduction to kayaking or an experienced paddler looking for an oasis of serenity, we have you covered.",
-          "image": "/uploads/2024/02/4.png"
+          "image": "/media/2024/02/4.png"
         },
         {
           "type": "cta",
@@ -287,19 +287,19 @@ export const kayak: PageContent = {
           "type": "feature",
           "title": "One-Seater Kayaks",
           "description": "For those seeking solitude and serenity, our one-seater kayaks are the perfect choice. Enjoy the tranquil beauty of Palm Jumeirah at your own pace, as you glide through the pristine waters, taking in the breathtaking views.",
-          "image": "/uploads/2024/02/1-3.png"
+          "image": "/media/2024/02/1-3.png"
         },
         {
           "type": "feature",
           "title": "Two-Seater Kayaks",
           "description": "Share the adventure with a friend, loved one, or fellow explorer in our comfortable two-seater kayaks. Paddle in harmony, creating lasting memories as you explore the hidden gems and natural wonders of Palm Jumeirah together.",
-          "image": "/uploads/2024/02/2-2.png"
+          "image": "/media/2024/02/2-2.png"
         },
         {
           "type": "feature",
           "title": "Three-Seater Kayaks",
           "description": "Planning a group outing or a memorable family adventure? Our three-seater kayaks are spacious enough to accommodate your loved ones, providing a shared experience that’s both thrilling and bonding. Explore the tranquil waters together in a kayak designed for group fun.",
-          "image": "/uploads/2024/02/3-2.png"
+          "image": "/media/2024/02/3-2.png"
         }
       ]
     },

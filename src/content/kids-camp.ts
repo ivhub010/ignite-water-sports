@@ -45,7 +45,7 @@ export const kidsCamp: PageContent = {
         },
         {
           "type": "image",
-          "src": "/uploads/2026/02/Kids-Club-Website-Banner-1024x296.png",
+          "src": "/media/2026/02/Kids-Club-Website-Banner-1024x296.png",
           "alt": ""
         },
         {

@@ -105,7 +105,7 @@ export default function ContentPage({ content }: { content: PageContent }) {
       <link
         rel="stylesheet"
         id="elementor-post-30-css"
-        href="/images/elementor/css/post-3027e7.css?ver=1787332087"
+        href="/theme/styles/post-3027e7.css?ver=1787332087"
         media="all"
       />
       <SiteHeader />

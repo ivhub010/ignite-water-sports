@@ -30,7 +30,7 @@ export const igniteCalendar: PageContent = {
         {
           "type": "cta",
           "label": "📄 Download March Calendar (PDF)",
-          "href": "/uploads/calendar.pdf",
+          "href": "/media/calendar.pdf",
           "download": "IGNITE-Water-Sports-Calendar-March.pdf",
           "newTab": true
         },

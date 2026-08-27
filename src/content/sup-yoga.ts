@@ -41,7 +41,7 @@ export const supYoga: PageContent = {
         },
         {
           "type": "image",
-          "src": "/uploads/2024/01/supyoga2.png",
+          "src": "/media/2024/01/supyoga2.png",
           "alt": ""
         }
       ]

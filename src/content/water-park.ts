@@ -11,25 +11,25 @@ export const waterPark: PageContent = {
           "type": "feature",
           "title": "Inflatable Fun for Kids at IGNITE",
           "description": "Our water park is tailored specifically for children and young teens, ages 6 to 16, here to create unforgettable memories filled with jumping, bouncing, and sliding on fantastic water inflatables.",
-          "image": "/uploads/2024/02/inflatable-fun.png"
+          "image": "/media/2024/02/inflatable-fun.png"
         },
         {
           "type": "feature",
           "title": "Kid-specific Inflatable Fun",
           "description": "Prepare your kids for an ocean of excitement at our inflatable water park. With strikingly thrilling bouncy slides and exciting inflatable challenges, every element of our park is crafted specifically for children. Please note that kids must be at least 110 cm in height to partake in our attractions.",
-          "image": "/uploads/2024/02/kids-specific.png"
+          "image": "/media/2024/02/kids-specific.png"
         },
         {
           "type": "feature",
           "title": "Inflatables for Younger Guests",
           "description": "At IGNITE, we value shared fun above all. Our park also provides a range of gentler, safe, and enjoyable inflatables for our younger visitors under ten years. They can venture through the inflatable obstacles or delight in our slides, under the close watch of a guardian aged 18 or older. These experiences ensure all members of the family can create beautiful moments against the scenic backdrop of the Palm Jumeirah.",
-          "image": "/uploads/2024/02/Younger-Guests.png"
+          "image": "/media/2024/02/Younger-Guests.png"
         },
         {
           "type": "feature",
           "title": "Your Child's Safety is Our Priority",
           "description": "While we aim to deliver fun-filled experiences, your child’s safety remains our top priority. Our certified and well-trained lifeguards constantly monitor the activities, providing immediate assistance when needed. Furthermore, we necessitate all visitors to wear a life vest while enjoying the inflatables, and strictly prohibit swimming or diving underneath our attractions.",
-          "image": "/uploads/2024/02/Safety.png"
+          "image": "/media/2024/02/Safety.png"
         },
         {
           "type": "feature",

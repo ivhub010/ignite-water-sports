@@ -27,8 +27,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={BODY_CLASS}>
         {/* jQuery must exist before the theme bundle runs. */}
-        <Script src="/lib/js/jquery/jquery.minf43b.js?ver=3.7.1" strategy="beforeInteractive" />
-        <Script src="/lib/js/jquery/jquery-migrate.min5589.js?ver=3.4.1" strategy="beforeInteractive" />
+        <Script src="/theme/wp/js/jquery/jquery.minf43b.js?ver=3.7.1" strategy="beforeInteractive" />
+        <Script src="/theme/wp/js/jquery/jquery-migrate.min5589.js?ver=3.4.1" strategy="beforeInteractive" />
 
         {/* Theme chrome: the custom cursor target and the accessibility skip link. */}
         <div id="magic-cursor">

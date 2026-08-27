@@ -89,25 +89,25 @@ export const ourEvents: PageContent = {
           "type": "feature",
           "title": "The Perfect Setting for E-Wave",
           "description": "The crystal clear waters of Palm Jumeirah are renowned for their calm, glass-like conditions. Thanks to strict regulations that prohibit jet skis and motorised boats in the area, the water remains exceptionally smooth creating the ideal environment for an E-Wave experience. This unique setting allows you to glide effortlessly above the surface and truly appreciate the future of electric water sports.",
-          "image": "/uploads/2024/02/1-2.png"
+          "image": "/media/2024/02/1-2.png"
         },
         {
           "type": "feature",
           "title": "Safety Meets Pure Thrill",
           "description": "With no competing watercraft, your E-Wave ride is both exhilarating and safe. Our certified instructors guide you step by step, ensuring confidence from your first take off to your final glide. This balance of expert supervision and open water freedom delivers a thrilling yet relaxed E-Wave adventure.",
-          "image": "/uploads/2024/02/3-1.png"
+          "image": "/media/2024/02/3-1.png"
         },
         {
           "type": "feature",
           "title": "Uninterrupted Views of Palm Jumeirah",
           "description": "The absence of boats and jet skis means nothing stands between you and Dubai’s most iconic scenery. As you ride the E-Wave, enjoy uninterrupted views of the Palm, turquoise waters, and the stunning skyline an immersive experience that feels both peaceful and extraordinary.",
-          "image": "/uploads/2024/02/2-1.png"
+          "image": "/media/2024/02/2-1.png"
         },
         {
           "type": "feature",
           "title": "A Truly Best in Class E-Wave Experience",
           "description": "Riding an E-Wave at Palm Jumeirah is unlike any other water sport in Dubai. Whether you’re discovering electric wave riding for the first time or refining your skills in a premium setting, IGNITE Water Sports delivers a best in class E-Wave experience designed for comfort, performance, and unforgettable moments.",
-          "image": "/uploads/2024/02/4.png"
+          "image": "/media/2024/02/4.png"
         }
       ]
     },

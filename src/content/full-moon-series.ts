@@ -50,7 +50,7 @@ export const fullMoonSeries: PageContent = {
         },
         {
           "type": "image",
-          "src": "/uploads/elementor/thumbs/1-qk639dmos1h00vqe6abuzhe8vbdszjc2pia3sle0dg.png",
+          "src": "/media/elementor/thumbs/1-qk639dmos1h00vqe6abuzhe8vbdszjc2pia3sle0dg.png",
           "alt": "1"
         }
       ]
