@@ -1071,6 +1071,11 @@ export default function Home() {
         </div>
       </div>
     </div>
+    {/* "Latest Blog" is hidden. The three posts it lists are Wavesurfer demo
+        content — Italian casino and blackjack spam that shipped with the theme
+        dump, not IGNITE articles. Set the guard to true once a real blog
+        exists; the markup is kept so it can be repopulated. */}
+    {false && (
     <div className="elementor-element elementor-element-057ea91 e-flex e-con-boxed e-con e-parent" data-id="057ea91" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
       <div className="e-con-inner">
         <div className="elementor-element elementor-element-72cdfe9 e-con-full e-flex e-con e-child" data-id="72cdfe9" data-element_type="container" data-e-type="container">
@@ -1175,6 +1180,7 @@ export default function Home() {
         </div>
       </div>
     </div>
+    )}
     <div className="elementor-element elementor-element-868fa6b e-con-full e-flex e-con e-parent" data-id="868fa6b" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
       <div className="elementor-element elementor-element-79f8b57 e-con-full e-flex e-con e-child" data-id="79f8b57" data-element_type="container" data-e-type="container">
         <div className="elementor-element elementor-element-6171651 sis-heading-animation sis-animation-heading-style-2 sis-light-title elementor-widget elementor-widget-heading" data-id={6171651} data-element_type="widget" data-e-type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">

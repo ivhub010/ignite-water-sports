@@ -123,7 +123,7 @@ export const kidsAndBirthdays: PageContent = {
         {
           "type": "cta",
           "label": "Download Brochure",
-          "href": "/wp-content/watersports/2026/02/IGNITE-Water-Sports-Birthday-Party-Guide.pdf"
+          "href": "/watersports/2026/02/IGNITE-Water-Sports-Birthday-Party-Guide.pdf"
         }
       ]
     }
