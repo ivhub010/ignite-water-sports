@@ -61,10 +61,25 @@ connect them; nothing else needs to change.
 
 ## Inherited theme runtime
 
-`public/vendor` and `public/lib` are the Elementor/ElementsKit/theme bundles the
-migrated markup still needs. Elementor loads some of its JavaScript as dynamic
-chunks whose paths never appear in source, so these directories cannot be pruned
-by static analysis — check pages in a browser before removing anything from them.
+`public/vendor` and `public/lib` hold the Elementor / ElementsKit / theme bundles
+the migrated markup still depends on. This is not a WordPress install, but the
+markup is Elementor's, and these scripts supply the behaviour it expects:
+
+- **Elementor frontend** reveals every element carrying a scroll animation.
+  Those elements ship with `class="elementor-invisible"` and `opacity: 0`;
+  Elementor's observer fades them in. Without it the home hero's headline,
+  subline and button never appear.
+- **ElementsKit** drives the navigation, mega menu and mobile off-canvas.
+- **jQuery** (`public/lib`) is a hard dependency of both.
+
+Anything not requested at runtime has been removed. What remains was verified by
+recording every asset the browser actually fetches across all 30 routes at two
+viewports — Elementor loads part of its JavaScript as dynamic chunks whose paths
+never appear in source, so **static analysis cannot prune these directories**.
+Check pages in a real browser before removing anything further.
+
+Replacing this runtime means replacing the Elementor markup it animates — a
+rewrite of the section components, not a file deletion.
 
 ## Commands
 
