@@ -14,7 +14,7 @@ export default function SiteHeader({ transparent = false }: SiteHeaderProps) {
       <link rel="stylesheet" id="elementor-post-3436-css" href="/theme/styles/post-343696e3.css?ver=1787278549" media="all" />
     <div className={`ekit-template-content-markup ekit-template-content-header ekit-template-content-theme-support${transparent ? ' site-header--overlay' : ''}`}>
       <div data-elementor-type="wp-post" data-elementor-id={3436} className="elementor elementor-3436">
-        <div className="elementor-element elementor-element-346619f e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-parent" data-id="346619f" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div className="elementor-element elementor-element-346619f e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-parent desktopheader" data-id="346619f" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
           <div className="elementor-element elementor-element-5973689 e-con-full e-flex e-con e-child" data-id={5973689} data-element_type="container" data-e-type="container">
             <div className="elementor-element elementor-element-2e9c1e0 elementor-widget elementor-widget-elementskit-stylish-list" data-id="2e9c1e0" data-element_type="widget" data-e-type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="elementskit-stylish-list.default">
               <div className="elementor-widget-container">

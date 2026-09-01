@@ -24,3 +24,13 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.desktopheader .ekit-stylish-list-content-title, .desktopheader .ekit-stylish-list-content-icon i, .desktopheader svg{
+  color: #fff !important;
+  fill: #fff !important;
+}
+
+.desktopheader .elementor-repeater-item-3ffd702:hover .ekit-stylish-list-content-title, .desktopheader .elementor-repeater-item-3ffd702:hover .ekit-stylish-list-content-icon i, .desktopheader .elementor-repeater-item-3ffd702:hover svg{
+  color: #24D2DD !important;
+  fill: #24D2DD !important;
+}
