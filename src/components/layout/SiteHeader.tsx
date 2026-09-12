@@ -106,7 +106,6 @@ export default function SiteHeader({ transparent = false }: SiteHeaderProps) {
                     <span className="elementskit-menu-hamburger-icon" /><span className="elementskit-menu-hamburger-icon" /><span className="elementskit-menu-hamburger-icon" />
                   </button>
                   <div id="ekit-megamenu-divided-left-navigation" className="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-no ekit-nav-dropdown-hover"><ul id="menu-divided-left-navigation" className="elementskit-navbar-nav elementskit-menu-po-left submenu-click-on-icon">
-    <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/" className="ekit-menu-nav-link">Home</a></li>
     <li className="menu-item menu-item-has-children nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"><a href="#" className="ekit-menu-nav-link ekit-menu-dropdown-toggle">Rentals</a>
       <ul className="elementskit-dropdown elementskit-submenu-panel">
         <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/stand-up-paddle-boarding" className="ekit-menu-nav-link">SUP</a></li>
@@ -207,7 +206,7 @@ export default function SiteHeader({ transparent = false }: SiteHeaderProps) {
                   </div>
                 </div>				</div>
               <div className="elementor-element elementor-element-2cf9a98 elementor-widget elementor-widget-button" data-id="2cf9a98" data-element_type="widget" data-e-type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="button.default">
-                <a className="elementor-button elementor-button-link elementor-size-sm" href="/contact-us">
+                <a className="elementor-button elementor-button-link elementor-size-sm" href="https://book.ignitewatersports.com">
                   <span className="elementor-button-content-wrapper">
                     <span className="elementor-button-text">Book Now</span>
                   </span>
@@ -240,7 +239,7 @@ export default function SiteHeader({ transparent = false }: SiteHeaderProps) {
                     <button className="elementskit-menu-hamburger elementskit-menu-toggler" type="button" aria-label="hamburger-icon">
                       <span className="elementskit-menu-hamburger-icon" /><span className="elementskit-menu-hamburger-icon" /><span className="elementskit-menu-hamburger-icon" />
                     </button>
-                    <div id="ekit-megamenu-main-menu" className="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-no ekit-nav-dropdown-hover"><ul id="menu-main-menu" className="elementskit-navbar-nav elementskit-menu-po-left submenu-click-on-icon"><li id="menu-item-home" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="/" className="ekit-menu-nav-link">Home</a></li>
+                    <div id="ekit-megamenu-main-menu" className="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-no ekit-nav-dropdown-hover"><ul id="menu-main-menu" className="elementskit-navbar-nav elementskit-menu-po-left submenu-click-on-icon">
                          <li id="menu-item-rentals" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" className="ekit-menu-nav-link ekit-menu-dropdown-toggle">Rentals</a>
                            <ul className="elementskit-dropdown elementskit-submenu-panel">
                              <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/stand-up-paddle-boarding" className="ekit-menu-nav-link">SUP</a></li>
