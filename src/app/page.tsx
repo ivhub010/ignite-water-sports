@@ -1801,17 +1801,17 @@ export default function Home() {
                   </h2>{" "}
                 </div>
               </div>
-              {/* <div className="elementor-element elementor-element-48f6a35 e-con-full e-flex e-con e-child" data-id="48f6a35" data-element_type="container" data-e-type="container">
-                <div className="elementor-element elementor-element-07c0424 elementor-invisible elementor-widget elementor-widget-text-editor" data-id="07c0424" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:50,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
-                  <p>Be part of thrilling water adventures and exclusive beach events. From high-energy competitions to relaxing ocean experiences, discover activities designed for every explorer.</p>								</div>
+              <div className="elementor-element elementor-element-48f6a35 e-con-full e-flex e-con e-child" data-id="48f6a35" data-element_type="container" data-e-type="container">
+                {/* <div className="elementor-element elementor-element-07c0424 elementor-invisible elementor-widget elementor-widget-text-editor" data-id="07c0424" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:50,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+                  <p>Be part of thrilling water adventures and exclusive beach events. From high-energy competitions to relaxing ocean experiences, discover activities designed for every explorer.</p>								</div> */}
                 <div className="elementor-element elementor-element-7e638e8 elementor-invisible elementor-widget elementor-widget-button" data-id="7e638e8" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="button.default">
-                  <a className="elementor-button elementor-button-link elementor-size-sm" href="/stand-up-paddle-boarding" target="_blank">
+                  <a className="elementor-button elementor-button-link elementor-size-sm" href="/our-events" target="_blank">
                     <span className="elementor-button-content-wrapper">
-                      <span className="elementor-button-text">Explore All Events</span>
+                      <span className="elementor-button-text">View All Events</span>
                     </span>
                   </a>
                 </div>
-              </div> */}
+              </div>
             </div>
             <div
               className="elementor-element elementor-element-6ba2e01 e-con-full e-flex e-con e-child"

@@ -178,9 +178,6 @@ body {
   right: -200px;
 }
 
-#sis-event-e726980 .sis-event-grid{
-  grid-template-columns: repeat(3,1fr);
-}
 
 #sis-event-e726980 .sis-btn span, #sis-event-e726980 .sis-btn i{
   color: #ff9015;
@@ -196,6 +193,16 @@ body {
   margin-bottom: 20px !important;
 }
 
+.elementor-element-7e638e8{
+  --align-self: end !important;
+}
+
+@media (min-width: 1024px) {
+  #sis-event-e726980 .sis-event-grid{
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
 @media (max-width: 767px) {
   .hero-trust-points {
     gap: 8px;
@@ -206,5 +213,9 @@ body {
     padding: 7px 11px;
     font-size: 12px;
     white-space: normal;
+  }
+
+  .elementor-element-7e638e8{
+    --align-self: center !important;
   }
 }
