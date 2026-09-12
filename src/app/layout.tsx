@@ -15,9 +15,9 @@ export const metadata: Metadata = {
   description:
     "Dubai's #1 water sports experience on Palm Jumeirah. eFoil, kayak, SUP, kids parties, classes and more at RIVA Beach Club.",
   icons: {
-    icon: "/ignite-favicon.jpg",
-    shortcut: "/ignite-favicon.jpg",
-    apple: "/ignite-favicon.jpg",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
 };
 

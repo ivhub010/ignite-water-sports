@@ -1842,7 +1842,7 @@ export default function Home() {
                               <div className="sis-event-grid-item__img">
                                 <a
                                   className="sis-event-grid-item__link"
-                                  href="/product/ignite-reset-club/"
+                                  href="#"
                                 >
                                   <img
                                     decoding="async"
@@ -1857,7 +1857,7 @@ export default function Home() {
                             <div className="sis-event-grid-title__wrap">
                               <a
                                 className="sis-event-grid-item__link"
-                                href="/product/ignite-reset-club/"
+                                href="#"
                               >
                                 <h4 className="sis-event-grid-item__title">
                                   Pink is Punk
@@ -1944,7 +1944,7 @@ export default function Home() {
                             <div className="btn-wraper">
                               <a
                                 className="elementor-button sis-btn"
-                                href="/product/ignite-reset-club/"
+                                href="#"
                               >
                                 <span className="elementor-button-text">
                                   Book now
@@ -1967,7 +1967,7 @@ export default function Home() {
                               <div className="sis-event-grid-item__img">
                                 <a
                                   className="sis-event-grid-item__link"
-                                  href="/product/ignite-reset-club/"
+                                  href="#"
                                 >
                                   <img
                                     decoding="async"
@@ -1982,7 +1982,7 @@ export default function Home() {
                             <div className="sis-event-grid-title__wrap">
                               <a
                                 className="sis-event-grid-item__link"
-                                href="/product/ignite-reset-club/"
+                                href="#"
                               >
                                 <h4 className="sis-event-grid-item__title">
                                   IGNITE Reset Club
@@ -2069,7 +2069,7 @@ export default function Home() {
                             <div className="btn-wraper">
                               <a
                                 className="elementor-button sis-btn"
-                                href="/product/ignite-reset-club/"
+                                href="#"
                               >
                                 <span className="elementor-button-text">
                                   Book now
@@ -2092,7 +2092,7 @@ export default function Home() {
                               <div className="sis-event-grid-item__img">
                                 <a
                                   className="sis-event-grid-item__link"
-                                  href="/product/global-heart-day/"
+                                  href="#"
                                 >
                                   <img
                                     decoding="async"
@@ -2107,7 +2107,7 @@ export default function Home() {
                             <div className="sis-event-grid-title__wrap">
                               <a
                                 className="sis-event-grid-item__link"
-                                href="/product/global-heart-day/"
+                                href="#"
                               >
                                 <h4 className="sis-event-grid-item__title">
                                   Global Heart Day
@@ -2194,7 +2194,7 @@ export default function Home() {
                             <div className="btn-wraper">
                               <a
                                 className="elementor-button sis-btn"
-                                href="/product/global-heart-day/"
+                                href="#"
                               >
                                 <span className="elementor-button-text">
                                   Book now
