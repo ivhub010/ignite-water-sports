@@ -1,6 +1,118 @@
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 
+import "dirham/css";
+import { DirhamIcon } from "dirham/react";
+
+const CompassIcon = () => (
+  <svg
+    width="30"
+    height="30"
+    viewBox="0 0 30 30"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle
+      cx="15"
+      cy="15"
+      r="10.5"
+      stroke="currentColor"
+      strokeWidth="2.5"
+    />
+    <path
+      d="M18.9 10.9L16.8 16.8L10.9 18.9L13 13L18.9 10.9Z"
+      stroke="currentColor"
+      strokeWidth="2.3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M15 2.8V5.2M15 24.8V27.2M2.8 15H5.2M24.8 15H27.2"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+    />
+  </svg>
+);
+
+const CalendarIcon = () => (
+  <svg
+    width="30"
+    height="30"
+    viewBox="0 0 30 30"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      x="5"
+      y="6.5"
+      width="20"
+      height="19"
+      rx="2.5"
+      stroke="currentColor"
+      strokeWidth="2.5"
+    />
+    <path
+      d="M10 3.5V9M20 3.5V9"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+    />
+    <path
+      d="M5 12H25"
+      stroke="currentColor"
+      strokeWidth="2.5"
+    />
+    <rect
+      x="9"
+      y="15.5"
+      width="3"
+      height="3"
+      rx=".5"
+      fill="currentColor"
+    />
+  </svg>
+);
+
+const WaveIcon = () => (
+  <svg
+    width="32"
+    height="30"
+    viewBox="0 0 32 30"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M3 16C6.5 16 6.7 7 10.2 7C13.8 7 13.7 23 17.2 23C20.8 23 20.5 12.5 24 12.5C26.3 12.5 26.8 16 29 16"
+      stroke="currentColor"
+      strokeWidth="2.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const howitworks = [
+  {
+    number: "1",
+    icon: <CompassIcon />,
+    title: "Choose your adventure",
+    text: "eFoil, SUP, kayak, kids parties, classes, and more — pick what excites you.",
+  },
+  {
+    number: "2",
+    icon: <CalendarIcon />,
+    title: "Pick your date and time",
+    text: "Book online in under two minutes. Instant confirmation, flexible rescheduling.",
+  },
+  {
+    number: "3",
+    icon: <WaveIcon />,
+    title: "Show up and get on the water",
+    text: "Arrive 10 minutes early. We handle the rest — gear, safety briefing, good vibes.",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -996,7 +1108,7 @@ export default function Home() {
                   >
                     From{" "}
                     <span style={{ color: "#ff7700", fontWeight: "800" }}>
-                      AED 50
+                      <DirhamIcon size="1em" /> 50
                     </span>
                   </p>
                   <div
@@ -1009,7 +1121,7 @@ export default function Home() {
                     }}
                   >
                     <img
-                      src="/watersports/deals-exact/sup-deals.jpg"
+                      src="https://ignitewatersports.com/wp-content/uploads/elementor/thumbs/SUP1-e1719384554118-qq7t4qbwrnvy1q5czbe5oml148jwh0elkzjiocgv0w.png"
                       alt="Today's best deals"
                       style={{
                         width: "100%",
@@ -1082,7 +1194,7 @@ export default function Home() {
                   >
                     From{" "}
                     <span style={{ color: "#ff7700", fontWeight: "800" }}>
-                      AED 100
+                      <DirhamIcon size="1em" /> 100
                     </span>
                   </p>
                   <div
@@ -1095,7 +1207,7 @@ export default function Home() {
                     }}
                   >
                     <img
-                      src="/watersports/deals-exact/kids-party.png"
+                      src="https://ignitewatersports.com/wp-content/uploads/elementor/thumbs/kidsbirthday-qkgqgpxwrmb8oznoo9mh8uyntebhcj06qns6m2e5g0.png"
                       alt="A party they'll never forget"
                       style={{
                         width: "100%",
@@ -1167,7 +1279,7 @@ export default function Home() {
                   >
                     From{" "}
                     <span style={{ color: "#ff7700", fontWeight: "800" }}>
-                      AED 50
+                      <DirhamIcon size="1em" /> 50
                     </span>
                   </p>
                   <div
@@ -1180,7 +1292,7 @@ export default function Home() {
                     }}
                   >
                     <img
-                      src="/watersports/deals-exact/kayak-palm.jpg"
+                      src="https://ignitewatersports.com/wp-content/uploads/2024/02/IWS-New-Website-Image-2-1.png"
                       alt="Explore the Palm by paddle"
                       style={{
                         width: "100%",
@@ -1252,7 +1364,7 @@ export default function Home() {
                   >
                     From{" "}
                     <span style={{ color: "#ff7700", fontWeight: "800" }}>
-                      AED 300
+                      <DirhamIcon size="1em" /> 300
                     </span>
                   </p>
                   <div
@@ -1265,7 +1377,7 @@ export default function Home() {
                     }}
                   >
                     <img
-                      src="/watersports/deals-exact/efoil-fly.png"
+                      src="https://ignitewatersports.com/wp-content/uploads/2025/10/R5CC1400-scaled.jpg"
                       alt="Learn to fly on water"
                       style={{
                         width: "100%",
@@ -1336,7 +1448,7 @@ export default function Home() {
                   >
                     From{" "}
                     <span style={{ color: "#ff7700", fontWeight: "800" }}>
-                      AED 120
+                      <DirhamIcon size="1em" /> 120
                     </span>
                   </p>
                   <div
@@ -1349,7 +1461,7 @@ export default function Home() {
                     }}
                   >
                     <img
-                      src="/watersports/deals-exact/team-burj.jpeg"
+                      src="https://ignitewatersports.com/wp-content/uploads/2025/10/teambonding.jpeg"
                       alt="Burj views, team wins"
                       style={{
                         width: "100%",
@@ -1428,7 +1540,7 @@ export default function Home() {
                   >
                     From{" "}
                     <span style={{ color: "#ff7700", fontWeight: "800" }}>
-                      AED 80
+                      <DirhamIcon size="1em" /> 80
                     </span>
                   </p>
                   <div
@@ -1441,7 +1553,7 @@ export default function Home() {
                     }}
                   >
                     <img
-                      src="/watersports/deals-exact/reset-wellness.jpg"
+                      src="https://ignitewatersports.com/wp-content/uploads/2025/10/iceplunge.jpeg"
                       alt="Reset and feel incredible"
                       style={{
                         width: "100%",
@@ -1480,279 +1592,32 @@ export default function Home() {
           data-settings='{"background_background":"classic"}'
         >
           <div className="e-con-inner">
-            <div
-              className="elementor-element elementor-element-37d58bb e-con-full e-flex e-con e-child"
-              data-id="37d58bb"
-              data-element_type="container"
-              data-e-type="container"
-            >
-              <div
-                className="elementor-element elementor-element-8198a25 e-con-full e-flex e-con e-child"
-                data-id="8198a25"
-                data-element_type="container"
-                data-e-type="container"
-              >
-                <div
-                  className="elementor-element elementor-element-6db323b sis-heading-animation sis-animation-heading-style-1 elementor-widget elementor-widget-heading"
-                  data-id="6db323b"
-                  data-element_type="widget"
-                  data-e-type="widget"
-                  data-settings='{"ekit_we_effect_on":"none"}'
-                  data-widget_type="heading.default"
-                >
-                  <h3 className="elementor-heading-title elementor-size-default">
-                    How It Works
-                  </h3>{" "}
-                </div>
-                <div
-                  className="elementor-element elementor-element-c84950d sis-heading-animation sis-animation-heading-style-2 sis-light-title elementor-widget elementor-widget-heading"
-                  data-id="c84950d"
-                  data-element_type="widget"
-                  data-e-type="widget"
-                  data-settings='{"ekit_we_effect_on":"none"}'
-                  data-widget_type="heading.default"
-                >
-                  <h2 className="elementor-heading-title elementor-size-default">
-                    3 easy steps to book your fun on the Palm
-                  </h2>{" "}
-                </div>
+            <section className="how-it-works">
+              <div className="how-it-works-header">
+                <span className="section-label">HOW IT WORKS</span>
+                <h2>3 easy steps to book your fun on the Palm</h2>
               </div>
-              <div
-                className="elementor-element elementor-element-f843d3c e-con-full e-flex e-con e-child"
-                data-id="f843d3c"
-                data-element_type="container"
-                data-e-type="container"
-              >
-                <div
-                  className="elementor-element elementor-element-bea1b0e elementor-invisible elementor-widget elementor-widget-text-editor"
-                  data-id="bea1b0e"
-                  data-element_type="widget"
-                  data-e-type="widget"
-                  data-settings='{"_animation":"fadeInUp","_animation_delay":50,"ekit_we_effect_on":"none"}'
-                  data-widget_type="text-editor.default"
-                >
-                  <p>
-                    From choosing your activity to hitting the waves, we make
-                    your entire journey smooth, exciting, and hassle-free.
-                  </p>{" "}
-                </div>
-                <div
-                  className="elementor-element elementor-element-bf730e1 elementor-invisible elementor-widget elementor-widget-button"
-                  data-id="bf730e1"
-                  data-element_type="widget"
-                  data-e-type="widget"
-                  data-settings='{"_animation":"fadeInUp","ekit_we_effect_on":"none"}'
-                  data-widget_type="button.default"
-                >
-                  <a
-                    className="elementor-button elementor-button-link elementor-size-sm"
-                    href="/stand-up-paddle-boarding"
-                    target="_blank"
-                  >
-                    <span className="elementor-button-content-wrapper">
-                      <span className="elementor-button-text">
-                        Explore Activities
-                      </span>
-                    </span>
-                  </a>
-                </div>
+
+              <div className="steps-wrapper">
+                {howitworks.map((step) => (
+                  <div className="step-card" key={step.number}>
+                    <span className="step-number">{step.number}</span>
+
+                    <div className="step-icon">{step.icon}</div>
+
+                    <h3>{step.title}</h3>
+
+                    <p>{step.text}</p>
+                  </div>
+                ))}
               </div>
-            </div>
-            <div
-              className="elementor-element elementor-element-252b56b e-con-full e-flex e-con e-child"
-              data-id="252b56b"
-              data-element_type="container"
-              data-e-type="container"
-            >
-              <div
-                className="elementor-element elementor-element-2fcb62b e-con-full e-flex e-con e-child"
-                data-id="2fcb62b"
-                data-element_type="container"
-                data-e-type="container"
-              >
-                <div
-                  className="elementor-element elementor-element-bd440aa sis-image-animation sis-animation-image-style-1 elementor-widget elementor-widget-image"
-                  data-id="bd440aa"
-                  data-element_type="widget"
-                  data-e-type="widget"
-                  data-settings='{"ekit_we_effect_on":"none"}'
-                  data-widget_type="image.default"
-                >
-                  <img
-                    loading="lazy"
-                    decoding="async"
-                    width={599}
-                    height={584}
-                    src="/watersports/2026/05/howit-works-img.png"
-                    className="attachment-full size-full wp-image-5652"
-                    alt=""
-                  />{" "}
-                </div>
+
+              <div className="how-it-works-button-wrap">
+                <a href="https://book.ignitewatersports.com/" className="how-it-works-button">
+                  Book your experience
+                </a>
               </div>
-              <div
-                className="elementor-element elementor-element-4a94f17 e-con-full e-flex e-con e-child"
-                data-id="4a94f17"
-                data-element_type="container"
-                data-e-type="container"
-              >
-                <div
-                  className="elementor-element elementor-element-e6dd6f7 e-con-full e-flex elementor-invisible e-con e-child"
-                  data-id="e6dd6f7"
-                  data-element_type="container"
-                  data-e-type="container"
-                  data-settings='{"animation":"fadeInUp"}'
-                >
-                  <div
-                    className="elementor-element elementor-element-9727b63 sis-icon-box-border sis-home-v3 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
-                    data-id="9727b63"
-                    data-element_type="widget"
-                    data-e-type="widget"
-                    data-settings='{"ekit_we_effect_on":"none"}'
-                    data-widget_type="elementskit-icon-box.default"
-                  >
-                    <div className="ekit-wid-con">
-                      {" "}
-                      {/* link opening */}
-                      {/* end link opening */}
-                      <div className="elementskit-infobox text-left text-left icon-lef-right-aligin elementor-animation- media  ">
-                        <div className="elementskit-box-header elementor-animation-">
-                          <div className="elementskit-info-box-icon  text-center">
-                            <svg
-                              aria-hidden="true"
-                              className="elementkit-infobox-icon e-font-icon-svg e-fas-circle"
-                              viewBox="0 0 512 512"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z" />
-                            </svg>
-                          </div>
-                        </div>
-                        <div className="box-body">
-                          <h3 className="elementskit-info-box-title">
-                            Choose your adventure{" "}
-                          </h3>
-                          <p>
-                            eFoil, SUP, kayak, kids parties, classes, and more,
-                            pick what excites you.
-                          </p>
-                        </div>
-                      </div>
-                    </div>{" "}
-                  </div>
-                  <div
-                    className="elementor-element elementor-element-ed34447 sis-icon-box-border sis-home-v3 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
-                    data-id="ed34447"
-                    data-element_type="widget"
-                    data-e-type="widget"
-                    data-settings='{"ekit_we_effect_on":"none"}'
-                    data-widget_type="elementskit-icon-box.default"
-                  >
-                    <div className="ekit-wid-con">
-                      {" "}
-                      {/* link opening */}
-                      {/* end link opening */}
-                      <div className="elementskit-infobox text-left text-left icon-lef-right-aligin elementor-animation- media  ">
-                        <div className="elementskit-box-header elementor-animation-">
-                          <div className="elementskit-info-box-icon  text-center">
-                            <svg
-                              aria-hidden="true"
-                              className="elementkit-infobox-icon e-font-icon-svg e-fas-circle"
-                              viewBox="0 0 512 512"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z" />
-                            </svg>
-                          </div>
-                        </div>
-                        <div className="box-body">
-                          <h3 className="elementskit-info-box-title">
-                            Pick your date and time{" "}
-                          </h3>
-                          <p>
-                            Book online in under two minutes. Instant
-                            confirmation, flexible rescheduling.
-                          </p>
-                        </div>
-                      </div>
-                    </div>{" "}
-                  </div>
-                  <div
-                    className="elementor-element elementor-element-55de720 sis-icon-box-border sis-home-v3 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
-                    data-id="55de720"
-                    data-element_type="widget"
-                    data-e-type="widget"
-                    data-settings='{"ekit_we_effect_on":"none"}'
-                    data-widget_type="elementskit-icon-box.default"
-                  >
-                    <div className="ekit-wid-con">
-                      {" "}
-                      {/* link opening */}
-                      {/* end link opening */}
-                      <div className="elementskit-infobox text-left text-left icon-lef-right-aligin elementor-animation- media  ">
-                        <div className="elementskit-box-header elementor-animation-">
-                          <div className="elementskit-info-box-icon  text-center">
-                            <svg
-                              aria-hidden="true"
-                              className="elementkit-infobox-icon e-font-icon-svg e-fas-circle"
-                              viewBox="0 0 512 512"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z" />
-                            </svg>
-                          </div>
-                        </div>
-                        <div className="box-body">
-                          <h3 className="elementskit-info-box-title">
-                            Show up and get on the water{" "}
-                          </h3>
-                          <p>
-                            Arrive 10 minutes early. We handle the rest, gear,
-                            safety briefing, good vibes.
-                          </p>
-                        </div>
-                      </div>
-                    </div>{" "}
-                  </div>
-                  <div
-                    className="elementor-element elementor-element-2ee7eb9 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
-                    data-id="2ee7eb9"
-                    data-element_type="widget"
-                    data-e-type="widget"
-                    data-settings='{"ekit_we_effect_on":"none"}'
-                    data-widget_type="elementskit-icon-box.default"
-                  >
-                    <div className="ekit-wid-con">
-                      {" "}
-                      {/* link opening */}
-                      {/* end link opening */}
-                      <div className="elementskit-infobox text-left text-left icon-lef-right-aligin elementor-animation- media  ">
-                        <div className="elementskit-box-header elementor-animation-">
-                          <div className="elementskit-info-box-icon  text-center">
-                            <svg
-                              aria-hidden="true"
-                              className="elementkit-infobox-icon e-font-icon-svg e-fas-circle"
-                              viewBox="0 0 512 512"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8z" />
-                            </svg>
-                          </div>
-                        </div>
-                        <div className="box-body">
-                          <h3 className="elementskit-info-box-title">
-                            Free parking available at RIVA Beach Club{" "}
-                          </h3>
-                          <p>
-                            Park in Building 7 first, then Building 8 if needed.
-                            Directions are on our FAQ page.
-                          </p>
-                        </div>
-                      </div>
-                    </div>{" "}
-                  </div>
-                </div>
-              </div>
-            </div>
+            </section>
           </div>
         </div>
 
@@ -3246,6 +3111,7 @@ export default function Home() {
         >
           <div
             className="elementor-element elementor-element-58be921 e-con-full e-flex elementor-invisible e-con e-child"
+            style={{background:'#222e34'}}
             data-id="58be921"
             data-element_type="container"
             data-e-type="container"
@@ -3263,7 +3129,7 @@ export default function Home() {
                 Get In Touch
               </h3>{" "}
             </div>
-            <div
+            {/* <div
               className="elementor-element elementor-element-6a420ff sis-heading-animation sis-animation-heading-style-2 sis-light-title elementor-widget elementor-widget-heading"
               data-id="6a420ff"
               data-element_type="widget"
@@ -3274,16 +3140,15 @@ export default function Home() {
               <h2 className="elementor-heading-title elementor-size-default">
                 Ready for Your Next Water Adventure?
               </h2>{" "}
-            </div>
+            </div> */}
             <div
               className="elementor-element elementor-widget elementor-widget-text-editor"
               data-element_type="widget"
               data-e-type="widget"
               data-widget_type="text-editor.default"
             >
-              <p>
-                Fill in your details and our team will get back to you within a
-                few hours.
+              <p className="whitetext">
+                Fill in your details and our team will get back to you within a few hours.
               </p>
             </div>
             <div
@@ -3432,6 +3297,27 @@ export default function Home() {
                           </p>
                         </div>
                         <div className="form-group col-md-12">
+                          <select className="wpcf7-form-control wpcf7-select form-control">
+                            <option value="">-Select Service-</option>
+                            <option value="SUP rental">SUP rental</option>
+                            <option value="Kayak rental">Kayak rental</option>
+                            <option value="eFoil">eFoil</option>
+                            <option value="Pedalo">Pedalo</option>
+                            <option value="Kids birthday party">Kids birthday party</option>
+                            <option value="Kids club">Kids club</option>
+                            <option value="Kids camp">Kids camp</option>
+                            <option value="Team bonding">Team bonding</option>
+                            <option value="Beach yoga">Beach yoga</option>
+                            <option value="SUP yoga">SUP yoga</option>
+                            <option value="SUP sound healing">SUP sound healing</option>
+                            <option value="Full moon series">Full moon series</option>
+                            <option value="SOMA breath">SOMA breath</option>
+                            <option value="Ice plunge">Ice plunge</option>
+                            <option value="Community events">Community events</option>
+                            <option value="Other">Other</option>
+                          </select>
+                        </div>
+                        <div className="form-group col-md-12">
                           <p>
                             <span
                               className="wpcf7-form-control-wrap"
@@ -3474,6 +3360,7 @@ export default function Home() {
           </div>
           <div
             className="elementor-element elementor-element-a636a94 e-con-full e-flex elementor-invisible e-con e-child"
+            style={{background:'#ff9015'}}
             data-id="a636a94"
             data-element_type="container"
             data-e-type="container"
