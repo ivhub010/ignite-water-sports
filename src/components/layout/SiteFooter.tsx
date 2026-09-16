@@ -15,7 +15,7 @@ export default function SiteFooter() {
                   <svg aria-hidden="true" className="e-font-icon-svg e-fas-arrow-up" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z" /></svg>				</span>
               </div>
             </div>				</div>
-          <div className="elementor-element elementor-element-23ab401 e-con-full e-flex e-con e-child" data-id="23ab401" data-element_type="container" data-e-type="container">
+          {/* <div className="elementor-element elementor-element-23ab401 e-con-full e-flex e-con e-child" data-id="23ab401" data-element_type="container" data-e-type="container">
             <div className="elementor-element elementor-element-64f52b8 gallery-spacing-custom elementor-widget elementor-widget-image-gallery" data-id="64f52b8" data-element_type="widget" data-e-type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="image-gallery.default">
               <div className="elementor-image-gallery">
                 <div id="gallery-1" className="gallery galleryid-16 gallery-columns-5 gallery-size-full"><figure className="gallery-item">
@@ -37,7 +37,7 @@ export default function SiteFooter() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="elementor-element elementor-element-353428b e-flex e-con-boxed e-con e-child" data-id="353428b" data-element_type="container" data-e-type="container">
             <div className="e-con-inner">
               <div className="elementor-element elementor-element-ce43da2 e-con-full e-flex e-con e-child" data-id="ce43da2" data-element_type="container" data-e-type="container">
