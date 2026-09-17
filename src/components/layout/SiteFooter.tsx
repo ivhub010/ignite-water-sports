@@ -86,7 +86,9 @@ export default function SiteFooter() {
                            <li id="menu-item-f2" className="menu-item nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="/faq" className="ekit-menu-nav-link">FAQ</a></li>
                            <li id="menu-item-f3" className="menu-item nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="/our-events" className="ekit-menu-nav-link">Events</a></li>
                            <li id="menu-item-f4" className="menu-item nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="/shop" className="ekit-menu-nav-link">Shop</a></li>
-                           <li id="menu-item-f5" className="menu-item nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="/contact-us" className="ekit-menu-nav-link">Partner with Us</a></li></ul></div>      </div>
+                           <li id="menu-item-f5" className="menu-item nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="/contact-us" className="ekit-menu-nav-link">Contact Us</a></li>
+                           <li id="menu-item-f5" className="menu-item nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="/contact-us" className="ekit-menu-nav-link">Partner with Us</a></li>
+                           </ul></div>      </div>
                   </div>				</div>
               </div>
               <div className="elementor-element elementor-element-8a4cd1e e-con-full e-flex e-con e-child" data-id="8a4cd1e" data-element_type="container" data-e-type="container">

@@ -252,10 +252,43 @@ export default function Home() {
                                       data-widget_type="text-editor.default"
                                     >
                                       <p>
-                                        eFoil, kayak, SUP, kid’s parties and
-                                        more right on the Palm. Experience it
-                                        all at RIVA Beach Club on Palm Jumeirah.
+                                        eFoil, kayak, SUP, kid's parties and more, right on the Palm.
                                       </p>
+
+                                      <div
+                                      className="elementor-element elementor-element-35e66c3 elementor-invisible elementor-widget elementor-widget-button"
+                                      data-id="35e66c3"
+                                      data-element_type="widget"
+                                      data-e-type="widget"
+                                      data-settings='{"_animation":"fadeInUp","ekit_we_effect_on":"none"}'
+                                      data-widget_type="button.default"
+                                    >
+                                      <a
+                                        className="elementor-button elementor-button-link elementor-size-sm"
+                                        href="https://book.ignitewatersports.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                      >
+                                        <span className="elementor-button-content-wrapper">
+                                          <span className="elementor-button-text" style={{textTransform:"initial"}}>
+                                            Book now
+                                          </span>
+                                        </span>
+                                      </a>
+
+                                      <a
+                                        className="elementor-button elementor-button-link elementor-size-sm"
+                                        href="/our-events"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                      >
+                                        <span className="elementor-button-content-wrapper">
+                                          <span className="elementor-button-text" style={{textTransform:"initial"}}>
+                                            See what's on
+                                          </span>
+                                        </span>
+                                      </a>
+                                    </div>
 
                                       <div className="hero-trust-points">
                                         <span>
@@ -273,40 +306,7 @@ export default function Home() {
                                       </div>
                                     </div>
 
-                                    <div
-                                      className="elementor-element elementor-element-35e66c3 elementor-invisible elementor-widget elementor-widget-button"
-                                      data-id="35e66c3"
-                                      data-element_type="widget"
-                                      data-e-type="widget"
-                                      data-settings='{"_animation":"fadeInUp","ekit_we_effect_on":"none"}'
-                                      data-widget_type="button.default"
-                                    >
-                                      <a
-                                        className="elementor-button elementor-button-link elementor-size-sm"
-                                        href="https://book.ignitewatersports.com"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                      >
-                                        <span className="elementor-button-content-wrapper">
-                                          <span className="elementor-button-text">
-                                            Explore Activities
-                                          </span>
-                                        </span>
-                                      </a>
-
-                                      <a
-                                        className="elementor-button elementor-button-link elementor-size-sm"
-                                        href="/our-events"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                      >
-                                        <span className="elementor-button-content-wrapper">
-                                          <span className="elementor-button-text">
-                                            See What's On
-                                          </span>
-                                        </span>
-                                      </a>
-                                    </div>
+                                    
                                   </div>
                                 </div>
                               </div>
@@ -777,9 +777,10 @@ export default function Home() {
                     decoding="async"
                     width={191}
                     height={293}
-                    src="/watersports/2026/05/home3-aboutimg-03.png"
+                    src="/watersports/iw1.jpg"
                     className="attachment-full size-full wp-image-5453"
                     alt=""
+                    style={{border:"5px solid #fff",borderRadius:"15px"}}
                   />{" "}
                 </div>
                 <div
@@ -794,7 +795,7 @@ export default function Home() {
                     decoding="async"
                     width={452}
                     height={656}
-                    src="/watersports/2026/05/home3-aboutimg-01.png"
+                    src="/watersports/Girl-laughing-SUP.jpg"
                     className="attachment-full size-full wp-image-5434"
                     alt=""
                   />{" "}
@@ -811,7 +812,8 @@ export default function Home() {
                     decoding="async"
                     width={191}
                     height={293}
-                    src="/watersports/2026/05/home3-aboutimg-02.png"
+                    src="/watersports/iw2.jpg"
+                    style={{border:"5px solid #fff",borderRadius:"15px"}}
                     className="attachment-full size-full wp-image-5448"
                     alt=""
                   />{" "}
@@ -844,7 +846,7 @@ export default function Home() {
                   data-widget_type="heading.default"
                 >
                   <h2 className="elementor-heading-title elementor-size-default">
-                    Your Gateway to Ocean Thrills and Wellness
+                    Your gateway to ocean thrills and wellness
                   </h2>{" "}
                 </div>
                 <div
@@ -1011,7 +1013,7 @@ export default function Home() {
                     target="_blank"
                   >
                     <span className="elementor-button-content-wrapper">
-                      <span className="elementor-button-text">Our Story</span>
+                      <span className="elementor-button-text" style={{textTransform:"initial"}}>Our Story</span>
                     </span>
                   </a>
                 </div>
@@ -1594,8 +1596,8 @@ export default function Home() {
           <div className="e-con-inner">
             <section className="how-it-works">
               <div className="how-it-works-header">
-                <span className="section-label">HOW IT WORKS</span>
-                <h2>3 easy steps to book your fun on the Palm</h2>
+                <span className="section-label">How it works</span>
+                <h2 style={{fontSize:"35px"}}>3 easy steps to book your fun on the Palm</h2>
               </div>
 
               <div className="steps-wrapper">
@@ -1672,7 +1674,7 @@ export default function Home() {
                 <div className="elementor-element elementor-element-7e638e8 elementor-invisible elementor-widget elementor-widget-button" data-id="7e638e8" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="button.default">
                   <a className="elementor-button elementor-button-link elementor-size-sm" href="/our-events" target="_blank">
                     <span className="elementor-button-content-wrapper">
-                      <span className="elementor-button-text">View All Events</span>
+                      <span className="elementor-button-text" style={{textTransform:"initial"}}>View All Events</span>
                     </span>
                   </a>
                 </div>
@@ -3108,6 +3110,7 @@ export default function Home() {
           data-id="b282ccf"
           data-element_type="container"
           data-e-type="container"
+          style={{marginBottom:"2px"}}
         >
           <div
             className="elementor-element elementor-element-58be921 e-con-full e-flex elementor-invisible e-con e-child"
@@ -3126,7 +3129,7 @@ export default function Home() {
               data-widget_type="heading.default"
             >
               <h3 className="elementor-heading-title elementor-size-default">
-                Get In Touch
+                Get in touch
               </h3>{" "}
             </div>
             {/* <div
@@ -3343,7 +3346,8 @@ export default function Home() {
                               className="wpcf7-form-control wpcf7-submit has-spinner btn-default"
                               id="msgSubmit"
                               type="submit"
-                              defaultValue="Send Message"
+                              defaultValue="Send message"
+                              style={{textTransform:"initial"}}
                             />
                           </p>
                         </div>
@@ -3360,7 +3364,6 @@ export default function Home() {
           </div>
           <div
             className="elementor-element elementor-element-a636a94 e-con-full e-flex elementor-invisible e-con e-child"
-            style={{background:'#ff9015'}}
             data-id="a636a94"
             data-element_type="container"
             data-e-type="container"
@@ -3644,7 +3647,7 @@ export default function Home() {
             </div>
           </div>
         )}
-        <div
+        {/* <div
           className="elementor-element elementor-element-868fa6b e-con-full e-flex e-con e-parent"
           data-id="868fa6b"
           data-element_type="container"
@@ -3777,7 +3780,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
       <SiteFooter />
       <link

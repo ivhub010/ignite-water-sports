@@ -124,7 +124,7 @@ body {
   font-size: 14px;
   font-weight: 600;
   line-height: 1;
-  text-transform: uppercase;
+  text-transform: initial;
   letter-spacing: 0.4px;
 
   transition:
@@ -239,7 +239,7 @@ body {
 
 .step-card {
   position: relative;
-  padding: 104px 26px 28px;
+  padding: 85px 25px;
   min-height: 290px;
 }
 
@@ -251,7 +251,7 @@ body {
   position: absolute;
   top: 22px;
   left: 24px;
-  font-size: 66px;
+  font-size: 60px;
   line-height: 1;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.5);
@@ -396,6 +396,61 @@ body {
   height: 32px;
 }
 
+.elementor-6724 .elementor-element.elementor-element-472d1df{
+  padding-bottom: 20px !important;
+}
+
+.elementor-6724 .elementor-element.elementor-element-a636a94:not(.elementor-motion-effects-element-type-background), .elementor-6724 .elementor-element.elementor-element-a636a94 > .elementor-motion-effects-container > .elementor-motion-effects-layer{
+  background-image: url("/watersports/Girl-pushing-SUP.jpg") !important;
+}
+
+@media (max-width: 1024px) {
+  #menu-main-menu .menu-item-has-children > .ekit-menu-nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  #menu-main-menu .elementskit-submenu-panel {
+    position: static !important;
+    width: 100% !important;
+    margin: 0 0 15px !important;
+    padding: 5px 0 5px 20px !important;
+    background: #111 !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+
+  #menu-main-menu .elementskit-submenu-panel .ekit-menu-nav-link {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important; /* important */
+    gap: 10px !important;
+
+    font-size: 18px !important;
+    padding: 10px 0 !important;
+    text-align: left !important;
+  }
+
+  #menu-main-menu .elementskit-submenu-panel .ekit-menu-nav-link::before {
+    content: "-";
+    color: #54c8e8;
+    font-size: 18px;
+    font-weight: 600;
+    flex: 0 0 auto;
+  }
+
+  .mobile-submenu-arrow {
+    font-size: 28px;
+    line-height: 1;
+    margin-left: 15px;
+    font-weight: 300;
+  }
+}
+
 @media (max-width: 767px) {
   .floating-whatsapp {
     right: 15px;
@@ -475,7 +530,7 @@ body {
   .step-number {
     top: 18px;
     left: 22px;
-    font-size: 58px;
+    font-size: 50px;
   }
 
   .step-icon {

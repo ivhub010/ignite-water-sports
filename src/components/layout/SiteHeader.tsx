@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 /**
  * Site header — single source of truth for the top bar, logo and navigation.
  * Edit here and every page updates.
@@ -8,6 +11,20 @@ type SiteHeaderProps = {
 };
 
 export default function SiteHeader({ transparent = false }: SiteHeaderProps) {
+
+  const [mobileSubmenu, setMobileSubmenu] = useState<string | null>(null);
+
+  const toggleMobileSubmenu = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    menu: string
+  ) => {
+    e.preventDefault();
+
+    setMobileSubmenu((current) =>
+      current === menu ? null : menu
+    );
+  };
+
   const logo = transparent ? '/watersports/ignite-logo-light.png' : '/watersports/ignite-logo.png';
   return (
     <>
@@ -107,7 +124,7 @@ export default function SiteHeader({ transparent = false }: SiteHeaderProps) {
                   </button>
                   <div id="ekit-megamenu-divided-left-navigation" className="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-no ekit-nav-dropdown-hover"><ul id="menu-divided-left-navigation" className="elementskit-navbar-nav elementskit-menu-po-left submenu-click-on-icon">
     <li className="menu-item menu-item-has-children nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"><a href="#" className="ekit-menu-nav-link ekit-menu-dropdown-toggle">Rentals</a>
-      <ul className="elementskit-dropdown elementskit-submenu-panel">
+      <ul className="elementskit-dropdown elementskit-submenu-panel" >
         <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/stand-up-paddle-boarding" className="ekit-menu-nav-link">SUP</a></li>
         <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/kayak" className="ekit-menu-nav-link">Kayak</a></li>
         <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/water-park" className="ekit-menu-nav-link">Water Park</a></li>
@@ -163,6 +180,7 @@ export default function SiteHeader({ transparent = false }: SiteHeaderProps) {
     <li className="menu-item menu-item-has-children nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"><a href="/our-events" className="ekit-menu-nav-link ekit-menu-dropdown-toggle">Events</a>
       <ul className="elementskit-dropdown elementskit-submenu-panel">
         <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/ignite-pink-is-punk-events" className="ekit-menu-nav-link">Pink is Punk</a></li>
+        <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/community-events" className="ekit-menu-nav-link">Community Events</a></li>
         <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/team-bonding" className="ekit-menu-nav-link">Team Bonding</a></li>
         <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/ignite-calendar" className="ekit-menu-nav-link">Calendar</a></li>
       </ul>
@@ -170,11 +188,10 @@ export default function SiteHeader({ transparent = false }: SiteHeaderProps) {
     <li className="menu-item menu-item-has-children nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"><a href="/shop" className="ekit-menu-nav-link ekit-menu-dropdown-toggle">Shop</a>
       <ul className="elementskit-dropdown elementskit-submenu-panel">
         <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/shop" className="ekit-menu-nav-link">Merch</a></li>
-        <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/community-events" className="ekit-menu-nav-link">Community Events</a></li>
       </ul>
     </li>
     <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/faq" className="ekit-menu-nav-link">FAQ</a></li>
-    <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/contact-us" className="ekit-menu-nav-link">Contact</a></li>
+    <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/contact-us" className="ekit-menu-nav-link">Contact Us</a></li>
     </ul><div className="elementskit-nav-identity-panel"><button className="elementskit-menu-close elementskit-menu-toggler" type="button">X</button></div></div>
                   <div className="elementskit-menu-overlay elementskit-menu-offcanvas-elements elementskit-menu-toggler ekit-nav-menu--overlay" />      </nav>
               </div>
@@ -208,7 +225,7 @@ export default function SiteHeader({ transparent = false }: SiteHeaderProps) {
               <div className="elementor-element elementor-element-2cf9a98 elementor-widget elementor-widget-button" data-id="2cf9a98" data-element_type="widget" data-e-type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="button.default">
                 <a className="elementor-button elementor-button-link elementor-size-sm" href="https://book.ignitewatersports.com">
                   <span className="elementor-button-content-wrapper">
-                    <span className="elementor-button-text">Book Now</span>
+                    <span className="elementor-button-text" style={{textTransform:"initial"}}>Book now</span>
                   </span>
                 </a>
               </div>
@@ -240,46 +257,248 @@ export default function SiteHeader({ transparent = false }: SiteHeaderProps) {
                       <span className="elementskit-menu-hamburger-icon" /><span className="elementskit-menu-hamburger-icon" /><span className="elementskit-menu-hamburger-icon" />
                     </button>
                     <div id="ekit-megamenu-main-menu" className="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-no ekit-nav-dropdown-hover"><ul id="menu-main-menu" className="elementskit-navbar-nav elementskit-menu-po-left submenu-click-on-icon">
-                         <li id="menu-item-rentals" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" className="ekit-menu-nav-link ekit-menu-dropdown-toggle">Rentals</a>
-                           <ul className="elementskit-dropdown elementskit-submenu-panel">
-                             <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/stand-up-paddle-boarding" className="ekit-menu-nav-link">SUP</a></li>
-                             <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/kayak" className="ekit-menu-nav-link">Kayak</a></li>
-                             <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/water-park" className="ekit-menu-nav-link">Water Park</a></li>
-                             <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/pedalo" className="ekit-menu-nav-link">Pedalo</a></li>
-                             <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/e-foil" className="ekit-menu-nav-link">E-Foil</a></li>
-                           </ul>
-                         </li>
-                         <li id="menu-item-kids" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" className="ekit-menu-nav-link ekit-menu-dropdown-toggle">Kids and Birthday</a>
-                           <ul className="elementskit-dropdown elementskit-submenu-panel">
-                             <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/kids-and-birthdays" className="ekit-menu-nav-link">Kids Birthday Party</a></li>
-                             <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/kids-kayak" className="ekit-menu-nav-link">Kids Kayak</a></li>
-                             <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/kids-camp" className="ekit-menu-nav-link">Kids Camp</a></li>
-                             <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/water-sports-club" className="ekit-menu-nav-link">Water Sports Club</a></li>
-                           </ul>
-                         </li>
-                         <li id="menu-item-classes" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="#" className="ekit-menu-nav-link ekit-menu-dropdown-toggle">Classes</a>
-                           <ul className="elementskit-dropdown elementskit-submenu-panel">
-                             <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/beach-yoga" className="ekit-menu-nav-link">Beach Yoga</a></li>
-                             <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/sup-sound-healing" className="ekit-menu-nav-link">SUP Sound Healing</a></li>
-                             <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/full-moon-series" className="ekit-menu-nav-link">Full Moon Series</a></li>
-                             <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/sup-yoga" className="ekit-menu-nav-link">SUP Yoga</a></li>
-                             <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/soma-breath" className="ekit-menu-nav-link">SOMA Breath</a></li>
-                           </ul>
-                         </li>
-                         <li id="menu-item-events" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="/our-events" className="ekit-menu-nav-link ekit-menu-dropdown-toggle">Events</a>
-                           <ul className="elementskit-dropdown elementskit-submenu-panel">
-                             <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/ignite-pink-is-punk-events" className="ekit-menu-nav-link">Pink is Punk</a></li>
-                             <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/team-bonding" className="ekit-menu-nav-link">Team Bonding</a></li>
-                             <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/ignite-calendar" className="ekit-menu-nav-link">Calendar</a></li>
-                           </ul>
-                         </li>
-                         <li id="menu-item-shop" className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="/shop" className="ekit-menu-nav-link ekit-menu-dropdown-toggle">Shop</a>
-                           <ul className="elementskit-dropdown elementskit-submenu-panel">
-                             <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/shop" className="ekit-menu-nav-link">Merch</a></li>
-                             <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/community-events" className="ekit-menu-nav-link">Community Events</a></li>
-                           </ul>
-                         </li>
-                         <li id="menu-item-faq" className="menu-item menu-item-type-post_type menu-item-object-page nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="/faq" className="ekit-menu-nav-link">FAQ</a></li></ul><div className="elementskit-nav-identity-panel"><button className="elementskit-menu-close elementskit-menu-toggler" type="button">X</button></div></div>
+                         <li
+                            id="menu-item-rentals"
+                            className={`menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content ${
+                              mobileSubmenu === "rentals" ? "submenu-open" : ""
+                            }`}
+                          >
+                            <a
+                              href="#"
+                              className="ekit-menu-nav-link ekit-menu-dropdown-toggle"
+                              onClick={(e) => toggleMobileSubmenu(e, "rentals")}
+                            >
+                              Rentals
+                              <span className="mobile-submenu-arrow">
+                                {mobileSubmenu === "rentals" ? "−" : "+"}
+                              </span>
+                            </a>
+
+                            <ul
+                              className="elementskit-dropdown elementskit-submenu-panel"
+                              style={{
+                                display: mobileSubmenu === "rentals" ? "inline-block" : "none",
+                              }}
+                            >
+                              <li className="menu-item nav-item elementskit-mobile-builder-content">
+                                <a href="/stand-up-paddle-boarding" className="ekit-menu-nav-link">
+                                  SUP
+                                </a>
+                              </li>
+
+                              <li className="menu-item nav-item elementskit-mobile-builder-content">
+                                <a href="/kayak" className="ekit-menu-nav-link">
+                                  Kayak
+                                </a>
+                              </li>
+
+                              <li className="menu-item nav-item elementskit-mobile-builder-content">
+                                <a href="/water-park" className="ekit-menu-nav-link">
+                                  Water Park
+                                </a>
+                              </li>
+
+                              <li className="menu-item nav-item elementskit-mobile-builder-content">
+                                <a href="/pedalo" className="ekit-menu-nav-link">
+                                  Pedalo
+                                </a>
+                              </li>
+
+                              <li className="menu-item nav-item elementskit-mobile-builder-content">
+                                <a href="/e-foil" className="ekit-menu-nav-link">
+                                  E-Foil
+                                </a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li
+                            id="menu-item-kids"
+                            className={`menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content ${
+                              mobileSubmenu === "kids" ? "submenu-open" : ""
+                            }`}
+                          >
+                            <a
+                              href="#"
+                              className="ekit-menu-nav-link ekit-menu-dropdown-toggle"
+                              onClick={(e) => toggleMobileSubmenu(e, "kids")}
+                            >
+                              Kids and Birthday
+                              <span className="mobile-submenu-arrow">
+                                {mobileSubmenu === "kids" ? "−" : "+"}
+                              </span>
+                            </a>
+
+                            <ul
+                              className="elementskit-dropdown elementskit-submenu-panel"
+                              style={{
+                                display: mobileSubmenu === "kids" ? "inline-block" : "none",
+                              }}
+                            >
+                              <li className="menu-item nav-item elementskit-mobile-builder-content">
+                                <a href="/kids-and-birthdays" className="ekit-menu-nav-link">
+                                  Kids Birthday Party
+                                </a>
+                              </li>
+
+                              <li className="menu-item nav-item elementskit-mobile-builder-content">
+                                <a href="/kids-kayak" className="ekit-menu-nav-link">
+                                  Kids Kayak
+                                </a>
+                              </li>
+
+                              <li className="menu-item nav-item elementskit-mobile-builder-content">
+                                <a href="/kids-camp" className="ekit-menu-nav-link">
+                                  Kids Camp
+                                </a>
+                              </li>
+
+                              <li className="menu-item nav-item elementskit-mobile-builder-content">
+                                <a href="/water-sports-club" className="ekit-menu-nav-link">
+                                  Water Sports Club
+                                </a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li
+                            id="menu-item-classes"
+                            className={`menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content ${
+                              mobileSubmenu === "classes" ? "submenu-open" : ""
+                            }`}
+                          >
+                            <a
+                              href="#"
+                              className="ekit-menu-nav-link ekit-menu-dropdown-toggle"
+                              onClick={(e) => toggleMobileSubmenu(e, "classes")}
+                            >
+                              Classes
+                              <span className="mobile-submenu-arrow">
+                                {mobileSubmenu === "classes" ? "−" : "+"}
+                              </span>
+                            </a>
+
+                            <ul
+                              className="elementskit-dropdown elementskit-submenu-panel"
+                              style={{
+                                display: mobileSubmenu === "classes" ? "inline-block" : "none",
+                              }}
+                            >
+                              <li className="menu-item nav-item elementskit-mobile-builder-content">
+                                <a href="/beach-yoga" className="ekit-menu-nav-link">
+                                  Beach Yoga
+                                </a>
+                              </li>
+
+                              <li className="menu-item nav-item elementskit-mobile-builder-content">
+                                <a href="/sup-sound-healing" className="ekit-menu-nav-link">
+                                  SUP Sound Healing
+                                </a>
+                              </li>
+
+                              <li className="menu-item nav-item elementskit-mobile-builder-content">
+                                <a href="/full-moon-series" className="ekit-menu-nav-link">
+                                  Full Moon Series
+                                </a>
+                              </li>
+
+                              <li className="menu-item nav-item elementskit-mobile-builder-content">
+                                <a href="/sup-yoga" className="ekit-menu-nav-link">
+                                  SUP Yoga
+                                </a>
+                              </li>
+
+                              <li className="menu-item nav-item elementskit-mobile-builder-content">
+                                <a href="/soma-breath" className="ekit-menu-nav-link">
+                                  SOMA Breath
+                                </a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li
+                            id="menu-item-events"
+                            className={`menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content ${
+                              mobileSubmenu === "events" ? "submenu-open" : ""
+                            }`}
+                          >
+                            <a
+                              href="#"
+                              className="ekit-menu-nav-link ekit-menu-dropdown-toggle"
+                              onClick={(e) => toggleMobileSubmenu(e, "events")}
+                            >
+                              Events
+                              <span className="mobile-submenu-arrow">
+                                {mobileSubmenu === "events" ? "−" : "+"}
+                              </span>
+                            </a>
+
+                            <ul
+                              className="elementskit-dropdown elementskit-submenu-panel"
+                              style={{
+                                display: mobileSubmenu === "events" ? "inline-block" : "none",
+                              }}
+                            >
+                              <li className="menu-item nav-item elementskit-mobile-builder-content">
+                                <a href="/our-events" className="ekit-menu-nav-link">
+                                  All Events
+                                </a>
+                              </li>
+
+                              <li className="menu-item nav-item elementskit-mobile-builder-content">
+                                <a href="/ignite-pink-is-punk-events" className="ekit-menu-nav-link">
+                                  Pink is Punk
+                                </a>
+                              </li>
+
+                              <li className="menu-item nav-item elementskit-mobile-builder-content">
+                                <a href="/community-events" className="ekit-menu-nav-link">
+                                  Community Events
+                                </a>
+                              </li>
+
+                              <li className="menu-item nav-item elementskit-mobile-builder-content">
+                                <a href="/team-bonding" className="ekit-menu-nav-link">
+                                  Team Bonding
+                                </a>
+                              </li>
+
+                              <li className="menu-item nav-item elementskit-mobile-builder-content">
+                                <a href="/ignite-calendar" className="ekit-menu-nav-link">
+                                  Calendar
+                                </a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li
+                            id="menu-item-shop"
+                            className={`menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content ${
+                              mobileSubmenu === "shop" ? "submenu-open" : ""
+                            }`}
+                          >
+                            <a
+                              href="#"
+                              className="ekit-menu-nav-link ekit-menu-dropdown-toggle"
+                              onClick={(e) => toggleMobileSubmenu(e, "shop")}
+                            >
+                              Shop
+                              <span className="mobile-submenu-arrow">
+                                {mobileSubmenu === "shop" ? "−" : "+"}
+                              </span>
+                            </a>
+
+                            <ul
+                              className="elementskit-dropdown elementskit-submenu-panel"
+                              style={{
+                                display: mobileSubmenu === "shop" ? "inline-block" : "none",
+                              }}
+                            >
+                              <li className="menu-item nav-item elementskit-mobile-builder-content">
+                                <a href="/shop" className="ekit-menu-nav-link">
+                                  Merch
+                                </a>
+                              </li>
+                            </ul>
+                          </li>                         
+                         <li id="menu-item-faq" className="menu-item menu-item-type-post_type menu-item-object-page nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="/faq" className="ekit-menu-nav-link">FAQ</a></li>
+                         <li id="menu-item-faq" className="menu-item menu-item-type-post_type menu-item-object-page nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="/contact-us" className="ekit-menu-nav-link">Contact Us</a></li></ul><div className="elementskit-nav-identity-panel"><button className="elementskit-menu-close elementskit-menu-toggler" type="button">X</button></div></div>
                     <div className="elementskit-menu-overlay elementskit-menu-offcanvas-elements elementskit-menu-toggler ekit-nav-menu--overlay" />      </nav>
                 </div>
               </div>
