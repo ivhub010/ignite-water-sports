@@ -79,7 +79,7 @@ export default function SiteFooter() {
               </div>
               <div className="elementor-element elementor-element-63021ef e-con-full e-flex e-con e-child" data-id="63021ef" data-element_type="container" data-e-type="container">
                 <div className="elementor-element elementor-element-bdaa170 sis-heading-animation sis-animation-heading-none elementor-widget elementor-widget-heading" data-id="bdaa170" data-element_type="widget" data-e-type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="heading.default">
-                  <h3 className="elementor-heading-title elementor-size-default">Links</h3>				</div>
+                  <h3 className="elementor-heading-title elementor-size-default">Quick links</h3>				</div>
                 <div className="elementor-element elementor-element-71886b9 elementor-widget elementor-widget-ekit-vertical-menu" data-id="71886b9" data-element_type="widget" data-e-type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="ekit-vertical-menu.default">
                   <div className="ekit-wid-con">        <div className="ekit-vertical-main-menu-wraper   badge-position-left">
                       <div className="ekit-vertical-menu-container"><ul id="menu-footer-menu" className="ekit-vertical-navbar-nav submenu-click-on-icon"><li id="menu-item-f1" className="menu-item nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="/" className="ekit-menu-nav-link">Home</a></li>
@@ -191,7 +191,7 @@ export default function SiteFooter() {
             <div className="e-con-inner">
               <div className="elementor-element elementor-element-7e24a17 e-con-full e-flex e-con e-child" data-id="7e24a17" data-element_type="container" data-e-type="container">
                 <div className="elementor-element elementor-element-98ff748 elementor-widget elementor-widget-text-editor footerflex" data-id="98ff748" data-element_type="widget" data-e-type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
-                  <p className="p1">© IGNITE Water Sports. All Rights Reserved 2010-{new Date().getFullYear()}.</p> <p className="p2">Part of the <img src="https://ignite.ae/assets/logos/Ignite%20brandmark_RGB_Green_FA.png"/> Group</p>
+                  <p className="p1">© IGNITE Water Sports. All Rights Reserved 2010-{new Date().getFullYear()}.</p> <p className="p2">Part of the <a href="https://ignite.ae/" target="_blank"><img src="https://ignite.ae/assets/logos/Ignite%20brandmark_RGB_Green_FA.png"/></a> Group</p>
                 </div>
               </div>
               <div className="elementor-element elementor-element-a26ffab e-con-full e-flex e-con e-child" data-id="a26ffab" data-element_type="container" data-e-type="container">

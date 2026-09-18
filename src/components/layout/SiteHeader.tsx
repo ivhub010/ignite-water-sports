@@ -223,7 +223,7 @@ export default function SiteHeader({ transparent = false }: SiteHeaderProps) {
                   </div>
                 </div>				</div>
               <div className="elementor-element elementor-element-2cf9a98 elementor-widget elementor-widget-button" data-id="2cf9a98" data-element_type="widget" data-e-type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="button.default">
-                <a className="elementor-button elementor-button-link elementor-size-sm" href="https://book.ignitewatersports.com">
+                <a className="elementor-button elementor-button-link orangebtn elementor-size-sm" href="https://book.ignitewatersports.com">
                   <span className="elementor-button-content-wrapper">
                     <span className="elementor-button-text" style={{textTransform:"initial"}}>Book now</span>
                   </span>

@@ -31,8 +31,8 @@ body {
 }
 
 .desktopheader .elementor-repeater-item-3ffd702:hover .ekit-stylish-list-content-title, .desktopheader .elementor-repeater-item-3ffd702:hover .ekit-stylish-list-content-icon i, .desktopheader .elementor-repeater-item-3ffd702:hover svg{
-  color: #24D2DD !important;
-  fill: #24D2DD !important;
+  color: #54c8e8 !important;
+  fill: #54c8e8 !important;
 }
 
 .ekit-slider-wrapper .e-con-inner{
@@ -239,7 +239,7 @@ body {
 
 .step-card {
   position: relative;
-  padding: 85px 25px;
+  padding: 85px 25px 0;
   min-height: 290px;
 }
 
@@ -404,6 +404,47 @@ body {
   background-image: url("/watersports/Girl-pushing-SUP.jpg") !important;
 }
 
+.orangebtn{
+  background: #ff9015 !important;
+  border-color: #ff9015 !important;
+  color: #fff !important;
+}
+
+.orangebtn:hover{
+  border-color: #222E34 !important;
+  color: #222E34 !important;
+}
+
+.solidblue{
+  background: #54c8e8 !important;
+  border-color: #54c8e8 !important;
+  
+
+  h3{
+    color: #fff !important;
+  }
+}
+
+.sup{
+  display: flex !important;
+  min-height: 400px !important;
+  background-image: url("/watersports/SUP1-e1719384554118.png") !important;
+
+  .e-con-inner{
+    align-content: center !important;
+
+    h1{
+      font-size: 40px;
+      color: #fff;
+      text-align: center;
+    }
+  }
+}
+
+.hidden{
+  display: none;
+}
+
 @media (max-width: 1024px) {
   #menu-main-menu .menu-item-has-children > .ekit-menu-nav-link {
     display: flex;
@@ -480,7 +521,7 @@ body {
   }
 
   .step-card {
-    padding: 92px 20px 24px;
+    padding: 92px 20px 10px;
   }
 
   .step-card h3 {
@@ -523,7 +564,7 @@ body {
 
   .step-card {
     min-height: auto;
-    padding: 82px 22px 25px;
+    padding: 82px 22px 10px;
   }
 
   .step-card:not(:last-child) {

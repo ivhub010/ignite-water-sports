@@ -254,7 +254,7 @@ export default function Home() {
                                       <p>
                                         eFoil, kayak, SUP, kid's parties and more, right on the Palm.
                                       </p>
-
+                                      <br/>
                                       <div
                                       className="elementor-element elementor-element-35e66c3 elementor-invisible elementor-widget elementor-widget-button"
                                       data-id="35e66c3"
@@ -264,7 +264,7 @@ export default function Home() {
                                       data-widget_type="button.default"
                                     >
                                       <a
-                                        className="elementor-button elementor-button-link elementor-size-sm"
+                                        className="elementor-button elementor-button-link elementor-size-sm orangebtn"
                                         href="https://book.ignitewatersports.com"
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -379,10 +379,9 @@ export default function Home() {
                                       data-widget_type="text-editor.default"
                                     >
                                       <p>
-                                        eFoil, kayak, SUP, kid’s parties and
-                                        more right on the Palm. Experience it
-                                        all at RIVA Beach Club on Palm Jumeirah.
-                                      </p>{" "}
+                                        eFoil, kayak, SUP, kid's parties and more, right on the Palm.
+                                      </p>
+                                      <br/>
                                     </div>
                                     <div
                                       className="elementor-element elementor-element-a8a24e6 elementor-invisible elementor-widget elementor-widget-button"
@@ -393,14 +392,14 @@ export default function Home() {
                                       data-widget_type="button.default"
                                     >
                                       <a
-                                        className="elementor-button elementor-button-link elementor-size-sm"
+                                        className="elementor-button elementor-button-link elementor-size-sm orangebtn"
                                         href="https://book.ignitewatersports.com"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                       >
                                         <span className="elementor-button-content-wrapper">
                                           <span className="elementor-button-text">
-                                            Explore Activities
+                                            Book now
                                           </span>
                                         </span>
                                       </a>
@@ -413,7 +412,7 @@ export default function Home() {
                                       >
                                         <span className="elementor-button-content-wrapper">
                                           <span className="elementor-button-text">
-                                            See What's On
+                                            See what's on
                                           </span>
                                         </span>
                                       </a>
@@ -490,10 +489,9 @@ export default function Home() {
                                       data-widget_type="text-editor.default"
                                     >
                                       <p>
-                                        eFoil, kayak, SUP, kid’s parties and
-                                        more right on the Palm. Experience it
-                                        all at RIVA Beach Club on Palm Jumeirah.
-                                      </p>{" "}
+                                        eFoil, kayak, SUP, kid's parties and more, right on the Palm.
+                                      </p>
+                                      <br/>
                                     </div>
                                     <div
                                       className="elementor-element elementor-element-0a8f2a5 elementor-invisible elementor-widget elementor-widget-button"
@@ -504,14 +502,14 @@ export default function Home() {
                                       data-widget_type="button.default"
                                     >
                                       <a
-                                        className="elementor-button elementor-button-link elementor-size-sm"
+                                        className="elementor-button elementor-button-link elementor-size-sm orangebtn"
                                         href="https://book.ignitewatersports.com"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                       >
                                         <span className="elementor-button-content-wrapper">
                                           <span className="elementor-button-text">
-                                            Explore Activities
+                                            Book now
                                           </span>
                                         </span>
                                       </a>
@@ -524,7 +522,7 @@ export default function Home() {
                                       >
                                         <span className="elementor-button-content-wrapper">
                                           <span className="elementor-button-text">
-                                            See What's On
+                                            See what's on
                                           </span>
                                         </span>
                                       </a>
@@ -618,7 +616,7 @@ export default function Home() {
                             hydrofoils, paddleboards, and kayaks.
                           </p>
                           <span className="learn-more-btn">
-                            Learn More
+                            Learn more
                             <span className="learn-more-arrow">→</span>
                           </span>
                         </div>
@@ -682,7 +680,7 @@ export default function Home() {
                             camps, and birthday celebrations.
                           </p>
                           <span className="learn-more-btn">
-                            Learn More
+                            Learn more
                             <span className="learn-more-arrow">→</span>
                           </span>
                         </div>
@@ -733,7 +731,7 @@ export default function Home() {
                             and more on the beach and on the water.
                           </p>
                           <span className="learn-more-btn">
-                            Learn More
+                            Learn more
                             <span className="learn-more-arrow">→</span>
                           </span>
                         </div>
@@ -1008,7 +1006,7 @@ export default function Home() {
                   data-widget_type="button.default"
                 >
                   <a
-                    className="elementor-button elementor-button-link elementor-size-sm"
+                    className="elementor-button elementor-button-link elementor-size-sm orangebtn"
                     href="https://ignite.ae/"
                     target="_blank"
                   >
@@ -1644,7 +1642,7 @@ export default function Home() {
                 data-e-type="container"
               >
                 <div
-                  className="elementor-element elementor-element-8f76e38 sis-heading-animation sis-animation-heading-style-1 elementor-widget elementor-widget-heading"
+                  className="elementor-element elementor-element-8f76e38 solidblue sis-heading-animation sis-animation-heading-style-1 elementor-widget elementor-widget-heading"
                   data-id="8f76e38"
                   data-element_type="widget"
                   data-e-type="widget"
@@ -1672,9 +1670,9 @@ export default function Home() {
                 {/* <div className="elementor-element elementor-element-07c0424 elementor-invisible elementor-widget elementor-widget-text-editor" data-id="07c0424" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:50,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
                   <p>Be part of thrilling water adventures and exclusive beach events. From high-energy competitions to relaxing ocean experiences, discover activities designed for every explorer.</p>								</div> */}
                 <div className="elementor-element elementor-element-7e638e8 elementor-invisible elementor-widget elementor-widget-button" data-id="7e638e8" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="button.default">
-                  <a className="elementor-button elementor-button-link elementor-size-sm" href="/our-events" target="_blank">
+                  <a className="elementor-button elementor-button-link elementor-size-sm orangebtn" href="/our-events" target="_blank">
                     <span className="elementor-button-content-wrapper">
-                      <span className="elementor-button-text" style={{textTransform:"initial"}}>View All Events</span>
+                      <span className="elementor-button-text" style={{textTransform:"initial"}}>View all events</span>
                     </span>
                   </a>
                 </div>
@@ -2137,7 +2135,7 @@ export default function Home() {
                   data-widget_type="heading.default"
                 >
                   <h3 className="elementor-heading-title elementor-size-default">
-                    What our guests say
+                    Our reviews
                   </h3>{" "}
                 </div>
                 <div
@@ -2149,7 +2147,7 @@ export default function Home() {
                   data-widget_type="heading.default"
                 >
                   <h2 className="elementor-heading-title elementor-size-default">
-                    Check Out Our Awesome Reviews
+                    What our guests say
                   </h2>{" "}
                 </div>
                 <div
@@ -3343,7 +3341,7 @@ export default function Home() {
                         <div className="col-md-12 form-btn">
                           <p>
                             <input
-                              className="wpcf7-form-control wpcf7-submit has-spinner btn-default"
+                              className="wpcf7-form-control wpcf7-submit has-spinner btn-default orangebtn"
                               id="msgSubmit"
                               type="submit"
                               defaultValue="Send message"
@@ -3376,7 +3374,7 @@ export default function Home() {
               data-e-type="container"
               data-settings='{"position":"absolute"}'
             >
-              <div
+              {/* <div
                 className="elementor-element elementor-element-a09b5e2 sis-image-animation sis-animation-image-none elementor-widget elementor-widget-image"
                 data-id="a09b5e2"
                 data-element_type="widget"
@@ -3393,7 +3391,7 @@ export default function Home() {
                   className="attachment-full size-full wp-image-6271"
                   alt=""
                 />{" "}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

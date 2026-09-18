@@ -59,7 +59,7 @@ export function HeadingWidget({
 export function TextWidget({ children }: { children: ReactNode }) {
   return (
     <div
-      className="elementor-element elementor-widget elementor-widget-text-editor"
+      className="elementor-element elementor-widget elementor-widget-text-editor hidden"
       {...WIDGET_ATTRS}
       data-widget_type="text-editor.default"
     >

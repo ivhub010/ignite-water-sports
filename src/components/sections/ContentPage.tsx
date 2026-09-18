@@ -98,7 +98,14 @@ function SectionBand({
   );
 }
 
-export default function ContentPage({ content }: { content: PageContent }) {
+export default function ContentPage({
+  content,
+  page,
+}: {
+  content: PageContent;
+  page: string;
+}) {
+
   return (
     <>
       {/* The Elementor stylesheet generated for the content-page template. */}
@@ -112,7 +119,7 @@ export default function ContentPage({ content }: { content: PageContent }) {
       <div
         data-elementor-type="wp-page"
         data-elementor-id={30}
-        className="elementor elementor-30"
+        className={`elementor elementor-30 ${page}`}
       >
         <PageHero title={content.title} tagline={content.tagline} />
         {content.sections.map((section, i) => (
