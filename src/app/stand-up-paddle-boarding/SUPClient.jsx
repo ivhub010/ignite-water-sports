@@ -391,6 +391,111 @@ export function SUPClient() {
           </div>
         </section>
 
+        {/* YOU MIGHT ALSO LIKE */}
+        <section className="related-section">
+          <div className="sup-container">
+            <h2 className="related-title">You might also like</h2>
+
+            <div className="related-grid">
+              <article className="related-card">
+                <div className="related-image-placeholder">
+                  <img
+                      src="https://ignitewatersports.com/wp-content/uploads/2024/02/IWS-New-Website-Image-2-1.png"
+                      alt="Explore the Palm by paddle"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                </div>
+
+                <div className="related-card-content">
+                  <span className="related-badge">Kayak</span>
+
+                  <h3>Kayak rental</h3>
+
+                  <p className="related-price">
+                    From <DirhamIcon size="1em" /> 50
+                  </p>
+
+                  <a
+                    href="https://book.ignitewatersports.com/?type=rentals&section=2"
+                    className="related-btn"
+                    target='_blank'
+                  >
+                    Book now
+                  </a>
+                </div>
+              </article>
+
+              <article className="related-card">
+                <div className="related-image-placeholder">
+                  <img
+                      src="https://ignitewatersports.com/wp-content/uploads/2025/10/R5CC1400-scaled.jpg"
+                      alt="Learn to fly on water"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                </div>
+
+                <div className="related-card-content">
+                  <span className="related-badge">eFoil</span>
+
+                  <h3>eFoil rental</h3>
+
+                  <p className="related-price">
+                    From <DirhamIcon size="1em" /> 300
+                  </p>
+
+                  <a
+                    href="https://book.ignitewatersports.com/?type=rentals&section=3"
+                    className="related-btn"
+                    target='_blank'
+                  >
+                    Book now
+                  </a>
+                </div>
+              </article>
+
+              <article className="related-card">
+                <div className="related-image-placeholder">
+                  <img
+                      src="/watersports/supsoundhealing.png"
+                      alt="Learn to fly on water"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                </div>
+
+                <div className="related-card-content">
+                  <span className="related-badge">Classes</span>
+
+                  <h3>SUP sound healing</h3>
+
+                  <p className="related-price">
+                    From <DirhamIcon size="1em" /> 120
+                  </p>
+
+                  <a
+                    href="https://book.ignitewatersports.com/?type=classes&section=2"
+                    className="related-btn"
+                    target='_blank'
+                  >
+                    Book now
+                  </a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
         <style jsx>{`
           .sup-page {
             --blue: #54c8e8;
@@ -829,6 +934,138 @@ export function SUPClient() {
           .faq-item.active .faq-toggle {
             color: var(--navy);
             background: var(--blue);
+          }
+
+          .related-section {
+            padding: 80px 0;
+            background: #fff;
+          }
+
+          .related-title {
+            margin: 0 0 40px;
+            font-size: 42px;
+            line-height: 1.1;
+            color: var(--navy);
+          }
+
+          .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+          }
+
+          .related-card {
+            overflow: hidden;
+            border-radius: 24px;
+            background: #f7f8f9;
+          }
+
+          .related-image-placeholder {
+            width: 100%;
+            aspect-ratio: 1.25 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e7f4fa;
+            text-align: center;
+          }
+
+          .related-card:nth-child(2) .related-image-placeholder {
+            background: #e7f7f2;
+          }
+
+          .related-card:nth-child(3) .related-image-placeholder {
+            background: #fff2dc;
+          }
+
+          .related-image-placeholder span {
+            color: #ff8a16;
+            font-size: 15px;
+            font-weight: 700;
+          }
+
+          .related-card-content {
+            padding: 28px;
+          }
+
+          .related-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            padding: 6px 25px;
+            border-radius: 30px;
+            background: #54c8e8;
+            color: #fff;
+            font-size: 13px;
+            font-weight: 700;
+          }
+
+          .related-card h3 {
+            margin: 0 0 8px;
+            font-size: 26px;
+            line-height: 1.2;
+            color: var(--navy);
+          }
+
+          .related-price {
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+            margin: 0 0 25px;
+            color: #ff8a16;
+            font-size: 20px;
+            font-weight: 700;
+          }
+
+          .related-btn {
+            width: 100%;
+            min-height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: #ff8a16;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            transition: 0.25s ease;
+          }
+
+          .related-btn:hover {
+            background: #e97800;
+            transform: translateY(-2px);
+          }
+
+          @media (max-width: 991px) {
+            .related-grid {
+              grid-template-columns: repeat(2, 1fr);
+            }
+          }
+
+          @media (max-width: 767px) {
+            .related-section {
+              padding: 55px 0;
+            }
+
+            .related-title {
+              margin-bottom: 28px;
+              font-size: 32px;
+            }
+
+            .related-grid {
+              grid-template-columns: 1fr;
+              gap: 22px;
+            }
+
+            .related-card-content {
+              padding: 22px;
+            }
+
+            .related-card h3 {
+              font-size: 22px;
+            }
           }
 
           @media (max-width: 991px) {
