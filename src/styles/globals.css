@@ -429,6 +429,7 @@ body {
   display: flex !important;
   min-height: 420px !important;
   background-image: url("/watersports/SUP1-e1719384554118.png") !important;
+  background-position: center;
 
   .e-con-inner{
     align-content: center !important;
@@ -443,6 +444,33 @@ body {
 
 .hidden{
   display: none;
+}
+
+.why-icon svg{
+  background: #FFF4E7;
+  padding: 5px 2px;
+  border-radius: 10px;
+}
+
+.google-word {
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+
+  .g-blue {
+    color: #4285f4;
+  }
+
+  .g-red {
+    color: #ea4335;
+  }
+
+  .g-yellow {
+    color: #fbbc05;
+  }
+
+  .g-green {
+    color: #34a853;
+  }
 }
 
 @media (max-width: 1024px) {

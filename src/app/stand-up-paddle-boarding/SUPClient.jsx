@@ -43,7 +43,11 @@ const benefits = [
 
 const sessionDetails = [
   { icon: 'clock', label: 'Duration', value: '60 minutes' },
-  { icon: 'tag', label: 'Price', value: 'From AED 75' },
+  { icon: 'tag', label: 'Price', value: (
+       <span className="price-value">
+         From <DirhamIcon size="1em" /> 75
+       </span>
+     ) },
   {
     icon: 'users',
     label: 'Suitable for',
@@ -120,8 +124,8 @@ const faqs = [
 
 function LineIcon({ name }) {
   const common = {
-    width: 20,
-    height: 20,
+    width: 80,
+    height: 40,
     viewBox: '0 0 24 24',
     fill: 'none',
     stroke: 'currentColor',
@@ -194,66 +198,32 @@ export function SUPClient() {
           </div>
         </div>
 
-        {/* INTRO */}
-        <section id="discover" className="sup-section">
-          <div className="sup-container intro-grid">
-            <div>
-              <span className="section-label">PADDLE BOARDING DUBAI</span>
-              <h2>
-                Explore Dubai From <span>a New Perspective</span>
-              </h2>
-              <p className="lead">
-                Imagine gliding across the calm waters of the Arabian Gulf,
-                taking in breathtaking views of Dubai&apos;s iconic skyline.
-                Stand-up paddle boarding combines adventure, relaxation and an
-                unforgettable way to experience the city.
-              </p>
-              <p>
-                With calm and clear waters, Dubai offers an ideal setting for
-                beginners as well as experienced paddle board enthusiasts.
-                Explore the coastline, enjoy the sunshine and experience one of
-                Dubai&apos;s most relaxing water sports.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* BENEFITS */}
-        <section className="sup-section sup-dark">
+        {/* SUP INTRO / BOOKING */}
+        <section className="sup-booking-intro">
           <div className="sup-container">
-            <div className="section-heading light-heading">
-              <span className="section-label">WHY IGNITE</span>
-              <h2>
-                Calm Water. <span>Incredible Experience.</span>
-              </h2>
+            <div className="sup-booking-content">
+              <h2>SUP rental on Palm Jumeirah</h2>
+
               <p>
-                Discover what makes paddle boarding at Palm Jumeirah such a
-                special experience.
+                Glide across the calm, motor-free waters of Palm Jumeirah with the
+                Burj Al Arab on the horizon. Suitable for all levels, our certified
+                instructors are with you every step of the way.
               </p>
-            </div>
 
-            <div className="benefits-grid">
-              {benefits.map((benefit, index) => (
-                <article className="benefit-card" key={benefit.title}>
-                  <span className="benefit-number">
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
-                  <div className="benefit-icon">{benefit.icon}</div>
-                  <h3>{benefit.title}</h3>
-                  <p>{benefit.description}</p>
-                </article>
-              ))}
-            </div>
+              <div className="sup-booking-actions">
+                <a
+                  href="https://book.ignitewatersports.com/?type=rentals&section=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="sup-booking-btn"
+                >
+                  Book now
+                </a>
 
-            <div className="center-action">
-              <a
-                href={BOOKING_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="sup-btn sup-btn-primary"
-              >
-                Book Now <span>→</span>
-              </a>
+                <span className="sup-booking-price">
+                  From AED 50, 60 minutes
+                </span>
+              </div>
             </div>
           </div>
         </section>
@@ -299,7 +269,14 @@ export function SUPClient() {
                         <h3>{item.title}</h3>
                         {item.icon === 'star' ? (
                           <p className="review-copy">
-                            <span className="stars">★★★★★</span> <strong>4.9</strong> on <span className="google-word">Google</span><br />
+                            <span className="stars">★★★★★</span> <strong>4.9</strong> on <span className="google-word" aria-label="Google">
+                              <span className="g-blue">G</span>
+                              <span className="g-red">o</span>
+                              <span className="g-yellow">o</span>
+                              <span className="g-blue">g</span>
+                              <span className="g-green">l</span>
+                              <span className="g-red">e</span>
+                            </span><br />
                             141 reviews, over 21,000 guests welcomed since 2010.
                           </p>
                         ) : (
@@ -408,10 +385,10 @@ export function SUPClient() {
                         objectFit: "cover",
                       }}
                     />
+                  <span className="related-badge">Kayak</span>
                 </div>
 
                 <div className="related-card-content">
-                  <span className="related-badge">Kayak</span>
 
                   <h3>Kayak rental</h3>
 
@@ -440,10 +417,10 @@ export function SUPClient() {
                         objectFit: "cover",
                       }}
                     />
+                    <span className="related-badge">eFoil</span>
                 </div>
 
                 <div className="related-card-content">
-                  <span className="related-badge">eFoil</span>
 
                   <h3>eFoil rental</h3>
 
@@ -472,10 +449,10 @@ export function SUPClient() {
                         objectFit: "cover",
                       }}
                     />
+                    <span className="related-badge">Classes</span>
                 </div>
 
                 <div className="related-card-content">
-                  <span className="related-badge">Classes</span>
 
                   <h3>SUP sound healing</h3>
 
@@ -547,6 +524,71 @@ export function SUPClient() {
           .lead {
             color: #334b58;
             font-size: 19px;
+          }
+          
+          .sup-booking-intro {
+            background: #1d343d;
+            padding: 85px 0 90px;
+          }
+
+          .sup-booking-content {
+            max-width: 1000px;
+          }
+
+          .sup-booking-content h2 {
+            margin: 0 0 30px;
+            max-width: 850px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.05;
+            letter-spacing: -2px;
+          }
+
+          .sup-booking-content p {
+            max-width: 980px;
+            margin: 0;
+            color: rgba(255, 255, 255, 0.72);
+            font-size: 21px;
+            line-height: 1.8;
+          }
+
+          .sup-booking-actions {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-top: 55px;
+          }
+
+          .sup-booking-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 20px 45px;
+
+            border-radius: 18px;
+            background: #ff8a12;
+
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+
+            transition:
+              transform 0.25s ease,
+              background 0.25s ease;
+          }
+
+          .sup-booking-btn:hover {
+            background: #f47c00;
+            transform: translateY(-3px);
+          }
+
+          .sup-booking-price {
+            color: rgba(255, 255, 255, 0.62);
+            font-size: 20px;
+            font-weight: 600;
           }
 
           .section-label {
@@ -861,7 +903,7 @@ export function SUPClient() {
             max-width: 420px;
             aspect-ratio: 9 / 16;
             margin: 0 auto;
-            border-radius: 20px;
+            border-radius: 16px;
             overflow: hidden;
             background: #000;
           }
@@ -901,6 +943,7 @@ export function SUPClient() {
             font-size: 17px;
             font-weight: 700;
             cursor: pointer;
+            text-transform: initial;
           }
 
           .faq-toggle {
@@ -968,6 +1011,7 @@ export function SUPClient() {
             justify-content: center;
             background: #e7f4fa;
             text-align: center;
+            position: relative;
           }
 
           .related-card:nth-child(2) .related-image-placeholder {
@@ -995,10 +1039,13 @@ export function SUPClient() {
             margin-bottom: 15px;
             padding: 6px 25px;
             border-radius: 30px;
-            background: #54c8e8;
-            color: #fff;
+            background: #222e34;
+            color: #fff !important;
             font-size: 13px;
             font-weight: 700;
+            position: absolute;
+            left: 5%;
+            top: 5%;
           }
 
           .related-card h3 {
@@ -1039,12 +1086,65 @@ export function SUPClient() {
           }
 
           @media (max-width: 991px) {
+            .sup-booking-intro {
+              padding: 70px 0;
+            }
+
+            .sup-booking-content h2 {
+              font-size: 30px;
+            }
+
+            .sup-booking-content p {
+              font-size: 18px;
+            }
+
+            .sup-booking-btn {
+              font-size: 20px;
+            }
+              
             .related-grid {
               grid-template-columns: repeat(2, 1fr);
             }
           }
 
           @media (max-width: 767px) {
+            .sup-booking-intro {
+              padding: 55px 0 60px;
+            }
+
+            .sup-booking-content h2 {
+              margin-bottom: 22px;
+              font-size: 25px;
+              line-height: 1.08;
+              letter-spacing: -1px;
+            }
+
+            .sup-booking-content p {
+              font-size: 16px;
+              line-height: 1.7;
+            }
+
+            .sup-booking-actions {
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 18px;
+              margin-top: 35px;
+            }
+
+            .sup-booking-btn {
+              min-width: 190px;
+              min-height: 62px;
+              padding: 15px 30px;
+
+              border-radius: 12px;
+
+              font-size: 18px;
+            }
+
+            .sup-booking-price {
+              font-size: 16px;
+            }
+              
             .related-section {
               padding: 55px 0;
             }
