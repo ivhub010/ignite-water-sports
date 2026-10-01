@@ -790,7 +790,7 @@ export function SUPClient() {
 
           .why-card {
             display: grid;
-            grid-template-columns: 28px 1fr;
+            grid-template-columns: 40px 1fr;
             gap: 14px;
             padding: 20px;
             border-radius: 15px;
