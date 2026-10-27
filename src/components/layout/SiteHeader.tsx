@@ -107,8 +107,10 @@ export default function SiteHeader({ transparent = false }: SiteHeaderProps) {
         <div className="elementor-element elementor-element-b3f0d8b elementor-hidden-tablet elementor-hidden-mobile e-con-full e-flex e-con e-parent" data-id="b3f0d8b" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
           <div className="elementor-element elementor-element-5eea421 e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-child" data-id="5eea421" data-element_type="container" data-e-type="container">
             <div className="elementor-element elementor-element-ffec855 elementor-widget elementor-widget-elementskit-header-search" data-id="ffec855" data-element_type="widget" data-e-type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="elementskit-header-search.default">
-              <div className="ekit-wid-con">        <a href="#ekit_modal-popup-ffec855" className="ekit_navsearch-button ekit-modal-popup" aria-label="navsearch-button">
-                  <i aria-hidden="true" className="icon icon-search11" />      </a>
+              <div className="ekit-wid-con">        
+                {/* <a href="#ekit_modal-popup-ffec855" className="ekit_navsearch-button ekit-modal-popup" aria-label="navsearch-button">
+                  <i aria-hidden="true" className="icon icon-search11" />
+                </a> */}
                 {/* language switcher strart */}
                 {/* xs modal */}
                 <div className="zoom-anim-dialog mfp-hide ekit_modal-searchPanel" id="ekit_modal-popup-ffec855">
