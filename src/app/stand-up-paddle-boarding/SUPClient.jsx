@@ -128,7 +128,7 @@ function LineIcon({ name }) {
     height: 40,
     viewBox: '0 0 24 24',
     fill: 'none',
-    stroke: 'currentColor',
+    stroke: '#54c8e8',
     strokeWidth: 1.9,
     strokeLinecap: 'round',
     strokeLinejoin: 'round',
@@ -221,7 +221,7 @@ export function SUPClient() {
                 </a>
 
                 <span className="sup-booking-price">
-                  From AED 50, 60 minutes
+                  From <DirhamIcon/> 50, 60 minutes
                 </span>
               </div>
             </div>
@@ -316,39 +316,69 @@ export function SUPClient() {
         {/* VIDEO */}
         <section className="video-section">
           <div className="video-container">
-            <div className="video-heading">
+            <div className="video-content">
+              <span className="video-label">Watch</span>
+
               <h2>See IGNITE in action</h2>
-              <p>Real people, real adventures, right on Palm Jumeirah.</p>
+
+              <p className="video-description">
+                Real people, real adventures, right on Palm Jumeirah.
+              </p>
+
+              <div className="video-features">
+                <div className="video-feature">
+                  <LineIcon name="wave" />
+                  <span>Calm, motor-free waters</span>
+                </div>
+
+                <div className="video-feature">
+                  <LineIcon name="pin" />
+                  <span>RIVA Beach Club, Palm Jumeirah</span>
+                </div>
+
+                <div className="video-feature">
+                  <LineIcon name="users" />
+                  <span>All levels welcome</span>
+                </div>
+
+                <div className="video-feature">
+                  <LineIcon name="shield" />
+                  <span>Certified instructors on hand</span>
+                </div>
+              </div>
             </div>
 
-            <div className="video-wrapper">
-              <iframe
-                src="https://www.youtube.com/embed/JmK4bT3QH8o?rel=0"
-                title="IGNITE Water Sports - Stand-Up Paddleboarding"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+            <div className="video-media">
+              <div className="video-wrapper">
+                <iframe
+                  src="https://www.youtube.com/embed/JmK4bT3QH8o?rel=0"
+                  title="IGNITE Water Sports - Stand-Up Paddleboarding"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </section>
 
+                
         {/* FAQ */}
-        <section className="sup-section sup-light">
+        <section className="sup-faq-section">
           <div className="sup-container faq-container">
-            <div className="section-heading">
-              <span className="section-label">FAQ</span>
-              <h2>
-                Frequently Asked <span>Questions</span>
-              </h2>
-              <p>Everything you need to know before your paddle boarding adventure.</p>
-            </div>
+            <h2 className="faq-title">
+              Frequently asked questions
+            </h2>
 
             <div className="faq-list">
               {faqs.map((faq, index) => {
                 const isOpen = openFaq === index;
 
                 return (
-                  <div className={`faq-item ${isOpen ? 'active' : ''}`} key={faq.question}>
+                  <div
+                    className={`faq-item ${isOpen ? 'active' : ''}`}
+                    key={faq.question}
+                  >
                     <button
                       type="button"
                       className="faq-question"
@@ -356,8 +386,12 @@ export function SUPClient() {
                       aria-expanded={isOpen}
                     >
                       <span>{faq.question}</span>
-                      <span className="faq-toggle">{isOpen ? '−' : '+'}</span>
+
+                      <span className="faq-toggle">
+                        {isOpen ? '−' : '+'}
+                      </span>
                     </button>
+
                     <div className="faq-answer">
                       <p>{faq.answer}</p>
                     </div>
@@ -367,6 +401,7 @@ export function SUPClient() {
             </div>
           </div>
         </section>
+
 
         {/* YOU MIGHT ALSO LIKE */}
         <section className="related-section">
@@ -867,45 +902,90 @@ export function SUPClient() {
             filter: brightness(1.04);
           }
 
-          /* VIDEO */
+                    
+          /* VIDEO SECTION */
           .video-section {
-            padding: 60px 0;
+            padding: 80px 0;
             background: #fff;
           }
 
           .video-container {
-            width: min(900px, calc(100% - 40px));
+            width: min(1180px, calc(100% - 40px));
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 65px;
           }
 
-          .video-heading {
-            margin-bottom: 24px;
-            text-align: center;
+          /* LEFT CONTENT */
+          .video-content {
+            max-width: 520px;
           }
 
-          .video-heading h2 {
-            margin: 0 0 8px;
-            font-size: 28px;
+          .video-label {
+            display: block;
+            margin-bottom: 12px;
+            color: #54c8e8;
+            font-size: 14px;
+            font-weight: 700;
+          }
+
+          .video-content h2 {
+            margin: 0 0 16px;
+            color: #182b36;
+            font-size: 32px;
+            font-weight: 700;
             line-height: 1.2;
-            letter-spacing: -0.5px;
+            letter-spacing: -0.7px;
           }
 
-          .video-heading p {
-            margin: 0;
+          .video-description {
+            margin: 0 0 28px;
             color: #8a9297;
-            font-size: 13px;
+            font-size: 16px;
+            line-height: 1.7;
+          }
+
+          /* FEATURES */
+          .video-features {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+          }
+
+          .video-feature {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            font-size: 16px;
             line-height: 1.5;
+          }
+
+          .video-feature svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            color: #54c8e8 !important;
+          }
+
+          /* RIGHT VIDEO */
+          .video-media {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-width: 0;
           }
 
           .video-wrapper {
             position: relative;
             width: 100%;
-            max-width: 420px;
-            aspect-ratio: 9 / 16;
-            margin: 0 auto;
-            border-radius: 16px;
+            max-width: 520px;
+            aspect-ratio: 16 / 9;
+            border-radius: 18px;
             overflow: hidden;
-            background: #000;
+            background: #1e2d34;
           }
 
           .video-wrapper iframe {
@@ -916,68 +996,241 @@ export function SUPClient() {
             border: 0;
           }
 
-          /* FAQ */
+          /* TABLET */
+          @media (max-width: 991px) {
+            .video-container {
+              gap: 35px;
+            }
+
+            .video-content h2 {
+              font-size: 28px;
+            }
+
+            .video-feature {
+              font-size: 14px;
+            }
+          }
+
+          /* MOBILE */
+          @media (max-width: 767px) {
+            .video-section {
+              padding: 55px 0;
+            }
+
+            .video-container {
+              width: calc(100% - 30px);
+              grid-template-columns: 1fr;
+              gap: 30px;
+            }
+
+            .video-content {
+              max-width: 100%;
+            }
+
+            .video-content h2 {
+              font-size: 28px;
+            }
+
+            .video-description {
+              font-size: 14px;
+              margin-bottom: 24px;
+            }
+
+            .video-features {
+              gap: 14px;
+            }
+
+            .video-feature {
+              font-size: 14px;
+            }
+
+            .video-wrapper {
+              max-width: 100%;
+              border-radius: 14px;
+            }
+          }
+
+
+                    
+          /* FAQ SECTION */
+          .sup-faq-section {
+            padding: 75px 0 85px;
+            background: #f7f8f9;
+          }
+
           .faq-container {
-            max-width: 900px;
+            max-width: 1180px;
           }
 
+          .faq-title {
+            margin: 0 0 35px;
+            color: #202d33;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            text-align: left;
+          }
+
+          /* FAQ LIST */
           .faq-list {
-            border-top: 1px solid #dbe7eb;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            border: 0;
           }
 
+          /* FAQ CARD */
           .faq-item {
-            border-bottom: 1px solid #dbe7eb;
+            background: #fff;
+            border: 0;
+            border-radius: 18px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
           }
 
+          /* QUESTION */
           .faq-question {
             width: 100%;
-            padding: 25px 0;
-            border: 0;
-            background: transparent;
+            min-height: 105px;
+            padding: 25px 36px;
+
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            gap: 30px;
-            text-align: left;
-            color: var(--navy);
-            font-size: 17px;
+            justify-content: space-between;
+            gap: 20px;
+
+            border: none;
+            background: transparent;
+
+            color: #202d33;
+            font-size: 21px;
             font-weight: 700;
+            line-height: 1.4;
+            text-align: left;
+            text-transform: none;
+
             cursor: pointer;
-            text-transform: initial;
           }
 
+          /* PLUS / MINUS ICON */
           .faq-toggle {
-            width: 38px;
-            height: 38px;
-            flex: 0 0 38px;
-            border-radius: 50%;
+            width: 46px;
+            height: 46px;
+            flex: 0 0 46px;
+
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #fff;
-            color: var(--blue-dark);
-            font-size: 23px;
+
+            border-radius: 50%;
+            background: #f0f0f0;
+            color: #a0a0a0;
+
+            font-size: 28px;
+            font-weight: 400;
+            line-height: 1;
+
+            transition:
+              background 0.25s ease,
+              color 0.25s ease;
           }
 
+          /* ACTIVE ICON */
+          .faq-item.active .faq-toggle {
+            background: #54c8e8;
+            color: #fff;
+          }
+
+          /* ANSWER */
           .faq-answer {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.4s ease;
+            transition: max-height 0.35s ease;
           }
 
           .faq-answer p {
             margin: 0;
-            padding: 0 60px 25px 0;
+            padding: 25px 36px 30px;
+
+            color: #666;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.8;
           }
 
+          /* OPEN FAQ */
           .faq-item.active .faq-answer {
-            max-height: 300px;
+            max-height: 500px;
           }
 
-          .faq-item.active .faq-toggle {
-            color: var(--navy);
-            background: var(--blue);
+          .faq-item.active .faq-question {
+            border-bottom: 1px solid #ededed;
           }
+
+          /* TABLET */
+          @media (max-width: 991px) {
+            .sup-faq-section {
+              padding: 60px 0;
+            }
+
+            .faq-title {
+              font-size: 32px;
+            }
+
+            .faq-question {
+              min-height: 90px;
+              padding: 22px 28px;
+              font-size: 18px;
+            }
+
+            .faq-answer p {
+              padding: 22px 28px 28px;
+              font-size: 16px;
+            }
+          }
+
+          /* MOBILE */
+          @media (max-width: 767px) {
+            .sup-faq-section {
+              padding: 50px 0 60px;
+            }
+
+            .faq-title {
+              margin-bottom: 25px;
+              font-size: 28px;
+              letter-spacing: -0.5px;
+            }
+
+            .faq-list {
+              gap: 10px;
+            }
+
+            .faq-item {
+              border-radius: 14px;
+            }
+
+            .faq-question {
+              min-height: 75px;
+              padding: 20px;
+              gap: 15px;
+              font-size: 16px;
+            }
+
+            .faq-toggle {
+              width: 36px;
+              height: 36px;
+              flex-basis: 36px;
+              font-size: 23px;
+            }
+
+            .faq-answer p {
+              padding: 18px 20px 24px;
+              font-size: 14px;
+              line-height: 1.7;
+            }
+          }
+
 
           .related-section {
             padding: 80px 0;
@@ -1231,13 +1484,6 @@ export function SUPClient() {
               width: min(100% - 30px, 900px);
             }
 
-            .faq-question {
-              font-size: 15px;
-            }
-
-            .faq-answer p {
-              padding-right: 0;
-            }
           }
 
           @media (max-width: 480px) {
