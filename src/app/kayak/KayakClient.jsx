@@ -349,7 +349,7 @@ export function KayakClient() {
             <div className="video-media">
               <div className="video-wrapper">
                 <iframe
-                  src="https://www.youtube.com/embed/JmK4bT3QH8o?rel=0"
+                  src="https://www.youtube.com/embed/BtJJaWvSsa0?rel=0"
                   title="IGNITE Water Sports - Stand-Up Paddleboarding"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
