@@ -522,6 +522,23 @@ export function SUPClient() {
             overflow: hidden;
           }
 
+          .sup{
+            display: flex !important;
+            min-height: 420px !important;
+            background-image: url("/watersports/SUP1-e1719384554118.png") !important;
+            background-position: center;
+
+            .e-con-inner{
+              align-content: center !important;
+
+              h1{
+                font-size: 40px;
+                color: #fff;
+                text-align: center;
+              }
+            }
+          }
+            
           .sup-container {
             width: min(1180px, calc(100% - 40px));
             margin: 0 auto;
