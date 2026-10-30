@@ -45,7 +45,7 @@ const sessionDetails = [
   { icon: 'clock', label: 'Duration', value: '60 minutes' },
   { icon: 'tag', label: 'Price', value: (
        <span className="price-value">
-         From <DirhamIcon size="1em" /> 75
+         From <DirhamIcon size="1em" /> 50
        </span>
      ) },
   {
@@ -202,7 +202,7 @@ export function SUPClient() {
         <section className="sup-booking-intro">
           <div className="sup-container">
             <div className="sup-booking-content">
-              <h2>SUP rental on Palm Jumeirah</h2>
+              {/* <h2>SUP rental on Palm Jumeirah</h2> */}
 
               <p>
                 Glide across the calm, motor-free waters of Palm Jumeirah with the
@@ -233,7 +233,7 @@ export function SUPClient() {
           <div className="sup-container details-layout">
             <div className="details-column">
               <div className="info-panel">
-                <h2 className="panel-title">SESSION DETAILS</h2>
+                <h2 className="panel-title">Session details</h2>
                 <div className="session-list">
                   {sessionDetails.map((item) => (
                     <div className="session-row" key={item.label}>
@@ -246,7 +246,7 @@ export function SUPClient() {
               </div>
 
               <div className="info-panel">
-                <h2 className="panel-title">WHAT&apos;S INCLUDED</h2>
+                <h2 className="panel-title">What’s included</h2>
                 <div className="included-list">
                   {included.map((item) => (
                     <div className="included-row" key={item}>
@@ -260,7 +260,7 @@ export function SUPClient() {
 
             <div className="details-column">
               <div className="info-panel why-panel">
-                <h2 className="panel-title">WHY IGNITE ON PALM JUMEIRAH</h2>
+                <h2 className="panel-title">Why IGNITE on Palm Jumeirah</h2>
                 <div className="why-list">
                   {whyIgnite.map((item) => (
                     <article className="why-card" key={item.title}>
@@ -289,7 +289,7 @@ export function SUPClient() {
               </div>
 
               <div className="info-panel">
-                <h2 className="panel-title">GOOD TO KNOW</h2>
+                <h2 className="panel-title">Good to know</h2>
                 <div className="good-list">
                   {goodToKnow.map((item) => (
                     <div className="good-row" key={item.text}>
@@ -304,7 +304,7 @@ export function SUPClient() {
 
           <div className="sup-container booking-strip">
             <div>
-              <strong>From <DirhamIcon size="1em" /> 75</strong>
+              <strong>From <DirhamIcon size="1em" /> 50</strong>
               <span>60 minutes, instant confirmation</span>
             </div>
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
@@ -766,7 +766,7 @@ export function SUPClient() {
           .panel-title {
             margin: 0 0 20px;
             color: #71787c;
-            font-size: 13px;
+            font-size: 20px;
             line-height: 1.2;
             letter-spacing: 1.6px;
           }
@@ -1092,8 +1092,8 @@ export function SUPClient() {
           /* QUESTION */
           .faq-question {
             width: 100%;
-            min-height: 105px;
-            padding: 25px 36px;
+            min-height: 80px;
+            padding: 15px 35px;
 
             display: flex;
             align-items: center;
@@ -1104,7 +1104,7 @@ export function SUPClient() {
             background: transparent;
 
             color: #202d33;
-            font-size: 21px;
+            font-size: 20px;
             font-weight: 700;
             line-height: 1.4;
             text-align: left;

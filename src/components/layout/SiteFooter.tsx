@@ -82,13 +82,15 @@ export default function SiteFooter() {
                   <h3 className="elementor-heading-title elementor-size-default">Quick links</h3>				</div>
                 <div className="elementor-element elementor-element-71886b9 elementor-widget elementor-widget-ekit-vertical-menu" data-id="71886b9" data-element_type="widget" data-e-type="widget" data-settings="{&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="ekit-vertical-menu.default">
                   <div className="ekit-wid-con">        <div className="ekit-vertical-main-menu-wraper   badge-position-left">
-                      <div className="ekit-vertical-menu-container"><ul id="menu-footer-menu" className="ekit-vertical-navbar-nav submenu-click-on-icon"><li id="menu-item-f1" className="menu-item nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="/" className="ekit-menu-nav-link">Home</a></li>
+                      <div className="ekit-vertical-menu-container">
+                        <ul id="menu-footer-menu" className="ekit-vertical-navbar-nav submenu-click-on-icon">
                            <li id="menu-item-f2" className="menu-item nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="/faq" className="ekit-menu-nav-link">FAQ</a></li>
                            <li id="menu-item-f3" className="menu-item nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="/our-events" className="ekit-menu-nav-link">Events</a></li>
                            <li id="menu-item-f4" className="menu-item nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="/shop" className="ekit-menu-nav-link">Shop</a></li>
                            <li id="menu-item-f5" className="menu-item nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="/contact-us" className="ekit-menu-nav-link">Contact Us</a></li>
                            <li id="menu-item-f5" className="menu-item nav-item elementskit-mobile-builder-content" data-vertical-menu="750px"><a href="/contact-us" className="ekit-menu-nav-link">Partner with Us</a></li>
-                           </ul></div>      </div>
+                           </ul>
+                        </div>      </div>
                   </div>				</div>
               </div>
               <div className="elementor-element elementor-element-8a4cd1e e-con-full e-flex e-con e-child" data-id="8a4cd1e" data-element_type="container" data-e-type="container">
