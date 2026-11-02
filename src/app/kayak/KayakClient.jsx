@@ -6,7 +6,7 @@ import SiteFooter from '@/components/layout/SiteFooter';
 import "dirham/css";
 import { DirhamIcon } from "dirham/react";
 
-const BOOKING_URL = 'https://book.ignitewatersports.com/?type=rentals&section=1';
+const BOOKING_URL = 'https://book.ignitewatersports.com/?type=rentals&section=2';
 
 const benefits = [
   {
@@ -51,19 +51,20 @@ const sessionDetails = [
   {
     icon: 'users',
     label: 'Suitable for',
-    value: 'Ages 12+, younger with adult supervision and ability to swim',
+    value: 'Ages 6+, adult supervision required',
   },
   { icon: 'waves', label: 'Ability', value: 'All levels welcome' },
   { icon: 'pin', label: 'Location', value: 'RIVA Beach Club, Palm Jumeirah' },
   { icon: 'trend', label: 'Difficulty', value: 'Easy' },
+  { icon: 'waves', label: 'Kayak types', value: 'Kids, Single, double, and triple seater available' },
 ];
 
 const included = [
-  'Kayak and paddle',
+  'Single, double, or triple kayak and paddle',
   'Life jacket',
   'Safety briefing',
   'Tutorial on request',
-  'Certified instructor available for full session',
+  'Certified instructor available throughout',
 ];
 
 const whyIgnite = [
@@ -98,27 +99,27 @@ const goodToKnow = [
 
 const faqs = [
   {
-    question: 'Do I need experience to try Kayak?',
+    question: 'Do I need experience to kayak?',
     answer:
-      'No experience needed. Our certified instructors give you a full briefing and tutorial before you get on the water. Kayaking is one of the easiest water sports to pick up and most people are paddling confidently within minutes.',
+      'No experience needed. Our certified instructors give you a full safety briefing before you get on the water. Kayaking is one of the easiest water activities to pick up and most people feel confident within the first few minutes.',
+  },
+  {
+    question: 'Can I kayak with a friend or family?',
+    answer: 'Yes. We offer single, double, and triple seater kayaks so you can paddle together. Perfect for couples, friends, and families.',
   },
   {
     question: 'What should I bring?',
     answer:
-      'Wear swimwear or clothing you don`t mind getting wet. Bring sunscreen, sunglasses, and a water bottle. We provide the board, paddle, and life jacket.',
-  },
-  {
-    question: 'How long is a session?',
-    answer: 'Sessions are 60 minutes. Arrive 10 minutes before your start time.',
+      'Wear swimwear or clothing you don’t mind getting wet. Bring sunscreen, sunglasses, and a water bottle. We provide the kayak, paddle, and life jacket.',
   },
   {
     question: 'Is it suitable for kids?',
     answer:
-      'Yes. Children aged 12 and above can paddle independently. Younger children are welcome with adult supervision, provided they can swim.',
+      'Yes. Children aged 6 and above are welcome with adult supervision. Life jackets are provided and our instructors are on hand throughout.',
   },
   {
     question: 'Is parking available?',
-    answer: 'Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah.',
+    answer: 'Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah. Please park in Building 7 first, then try Building 8 if needed. If Building 8 is full, you will need to do a short loop to return to RIVA. Please make sure you have tried Building 7 first before doing so. <br/> <b>Building 7:</b> After passing Palma Residences, take a sharp right down the ramp to access the basement parking. <br/> <b>Building 8:</b> After passing the RIVA signage, continue to the next building (Building 8), then turn right down the ramp to access the basement parking. <br/><br/><b><a href="https://maps.app.goo.gl/36hc7S4XwKSMNZcb6" target="_blank">Click here for directions to RIVA</a></b>',
   },
 ];
 
@@ -192,7 +193,7 @@ export function KayakClient() {
               data-widget_type="heading.default"
             >
               <h1 className="elementor-heading-title elementor-size-default">
-                Discover the Top Dubai Kayaking Spot
+                Kayak rental on Palm Jumeirah
               </h1>
             </div>
           </div>
@@ -210,7 +211,7 @@ export function KayakClient() {
 
               <div className="sup-booking-actions">
                 <a
-                  href="https://book.ignitewatersports.com/?type=rentals&section=1"
+                  href={BOOKING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="sup-booking-btn"
@@ -391,7 +392,7 @@ export function KayakClient() {
                     </button>
 
                     <div className="faq-answer">
-                      <p>{faq.answer}</p>
+                      <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                     </div>
                   </div>
                 );
@@ -418,7 +419,7 @@ export function KayakClient() {
                         objectFit: "cover",
                       }}
                     />
-                  <span className="related-badge">Kayak</span>
+                  <span className="related-badge">SUP</span>
                 </div>
 
                 <div className="related-card-content">

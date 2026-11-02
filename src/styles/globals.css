@@ -456,6 +456,18 @@ body {
   }
 }
 
+.faq-item button:hover,.faq-item button:active{
+  border: none !important;
+}
+
+.faq-question{
+  padding: 15px 35px 0 !important;
+}
+
+.faq-answer {
+  padding: 10px 35px;
+}
+
 @media (max-width: 1024px) {
   #menu-main-menu .menu-item-has-children > .ekit-menu-nav-link {
     display: flex;

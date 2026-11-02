@@ -105,7 +105,7 @@ const faqs = [
   {
     question: 'What should I bring?',
     answer:
-      'Wear swimwear or clothing you don`t mind getting wet. Bring sunscreen, sunglasses, and a water bottle. We provide the board, paddle, and life jacket.',
+      'Wear swimwear or clothing you don’t mind getting wet. Bring sunscreen, sunglasses, and a water bottle. We provide the board, paddle, and life jacket.',
   },
   {
     question: 'How long is a session?',
@@ -118,7 +118,7 @@ const faqs = [
   },
   {
     question: 'Is parking available?',
-    answer: 'Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah.',
+    answer: 'Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah. Please park in Building 7 first, then try Building 8 if needed. If Building 8 is full, you will need to do a short loop to return to RIVA. Please make sure you have tried Building 7 first before doing so. <br/> <b>Building 7:</b> After passing Palma Residences, take a sharp right down the ramp to access the basement parking. <br/> <b>Building 8:</b> After passing the RIVA signage, continue to the next building (Building 8), then turn right down the ramp to access the basement parking. <br/><br/><b><a href="https://maps.app.goo.gl/36hc7S4XwKSMNZcb6" target="_blank">Click here for directions to RIVA</a></b>',
   },
 ];
 
@@ -192,7 +192,7 @@ export function SUPClient() {
               data-widget_type="heading.default"
             >
               <h1 className="elementor-heading-title elementor-size-default">
-                SUP rental on Palm Jumeirah
+                SUP rental Dubai | Standup paddle boarding on Palm Jumeirah
               </h1>
             </div>
           </div>
@@ -212,7 +212,7 @@ export function SUPClient() {
 
               <div className="sup-booking-actions">
                 <a
-                  href="https://book.ignitewatersports.com/?type=rentals&section=1"
+                  href={BOOKING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="sup-booking-btn"
@@ -393,7 +393,7 @@ export function SUPClient() {
                     </button>
 
                     <div className="faq-answer">
-                      <p>{faq.answer}</p>
+                      <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                     </div>
                   </div>
                 );

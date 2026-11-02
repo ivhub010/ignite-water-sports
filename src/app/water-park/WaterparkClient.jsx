@@ -6,7 +6,7 @@ import SiteFooter from '@/components/layout/SiteFooter';
 import "dirham/css";
 import { DirhamIcon } from "dirham/react";
 
-const BOOKING_URL = 'https://book.ignitewatersports.com/?type=rentals&section=1';
+const BOOKING_URL = 'https://book.ignitewatersports.com/?type=rentals&section=5';
 
 const benefits = [
   {
@@ -42,28 +42,41 @@ const benefits = [
 //     )
 
 const sessionDetails = [
-  { icon: 'clock', label: 'Duration', value: '60 minutes' },
-  { icon: 'tag', label: 'Price', value: (
-       <span className="price-value">
-         From <DirhamIcon size="1em" /> 50
-       </span>
-     ) },
+  {
+    icon: 'clock',
+    label: 'Duration',
+    value: '1 hour',
+  },
+  {
+    icon: 'tag',
+    label: 'Price',
+    value: (
+      <span className="price-value">
+        <DirhamIcon size="1em" /> 100 per child
+      </span>
+    ),
+  },
   {
     icon: 'users',
     label: 'Suitable for',
-    value: 'Ages 12+, younger with adult supervision and ability to swim',
+    value: 'Ages 6 to 16, minimum height 110cm',
   },
-  { icon: 'waves', label: 'Ability', value: 'All levels welcome' },
-  { icon: 'pin', label: 'Location', value: 'RIVA Beach Club, Palm Jumeirah' },
-  { icon: 'trend', label: 'Difficulty', value: 'Easy' },
+  {
+    icon: 'pin',
+    label: 'Location',
+    value: 'RIVA Beach Club, Palm Jumeirah',
+  },
+  {
+    icon: 'users',
+    label: 'Group size',
+    value: 'Maximum 35 children per session',
+  },
 ];
 
 const included = [
-  'Kayak and paddle',
-  'Life jacket',
-  'Safety briefing',
-  'Tutorial on request',
-  'Certified instructor available for full session',
+  'Access to the inflatable water park',
+  'Safety equipment included',
+  'Lifeguard-trained staff on hand throughout',
 ];
 
 const whyIgnite = [
@@ -89,6 +102,22 @@ const whyIgnite = [
   },
 ];
 
+const sessionsAndPrices = [
+  {
+    title: "IGNITE water park",
+    description: "1 hour",
+    price: 100,
+    priceLabel: "per child",
+  },
+  {
+    title: "Family Fun Time",
+    description: "Kids 3 to 5 years old, with a parent",
+    timing: "Sunday 8am – 12pm",
+    price: 100,
+    priceLabel: "child and accompanying parent",
+  },
+];
+
 const goodToKnow = [
   { icon: 'shirt', text: "Wear swimwear or clothing you don't mind getting wet" },
   { icon: 'sun', text: 'Bring sunscreen, sunglasses, and a water bottle' },
@@ -98,27 +127,27 @@ const goodToKnow = [
 
 const faqs = [
   {
-    question: 'Do I need experience to try Kayak?',
+    question: 'What are the age and height requirements?',
     answer:
-      'No experience needed. Our certified instructors give you a full briefing and tutorial before you get on the water. Kayaking is one of the easiest water sports to pick up and most people are paddling confidently within minutes.',
+      'The water park is for children aged 6 to 16. Children must be at least 110cm tall.',
   },
   {
-    question: 'What should I bring?',
+    question: 'Is there a session for younger children?',
     answer:
-      'Wear swimwear or clothing you don`t mind getting wet. Bring sunscreen, sunglasses, and a water bottle. We provide the board, paddle, and life jacket.',
+      'Yes. Family Fun Time is for kids aged 3 to 5 on Sundays from 8am to 12pm. Parents must accompany their children. The price is AED 100 in total.',
   },
   {
-    question: 'How long is a session?',
-    answer: 'Sessions are 60 minutes. Arrive 10 minutes before your start time.',
+    question: 'Do I need to book in advance?',
+    answer: 'Yes. Family Fun Time bookings are mandatory, as the water park may be booked privately. Please book online before you arrive.',
   },
   {
-    question: 'Is it suitable for kids?',
+    question: 'What should we bring?',
     answer:
-      'Yes. Children aged 12 and above can paddle independently. Younger children are welcome with adult supervision, provided they can swim.',
+      'Wear swimwear or clothing you don’t mind getting wet. Bring sunscreen, sunglasses, and a water bottle.',
   },
   {
     question: 'Is parking available?',
-    answer: 'Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah.',
+    answer: 'Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah. Please park in Building 7 first, then try Building 8 if needed. If Building 8 is full, you will need to do a short loop to return to RIVA. Please make sure you have tried Building 7 first before doing so. <br/> <b>Building 7:</b> After passing Palma Residences, take a sharp right down the ramp to access the basement parking. <br/> <b>Building 8:</b> After passing the RIVA signage, continue to the next building (Building 8), then turn right down the ramp to access the basement parking. <br/><br/><b><a href="https://maps.app.goo.gl/36hc7S4XwKSMNZcb6" target="_blank">Click here for directions to RIVA</a></b>',
   },
 ];
 
@@ -192,7 +221,7 @@ export function WaterparkClient() {
               data-widget_type="heading.default"
             >
               <h1 className="elementor-heading-title elementor-size-default">
-                Discover the Top Dubai Kayaking Spot
+                Inflatable water park on Palm Jumeirah
               </h1>
             </div>
           </div>
@@ -205,12 +234,12 @@ export function WaterparkClient() {
               {/* <h2>SUP rental on Palm Jumeirah</h2> */}
 
               <p>
-                Explore the calm, motor-free waters of Palm Jumeirah at your own pace. Solo or double kayaks available, suitable for all levels with certified instructors on hand throughout your session.
+                Climb, slide, jump and splash on our inflatable water park at RIVA Beach Club on Palm Jumeirah. Lifeguard-trained staff are on hand throughout.
               </p>
 
               <div className="sup-booking-actions">
                 <a
-                  href="https://book.ignitewatersports.com/?type=rentals&section=1"
+                  href={BOOKING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="sup-booking-btn"
@@ -219,7 +248,7 @@ export function WaterparkClient() {
                 </a>
 
                 <span className="sup-booking-price">
-                  From <DirhamIcon/> 50, 60 minutes
+                  <DirhamIcon/> 100 per child, 1 hour
                 </span>
               </div>
             </div>
@@ -230,6 +259,30 @@ export function WaterparkClient() {
         <section className="details-section">
           <div className="sup-container details-layout">
             <div className="details-column">
+
+              <div className="info-panel">
+                  <h2 className="panel-title">Sessions and prices</h2>
+
+                  <div className="pricing-list">
+                    {sessionsAndPrices.map((item) => (
+                      <div className="pricing-row" key={item.title}>
+                        <div className="pricing-details">
+                          <strong>{item.title}</strong>
+                          <span>{item.description}</span>
+                          {item.timing && <span>{item.timing}</span>}
+                        </div>
+
+                        <div className="pricing-amount">
+                          <strong>
+                            <DirhamIcon size="1em" /> {item.price}
+                          </strong>
+                          <span>{item.priceLabel}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
               <div className="info-panel">
                 <h2 className="panel-title">Session details</h2>
                 <div className="session-list">
@@ -302,8 +355,8 @@ export function WaterparkClient() {
 
           <div className="sup-container booking-strip">
             <div>
-              <strong>From <DirhamIcon size="1em" /> 50</strong>
-              <span>60 minutes, instant confirmation</span>
+              <strong><DirhamIcon size="1em" /> 100 per child</strong>
+              <span>1 hour, instant confirmation</span>
             </div>
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
               Book your session
@@ -349,7 +402,7 @@ export function WaterparkClient() {
             <div className="video-media">
               <div className="video-wrapper">
                 <iframe
-                  src="https://www.youtube.com/embed/BtJJaWvSsa0?rel=0"
+                  src="https://www.youtube.com/embed/ngMhzqlrWZs?rel=0"
                   title="IGNITE Water Sports - Stand-Up Paddleboarding"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -391,7 +444,7 @@ export function WaterparkClient() {
                     </button>
 
                     <div className="faq-answer">
-                      <p>{faq.answer}</p>
+                      <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                     </div>
                   </div>
                 );
@@ -410,7 +463,39 @@ export function WaterparkClient() {
               <article className="related-card">
                 <div className="related-image-placeholder">
                   <img
-                      src="https://ignitewatersports.com/wp-content/uploads/elementor/thumbs/SUP1-e1719384554118-qq7t4qbwrnvy1q5czbe5oml148jwh0elkzjiocgv0w.png"
+                      src="https://ignitewatersports.com/wp-content/uploads/elementor/thumbs/kidsbirthday-qkgqgpxwrmb8oznoo9mh8uyntebhcj06qns6m2e5g0.png"
+                      alt="Explore the Palm by paddle"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  <span className="related-badge">Kids</span>
+                </div>
+
+                <div className="related-card-content">
+
+                  <h3>Kids birthday party</h3>
+
+                  <p className="related-price">
+                    From <DirhamIcon size="1em" /> 120
+                  </p>
+
+                  <a
+                    href="https://web.whatsapp.com/send?a+utoload=1&app_absent=0&phone=971522495311&text=Hi,%20I%27d%20like%20to%20know%20more%20about%20your%20Birthday%20packages%20please."
+                    className="related-btn"
+                    target='_blank'
+                  >
+                    Book now
+                  </a>
+                </div>
+              </article>
+
+              <article className="related-card">
+                <div className="related-image-placeholder">
+                  <img
+                      src="https://ignitewatersports.com/wp-content/uploads/2024/02/IWS-New-Website-Image-2-1.png"
                       alt="Explore the Palm by paddle"
                       style={{
                         width: "100%",
@@ -423,6 +508,38 @@ export function WaterparkClient() {
 
                 <div className="related-card-content">
 
+                  <h3>Kayak rental</h3>
+
+                  <p className="related-price">
+                    From <DirhamIcon size="1em" /> 50
+                  </p>
+
+                  <a
+                    href="https://book.ignitewatersports.com/?type=rentals&section=2"
+                    className="related-btn"
+                    target='_blank'
+                  >
+                    Book now
+                  </a>
+                </div>
+              </article>
+
+              <article className="related-card">
+                <div className="related-image-placeholder">
+                  <img
+                      src="https://ignitewatersports.com/wp-content/uploads/elementor/thumbs/SUP1-e1719384554118-qq7t4qbwrnvy1q5czbe5oml148jwh0elkzjiocgv0w.png"
+                      alt="Explore the Palm by paddle"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  <span className="related-badge">SUP</span>
+                </div>
+
+                <div className="related-card-content">
+
                   <h3>SUP rental</h3>
 
                   <p className="related-price">
@@ -431,70 +548,6 @@ export function WaterparkClient() {
 
                   <a
                     href="https://book.ignitewatersports.com/?type=rentals&section=1"
-                    className="related-btn"
-                    target='_blank'
-                  >
-                    Book now
-                  </a>
-                </div>
-              </article>
-
-              <article className="related-card">
-                <div className="related-image-placeholder">
-                  <img
-                      src="https://ignitewatersports.com/wp-content/uploads/2025/10/R5CC1400-scaled.jpg"
-                      alt="Learn to fly on water"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                    <span className="related-badge">eFoil</span>
-                </div>
-
-                <div className="related-card-content">
-
-                  <h3>eFoil rental</h3>
-
-                  <p className="related-price">
-                    From <DirhamIcon size="1em" /> 300
-                  </p>
-
-                  <a
-                    href="https://book.ignitewatersports.com/?type=rentals&section=3"
-                    className="related-btn"
-                    target='_blank'
-                  >
-                    Book now
-                  </a>
-                </div>
-              </article>
-
-              <article className="related-card">
-                <div className="related-image-placeholder">
-                  <img
-                      src="https://ignitewatersports.com/wp-content/uploads/2025/10/teambonding.jpeg"
-                      alt="Learn to fly on water"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                    <span className="related-badge">Classes</span>
-                </div>
-
-                <div className="related-card-content">
-
-                  <h3>Beach Yoga</h3>
-
-                  <p className="related-price">
-                    From <DirhamIcon size="1em" /> 120
-                  </p>
-
-                  <a
-                    href="https://book.ignitewatersports.com/?type=classes&section=1"
                     className="related-btn"
                     target='_blank'
                   >
@@ -523,7 +576,7 @@ export function WaterparkClient() {
           .sup{
             display: flex !important;
             min-height: 420px !important;
-            background-image: url("/watersports/Kayak1.png") !important;
+            background-image: url("/watersports/water-park.jpg") !important;
             background-position: center;
 
             .e-con-inner{
@@ -1516,6 +1569,98 @@ export function WaterparkClient() {
 
             .detail-label {
               font-weight: 600;
+            }
+          }
+
+          .pricing-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+          }
+
+          .pricing-row {
+            display: grid;
+            grid-template-columns: minmax(0, 70fr) minmax(0, 30fr);
+            align-items: center;
+            gap: 10px;
+            padding: 16px;
+            background: #fff;
+            border: 1px solid #e8e8e8;
+            border-radius: 12px;
+          }
+
+          .pricing-details {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            gap: 4px;
+
+            strong {
+              color: #303a40;
+              font-size: 20px;
+              font-weight: 900;
+              line-height: 1.4;
+            }
+
+            span {
+              color: #858585;
+              font-size: 13px;
+              line-height: 1.5;
+            }
+          }
+
+          .pricing-amount {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            min-width: 0;
+            gap: 4px;
+            text-align: right;
+
+            strong {
+              display: inline-flex;
+              align-items: baseline;
+              justify-content: flex-end;
+              gap: 3px;
+              color: #ff9417;
+              font-size: 20px;
+              font-weight: 800;
+              white-space: nowrap;
+            }
+
+            span {
+              color: #858585;
+              font-size: 11px;
+              line-height: 1.4;
+              overflow-wrap: anywhere;
+            }
+          }
+
+          @media (max-width: 767px) {
+            .pricing-row {
+              grid-template-columns: minmax(0, 70fr) minmax(0, 30fr);
+              gap: 8px;
+              padding: 14px 10px;
+            }
+
+            .pricing-details {
+              strong {
+                font-size: 14px;
+              }
+
+              span {
+                font-size: 12px;
+              }
+            }
+
+            .pricing-amount {
+              strong {
+                font-size: 14px;
+              }
+
+              span {
+                font-size: 10px;
+              }
             }
           }
         `}</style>
