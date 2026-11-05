@@ -6,7 +6,7 @@ import SiteFooter from '@/components/layout/SiteFooter';
 import "dirham/css";
 import { DirhamIcon } from "dirham/react";
 
-const BOOKING_URL = 'https://book.ignitewatersports.com/?type=rentals&section=1';
+const BOOKING_URL = 'https://book.ignitewatersports.com/?type=rentals&section=4';
 
 const benefits = [
   {
@@ -42,28 +42,26 @@ const benefits = [
 //     )
 
 const sessionDetails = [
-  { icon: 'clock', label: 'Duration', value: '60 minutes' },
+  { icon: 'clock', label: 'Duration', value: '1 hour' },
   { icon: 'tag', label: 'Price', value: (
        <span className="price-value">
-         From <DirhamIcon size="1em" /> 50
+         <DirhamIcon size="1em" /> 280 per pedalo
        </span>
      ) },
   {
     icon: 'users',
     label: 'Suitable for',
-    value: 'Ages 12+, younger with adult supervision and ability to swim',
+    value: 'Families and friends, all ages',
   },
-  { icon: 'waves', label: 'Ability', value: 'All levels welcome' },
+  { icon: 'users', label: 'Group Size', value: 'Up to 4 guests per pedalo' },
   { icon: 'pin', label: 'Location', value: 'RIVA Beach Club, Palm Jumeirah' },
   { icon: 'trend', label: 'Difficulty', value: 'Easy' },
 ];
 
 const included = [
-  'Kayak and paddle',
-  'Life jacket',
-  'Safety briefing',
-  'Tutorial on request',
-  'Certified instructor available for full session',
+  '4 seater pedalo for 1 hour',
+  'Life vests for everyone on board',
+  'Lifeguard-trained staff on hand throughout',
 ];
 
 const whyIgnite = [
@@ -89,36 +87,58 @@ const whyIgnite = [
   },
 ];
 
+
 const goodToKnow = [
-  { icon: 'shirt', text: "Wear swimwear or clothing you don't mind getting wet" },
-  { icon: 'sun', text: 'Bring sunscreen, sunglasses, and a water bottle' },
-  { icon: 'clock', text: 'Arrive 10 minutes before your session' },
-  { icon: 'car', text: 'Free parking available at RIVA Beach Club' },
+  {
+    icon: 'shirt',
+    text: "Wear swimwear or clothing you don't mind getting wet",
+  },
+  {
+    icon: 'sun',
+    text: 'Bring sunscreen, sunglasses, and a water bottle',
+  },
+  {
+    icon: 'clock',
+    text: 'Arrive 10 minutes before your session',
+  },
+  {
+    icon: 'cloud',
+    text: 'Sessions depend on weather conditions',
+  },
+  {
+    icon: 'bottle',
+    text: 'Towels, food and drinks are not included',
+  },
+  {
+    icon: 'car',
+    text: 'Free parking available at RIVA Beach Club',
+  },
 ];
+
 
 const faqs = [
   {
-    question: 'Do I need experience to try Kayak?',
+    question: 'How many people fit on a pedalo?',
     answer:
-      'No experience needed. Our certified instructors give you a full briefing and tutorial before you get on the water. Kayaking is one of the easiest water sports to pick up and most people are paddling confidently within minutes.',
+      'Up to 4 guests per pedalo. It is a 4-seater, ideal for families and friends.',
   },
   {
-    question: 'What should I bring?',
+    question: 'Do I need experience?',
     answer:
-      'Wear swimwear or clothing you don`t mind getting wet. Bring sunscreen, sunglasses, and a water bottle. We provide the board, paddle, and life jacket.',
+      'No experience needed. The pedalo is easy to use and you cruise at your own pace.',
   },
   {
-    question: 'How long is a session?',
-    answer: 'Sessions are 60 minutes. Arrive 10 minutes before your start time.',
+    question: 'Are life vests provided?',
+    answer: 'Yes. Life vests are included for everyone on board.',
   },
   {
-    question: 'Is it suitable for kids?',
+    question: 'What happens if the weather is bad?',
     answer:
-      'Yes. Children aged 12 and above can paddle independently. Younger children are welcome with adult supervision, provided they can swim.',
+      'Pedalo sessions depend on weather conditions. If the weather affects your booking, contact our team on WhatsApp at +971 52 249 5311.',
   },
   {
     question: 'Is parking available?',
-    answer: 'Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah.',
+    answer: 'Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah. Please park in Building 7 first, then try Building 8 if needed. If Building 8 is full, you will need to do a short loop to return to RIVA. Please make sure you have tried Building 7 first before doing so. <br/> <b>Building 7:</b> After passing Palma Residences, take a sharp right down the ramp to access the basement parking. <br/> <b>Building 8:</b> After passing the RIVA signage, continue to the next building (Building 8), then turn right down the ramp to access the basement parking. <br/><br/><b><a href="https://maps.app.goo.gl/36hc7S4XwKSMNZcb6" target="_blank">Click here for directions to RIVA</a></b>',
   },
 ];
 
@@ -162,6 +182,22 @@ function LineIcon({ name }) {
       return <svg {...common}><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>;
     case 'car':
       return <svg {...common}><path d="M4 16V9l2-4h10l3 4v7"/><path d="M4 11h15M7 16v2M17 16v2"/><circle cx="7" cy="14" r="1"/><circle cx="16" cy="14" r="1"/></svg>;
+    case 'cloud':
+      return (
+        <svg {...common}>
+          <path d="M7 18h11a4 4 0 0 0 .5-7.97A6.5 6.5 0 0 0 6 11a3.5 3.5 0 0 0 1 7Z" />
+        </svg>
+      );
+
+    case 'bottle':
+      return (
+        <svg {...common}>
+          <path d="M10 3h4v3h-4z" />
+          <path d="M10 6v2l-2.5 3.5A4 4 0 0 0 7 14v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-5a4 4 0 0 0-.5-2.5L14 8V6" />
+          <path d="M7.5 14h9" />
+          <path d="M7.5 18h9" />
+        </svg>
+      );
     default:
       return null;
   }
@@ -192,7 +228,7 @@ export function PedaloClient() {
               data-widget_type="heading.default"
             >
               <h1 className="elementor-heading-title elementor-size-default">
-                Discover the Top Dubai Kayaking Spot
+                Pedalo rental on Palm Jumeirah
               </h1>
             </div>
           </div>
@@ -205,12 +241,12 @@ export function PedaloClient() {
               {/* <h2>SUP rental on Palm Jumeirah</h2> */}
 
               <p>
-                Explore the calm, motor-free waters of Palm Jumeirah at your own pace. Solo or double kayaks available, suitable for all levels with certified instructors on hand throughout your session.
+                Cruise across the calm waters of Palm Jumeirah at your own pace on a 4-seater pedalo, with views of the Dubai skyline. Perfect for families and friends.
               </p>
 
               <div className="sup-booking-actions">
                 <a
-                  href="https://book.ignitewatersports.com/?type=rentals&section=1"
+                  href={BOOKING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="sup-booking-btn"
@@ -219,7 +255,7 @@ export function PedaloClient() {
                 </a>
 
                 <span className="sup-booking-price">
-                  From <DirhamIcon/> 50, 60 minutes
+                  From <DirhamIcon/> 280 per pedalo, 1 hour
                 </span>
               </div>
             </div>
@@ -302,8 +338,8 @@ export function PedaloClient() {
 
           <div className="sup-container booking-strip">
             <div>
-              <strong>From <DirhamIcon size="1em" /> 50</strong>
-              <span>60 minutes, instant confirmation</span>
+              <strong>From <DirhamIcon size="1em" /> 280</strong>
+              <span>1 hour, up to 4 guests, instant confirmation</span>
             </div>
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
               Book your session
@@ -348,13 +384,7 @@ export function PedaloClient() {
 
             <div className="video-media">
               <div className="video-wrapper">
-                <iframe
-                  src="https://www.youtube.com/embed/BtJJaWvSsa0?rel=0"
-                  title="IGNITE Water Sports - Stand-Up Paddleboarding"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  loading="lazy"
-                />
+                <img src="https://ignitewatersports.com/wp-content/uploads/2026/01/Pedalo-Dubai.jpg"/>
               </div>
             </div>
           </div>
@@ -391,7 +421,7 @@ export function PedaloClient() {
                     </button>
 
                     <div className="faq-answer">
-                      <p>{faq.answer}</p>
+                      <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                     </div>
                   </div>
                 );
@@ -410,7 +440,7 @@ export function PedaloClient() {
               <article className="related-card">
                 <div className="related-image-placeholder">
                   <img
-                      src="https://ignitewatersports.com/wp-content/uploads/elementor/thumbs/SUP1-e1719384554118-qq7t4qbwrnvy1q5czbe5oml148jwh0elkzjiocgv0w.png"
+                      src="https://ignitewatersports.com/wp-content/uploads/2024/02/IWS-New-Website-Image-2-1.png"
                       alt="Explore the Palm by paddle"
                       style={{
                         width: "100%",
@@ -419,6 +449,38 @@ export function PedaloClient() {
                       }}
                     />
                   <span className="related-badge">Kayak</span>
+                </div>
+
+                <div className="related-card-content">
+
+                  <h3>Kayak rental</h3>
+
+                  <p className="related-price">
+                    From <DirhamIcon size="1em" /> 50
+                  </p>
+
+                  <a
+                    href="https://book.ignitewatersports.com/?type=rentals&section=2"
+                    className="related-btn"
+                    target='_blank'
+                  >
+                    Book now
+                  </a>
+                </div>
+              </article>
+
+              <article className="related-card">
+                <div className="related-image-placeholder">
+                  <img
+                      src="https://ignitewatersports.com/wp-content/uploads/elementor/thumbs/SUP1-e1719384554118-qq7t4qbwrnvy1q5czbe5oml148jwh0elkzjiocgv0w.png"
+                      alt="Explore the Palm by paddle"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  <span className="related-badge">SUP</span>
                 </div>
 
                 <div className="related-card-content">
@@ -442,7 +504,7 @@ export function PedaloClient() {
               <article className="related-card">
                 <div className="related-image-placeholder">
                   <img
-                      src="https://ignitewatersports.com/wp-content/uploads/2025/10/R5CC1400-scaled.jpg"
+                      src="/watersports/water-park.jpg"
                       alt="Learn to fly on water"
                       style={{
                         width: "100%",
@@ -450,51 +512,19 @@ export function PedaloClient() {
                         objectFit: "cover",
                       }}
                     />
-                    <span className="related-badge">eFoil</span>
+                    <span className="related-badge">Water park</span>
                 </div>
 
                 <div className="related-card-content">
 
-                  <h3>eFoil rental</h3>
+                  <h3>Inflatable water park</h3>
 
                   <p className="related-price">
-                    From <DirhamIcon size="1em" /> 300
+                    From <DirhamIcon size="1em" /> 100 per child
                   </p>
 
                   <a
-                    href="https://book.ignitewatersports.com/?type=rentals&section=3"
-                    className="related-btn"
-                    target='_blank'
-                  >
-                    Book now
-                  </a>
-                </div>
-              </article>
-
-              <article className="related-card">
-                <div className="related-image-placeholder">
-                  <img
-                      src="https://ignitewatersports.com/wp-content/uploads/2025/10/teambonding.jpeg"
-                      alt="Learn to fly on water"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                    <span className="related-badge">Classes</span>
-                </div>
-
-                <div className="related-card-content">
-
-                  <h3>Beach Yoga</h3>
-
-                  <p className="related-price">
-                    From <DirhamIcon size="1em" /> 120
-                  </p>
-
-                  <a
-                    href="https://book.ignitewatersports.com/?type=classes&section=1"
+                    href="https://book.ignitewatersports.com/?type=rentals&section=5"
                     className="related-btn"
                     target='_blank'
                   >
@@ -523,8 +553,9 @@ export function PedaloClient() {
           .sup{
             display: flex !important;
             min-height: 420px !important;
-            background-image: url("/watersports/Kayak1.png") !important;
+            background-image: url("/watersports/Pedalo-Dubai.jpg") !important;
             background-position: center;
+            background-size: cover;
 
             .e-con-inner{
               align-content: center !important;
@@ -1001,6 +1032,9 @@ export function PedaloClient() {
             border-radius: 18px;
             overflow: hidden;
             background: #1e2d34;
+            align-content: center;
+            align-items: center;
+            display: flex;
           }
 
           .video-wrapper iframe {

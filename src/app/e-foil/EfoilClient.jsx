@@ -6,7 +6,7 @@ import SiteFooter from '@/components/layout/SiteFooter';
 import "dirham/css";
 import { DirhamIcon } from "dirham/react";
 
-const BOOKING_URL = 'https://book.ignitewatersports.com/?type=rentals&section=1';
+const BOOKING_URL = 'https://book.ignitewatersports.com/?type=rentals&section=3';
 
 const benefits = [
   {
@@ -41,30 +41,43 @@ const benefits = [
 //       </span>
 //     )
 
+
 const sessionDetails = [
-  { icon: 'clock', label: 'Duration', value: '60 minutes' },
-  { icon: 'tag', label: 'Price', value: (
-       <span className="price-value">
-         From <DirhamIcon size="1em" /> 50
-       </span>
-     ) },
+  {
+    icon: 'clock',
+    label: 'Duration',
+    value: '20 to 60 minutes',
+  },
   {
     icon: 'users',
     label: 'Suitable for',
-    value: 'Ages 12+, younger with adult supervision and ability to swim',
+    value: 'Adults, and ages 8 to 16 on the Kids E-Foil',
   },
-  { icon: 'waves', label: 'Ability', value: 'All levels welcome' },
-  { icon: 'pin', label: 'Location', value: 'RIVA Beach Club, Palm Jumeirah' },
-  { icon: 'trend', label: 'Difficulty', value: 'Easy' },
+  {
+    icon: 'graduation',
+    label: 'Lesson',
+    value:
+      'Included with the 40 minute session (AED 700), the 4 pack, the Kids E-Foil and the Friday Duo',
+  },
+  {
+    icon: 'id-card',
+    label: 'UAE residents',
+    value:
+      'An extra 10 minutes, including a lesson, on the 20 and 40 minute sessions',
+  },
+  {
+    icon: 'pin',
+    label: 'Location',
+    value: 'RIVA Beach Club, Palm Jumeirah',
+  },
 ];
 
 const included = [
-  'Kayak and paddle',
-  'Life jacket',
-  'Safety briefing',
-  'Tutorial on request',
-  'Certified instructor available for full session',
+  'E-Foil rental for your session',
+  'Safety equipment included',
+  'Lifeguard-trained staff on hand throughout',
 ];
+
 
 const whyIgnite = [
   {
@@ -98,29 +111,90 @@ const goodToKnow = [
 
 const faqs = [
   {
-    question: 'Do I need experience to try Kayak?',
+    question: 'Do I need experience to eFoil?',
     answer:
-      'No experience needed. Our certified instructors give you a full briefing and tutorial before you get on the water. Kayaking is one of the easiest water sports to pick up and most people are paddling confidently within minutes.',
+      'No. The 40 minute session, the 4 pack, the Kids E-Foil and the Friday Duo each include a lesson, so they are the right choice if you are new to eFoil. The 20 minute session is for experienced riders.',
   },
   {
-    question: 'What should I bring?',
+    question: 'What are the weekly eFoil offers?',
     answer:
-      'Wear swimwear or clothing you don`t mind getting wet. Bring sunscreen, sunglasses, and a water bottle. We provide the board, paddle, and life jacket.',
+      'Tuesday is Mermen day and Wednesday is Mermaid day: a 40 minute E-Foil for AED 350. Thursday is a 30 minute E-Foil for AED 300. Friday is the E-Foil Duo: two E-Foils for AED 700 for 40 minutes, taken at the same time, with a lesson.',
   },
   {
-    question: 'How long is a session?',
-    answer: 'Sessions are 60 minutes. Arrive 10 minutes before your start time.',
+    question: 'Is there an eFoil session for kids?',
+    answer: 'Yes. The Kids E-Foil is a 40 minute session with a lesson for children and teens aged 8 to 16. The price is AED 350.',
   },
   {
-    question: 'Is it suitable for kids?',
+    question: 'What is the 4 pack?',
     answer:
-      'Yes. Children aged 12 and above can paddle independently. Younger children are welcome with adult supervision, provided they can swim.',
+      'Four 40 minute sessions for AED 2,520, each with a lesson. Use them on separate visits, share them with friends, or use them as credit.',
   },
   {
     question: 'Is parking available?',
-    answer: 'Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah.',
+    answer: 'Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah. Please park in Building 7 first, then try Building 8 if needed. If Building 8 is full, you will need to do a short loop to return to RIVA. Please make sure you have tried Building 7 first before doing so. <br/> <b>Building 7:</b> After passing Palma Residences, take a sharp right down the ramp to access the basement parking. <br/> <b>Building 8:</b> After passing the RIVA signage, continue to the next building (Building 8), then turn right down the ramp to access the basement parking. <br/><br/><b><a href="https://maps.app.goo.gl/36hc7S4XwKSMNZcb6" target="_blank">Click here for directions to RIVA</a></b>',
   },
 ];
+
+
+const sessionsAndPrices = [
+  {
+    title: "E-Foil, 20 minutes",
+    description: "For experienced riders",
+    price: 400,
+  },
+  {
+    title: "E-Foil, 40 minutes",
+    description: "Includes a lesson",
+    price: 700,
+  },
+  {
+    title: "E-Foil, 60 minutes",
+    description: "One hour on the water",
+    price: 1000,
+  },
+  {
+    title: "E-Foil 4 pack",
+    description:
+      "4 sessions of 40 minutes, each with a lesson. Use them on separate visits, share with friends, or use as credit",
+    price: 2520,
+  },
+  {
+    title: "Kids E-Foil, 40 minutes",
+    description: "Ages 8 to 16, includes a lesson",
+    price: 350,
+  },
+];
+
+
+const weeklyOffers = [
+  {
+    day: "Tue",
+    title: "Mermen day",
+    description: "E-Foil, 40 minutes",
+    price: 350,
+  },
+  {
+    day: "Wed",
+    title: "Mermaid day, ladies' day",
+    description: "E-Foil, 40 minutes",
+    price: 350,
+  },
+  {
+    day: "Thu",
+    title: "Thursday E-Foil",
+    description: "E-Foil, 30 minutes",
+    price: 300,
+  },
+  {
+    day: "Fri",
+    title: "E-Foil Duo",
+    description:
+      "2 people, 2 E-Foils at the same time, 40 minutes, with a lesson",
+    price: 700,
+  },
+];
+
+
 
 function LineIcon({ name }) {
   const common = {
@@ -162,6 +236,25 @@ function LineIcon({ name }) {
       return <svg {...common}><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>;
     case 'car':
       return <svg {...common}><path d="M4 16V9l2-4h10l3 4v7"/><path d="M4 11h15M7 16v2M17 16v2"/><circle cx="7" cy="14" r="1"/><circle cx="16" cy="14" r="1"/></svg>;
+    case 'graduation':
+      return (
+        <svg {...common}>
+          <path d="m2 9 10-5 10 5-10 5L2 9Z" />
+          <path d="M6 11v5c3.5 3 8.5 3 12 0v-5" />
+          <path d="M22 9v6" />
+        </svg>
+      );
+
+    case 'id-card':
+      return (
+        <svg {...common}>
+          <rect x="3" y="5" width="18" height="14" rx="2" />
+          <circle cx="9" cy="10" r="2" />
+          <path d="M6 16c.5-2 1.5-3 3-3s2.5 1 3 3" />
+          <path d="M14 9h4M14 12h4M14 15h3" />
+        </svg>
+      );
+
     default:
       return null;
   }
@@ -192,7 +285,7 @@ export function EfoilClient() {
               data-widget_type="heading.default"
             >
               <h1 className="elementor-heading-title elementor-size-default">
-                Discover the Top Dubai Kayaking Spot
+                eFoil rental on Palm Jumeirah
               </h1>
             </div>
           </div>
@@ -205,12 +298,12 @@ export function EfoilClient() {
               {/* <h2>SUP rental on Palm Jumeirah</h2> */}
 
               <p>
-                Explore the calm, motor-free waters of Palm Jumeirah at your own pace. Solo or double kayaks available, suitable for all levels with certified instructors on hand throughout your session.
+                Fly above the calm waters of Palm Jumeirah on an electric hydrofoil. Weekly offers from AED 300, and a lesson is included with 40 minute sessions.
               </p>
 
               <div className="sup-booking-actions">
                 <a
-                  href="https://book.ignitewatersports.com/?type=rentals&section=1"
+                  href={BOOKING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="sup-booking-btn"
@@ -219,7 +312,7 @@ export function EfoilClient() {
                 </a>
 
                 <span className="sup-booking-price">
-                  From <DirhamIcon/> 50, 60 minutes
+                  From <DirhamIcon/> 300, 20 to 60 minutes
                 </span>
               </div>
             </div>
@@ -230,6 +323,67 @@ export function EfoilClient() {
         <section className="details-section">
           <div className="sup-container details-layout">
             <div className="details-column">
+
+              <div className="info-panel">
+                  <h2 className="panel-title">Sessions and prices</h2>
+
+                  <div className="pricing-list">
+                    {sessionsAndPrices.map((item) => (
+                      <div className="pricing-row" key={item.title}>
+                        <div className="pricing-details">
+                          <strong>{item.title}</strong>
+                          <span>{item.description}</span>
+                          {item.timing && <span>{item.timing}</span>}
+                        </div>
+
+                        <div className="pricing-amount">
+                          <strong>
+                            <DirhamIcon size="1em" /> {item.price}
+                          </strong>
+                          {item.priceLabel && <span>{item.priceLabel}</span>}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+              </div>
+              
+
+              {/* WEEKLY OFFERS */}
+              <div className="info-panel weekly-offers-panel">
+                <h2 className="panel-title">Weekly offers</h2>
+
+                <div className="weekly-offers-list">
+                  {weeklyOffers.map((item) => (
+                    <div className="weekly-offer-row" key={item.day}>
+                      <div className="weekly-offer-day">
+                        {item.day}
+                      </div>
+
+                      <div className="weekly-offer-details">
+                        <strong>{item.title}</strong>
+                        <span>{item.description}</span>
+                      </div>
+
+                      <div className="weekly-offer-price">
+                        <strong>
+                          <DirhamIcon size="1em" />{" "}
+                          {item.price.toLocaleString("en-AE")}
+                        </strong>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <a
+                  href="https://book.ignitewatersports.com/?type=offers"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="weekly-offers-btn"
+                >
+                  See and book weekly offers
+                </a>
+              </div>
+
               <div className="info-panel">
                 <h2 className="panel-title">Session details</h2>
                 <div className="session-list">
@@ -238,18 +392,6 @@ export function EfoilClient() {
                       <span className="detail-icon"><LineIcon name={item.icon} /></span>
                       <span className="detail-label">{item.label}</span>
                       <strong>{item.value}</strong>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="info-panel">
-                <h2 className="panel-title">What’s included</h2>
-                <div className="included-list">
-                  {included.map((item) => (
-                    <div className="included-row" key={item}>
-                      <span className="check">✓</span>
-                      <span>{item}</span>
                     </div>
                   ))}
                 </div>
@@ -287,6 +429,18 @@ export function EfoilClient() {
               </div>
 
               <div className="info-panel">
+                <h2 className="panel-title">What’s included</h2>
+                <div className="included-list">
+                  {included.map((item) => (
+                    <div className="included-row" key={item}>
+                      <span className="check">✓</span>
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="info-panel">
                 <h2 className="panel-title">Good to know</h2>
                 <div className="good-list">
                   {goodToKnow.map((item) => (
@@ -302,8 +456,8 @@ export function EfoilClient() {
 
           <div className="sup-container booking-strip">
             <div>
-              <strong>From <DirhamIcon size="1em" /> 50</strong>
-              <span>60 minutes, instant confirmation</span>
+              <strong>From <DirhamIcon size="1em" /> 300</strong>
+              <span>20 to 60 minutes, instant confirmation</span>
             </div>
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
               Book your session
@@ -349,7 +503,7 @@ export function EfoilClient() {
             <div className="video-media">
               <div className="video-wrapper">
                 <iframe
-                  src="https://www.youtube.com/embed/BtJJaWvSsa0?rel=0"
+                  src="https://www.youtube.com/embed/jA4v9jlVjBU?rel=0"
                   title="IGNITE Water Sports - Stand-Up Paddleboarding"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -391,7 +545,7 @@ export function EfoilClient() {
                     </button>
 
                     <div className="faq-answer">
-                      <p>{faq.answer}</p>
+                      <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                     </div>
                   </div>
                 );
@@ -410,7 +564,7 @@ export function EfoilClient() {
               <article className="related-card">
                 <div className="related-image-placeholder">
                   <img
-                      src="https://ignitewatersports.com/wp-content/uploads/elementor/thumbs/SUP1-e1719384554118-qq7t4qbwrnvy1q5czbe5oml148jwh0elkzjiocgv0w.png"
+                      src="https://ignitewatersports.com/wp-content/uploads/2024/02/IWS-New-Website-Image-2-1.png"
                       alt="Explore the Palm by paddle"
                       style={{
                         width: "100%",
@@ -419,6 +573,38 @@ export function EfoilClient() {
                       }}
                     />
                   <span className="related-badge">Kayak</span>
+                </div>
+
+                <div className="related-card-content">
+
+                  <h3>Kayak rental</h3>
+
+                  <p className="related-price">
+                    From <DirhamIcon size="1em" /> 50
+                  </p>
+
+                  <a
+                    href="https://book.ignitewatersports.com/?type=rentals&section=2"
+                    className="related-btn"
+                    target='_blank'
+                  >
+                    Book now
+                  </a>
+                </div>
+              </article>
+
+              <article className="related-card">
+                <div className="related-image-placeholder">
+                  <img
+                      src="https://ignitewatersports.com/wp-content/uploads/elementor/thumbs/SUP1-e1719384554118-qq7t4qbwrnvy1q5czbe5oml148jwh0elkzjiocgv0w.png"
+                      alt="Explore the Palm by paddle"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  <span className="related-badge">SUP</span>
                 </div>
 
                 <div className="related-card-content">
@@ -442,59 +628,27 @@ export function EfoilClient() {
               <article className="related-card">
                 <div className="related-image-placeholder">
                   <img
-                      src="https://ignitewatersports.com/wp-content/uploads/2025/10/R5CC1400-scaled.jpg"
-                      alt="Learn to fly on water"
+                      src="/watersports/Pedalo-Dubai.jpg"
+                      alt="Explore the Palm by paddle"
                       style={{
                         width: "100%",
                         height: "100%",
                         objectFit: "cover",
                       }}
                     />
-                    <span className="related-badge">eFoil</span>
+                  <span className="related-badge">Pedalo</span>
                 </div>
 
                 <div className="related-card-content">
 
-                  <h3>eFoil rental</h3>
+                  <h3>Pedalo rental</h3>
 
                   <p className="related-price">
-                    From <DirhamIcon size="1em" /> 300
+                    <DirhamIcon size="1em" /> 280 per pedalo
                   </p>
 
                   <a
-                    href="https://book.ignitewatersports.com/?type=rentals&section=3"
-                    className="related-btn"
-                    target='_blank'
-                  >
-                    Book now
-                  </a>
-                </div>
-              </article>
-
-              <article className="related-card">
-                <div className="related-image-placeholder">
-                  <img
-                      src="https://ignitewatersports.com/wp-content/uploads/2025/10/teambonding.jpeg"
-                      alt="Learn to fly on water"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                    <span className="related-badge">Classes</span>
-                </div>
-
-                <div className="related-card-content">
-
-                  <h3>Beach Yoga</h3>
-
-                  <p className="related-price">
-                    From <DirhamIcon size="1em" /> 120
-                  </p>
-
-                  <a
-                    href="https://book.ignitewatersports.com/?type=classes&section=1"
+                    href="https://book.ignitewatersports.com/?type=rentals&section=4"
                     className="related-btn"
                     target='_blank'
                   >
@@ -523,7 +677,7 @@ export function EfoilClient() {
           .sup{
             display: flex !important;
             min-height: 420px !important;
-            background-image: url("/watersports/Kayak1.png") !important;
+            background-image: url("/watersports/Efoil1.png") !important;
             background-position: center;
 
             .e-con-inner{
@@ -1518,6 +1672,268 @@ export function EfoilClient() {
               font-weight: 600;
             }
           }
+
+          .pricing-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+          }
+
+          .pricing-row {
+            display: grid;
+            grid-template-columns: minmax(0, 70fr) minmax(0, 30fr);
+            align-items: center;
+            gap: 10px;
+            padding: 16px;
+            background: #fff;
+            border: 1px solid #e8e8e8;
+            border-radius: 12px;
+          }
+
+          .pricing-details {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            gap: 4px;
+
+            strong {
+              color: #303a40;
+              font-size: 15px;
+              font-weight: 700;
+              line-height: 1.4;
+            }
+
+            span {
+              color: #858585;
+              font-size: 13px;
+              line-height: 1.5;
+            }
+          }
+
+          .pricing-amount {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            min-width: 0;
+            gap: 4px;
+            text-align: right;
+
+            strong {
+              display: inline-flex;
+              align-items: center;
+              justify-content: flex-end;
+              gap: 3px;
+              color: #ff9417;
+              font-size: 16px;
+              font-weight: 800;
+              white-space: nowrap;
+            }
+
+            span {
+              color: #858585;
+              font-size: 11px;
+              line-height: 1.4;
+              overflow-wrap: anywhere;
+            }
+          }
+
+          @media (max-width: 767px) {
+            .pricing-row {
+              grid-template-columns: minmax(0, 70fr) minmax(0, 30fr);
+              gap: 8px;
+              padding: 14px 10px;
+            }
+
+            .pricing-details {
+              strong {
+                font-size: 14px;
+              }
+
+              span {
+                font-size: 12px;
+              }
+            }
+
+            .pricing-amount {
+              strong {
+                font-size: 14px;
+              }
+
+              span {
+                font-size: 10px;
+              }
+            }
+          }
+
+
+          /* =====================================
+            WEEKLY OFFERS
+          ===================================== */
+
+          .weekly-offers-panel {
+            .panel-title {
+              margin-bottom: 22px;
+            }
+          }
+
+          .weekly-offers-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+          }
+
+          .weekly-offer-row {
+            display: grid;
+            grid-template-columns: 70px minmax(0, 1fr) auto;
+            align-items: center;
+            gap: 16px;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #e6e6e6;
+            border-radius: 14px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+          }
+
+          .weekly-offer-day {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 42px;
+            padding: 8px 12px;
+            border-radius: 10px;
+            background: #263238;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 800;
+            text-align: center;
+          }
+
+          .weekly-offer-details {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            gap: 5px;
+
+            strong {
+              color: #202629;
+              font-size: 16px;
+              font-weight: 800;
+              line-height: 1.35;
+            }
+
+            span {
+              color: #929292;
+              font-size: 14px;
+              line-height: 1.5;
+            }
+          }
+
+          .weekly-offer-price {
+            text-align: right;
+
+            strong {
+              display: inline-flex;
+              align-items: baseline;
+              justify-content: flex-end;
+              gap: 3px;
+              color: #ff9417;
+              font-size: 17px;
+              font-weight: 800;
+              white-space: nowrap;
+            }
+          }
+
+          /* BOOKING BUTTON */
+
+          .weekly-offers-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 52px;
+            margin-top: 22px;
+            padding: 12px 18px;
+            border: 1.5px solid #263238;
+            border-radius: 12px;
+            background: transparent;
+            color: #263238;
+            font-size: 15px;
+            font-weight: 800;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.25s ease;
+
+            &:hover {
+              background: #263238;
+              color: #fff;
+            }
+          }
+
+          /* TABLET */
+
+          @media (max-width: 991px) {
+            .weekly-offer-row {
+              grid-template-columns: 60px minmax(0, 1fr) auto;
+              gap: 12px;
+              padding: 16px;
+            }
+
+            .weekly-offer-day {
+              min-height: 38px;
+              font-size: 13px;
+            }
+
+            .weekly-offer-details {
+              strong {
+                font-size: 15px;
+              }
+
+              span {
+                font-size: 13px;
+              }
+            }
+
+            .weekly-offer-price strong {
+              font-size: 15px;
+            }
+          }
+
+          /* MOBILE */
+
+          @media (max-width: 600px) {
+            .weekly-offer-row {
+              grid-template-columns: 48px minmax(0, 1fr) auto;
+              gap: 9px;
+              padding: 14px 10px;
+            }
+
+            .weekly-offer-day {
+              min-height: 34px;
+              padding: 6px;
+              font-size: 12px;
+              border-radius: 8px;
+            }
+
+            .weekly-offer-details {
+              strong {
+                font-size: 13px;
+              }
+
+              span {
+                font-size: 12px;
+              }
+            }
+
+            .weekly-offer-price strong {
+              font-size: 13px;
+            }
+
+            .weekly-offers-btn {
+              min-height: 48px;
+              font-size: 13px;
+            }
+          }
+
         `}</style>
       </main>
 
