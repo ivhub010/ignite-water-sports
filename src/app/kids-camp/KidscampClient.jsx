@@ -363,7 +363,7 @@ export function KidscampClient() {
               data-widget_type="heading.default"
             >
               <h1 className="elementor-heading-title elementor-size-default">
-                Kids kayak on Palm Jumeirah
+                Kids camp on Palm Jumeirah
               </h1>
             </div>
           </div>
