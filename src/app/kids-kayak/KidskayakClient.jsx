@@ -509,15 +509,15 @@ export function KidskayakClient() {
                   <h3>Kids birthday party</h3>
 
                   <p className="related-price">
-                    From <DirhamIcon size="1em" /> 120
+                    From <DirhamIcon size="1em" /> 100
                   </p>
 
                   <a
-                    href="https://web.whatsapp.com/send?a+utoload=1&app_absent=0&phone=971522495311&text=Hi,%20I%27d%20like%20to%20know%20more%20about%20your%20Birthday%20packages%20please."
+                    href="https://api.whatsapp.com/send?phone=971522495311&text=I%20would%20like%20more%20information%20on%20your%20birthday%20packages"
                     className="related-btn"
                     target='_blank'
                   >
-                    Book now
+                    Get a Quote
                   </a>
                 </div>
               </article>
