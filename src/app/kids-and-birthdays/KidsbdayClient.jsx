@@ -7,7 +7,7 @@ import "dirham/css";
 import { DirhamIcon } from "dirham/react";
 
 const QUOTE_URL = 'https://api.whatsapp.com/send?phone=971522495311&text=I%20would%20like%20more%20information%20on%20your%20birthday%20packages';
-const GUIDE_URL = 'https://ignitewatersports.com/wp-content/uploads/2026/02/IGNITE-Water-Sports-Birthday-Party-Guide.pdf';
+const GUIDE_URL = 'https://ignitewatersports.com/wp-content/uploads/2026/11/IGNITE-Water-Sports-Birthday-Party-Guide.pdf';
 
 const birthdayPackages = [
   {

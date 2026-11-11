@@ -6,7 +6,7 @@ import SiteFooter from '@/components/layout/SiteFooter';
 import "dirham/css";
 import { DirhamIcon } from "dirham/react";
 
-const BOOKING_URL = 'https://book.ignitewatersports.com/?type=rentals&section=4';
+const BOOKING_URL = 'https://book.ignitewatersports.com/?type=rentals&section=2';
 
 const benefits = [
   {
@@ -35,71 +35,56 @@ const benefits = [
   },
 ];
 
-
-const birthdayPackages = [
-  {
-    id: "water-sports-park",
-    title: "Water sports and water park",
-    age: "6 to 16 years",
-    duration: "1.5 hours",
-    image: "",
-    imageAlt: "Kids on the Giant SUP",
-    imagePlaceholder: "Photo: kids on the Giant SUP",
-    description:
-      "30 minutes of water sports followed by 60 minutes on the IGNITE water park. The split can be adjusted to suit the celebrant.",
-    features: [
-      "Land-based challenges first, such as sack races and musical hoops",
-      "Water games in life vests: Giant SUP, kids' kayaks, blue mats and nipper boards",
-      "Exclusive access to the water park",
-    ],
-  },
-  {
-    id: "water-sports",
-    title: "Water sports",
-    age: "6 to 16 years",
-    duration: "1.5 hours",
-    image: "",
-    imageAlt: "Kids kayaking",
-    imagePlaceholder: "Photo: kids kayaking",
-    description:
-      "Land-based challenges followed by water sports, tailored to the age of the group.",
-    features: [
-      "Sack races and musical hoops before heading to the water",
-      "Water games in life vests: Giant SUP, kids' kayaks, blue mats and nipper boards",
-      "Older kids can race Giant SUPs with paddles or try stand-up paddleboarding",
-    ],
-  },
-];
-
-
 // value: (
 //       <span className="price-value">
 //         From <DirhamIcon size="1em" /> 50
 //       </span>
 //     )
 
+
 const sessionDetails = [
-  { icon: 'clock', label: 'Duration', value: '1 hour' },
-  { icon: 'tag', label: 'Price', value: (
-       <span className="price-value">
-         <DirhamIcon size="1em" /> 280 per pedalo
-       </span>
-     ) },
+  {
+    icon: 'clock',
+    label: 'Duration',
+    value: '1 hour',
+  },
+  {
+    icon: 'tag',
+    label: 'Price',
+    value: (
+      <span className="price-value">
+        <DirhamIcon size="1em" /> 50
+      </span>
+    ),
+  },
   {
     icon: 'users',
     label: 'Suitable for',
-    value: 'Families and friends, all ages',
+    value: 'Ages 6 to 10',
   },
-  { icon: 'users', label: 'Group Size', value: 'Up to 4 guests per pedalo' },
-  { icon: 'pin', label: 'Location', value: 'RIVA Beach Club, Palm Jumeirah' },
-  { icon: 'trend', label: 'Difficulty', value: 'Easy' },
+  {
+    icon: 'eye',
+    label: 'Supervision',
+    value: 'A parent must supervise while children are on the kayak',
+  },
+  {
+    icon: 'pin',
+    label: 'Location',
+    value: 'RIVA Beach Club, Palm Jumeirah',
+  },
+  {
+    icon: 'trend',
+    label: 'Difficulty',
+    value: 'Easy',
+  },
 ];
 
 const included = [
-  '4 seater pedalo for 1 hour',
-  'Life vests for everyone on board',
+  'Kids kayak and paddle',
+  'Life vest',
   'Lifeguard-trained staff on hand throughout',
 ];
+
 
 const whyIgnite = [
   {
@@ -124,54 +109,31 @@ const whyIgnite = [
   },
 ];
 
-
 const goodToKnow = [
-  {
-    icon: 'shirt',
-    text: "Wear swimwear or clothing you don't mind getting wet",
-  },
-  {
-    icon: 'sun',
-    text: 'Bring sunscreen, sunglasses, and a water bottle',
-  },
-  {
-    icon: 'clock',
-    text: 'Arrive 10 minutes before your session',
-  },
-  {
-    icon: 'cloud',
-    text: 'Sessions depend on weather conditions',
-  },
-  {
-    icon: 'bottle',
-    text: 'Towels, food and drinks are not included',
-  },
-  {
-    icon: 'car',
-    text: 'Free parking available at RIVA Beach Club',
-  },
+  { icon: 'shirt', text: "Wear swimwear or clothing you don't mind getting wet" },
+  { icon: 'sun', text: 'Bring sunscreen, sunglasses, and a water bottle' },
+  { icon: 'clock', text: 'Arrive 10 minutes before your session' },
+  { icon: 'car', text: 'Free parking available at RIVA Beach Club' },
 ];
-
 
 const faqs = [
   {
-    question: 'How many people fit on a pedalo?',
+    question: 'What ages is the kids kayak for?',
     answer:
-      'Up to 4 guests per pedalo. It is a 4-seater, ideal for families and friends.',
+      'The kids kayak is for children aged 6 to 10. A parent must supervise while your child is on the kayak.',
   },
   {
-    question: 'Do I need experience?',
-    answer:
-      'No experience needed. The pedalo is easy to use and you cruise at your own pace.',
+    question: 'How long is a session?',
+    answer: 'Sessions are 1 hour. Arrive 10 minutes before your start time.',
   },
   {
-    question: 'Are life vests provided?',
-    answer: 'Yes. Life vests are included for everyone on board.',
+    question: 'What if my child is older than 10?',
+    answer: "Children aged 6 and over can also use our regular kayaks with an adult supervising. See our <b><a href='/kayak'>kayak rental page</a></b>.",
   },
   {
-    question: 'What happens if the weather is bad?',
+    question: 'What should my child bring?',
     answer:
-      'Pedalo sessions depend on weather conditions. If the weather affects your booking, contact our team on WhatsApp at +971 52 249 5311.',
+      'Wear swimwear or clothing your child can get wet. Bring sunscreen, sunglasses, and a water bottle.',
   },
   {
     question: 'Is parking available?',
@@ -219,28 +181,12 @@ function LineIcon({ name }) {
       return <svg {...common}><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>;
     case 'car':
       return <svg {...common}><path d="M4 16V9l2-4h10l3 4v7"/><path d="M4 11h15M7 16v2M17 16v2"/><circle cx="7" cy="14" r="1"/><circle cx="16" cy="14" r="1"/></svg>;
-    case 'cloud':
-      return (
-        <svg {...common}>
-          <path d="M7 18h11a4 4 0 0 0 .5-7.97A6.5 6.5 0 0 0 6 11a3.5 3.5 0 0 0 1 7Z" />
-        </svg>
-      );
-
-    case 'bottle':
-      return (
-        <svg {...common}>
-          <path d="M10 3h4v3h-4z" />
-          <path d="M10 6v2l-2.5 3.5A4 4 0 0 0 7 14v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-5a4 4 0 0 0-.5-2.5L14 8V6" />
-          <path d="M7.5 14h9" />
-          <path d="M7.5 18h9" />
-        </svg>
-      );
     default:
       return null;
   }
 }
 
-export function KidsbdayClient() {
+export function KidskayakClient() {
   const [openFaq, setOpenFaq] = useState(0);
 
   return (
@@ -265,7 +211,7 @@ export function KidsbdayClient() {
               data-widget_type="heading.default"
             >
               <h1 className="elementor-heading-title elementor-size-default">
-                Kids birthday parties on Palm Jumeirah
+                Kids kayak on Palm Jumeirah
               </h1>
             </div>
           </div>
@@ -278,119 +224,26 @@ export function KidsbdayClient() {
               {/* <h2>SUP rental on Palm Jumeirah</h2> */}
 
               <p>
-                Water sports and inflatable water park parties for ages 3 to 16, fully supervised by the IGNITE team at RIVA Beach Club.
+                Let your kids explore the calm waters of Palm Jumeirah in a kayak, with lifeguard-trained staff on hand throughout.
               </p>
 
               <div className="sup-booking-actions">
                 <a
-                  href="https://api.whatsapp.com/send?phone=971522495311&text=I%20would%20like%20more%20information%20on%20your%20birthday%20packages"
+                  href={BOOKING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="sup-booking-btn"
                 >
-                  Get a Quote
+                  Book now
                 </a>
 
-                <a
-                  href="https://ignitewatersports.com/wp-content/uploads/2026/02/IGNITE-Water-Sports-Birthday-Party-Guide.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="sup-booking-price"
-                >
-                  Download the birthday guide
-                </a>
+                <span className="sup-booking-price">
+                  From <DirhamIcon/> 50, 60 minutes
+                </span>
               </div>
             </div>
           </div>
         </section>
-
-
-        {/* BIRTHDAY PACKAGES */}
-        <section className="birthday-packages" id="birthday-packages">
-          <div className="birthday-packages__container">
-            <div className="birthday-packages__heading">
-              <h2>Choose a package</h2>
-              <p>
-                Every party is fully supervised by the IGNITE team. Our team
-                quotes each party based on the package and the number of guests.
-              </p>
-            </div>
-
-            <div className="birthday-packages__grid">
-              {birthdayPackages.map((pkg) => (
-                <article className="birthday-package" key={pkg.id}>
-                  {/* IMAGE */}
-                  <div className="birthday-package__image">
-                    <span className="birthday-package__age">
-                      {pkg.age}
-                    </span>
-
-                    {pkg.image ? (
-                      <img
-                        src={pkg.image}
-                        alt={pkg.imageAlt}
-                        loading="lazy"
-                      />
-                    ) : (
-                      <span className="birthday-package__placeholder">
-                        {pkg.imagePlaceholder}
-                      </span>
-                    )}
-                  </div>
-
-                  {/* CONTENT */}
-                  <div className="birthday-package__body">
-                    <h3>{pkg.title}</h3>
-
-                    <div className="birthday-package__duration">
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        aria-hidden="true"
-                      >
-                        <circle cx="12" cy="12" r="9" />
-                        <path d="M12 7v5l3 2" />
-                      </svg>
-                      <span>{pkg.duration}</span>
-                    </div>
-
-                    <p className="birthday-package__description">
-                      {pkg.description}
-                    </p>
-
-                    <div className="birthday-package__features">
-                      {pkg.features.map((feature) => (
-                        <div
-                          className="birthday-package__feature"
-                          key={feature}
-                        >
-                          <span className="birthday-package__check">
-                            ✓
-                          </span>
-                          <span>{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-
-                    <a
-                      href={`#birthday-enquiry`}
-                      className="birthday-package__button"
-                    >
-                      Get a quote
-                    </a>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
 
         {/* SESSION INFORMATION */}
         <section className="details-section">
@@ -468,8 +321,8 @@ export function KidsbdayClient() {
 
           <div className="sup-container booking-strip">
             <div>
-              <strong>From <DirhamIcon size="1em" /> 280</strong>
-              <span>1 hour, up to 4 guests, instant confirmation</span>
+              <strong>From <DirhamIcon size="1em" /> 50</strong>
+              <span>60 minutes, instant confirmation</span>
             </div>
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
               Book your session
@@ -514,7 +367,13 @@ export function KidsbdayClient() {
 
             <div className="video-media">
               <div className="video-wrapper">
-                <img src="https://ignitewatersports.com/wp-content/uploads/2026/01/Pedalo-Dubai.jpg"/>
+                <iframe
+                  src="https://www.youtube.com/embed/7xPcz5YSvqY?rel=0"
+                  title="IGNITE Water Sports - Stand-Up Paddleboarding"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
@@ -602,38 +461,6 @@ export function KidsbdayClient() {
               <article className="related-card">
                 <div className="related-image-placeholder">
                   <img
-                      src="https://ignitewatersports.com/wp-content/uploads/elementor/thumbs/SUP1-e1719384554118-qq7t4qbwrnvy1q5czbe5oml148jwh0elkzjiocgv0w.png"
-                      alt="Explore the Palm by paddle"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                  <span className="related-badge">SUP</span>
-                </div>
-
-                <div className="related-card-content">
-
-                  <h3>SUP rental</h3>
-
-                  <p className="related-price">
-                    From <DirhamIcon size="1em" /> 50
-                  </p>
-
-                  <a
-                    href="https://book.ignitewatersports.com/?type=rentals&section=1"
-                    className="related-btn"
-                    target='_blank'
-                  >
-                    Book now
-                  </a>
-                </div>
-              </article>
-
-              <article className="related-card">
-                <div className="related-image-placeholder">
-                  <img
                       src="/watersports/water-park.jpg"
                       alt="Learn to fly on water"
                       style={{
@@ -662,6 +489,38 @@ export function KidsbdayClient() {
                   </a>
                 </div>
               </article>
+
+              <article className="related-card">
+                <div className="related-image-placeholder">
+                  <img
+                      src="https://ignitewatersports.com/wp-content/uploads/elementor/thumbs/kidsbirthday-qkgqgpxwrmb8oznoo9mh8uyntebhcj06qns6m2e5g0.png"
+                      alt="Explore the Palm by paddle"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                      }}
+                    />
+                  <span className="related-badge">Kids</span>
+                </div>
+
+                <div className="related-card-content">
+
+                  <h3>Kids birthday party</h3>
+
+                  <p className="related-price">
+                    From <DirhamIcon size="1em" /> 120
+                  </p>
+
+                  <a
+                    href="https://web.whatsapp.com/send?a+utoload=1&app_absent=0&phone=971522495311&text=Hi,%20I%27d%20like%20to%20know%20more%20about%20your%20Birthday%20packages%20please."
+                    className="related-btn"
+                    target='_blank'
+                  >
+                    Book now
+                  </a>
+                </div>
+              </article>
             </div>
           </div>
         </section>
@@ -683,9 +542,8 @@ export function KidsbdayClient() {
           .sup{
             display: flex !important;
             min-height: 420px !important;
-            background-image: url("/watersports/Kids-Birthday1.png") !important;
+            background-image: url("/watersports/IWS-New-Website-Banner-1-1.png") !important;
             background-position: center;
-            background-size: cover;
 
             .e-con-inner{
               align-content: center !important;
@@ -797,12 +655,9 @@ export function KidsbdayClient() {
           }
 
           .sup-booking-price {
-            color: #ffffff9e;
+            color: rgba(255, 255, 255, 0.62);
             font-size: 20px;
             font-weight: 600;
-            border: 2px solid #ffffff9e;
-            padding: 20px 45px;
-            border-radius: 18px;
           }
 
           .section-label {
@@ -1165,9 +1020,6 @@ export function KidsbdayClient() {
             border-radius: 18px;
             overflow: hidden;
             background: #1e2d34;
-            align-content: center;
-            align-items: center;
-            display: flex;
           }
 
           .video-wrapper iframe {
@@ -1685,312 +1537,6 @@ export function KidsbdayClient() {
               font-weight: 600;
             }
           }
-
-
-          /* =========================================
-            BIRTHDAY PACKAGES
-          ========================================= */
-
-          .birthday-packages {
-            padding: 70px 0 90px;
-            background: #fff;
-
-            &__container {
-              width: min(1180px, calc(100% - 40px));
-              margin: 0 auto;
-            }
-
-            &__heading {
-              margin-bottom: 45px;
-
-              h2 {
-                margin: 0 0 15px;
-                color: #111;
-                font-size: clamp(32px, 4vw, 46px);
-                font-weight: 800;
-                line-height: 1.2;
-                letter-spacing: -1px;
-              }
-
-              p {
-                max-width: 1050px;
-                margin: 0;
-                color: #777;
-                font-size: 18px;
-                line-height: 1.8;
-              }
-            }
-
-            &__grid {
-              display: grid;
-              grid-template-columns: repeat(2, minmax(0, 1fr));
-              gap: 30px;
-              align-items: stretch;
-            }
-          }
-
-          /* PACKAGE CARD */
-
-          .birthday-package {
-            display: flex;
-            flex-direction: column;
-            min-width: 0;
-            overflow: hidden;
-            background: #f7f8f9;
-            border-radius: 24px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.025);
-
-            /* IMAGE */
-
-            &__image {
-              position: relative;
-              height: 290px;
-              overflow: hidden;
-              background: linear-gradient(
-                145deg,
-                #bedce8 0%,
-                #91bfd0 60%,
-                #79afc3 100%
-              );
-
-              img {
-                display: block;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-              }
-            }
-
-            &__age {
-              position: absolute;
-              top: 20px;
-              left: 20px;
-              z-index: 2;
-              padding: 7px 18px;
-              border-radius: 30px;
-              background: #233239;
-              color: #fff;
-              font-size: 13px;
-              font-weight: 800;
-              line-height: 1.2;
-            }
-
-            &__placeholder {
-              position: absolute;
-              bottom: 20px;
-              left: 20px;
-              color: rgba(255, 255, 255, 0.8);
-              font-size: 14px;
-              font-style: italic;
-              font-weight: 500;
-              letter-spacing: 0.3px;
-            }
-
-            /* CONTENT */
-
-            &__body {
-              display: flex;
-              flex: 1;
-              flex-direction: column;
-              padding: 35px;
-            }
-
-            &__body h3 {
-              margin: 0 0 12px;
-              color: #111;
-              font-size: 26px;
-              font-weight: 800;
-              line-height: 1.3;
-            }
-
-            &__duration {
-              display: inline-flex;
-              align-items: center;
-              align-self: flex-start;
-              gap: 10px;
-              padding: 8px 18px;
-              border-radius: 30px;
-              background: #fff;
-              color: #303b40;
-              font-size: 15px;
-              font-weight: 700;
-
-              svg {
-                color: #54c8e8;
-              }
-            }
-
-            &__description {
-              margin: 24px 0 22px;
-              color: #777;
-              font-size: 17px;
-              line-height: 1.8;
-            }
-
-            /* FEATURES */
-
-            &__features {
-              display: flex;
-              flex-direction: column;
-              margin-bottom: 35px;
-            }
-
-            &__feature {
-              display: flex;
-              align-items: flex-start;
-              gap: 15px;
-              padding: 15px 0;
-              border-bottom: 1px solid #e8e9eb;
-              color: #555;
-              font-size: 16px;
-              line-height: 1.6;
-
-              &:last-child {
-                border-bottom: 0;
-              }
-            }
-
-            &__check {
-              flex: 0 0 18px;
-              color: #54c8e8;
-              font-size: 22px;
-              font-weight: 800;
-              line-height: 1.2;
-            }
-
-            /* BUTTON */
-
-            &__button {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              width: 100%;
-              min-height: 62px;
-              margin-top: auto;
-              padding: 15px 25px;
-              border: 0;
-              border-radius: 13px;
-              background: #ff9012;
-              color: #fff;
-              font-size: 18px;
-              font-weight: 800;
-              text-align: center;
-              text-decoration: none;
-              transition: all 0.25s ease;
-
-              &:hover {
-                background: #e87e00;
-                color: #fff;
-                transform: translateY(-2px);
-                box-shadow: 0 8px 20px rgba(255, 144, 18, 0.2);
-              }
-            }
-          }
-
-          /* =========================================
-            TABLET
-          ========================================= */
-
-          @media (max-width: 991px) {
-            .birthday-packages {
-              padding: 60px 0;
-
-              &__grid {
-                gap: 20px;
-              }
-
-              &__heading p {
-                font-size: 16px;
-              }
-            }
-
-            .birthday-package {
-              &__image {
-                height: 240px;
-              }
-
-              &__body {
-                padding: 25px;
-              }
-
-              &__body h3 {
-                font-size: 22px;
-              }
-
-              &__description {
-                font-size: 15px;
-              }
-
-              &__feature {
-                font-size: 14px;
-              }
-            }
-          }
-
-          /* =========================================
-            MOBILE
-          ========================================= */
-
-          @media (max-width: 767px) {
-            .birthday-packages {
-              padding: 45px 0 60px;
-
-              &__container {
-                width: calc(100% - 30px);
-              }
-
-              &__heading {
-                margin-bottom: 30px;
-
-                h2 {
-                  font-size: 32px;
-                }
-
-                p {
-                  font-size: 15px;
-                  line-height: 1.7;
-                }
-              }
-
-              &__grid {
-                grid-template-columns: 1fr;
-                gap: 25px;
-              }
-            }
-
-            .birthday-package {
-              border-radius: 18px;
-
-              &__image {
-                height: 230px;
-              }
-
-              &__body {
-                padding: 25px 22px;
-              }
-
-              &__body h3 {
-                font-size: 23px;
-              }
-
-              &__description {
-                font-size: 15px;
-                margin: 20px 0;
-              }
-
-              &__feature {
-                gap: 12px;
-                font-size: 14px;
-                padding: 12px 0;
-              }
-
-              &__button {
-                min-height: 55px;
-                font-size: 16px;
-              }
-            }
-          }
-
         `}</style>
       </main>
 
