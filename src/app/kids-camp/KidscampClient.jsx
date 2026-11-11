@@ -518,8 +518,8 @@ export function KidscampClient() {
 
           <div className="sup-container booking-strip">
             <div>
-              <strong>From <DirhamIcon size="1em" /> 50</strong>
-              <span>60 minutes, instant confirmation</span>
+              <strong>From <DirhamIcon size="1em" /> 250</strong>
+              <span>3 hours a day</span>
             </div>
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
               Book your session
@@ -565,7 +565,7 @@ export function KidscampClient() {
             <div className="video-media">
               <div className="video-wrapper">
                 <iframe
-                  src="https://www.youtube.com/embed/7xPcz5YSvqY?rel=0"
+                  src="https://www.youtube.com/embed/pj9hV4OZ8aY?rel=0"
                   title="IGNITE Water Sports - Stand-Up Paddleboarding"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
