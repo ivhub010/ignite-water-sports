@@ -509,7 +509,7 @@ export function KidskayakClient() {
                   <h3>Kids birthday party</h3>
 
                   <p className="related-price">
-                    From <DirhamIcon size="1em" /> 100
+                    From <DirhamIcon size="1em" /> 120
                   </p>
 
                   <a
