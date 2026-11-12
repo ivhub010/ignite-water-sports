@@ -491,7 +491,7 @@ export function KayakClient() {
                   <h3>Beach Yoga</h3>
 
                   <p className="related-price">
-                    From <DirhamIcon size="1em" /> 120
+                    From <DirhamIcon size="1em" /> 60 per class
                   </p>
 
                   <a

@@ -420,7 +420,7 @@ export function BeachyogaClient() {
 
               <div className="video-features">
                 <div className="video-feature">
-                  <LineIcon name="wave" />
+                  <LineIcon name="calendar" />
                   <span>Saturday mornings on the beach</span>
                 </div>
 
