@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   title: "Kids camp on Palm Jumeirah",
 
   description:
-    "An action-packed beachside camp for ages 6 to 12, run with SUP Kids UAE. Water sports, water park fun and team challenges, led by certified instructors.",
+    "An action-packed beachside camp for ages 6 to 12. Water sports, water park fun and team challenges, led by certified instructors.",
 
   openGraph: {
     title: "Kids camp on Palm Jumeirah",
 
     description:
-    "An action-packed beachside camp for ages 6 to 12, run with SUP Kids UAE. Water sports, water park fun and team challenges, led by certified instructors.",
+    "An action-packed beachside camp for ages 6 to 12. Water sports, water park fun and team challenges, led by certified instructors.",
     type: "website",
     siteName: "IGNITE Water Sports",
     images: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "Kids camp on Palm Jumeirah",
 
     description:
-    "An action-packed beachside camp for ages 6 to 12, run with SUP Kids UAE. Water sports, water park fun and team challenges, led by certified instructors.",
+    "An action-packed beachside camp for ages 6 to 12. Water sports, water park fun and team challenges, led by certified instructors.",
     images: [
       "https://ignitewatersports.com/wp-content/uploads/2024/12/IGNITE_SocialIcon_WhiteWLogo_WaterSports.png",
     ],

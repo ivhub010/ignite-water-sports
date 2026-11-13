@@ -66,8 +66,8 @@ const sessionDetails = [
   },
   {
     icon: 'heart',
-    label: 'Run with',
-    value: 'SUP Kids UAE',
+    label: 'Run by',
+    value: 'IGNITE Water Sports',
   },
 ];
 
@@ -376,7 +376,7 @@ export function KidscampClient() {
               {/* <h2>SUP rental on Palm Jumeirah</h2> */}
 
               <p>
-                An action-packed beachside camp for ages 6 to 12, run with SUP Kids UAE. Water sports, water park fun and team challenges, led by certified instructors.
+                An action-packed beachside camp for ages 6 to 12. Water sports, water park fun and team challenges, led by certified instructors.
               </p>
 
               <div className="sup-booking-actions">
@@ -740,7 +740,7 @@ export function KidscampClient() {
             display: flex !important;
             min-height: 420px !important;
             background-image: url("/watersports/kidscamp1.png") !important;
-            background-position: center;
+            background-position: 50% -40%;
 
             .e-con-inner{
               align-content: center !important;

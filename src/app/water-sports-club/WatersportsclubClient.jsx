@@ -67,8 +67,8 @@ const sessionDetails = [
   },
   {
     icon: 'heart',
-    label: 'Run with',
-    value: 'SUP Kids',
+    label: 'Run by',
+    value: 'IGNITE Water Sports',
   },
 ];
 
@@ -390,7 +390,7 @@ export function WatersportsclubClient() {
               {/* <h2>SUP rental on Palm Jumeirah</h2> */}
 
               <p>
-                Saturday sessions at RIVA Beach Club for kids aged 3 and above, run with SUP Kids. The club is not running at the moment.
+                Saturday sessions at RIVA Beach Club for kids aged 3 and above. The club is not running at the moment.
               </p>
 
               <div className="sup-booking-actions">

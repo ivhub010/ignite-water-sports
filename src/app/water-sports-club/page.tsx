@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   title: "IGNITE Water Sports Club",
 
   description:
-    "Saturday sessions at RIVA Beach Club for kids aged 3 and above, run with SUP Kids. The club is not running at the moment.",
+    "Saturday sessions at RIVA Beach Club for kids aged 3 and above. The club is not running at the moment.",
 
   openGraph: {
     title: "IGNITE Water Sports Club",
 
     description:
-    "Saturday sessions at RIVA Beach Club for kids aged 3 and above, run with SUP Kids. The club is not running at the moment.",
+    "Saturday sessions at RIVA Beach Club for kids aged 3 and above. The club is not running at the moment.",
     type: "website",
     siteName: "IGNITE Water Sports",
     images: [
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "IGNITE Water Sports Club",
 
     description:
-    "Saturday sessions at RIVA Beach Club for kids aged 3 and above, run with SUP Kids. The club is not running at the moment.",
+    "Saturday sessions at RIVA Beach Club for kids aged 3 and above. The club is not running at the moment.",
     images: [
       "https://ignitewatersports.com/wp-content/uploads/2024/12/IGNITE_SocialIcon_WhiteWLogo_WaterSports.png",
     ],
