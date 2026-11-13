@@ -466,7 +466,7 @@ export function SUPsoundClient() {
                     href={CORPORATE_WHATSAPP_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="sound-corporate-btn"
+                    className="camp-message-btn"
                   >
                     Enquire about a corporate booking
                   </a>

@@ -81,7 +81,7 @@ const included = [
   'A series of poses led by a certified yoga instructor',
   'Build balance, focus and coordination as you rock gently on the water',
   'A refreshing workout that challenges body and mind',
-];;
+];
 
 const goodToKnow = [
   {
@@ -496,13 +496,7 @@ export function SUPyogaClient() {
 
             <div className="video-media">
               <div className="video-wrapper">
-                <iframe
-                  src="https://www.youtube.com/embed/36sgO6gJHC0?rel=0"
-                  title="IGNITE Water Sports - Beach Yoga"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  loading="lazy"
-                />
+                <img src="https://ignitewatersports.com/wp-content/uploads/2024/01/supyoga2.png"/>
               </div>
             </div>
           </div>
