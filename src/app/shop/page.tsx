@@ -1,13 +1,47 @@
-import type { Metadata } from 'next';
-import ProductArchive from '@/components/sections/ProductArchive';
-import { products } from '@/content/products';
+import ContentPage from '@/components/sections/ContentPage';
+import { pageMetadata } from '@/lib/metadata';
+import { standUpPaddleBoarding } from '@/content/stand-up-paddle-boarding';
+import { ShopClient } from './ShopClient';
+
+// export const metadata = pageMetadata(standUpPaddleBoarding);
+
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Shop - IGNITE Water Sports',
+  title: "IGNITE Water Sports merch | Branded gear and accessories Dubai",
+
   description:
-    'Shop IGNITE Water Sports merchandise, camps, club terms and community event tickets. Caps, rash guards, swim shorts, water bottles and more, delivered in Dubai.',
+    "Shop IGNITE Water Sports branded clothing, accessories and gear. Tees, caps, rash guards and more. Official IGNITE merchandise available online.",
+
+  openGraph: {
+    title: "IGNITE Water Sports merch | Branded gear and accessories Dubai",
+
+    description:
+    "Shop IGNITE Water Sports branded clothing, accessories and gear. Tees, caps, rash guards and more. Official IGNITE merchandise available online.",
+    type: "website",
+    siteName: "IGNITE Water Sports",
+    images: [
+      {
+        url: "https://ignitewatersports.com/wp-content/uploads/2024/12/IGNITE_SocialIcon_WhiteWLogo_WaterSports.png",
+        width: 1200,
+        height: 630,
+        alt: "IGNITE Water Sports - Standup Paddle Boarding Dubai",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "IGNITE Water Sports merch | Branded gear and accessories Dubai",
+
+    description:
+    "Shop IGNITE Water Sports branded clothing, accessories and gear. Tees, caps, rash guards and more. Official IGNITE merchandise available online.",
+    images: [
+      "https://ignitewatersports.com/wp-content/uploads/2024/12/IGNITE_SocialIcon_WhiteWLogo_WaterSports.png",
+    ],
+  },
 };
 
 export default function Page() {
-  return <ProductArchive title="Shop" products={products} />;
+  return <ShopClient/>;
 }
