@@ -1,6 +1,5 @@
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
-
 import "dirham/css";
 import { DirhamIcon } from "dirham/react";
 
@@ -856,147 +855,38 @@ export default function Home() {
                   data-widget_type="text-editor.default"
                 >
                   <p>
-                    IGNITE Water Sports is Dubai's premier aquatic adventure hub
-                    at RIVA Beach Club, Palm Jumeirah. In calm, protected
-                    waters, we offer world-class equipment, certified
-                    instructors, and transformative wellness programs.
+                    IGNITE Water Sports is Dubai's premier aquatic adventure hub at RIVA Beach Club, Palm Jumeirah. In calm, protected waters, we offer world-class equipment, certified instructors, and transformative wellness programs.
                   </p>{" "}
                 </div>
-                <div
-                  className="elementor-element elementor-element-2bfd7ec e-grid e-con-full e-con e-child"
-                  data-id="2bfd7ec"
-                  data-element_type="container"
-                  data-e-type="container"
-                >
-                  <div
-                    className="elementor-element elementor-element-48a7401 elementor-invisible elementor-widget elementor-widget-elementskit-funfact"
-                    data-id="48a7401"
-                    data-element_type="widget"
-                    data-e-type="widget"
-                    data-settings='{"_animation":"fadeInUp","ekit_we_effect_on":"none"}'
-                    data-widget_type="elementskit-funfact.default"
-                  >
-                    <div className="ekit-wid-con">
-                      <div className="elementskit-funfact text-left     ">
-                        <div className="elementskit-funfact-inner position_top">
-                          <div className="funfact-icon"></div>
-                          <div className="funfact-content">
-                            <div className="number-percentage-wraper">
-                              <span
-                                className="number-percentage"
-                                data-value={20}
-                                data-animation-duration={3500}
-                                data-style="static"
-                              >
-                                15
-                              </span>
-                              <span className="super">+</span>
-                            </div>
-                            <h3 className="funfact-title">
-                              Years of Experience
-                            </h3>{" "}
-                          </div>
-                        </div>
-                      </div>
-                    </div>{" "}
+                                
+                <div className="ignite-stats">
+                  <div className="ignite-stat-item">
+                    <h3>
+                      Since <span>2010</span>
+                    </h3>
+                    <p>Dubai's original water sports club</p>
                   </div>
-                  <div
-                    className="elementor-element elementor-element-85b6106 elementor-invisible elementor-widget elementor-widget-elementskit-funfact"
-                    data-id="85b6106"
-                    data-element_type="widget"
-                    data-e-type="widget"
-                    data-settings='{"_animation":"fadeInUp","ekit_we_effect_on":"none"}'
-                    data-widget_type="elementskit-funfact.default"
-                  >
-                    <div className="ekit-wid-con">
-                      <div className="elementskit-funfact text-left     ">
-                        <div className="elementskit-funfact-inner position_top">
-                          <div className="funfact-icon"></div>
-                          <div className="funfact-content">
-                            <div className="number-percentage-wraper">
-                              <span
-                                className="number-percentage"
-                                data-value={15}
-                                data-animation-duration={3500}
-                                data-style="static"
-                              >
-                                10
-                              </span>
-                              <span className="super">+</span>
-                            </div>
-                            <h3 className="funfact-title">
-                              Water Sports Activities
-                            </h3>{" "}
-                          </div>
-                        </div>
-                      </div>
-                    </div>{" "}
+
+                  <div className="ignite-stat-item">
+                    <h3>
+                      21,000<span>+</span>
+                    </h3>
+                    <p>Guests welcomed</p>
                   </div>
-                  <div
-                    className="elementor-element elementor-element-a1c4f01 elementor-invisible elementor-widget elementor-widget-elementskit-funfact"
-                    data-id="a1c4f01"
-                    data-element_type="widget"
-                    data-e-type="widget"
-                    data-settings='{"_animation":"fadeInUp","ekit_we_effect_on":"none"}'
-                    data-widget_type="elementskit-funfact.default"
-                  >
-                    <div className="ekit-wid-con">
-                      <div className="elementskit-funfact text-left     ">
-                        <div className="elementskit-funfact-inner position_top">
-                          <div className="funfact-icon"></div>
-                          <div className="funfact-content">
-                            <div className="number-percentage-wraper">
-                              <span
-                                className="number-percentage"
-                                data-value={4.9}
-                                data-animation-duration={3500}
-                                data-style="static"
-                              >
-                                4.9
-                              </span>
-                              <span className="super">★</span>
-                            </div>
-                            <h3 className="funfact-title">
-                              Average Google Rating
-                            </h3>{" "}
-                          </div>
-                        </div>
-                      </div>
-                    </div>{" "}
+
+                  <div className="ignite-stat-item">
+                    <h3>
+                      4.9<span className="stat-star">★</span>
+                    </h3>
+                    <p>Average Google rating</p>
                   </div>
-                  <div
-                    className="elementor-element elementor-element-b2d5e12 elementor-invisible elementor-widget elementor-widget-elementskit-funfact"
-                    data-id="b2d5e12"
-                    data-element_type="widget"
-                    data-e-type="widget"
-                    data-settings='{"_animation":"fadeInUp","ekit_we_effect_on":"none"}'
-                    data-widget_type="elementskit-funfact.default"
-                  >
-                    <div className="ekit-wid-con">
-                      <div className="elementskit-funfact text-left     ">
-                        <div className="elementskit-funfact-inner position_top">
-                          <div className="funfact-icon"></div>
-                          <div className="funfact-content">
-                            <div className="number-percentage-wraper">
-                              <span
-                                className="number-percentage"
-                                data-value={115}
-                                data-animation-duration={3500}
-                                data-style="static"
-                              >
-                                141
-                              </span>
-                              <span className="super">+</span>
-                            </div>
-                            <h3 className="funfact-title">
-                              Total Reviews
-                            </h3>{" "}
-                          </div>
-                        </div>
-                      </div>
-                    </div>{" "}
+
+                  <div className="ignite-stat-item">
+                    <h3>141</h3>
+                    <p>Google reviews</p>
                   </div>
                 </div>
+
                 <div
                   className="elementor-element elementor-element-378bfa2 elementor-invisible elementor-widget elementor-widget-button"
                   data-id="378bfa2"
@@ -1011,7 +901,7 @@ export default function Home() {
                     target="_blank"
                   >
                     <span className="elementor-button-content-wrapper">
-                      <span className="elementor-button-text" style={{textTransform:"initial"}}>Our Story</span>
+                      <span className="elementor-button-text" style={{textTransform:"initial"}}>Our story</span>
                     </span>
                   </a>
                 </div>
@@ -3178,7 +3068,7 @@ export default function Home() {
                       method="post"
                       className="wpcf7-form init"
                       aria-label="Contact form"
-                      noValidate="novalidate"
+                      noValidate
                       data-status="init"
                     >
                       <fieldset className="hidden-fields-container">
