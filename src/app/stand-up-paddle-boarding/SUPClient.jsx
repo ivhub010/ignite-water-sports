@@ -45,7 +45,7 @@ const sessionDetails = [
   { icon: 'clock', label: 'Duration', value: '60 minutes' },
   { icon: 'tag', label: 'Price', value: (
        <span className="price-value">
-         From <DirhamIcon size="1em" /> 50
+         <DirhamIcon size="1em" /> 75. From <DirhamIcon size="1em" /> 50 on offer days
        </span>
      ) },
   {
@@ -65,6 +65,14 @@ const included = [
   'Tutorial on request',
   'Certified instructor available for full session',
 ];
+
+const weeklyOffers = [
+  { title: 'Monday paddle hour', description: 'SUP or kayak, 1 hour', price: 60 },
+  { title: 'Mermen day, Tuesday', description: 'SUP, 1 hour', price: 50 },
+  { title: 'Mermaid day, Wednesday', description: 'SUP, 1 hour', price: 50 },
+];
+
+const WEEKLY_OFFERS_URL = 'https://book.ignitewatersports.com/?type=offers';
 
 const whyIgnite = [
   {
@@ -255,6 +263,31 @@ export function SUPClient() {
                     </div>
                   ))}
                 </div>
+              </div>
+
+              <div className="info-panel weekly-offers-panel">
+                <h2 className="panel-title">Weekly offers</h2>
+                <div className="weekly-offers-list">
+                  {weeklyOffers.map((offer) => (
+                    <div className="weekly-offer-card" key={offer.title}>
+                      <div className="weekly-offer-info">
+                        <h3>{offer.title}</h3>
+                        <p>{offer.description}</p>
+                      </div>
+                      <strong className="weekly-offer-price">
+                        <DirhamIcon size="1em" /> {offer.price}
+                      </strong>
+                    </div>
+                  ))}
+                </div>
+                <a
+                  className="weekly-offers-button"
+                  href={WEEKLY_OFFERS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  See all weekly offers
+                </a>
               </div>
             </div>
 
@@ -786,6 +819,84 @@ export function SUPClient() {
             font-size: 20px;
             line-height: 1.2;
             letter-spacing: 1.6px;
+          }
+
+          /* SUP session cards and weekly offers */
+          .price-value {
+            display: inline;
+            line-height: 1.5;
+          }
+
+          .price-value svg,
+          .weekly-offer-price svg {
+            display: inline-block;
+            vertical-align: -0.1em;
+          }
+
+          .weekly-offers-list {
+            display: grid;
+            gap: 12px;
+          }
+
+          .weekly-offer-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            padding: 19px 20px;
+            border-radius: 14px;
+            background: #fff;
+          }
+
+          .weekly-offer-info {
+            min-width: 0;
+          }
+
+          .weekly-offer-info h3 {
+            margin: 0 0 5px;
+            color: #263238;
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 1.35;
+          }
+
+          .weekly-offer-info p {
+            margin: 0;
+            color: #92989c;
+            font-size: 14px;
+            line-height: 1.45;
+          }
+
+          .weekly-offer-price {
+            flex-shrink: 0;
+            color: #ff9017;
+            font-size: 19px;
+            font-weight: 800;
+            white-space: nowrap;
+          }
+
+          .weekly-offers-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+            min-height: 48px;
+            margin: 22px auto 0;
+            padding: 10px 25px;
+            border: 2px solid #263940;
+            border-radius: 12px;
+            color: #263940;
+            background: transparent;
+            text-decoration: none;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 700;
+            transition: background 0.2s ease, color 0.2s ease;
+          }
+
+          .weekly-offers-button:hover {
+            background: #263940;
+            color: #fff;
           }
 
           .session-row {
@@ -1479,6 +1590,18 @@ export function SUPClient() {
               grid-template-columns: 22px 105px 1fr;
               gap: 10px;
               font-size: 14px;
+            }
+
+            .weekly-offer-card {
+              padding: 15px;
+            }
+
+            .weekly-offer-info h3 {
+              font-size: 15px;
+            }
+
+            .weekly-offer-price {
+              font-size: 16px;
             }
 
             .booking-strip {

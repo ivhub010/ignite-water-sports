@@ -43,20 +43,12 @@ const benefits = [
 
 const sessionDetails = [
   { icon: 'clock', label: 'Duration', value: '60 minutes' },
-  { icon: 'tag', label: 'Price', value: (
-       <span className="price-value">
-         From <DirhamIcon size="1em" /> 50
-       </span>
-     ) },
-  {
-    icon: 'users',
-    label: 'Suitable for',
-    value: 'Ages 6+, adult supervision required',
-  },
+  { icon: 'tag', label: 'Price', value: <span>Single <DirhamIcon size="1em" /> 65, double <DirhamIcon size="1em" /> 80, triple <DirhamIcon size="1em" /> 95. From <DirhamIcon size="1em" /> 45 on offer days</span> },
+  { icon: 'users', label: 'Suitable for', value: 'Ages 6+, adult supervision required' },
   { icon: 'waves', label: 'Ability', value: 'All levels welcome' },
   { icon: 'pin', label: 'Location', value: 'RIVA Beach Club, Palm Jumeirah' },
   { icon: 'trend', label: 'Difficulty', value: 'Easy' },
-  { icon: 'waves', label: 'Kayak types', value: 'Kids, Single, double, and triple seater available' },
+  { icon: 'kayak', label: 'Kayak types', value: 'Kids, single, double and triple seater' },
 ];
 
 const included = [
@@ -115,7 +107,7 @@ const faqs = [
   {
     question: 'Is it suitable for kids?',
     answer:
-      'Yes. Children aged 6 and above are welcome with adult supervision. Life jackets are provided and our instructors are on hand throughout.',
+      'Yes. Children aged 6 and above are welcome with adult supervision. Life jackets are provided and our instructors are on hand throughout. For children aged 6 to 10, see our <b><a href="/kids-kayak">kids kayak</a></b>',
   },
   {
     question: 'Is parking available?',
@@ -137,6 +129,8 @@ function LineIcon({ name }) {
   };
 
   switch (name) {
+    case 'kayak':
+      return <svg {...common}><path d="M3 17c4 2 14 2 18 0M5 14l7 4 7-4M12 4v11M7 7l10 6M17 7 7 13"/></svg>;
     case 'clock':
       return <svg {...common}><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>;
     case 'tag':
@@ -206,7 +200,7 @@ export function KayakClient() {
               {/* <h2>SUP rental on Palm Jumeirah</h2> */}
 
               <p>
-                Explore the calm, motor-free waters of Palm Jumeirah at your own pace. Solo or double kayaks available, suitable for all levels with certified instructors on hand throughout your session.
+                Explore the calm, motor-free waters of Palm Jumeirah at your own pace. Single, double and triple kayaks available, suitable for all levels with certified instructors on hand throughout your session.
               </p>
 
               <div className="sup-booking-actions">
@@ -220,7 +214,7 @@ export function KayakClient() {
                 </a>
 
                 <span className="sup-booking-price">
-                  From <DirhamIcon/> 50, 60 minutes
+                  From <DirhamIcon/> 45, 60 minutes
                 </span>
               </div>
             </div>
@@ -254,6 +248,21 @@ export function KayakClient() {
                     </div>
                   ))}
                 </div>
+              </div>
+
+              <div className="info-panel weekly-panel">
+                <h2 className="panel-title">Weekly offers</h2>
+                <div className="weekly-offers-list">
+                  <div className="weekly-offer-card">
+                    <div><h3>Monday paddle hour</h3><p>SUP or kayak, 1 hour</p></div>
+                    <strong><DirhamIcon size="1em" /> 60</strong>
+                  </div>
+                  <div className="weekly-offer-card">
+                    <div><h3>Mermen and Mermaid days</h3><p>Tuesday and Wednesday. Single <DirhamIcon size="1em" /> 45, double <DirhamIcon size="1em" /> 55, triple <DirhamIcon size="1em" /> 66</p></div>
+                    <strong>From <DirhamIcon size="1em" /> 45</strong>
+                  </div>
+                </div>
+                <a className="weekly-offers-btn" href="https://book.ignitewatersports.com/?type=offers" target="_blank" rel="noopener noreferrer">See all weekly offers</a>
               </div>
             </div>
 
@@ -303,7 +312,7 @@ export function KayakClient() {
 
           <div className="sup-container booking-strip">
             <div>
-              <strong>From <DirhamIcon size="1em" /> 50</strong>
+              <strong>From <DirhamIcon size="1em" /> 45</strong>
               <span>60 minutes, instant confirmation</span>
             </div>
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
@@ -919,6 +928,20 @@ export function KayakClient() {
           }
 
                     
+
+          .weekly-offers-list { display: grid; gap: 12px; }
+          .weekly-offer-card { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 20px; border-radius: 15px; background: #fff; }
+          .weekly-offer-card h3 { margin: 0 0 5px; font-size: 17px; line-height: 1.35; color: #202d33; }
+          .weekly-offer-card p { margin: 0; font-size: 14px; line-height: 1.5; color: #8a9297; }
+          .weekly-offer-card strong { flex-shrink: 0; font-size: 17px; color: #ff9017; white-space: nowrap; }
+          .weekly-offers-btn { display: block; width: fit-content; margin: 20px auto 0; padding: 11px 25px; border: 2px solid #34464e; border-radius: 12px; color: #34464e; font-weight: 700; text-decoration: none; text-align: center; }
+          .weekly-offers-btn:hover { background: #34464e; color: #fff; }
+          .session-row svg, .good-row svg { width: 22px; height: 22px; }
+          .why-icon svg { width: 24px; height: 24px; stroke: #ff9017; }
+          .why-icon { align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; background: #fff3e8; }
+          .why-card { grid-template-columns: 44px 1fr; }
+          @media (max-width: 480px) { .weekly-offer-card { padding: 15px; } .weekly-offer-card strong { font-size: 14px; } }
+
           /* VIDEO SECTION */
           .video-section {
             padding: 80px 0;

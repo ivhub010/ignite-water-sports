@@ -940,6 +940,7 @@ export default function Home() {
                 <h2 className="elementor-heading-title elementor-size-default">
                   Choose your adventure
                 </h2>
+                <p style={{textAlign:"center"}}>Rentals, classes, kids parties and more, right on the palm.</p>
               </div>
             </div>
 
@@ -967,65 +968,35 @@ export default function Home() {
                     flexDirection: "column",
                   }}
                 >
-                  <h3
-                    style={{
-                      fontSize: "22px",
-                      fontWeight: "700",
-                      marginBottom: "6px",
-                      color: "#111827",
-                    }}
-                  >
-                    Today's best deals{" "}
-                    <span
-                      style={{
-                        fontSize: "11px",
-                        background: "#374151",
-                        color: "#ffffff",
-                        padding: "2px 8px",
-                        borderRadius: "4px",
-                      }}
-                    >
-                      Daily Offers
+                  <h3 style={{ fontSize: "22px", fontWeight: "700", marginBottom: "6px", color: "#111827" }}>
+                    <span style={{ fontSize: "11px", background: "#374151", color: "#ffffff", padding: "2px 8px", borderRadius: "4px" }}>
+                      Rentals
                     </span>
                   </h3>
-                  <p
-                    style={{
-                      fontSize: "16px",
-                      color: "#4b5563",
-                      fontWeight: "600",
-                      marginBottom: "16px",
-                    }}
-                  >
+                  <div style={{ width: "100%", height: "220px", borderRadius: "10px", overflow: "hidden", marginBottom: "20px" }}>
+                    <img
+                      src="https://ignitewatersports.com/wp-content/uploads/elementor/thumbs/SUP1-e1719384554118-qq7t4qbwrnvy1q5czbe5oml148jwh0elkzjiocgv0w.png"
+                      alt="Rentals"
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    />
+                  </div>
+                  <h3 style={{ fontSize: "22px", fontWeight: "700", marginBottom: "6px", color: "#111827" }}>
+                    Rentals
+                  </h3>
+                  <p>SUP, kayak and pedalo, on calm, motor-free water</p>
+                  <p style={{ fontSize: "16px", color: "#4b5563", fontWeight: "600", marginBottom: "16px" }}>
                     From{" "}
                     <span style={{ color: "#ff7700", fontWeight: "800" }}>
                       <DirhamIcon size="1em" /> 50
                     </span>
                   </p>
-                  <div
-                    style={{
-                      width: "100%",
-                      height: "220px",
-                      borderRadius: "10px",
-                      overflow: "hidden",
-                      marginBottom: "20px",
-                    }}
-                  >
-                    <img
-                      src="https://ignitewatersports.com/wp-content/uploads/elementor/thumbs/SUP1-e1719384554118-qq7t4qbwrnvy1q5czbe5oml148jwh0elkzjiocgv0w.png"
-                      alt="Today's best deals"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                  </div>
                   <div style={{ marginTop: "auto", textAlign: "center" }}>
                     <a
                       href="https://book.ignitewatersports.com/?type=rentals"
-                      target="_blank"
+                      target="_blank" rel="noopener noreferrer"
                       style={{
                         display: "inline-block",
+                        boxSizing: "border-box",
                         width: "100%",
                         padding: "14px 24px",
                         backgroundColor: "#ff7a00",
@@ -1036,11 +1007,10 @@ export default function Home() {
                         letterSpacing: "0.5px",
                       }}
                     >
-                      Book now
+                      Learn more
                     </a>
                   </div>
                 </div>
-
                 {/* Card 2 */}
                 <div
                   style={{
@@ -1053,64 +1023,35 @@ export default function Home() {
                     flexDirection: "column",
                   }}
                 >
-                  <h3
-                    style={{
-                      fontSize: "22px",
-                      fontWeight: "700",
-                      marginBottom: "6px",
-                      color: "#111827",
-                    }}
-                  >
-                    A party they'll never forget{" "}
-                    <span
-                      style={{
-                        fontSize: "11px",
-                        background: "#374151",
-                        color: "#ffffff",
-                        padding: "2px 8px",
-                        borderRadius: "4px",
-                      }}
-                    >
-                      Kids birthday parties
+                  <h3 style={{ fontSize: "22px", fontWeight: "700", marginBottom: "6px", color: "#111827" }}>
+                    <span style={{ fontSize: "11px", background: "#374151", color: "#ffffff", padding: "2px 8px", borderRadius: "4px" }}>
+                      eFoil
                     </span>
                   </h3>
-                  <p
-                    style={{
-                      fontSize: "16px",
-                      color: "#4b5563",
-                      fontWeight: "600",
-                      marginBottom: "16px",
-                    }}
-                  >
-                    From{" "}
-                    <span style={{ color: "#ff7700", fontWeight: "800" }}>
-                      <DirhamIcon size="1em" /> 100
-                    </span>
-                  </p>
-                  <div
-                    style={{
-                      width: "100%",
-                      height: "220px",
-                      borderRadius: "10px",
-                      overflow: "hidden",
-                      marginBottom: "20px",
-                    }}
-                  >
+                  <div style={{ width: "100%", height: "220px", borderRadius: "10px", overflow: "hidden", marginBottom: "20px" }}>
                     <img
-                      src="https://ignitewatersports.com/wp-content/uploads/elementor/thumbs/kidsbirthday-qkgqgpxwrmb8oznoo9mh8uyntebhcj06qns6m2e5g0.png"
-                      alt="A party they'll never forget"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
+                      src="https://ignitewatersports.com/wp-content/uploads/2025/10/R5CC1400-scaled.jpg"
+                      alt="eFoil"
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
                     />
                   </div>
+                  <h3 style={{ fontSize: "22px", fontWeight: "700", marginBottom: "6px", color: "#111827" }}>
+                    eFoil
+                  </h3>
+                  <p>Learn to fly on water</p>
+                  <p style={{ fontSize: "16px", color: "#4b5563", fontWeight: "600", marginBottom: "16px" }}>
+                    From{" "}
+                    <span style={{ color: "#ff7700", fontWeight: "800" }}>
+                      <DirhamIcon size="1em" /> 300
+                    </span>
+                  </p>
                   <div style={{ marginTop: "auto", textAlign: "center" }}>
                     <a
-                      href="/kids-and-birthdays"
+                      href="/e-foil"
+                      
                       style={{
                         display: "inline-block",
+                        boxSizing: "border-box",
                         width: "100%",
                         padding: "14px 24px",
                         backgroundColor: "#ff7a00",
@@ -1121,11 +1062,10 @@ export default function Home() {
                         letterSpacing: "0.5px",
                       }}
                     >
-                      Book now
+                      Learn more
                     </a>
                   </div>
                 </div>
-
                 {/* Card 3 */}
                 <div
                   style={{
@@ -1138,64 +1078,35 @@ export default function Home() {
                     flexDirection: "column",
                   }}
                 >
-                  <h3
-                    style={{
-                      fontSize: "22px",
-                      fontWeight: "700",
-                      marginBottom: "6px",
-                      color: "#111827",
-                    }}
-                  >
-                    Explore the Palm by paddle{" "}
-                    <span
-                      style={{
-                        fontSize: "11px",
-                        background: "#374151",
-                        color: "#ffffff",
-                        padding: "2px 8px",
-                        borderRadius: "4px",
-                      }}
-                    >
-                      Rentals
+                  <h3 style={{ fontSize: "22px", fontWeight: "700", marginBottom: "6px", color: "#111827" }}>
+                    <span style={{ fontSize: "11px", background: "#374151", color: "#ffffff", padding: "2px 8px", borderRadius: "4px" }}>
+                      Classes
                     </span>
                   </h3>
-                  <p
-                    style={{
-                      fontSize: "16px",
-                      color: "#4b5563",
-                      fontWeight: "600",
-                      marginBottom: "16px",
-                    }}
-                  >
-                    From{" "}
-                    <span style={{ color: "#ff7700", fontWeight: "800" }}>
-                      <DirhamIcon size="1em" /> 50
-                    </span>
-                  </p>
-                  <div
-                    style={{
-                      width: "100%",
-                      height: "220px",
-                      borderRadius: "10px",
-                      overflow: "hidden",
-                      marginBottom: "20px",
-                    }}
-                  >
+                  <div style={{ width: "100%", height: "220px", borderRadius: "10px", overflow: "hidden", marginBottom: "20px" }}>
                     <img
-                      src="https://ignitewatersports.com/wp-content/uploads/2024/02/IWS-New-Website-Image-2-1.png"
-                      alt="Explore the Palm by paddle"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
+                      src="https://ignitewatersports.com/wp-content/uploads/2025/10/iceplunge.jpeg"
+                      alt="Reset and feel incredible"
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
                     />
                   </div>
+                  <h3 style={{ fontSize: "22px", fontWeight: "700", marginBottom: "6px", color: "#111827" }}>
+                    Classes and wellness
+                  </h3>
+                  <p>Yoga, breathwork, soundhealing and ice plunge</p>
+                  <p style={{ fontSize: "16px", color: "#4b5563", fontWeight: "600", marginBottom: "16px" }}>
+                    From{" "}
+                    <span style={{ color: "#ff7700", fontWeight: "800" }}>
+                      <DirhamIcon size="1em" /> 60
+                    </span>
+                  </p>
                   <div style={{ marginTop: "auto", textAlign: "center" }}>
                     <a
-                      href="/stand-up-paddle-boarding"
+                      href="/beach-yoga"
+                      
                       style={{
                         display: "inline-block",
+                        boxSizing: "border-box",
                         width: "100%",
                         padding: "14px 24px",
                         backgroundColor: "#ff7a00",
@@ -1210,7 +1121,7 @@ export default function Home() {
                     </a>
                   </div>
                 </div>
-
+                
                 {/* Card 4 */}
                 <div
                   style={{
@@ -1223,78 +1134,50 @@ export default function Home() {
                     flexDirection: "column",
                   }}
                 >
-                  <h3
-                    style={{
-                      fontSize: "22px",
-                      fontWeight: "700",
-                      marginBottom: "6px",
-                      color: "#111827",
-                    }}
-                  >
-                    Learn to fly on water{" "}
-                    <span
-                      style={{
-                        fontSize: "11px",
-                        background: "#374151",
-                        color: "#ffffff",
-                        padding: "2px 8px",
-                        borderRadius: "4px",
-                      }}
-                    >
-                      eFoil
+                  <h3 style={{ fontSize: "22px", fontWeight: "700", marginBottom: "6px", color: "#111827" }}>
+                    <span style={{ fontSize: "11px", background: "#374151", color: "#ffffff", padding: "2px 8px", borderRadius: "4px" }}>
+                      Kids
                     </span>
                   </h3>
-                  <p
-                    style={{
-                      fontSize: "16px",
-                      color: "#4b5563",
-                      fontWeight: "600",
-                      marginBottom: "16px",
-                    }}
-                  >
-                    From{" "}
-                    <span style={{ color: "#ff7700", fontWeight: "800" }}>
-                      <DirhamIcon size="1em" /> 300
-                    </span>
-                  </p>
-                  <div
-                    style={{
-                      width: "100%",
-                      height: "220px",
-                      borderRadius: "10px",
-                      overflow: "hidden",
-                      marginBottom: "20px",
-                    }}
-                  >
+                  <div style={{ width: "100%", height: "220px", borderRadius: "10px", overflow: "hidden", marginBottom: "20px" }}>
                     <img
-                      src="https://ignitewatersports.com/wp-content/uploads/2025/10/R5CC1400-scaled.jpg"
-                      alt="Learn to fly on water"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
+                      src="https://ignitewatersports.com/wp-content/uploads/elementor/thumbs/kidsbirthday-qkgqgpxwrmb8oznoo9mh8uyntebhcj06qns6m2e5g0.png"
+                      alt="A party they'll never forget"
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
                     />
                   </div>
+                  <h3 style={{ fontSize: "22px", fontWeight: "700", marginBottom: "6px", color: "#111827" }}>
+                    Kids birthday parties
+                  </h3>
+                  <p>A party they'll never forget</p>
+                  <p style={{ fontSize: "16px", color: "#4b5563", fontWeight: "600", marginBottom: "16px" }}>
+                    From{" "}
+                    <span style={{ color: "#ff7700", fontWeight: "800" }}>
+                      <DirhamIcon size="1em" /> 120
+                    </span>
+                  </p>
                   <div style={{ marginTop: "auto", textAlign: "center" }}>
                     <a
-                      href="/e-foil"
+                      href="/kids-and-birthdays"
+                      
                       style={{
                         display: "inline-block",
+                        boxSizing: "border-box",
                         width: "100%",
                         padding: "14px 24px",
                         backgroundColor: "#ff7a00",
                         color: "#ffffff",
                         fontWeight: "700",
                         borderRadius: "8px",
+                        textDecoration: "none",
                         letterSpacing: "0.5px",
                       }}
                     >
-                      Book now
+                      Learn more
                     </a>
                   </div>
                 </div>
-
+                
                 {/* Card 5 */}
                 <div
                   style={{
@@ -1307,78 +1190,49 @@ export default function Home() {
                     flexDirection: "column",
                   }}
                 >
-                  <h3
-                    style={{
-                      fontSize: "22px",
-                      fontWeight: "700",
-                      marginBottom: "6px",
-                      color: "#111827",
-                    }}
-                  >
-                    Burj views, team wins{" "}
-                    <span
-                      style={{
-                        fontSize: "11px",
-                        background: "#374151",
-                        color: "#ffffff",
-                        padding: "2px 8px",
-                        borderRadius: "4px",
-                      }}
-                    >
-                      Team bonding
+                  <h3 style={{ fontSize: "22px", fontWeight: "700", marginBottom: "6px", color: "#111827" }}>
+                    <span style={{ fontSize: "11px", background: "#374151", color: "#ffffff", padding: "2px 8px", borderRadius: "4px" }}>
+                      Teams
                     </span>
                   </h3>
-                  <p
-                    style={{
-                      fontSize: "16px",
-                      color: "#4b5563",
-                      fontWeight: "600",
-                      marginBottom: "16px",
-                    }}
-                  >
+                  <div style={{ width: "100%", height: "220px", borderRadius: "10px", overflow: "hidden", marginBottom: "20px" }}>
+                    <img
+                      src="https://ignitewatersports.com/wp-content/uploads/2025/10/teambonding.jpeg"
+                      alt="Burj views, team wins"
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                    />
+                  </div>
+                  <h3 style={{ fontSize: "22px", fontWeight: "700", marginBottom: "6px", color: "#111827" }}>
+                    Team bonding
+                  </h3>
+                  <p>Burj views, team wins</p>
+                  <p style={{ fontSize: "16px", color: "#4b5563", fontWeight: "600", marginBottom: "16px" }}>
                     From{" "}
                     <span style={{ color: "#ff7700", fontWeight: "800" }}>
                       <DirhamIcon size="1em" /> 120
                     </span>
                   </p>
-                  <div
-                    style={{
-                      width: "100%",
-                      height: "220px",
-                      borderRadius: "10px",
-                      overflow: "hidden",
-                      marginBottom: "20px",
-                    }}
-                  >
-                    <img
-                      src="https://ignitewatersports.com/wp-content/uploads/2025/10/teambonding.jpeg"
-                      alt="Burj views, team wins"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
-                    />
-                  </div>
                   <div style={{ marginTop: "auto", textAlign: "center" }}>
                     <a
                       href="/team-bonding"
+                      
                       style={{
                         display: "inline-block",
+                        boxSizing: "border-box",
                         width: "100%",
                         padding: "14px 24px",
                         backgroundColor: "#ff7a00",
                         color: "#ffffff",
                         fontWeight: "700",
                         borderRadius: "8px",
+                        textDecoration: "none",
                         letterSpacing: "0.5px",
                       }}
                     >
-                      Book now
+                      Learn more
                     </a>
                   </div>
                 </div>
-
                 {/* Card 6 */}
                 <div
                   style={{
@@ -1391,89 +1245,142 @@ export default function Home() {
                     flexDirection: "column",
                   }}
                 >
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                    }}
-                  >
-                    <h3
-                      style={{
-                        fontSize: "22px",
-                        fontWeight: "700",
-                        marginBottom: "6px",
-                        color: "#111827",
-                      }}
-                    >
-                      Reset and feel incredible{" "}
-                      <span
-                        style={{
-                          fontSize: "11px",
-                          background: "#374151",
-                          color: "#ffffff",
-                          padding: "2px 8px",
-                          borderRadius: "4px",
-                        }}
-                      >
-                        Ice Plunge
-                      </span>
-                    </h3>
-                  </div>
-                  <p
-                    style={{
-                      fontSize: "16px",
-                      color: "#4b5563",
-                      fontWeight: "600",
-                      marginBottom: "16px",
-                    }}
-                  >
-                    From{" "}
-                    <span style={{ color: "#ff7700", fontWeight: "800" }}>
-                      <DirhamIcon size="1em" /> 80
+                  <h3 style={{ fontSize: "22px", fontWeight: "700", marginBottom: "6px", color: "#111827" }}>
+                    <span style={{ fontSize: "11px", background: "#374151", color: "#ffffff", padding: "2px 8px", borderRadius: "4px" }}>
+                      Offers
                     </span>
-                  </p>
-                  <div
-                    style={{
-                      width: "100%",
-                      height: "220px",
-                      borderRadius: "10px",
-                      overflow: "hidden",
-                      marginBottom: "20px",
-                    }}
-                  >
+                  </h3>
+                  <div style={{ width: "100%", height: "220px", borderRadius: "10px", overflow: "hidden", marginBottom: "20px" }}>
                     <img
-                      src="https://ignitewatersports.com/wp-content/uploads/2025/10/iceplunge.jpeg"
-                      alt="Reset and feel incredible"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                      }}
+                      src="https://ignitewatersports.com/wp-content/uploads/2024/02/IWS-New-Website-Image-2-1.png"
+                      alt="Explore the Palm by paddle"
+                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
                     />
                   </div>
+                  <h3 style={{ fontSize: "22px", fontWeight: "700", marginBottom: "6px", color: "#111827" }}>
+                    Daily offers
+                  </h3>
+                  <p>today's best deals</p>
+                  <p style={{ fontSize: "16px", color: "#4b5563", fontWeight: "600", marginBottom: "16px" }}>
+                    From{" "}
+                    <span style={{ color: "#ff7700", fontWeight: "800" }}>
+                      <DirhamIcon size="1em" /> 45
+                    </span>
+                  </p>
                   <div style={{ marginTop: "auto", textAlign: "center" }}>
                     <a
-                      href="/beach-yoga"
+                      href="/stand-up-paddle-boarding"
+                      
                       style={{
                         display: "inline-block",
+                        boxSizing: "border-box",
                         width: "100%",
                         padding: "14px 24px",
                         backgroundColor: "#ff7a00",
                         color: "#ffffff",
                         fontWeight: "700",
                         borderRadius: "8px",
+                        textDecoration: "none",
                         letterSpacing: "0.5px",
                       }}
                     >
-                      Book now
+                      See offers
                     </a>
                   </div>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
+
+
+        <section className="ignite-weekly">
+          <div className="ignite-weekly-container">
+            <div className="ignite-weekly-header">
+              <span className="ignite-weekly-eyebrow">
+                Every week
+              </span>
+
+              <h2>Your week at IGNITE</h2>
+
+              <p>
+                Something on every day, right on the Palm. Looking for
+                one-off events?{" "}
+                <a href="/events">See upcoming events</a>
+              </p>
+            </div>
+
+            <div className="ignite-weekly-grid">
+              {[
+                {
+                  day: "Mon",
+                  title: "Monday paddle hour",
+                  description: "SUP or kayak, 1 hour, AED 60",
+                },
+                {
+                  day: "Tue",
+                  title: "Mermen day",
+                  description: "SUP AED 50, eFoil AED 350",
+                },
+                {
+                  day: "Wed",
+                  title: "Mermaid day",
+                  description: "SUP AED 50, eFoil AED 350",
+                },
+                {
+                  day: "Thu",
+                  title: "eFoil day",
+                  description: "30 minutes, AED 300",
+                },
+                {
+                  day: "Fri",
+                  title: "eFoil duo",
+                  description: "Two riders, AED 700",
+                },
+                {
+                  day: "Sat",
+                  title: "Classes",
+                  description:
+                    "Yoga, sound healing, SOMA Breath and ice plunge",
+                  featured: true,
+                },
+                {
+                  day: "Sun",
+                  title: "Family fun time",
+                  description:
+                    "Water park for ages 3 to 5 with a parent, AED 100",
+                },
+              ].map((offer) => (
+                <div
+                  key={offer.day}
+                  className={`ignite-weekly-card ${
+                    offer.featured ? "featured" : ""
+                  }`}
+                >
+                  <span className="ignite-weekly-day">
+                    {offer.day}
+                  </span>
+
+                  <h3>{offer.title}</h3>
+
+                  <p>{offer.description}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="ignite-weekly-footer">
+              <a
+                href="/weekly-offers"
+                className="ignite-weekly-button"
+              >
+                See all weekly offers
+              </a>
+            </div>
+          </div>
+        </section>
+
+
         <div
           className="elementor-element elementor-element-a0cd4ed e-flex e-con-boxed e-con e-parent"
           data-id="a0cd4ed"
@@ -1972,7 +1879,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div
+        {/* <div
           className="elementor-element elementor-element-93c1768 e-con-full e-flex e-con e-parent"
           data-id="93c1768"
           data-element_type="container"
@@ -2390,7 +2297,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* "Our Awesome Team" is hidden: the profiles are Wavesurfer demo staff
         (James Davis, Robert Garcia, David Taylor), not real IGNITE people.
         Set the guard below to true once real team content exists. */}

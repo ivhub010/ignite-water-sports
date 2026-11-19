@@ -735,3 +735,240 @@ body {
     line-height: 1.4;
   }
 }
+
+
+
+.ignite-weekly {
+  background: #f7f8fa;
+  padding: 70px 0 60px;
+  width: 100%;
+}
+
+.ignite-weekly-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+/* Header */
+
+.ignite-weekly-header {
+  margin-bottom: 55px;
+}
+
+.ignite-weekly-eyebrow {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: #54c8e8;
+  margin-bottom: 14px;
+}
+
+.ignite-weekly-header h2 {
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.15;
+  font-weight: 800;
+  color: #080808;
+  letter-spacing: -1.5px;
+  margin: 0 0 20px;
+}
+
+.ignite-weekly-header p {
+  font-size: 22px;
+  line-height: 1.6;
+  color: #858585;
+  margin: 0;
+}
+
+.ignite-weekly-header p a {
+  color: #ff8800;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Seven column grid */
+
+.ignite-weekly-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+}
+
+/* Cards */
+
+.ignite-weekly-card {
+  background: #ffffff;
+  border-radius: 22px;
+  border-top: 6px solid #54c8e8;
+  min-height: 150px;
+  padding: 32px 16px 28px;
+  text-align: center;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.ignite-weekly-card.featured {
+  border-top-color: #ff8800;
+}
+
+.ignite-weekly-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+}
+
+.ignite-weekly-day {
+  display: block;
+  color: #909090;
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.ignite-weekly-card h3 {
+  color: #080808;
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 18px;
+  overflow-wrap: break-word;
+}
+
+.ignite-weekly-card p {
+  color: #858585;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Footer button */
+
+.ignite-weekly-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.ignite-weekly-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70px;
+  padding: 14px 45px;
+
+  border: 2px solid #26363e;
+  border-radius: 16px;
+
+  background: transparent;
+  color: #26363e;
+
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+
+  transition: all 0.25s ease;
+}
+
+.ignite-weekly-button:hover {
+  background: #26363e;
+  color: #ffffff;
+}
+
+/* Tablet */
+
+@media (max-width: 1100px) {
+  .ignite-weekly-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .ignite-weekly-card {
+    min-height: 320px;
+  }
+
+  .ignite-weekly-header p {
+    font-size: 19px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .ignite-weekly {
+    padding: 50px 0;
+  }
+
+  .ignite-weekly-container {
+    padding: 0 18px;
+  }
+
+  .ignite-weekly-header {
+    margin-bottom: 32px;
+  }
+
+  .ignite-weekly-header h2 {
+    font-size: 34px;
+    letter-spacing: -0.8px;
+  }
+
+  .ignite-weekly-header p {
+    font-size: 16px;
+  }
+
+  .ignite-weekly-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .ignite-weekly-card {
+    min-height: 260px;
+    border-radius: 16px;
+    padding: 24px 12px;
+  }
+
+  .ignite-weekly-day {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .ignite-weekly-card h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .ignite-weekly-card p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .ignite-weekly-footer {
+    margin-top: 35px;
+  }
+
+  .ignite-weekly-button {
+    min-height: 54px;
+    padding: 12px 25px;
+    font-size: 17px;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .ignite-weekly-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ignite-weekly-card {
+    min-height: 200px;
+  }
+}
