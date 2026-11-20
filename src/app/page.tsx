@@ -1,5 +1,6 @@
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
+import GoogleReviews from "./GoogleReviews";
 import "dirham/css";
 import { DirhamIcon } from "dirham/react";
 
@@ -1879,7 +1880,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* <div
+
+        <div
           className="elementor-element elementor-element-93c1768 e-con-full e-flex e-con e-parent"
           data-id="93c1768"
           data-element_type="container"
@@ -1893,411 +1895,32 @@ export default function Home() {
           >
             <div className="e-con-inner">
               <div
-                className="elementor-element elementor-element-c9983cb e-con-full e-flex e-con e-child"
-                data-id="c9983cb"
+                className="elementor-element elementor-element-290344f e-con-full e-flex e-con e-child"
+                data-id="290344f"
                 data-element_type="container"
                 data-e-type="container"
               >
                 <div
-                  className="elementor-element elementor-element-54b4e63 sis-image-animation sis-animation-image-style-1 elementor-widget elementor-widget-image"
-                  data-id="54b4e63"
-                  data-element_type="widget"
-                  data-e-type="widget"
-                  data-settings='{"ekit_we_effect_on":"none"}'
-                  data-widget_type="image.default"
-                >
-                  <img
-                    loading="lazy"
-                    decoding="async"
-                    width={599}
-                    height={601}
-                    src="/watersports/2026/05/testimonial-image.png"
-                    className="attachment-full size-full wp-image-5899"
-                    alt=""
-                  />{" "}
-                </div>
-              </div>
-              <div
-                className="elementor-element elementor-element-8cb209f e-con-full e-flex e-con e-child"
-                data-id="8cb209f"
-                data-element_type="container"
-                data-e-type="container"
-              >
-                <div
-                  className="elementor-element elementor-element-423031e sis-heading-animation sis-animation-heading-style-1 elementor-widget elementor-widget-heading"
-                  data-id="423031e"
-                  data-element_type="widget"
-                  data-e-type="widget"
-                  data-settings='{"ekit_we_effect_on":"none"}'
+                  className="elementor-element elementor-element-9f7ef23 sis-heading-animation sis-animation-heading-style-1 elementor-widget elementor-widget-heading"
                   data-widget_type="heading.default"
                 >
                   <h3 className="elementor-heading-title elementor-size-default">
                     Our reviews
-                  </h3>{" "}
+                  </h3>
                 </div>
                 <div
-                  className="elementor-element elementor-element-f203928 sis-heading-animation sis-animation-heading-style-2 elementor-widget elementor-widget-heading"
-                  data-id="f203928"
-                  data-element_type="widget"
-                  data-e-type="widget"
-                  data-settings='{"ekit_we_effect_on":"none"}'
+                  className="elementor-element elementor-element-7854b00 sis-heading-animation sis-animation-heading-style-2 sis-light-title elementor-widget elementor-widget-heading"
                   data-widget_type="heading.default"
                 >
                   <h2 className="elementor-heading-title elementor-size-default">
                     What our guests say
-                  </h2>{" "}
+                  </h2>
                 </div>
-                <div
-                  className="elementor-element elementor-element-f5d75db sis-testimonial2 elementor-invisible elementor-widget elementor-widget-elementskit-testimonial"
-                  data-id="f5d75db"
-                  data-element_type="widget"
-                  data-e-type="widget"
-                  data-settings='{"_animation":"fadeInUp","ekit_we_effect_on":"none"}'
-                  data-widget_type="elementskit-testimonial.default"
-                >
-                  <div className="ekit-wid-con">
-                    <div
-                      className="elementskit-testimonial-slider ekit_testimonial_style_5 arrow_inside slider-dotted"
-                      data-config='{"rtl":false,"arrows":false,"dots":true,"pauseOnHover":true,"autoplay":true,"speed":1000,"slidesPerGroup":1,"slidesPerView":1,"loop":true,"spaceBetween":25,"breakpoints":{"320":{"slidesPerView":1,"slidesPerGroup":1,"spaceBetween":10},"768":{"slidesPerView":1,"slidesPerGroup":1,"spaceBetween":10},"1024":{"slidesPerView":1,"slidesPerGroup":1,"spaceBetween":25}}}'
-                    >
-                      <div className="ekit-main-swiper swiper">
-                        <div className="swiper-wrapper">
-                          <div className="swiper-slide">
-                            <div className="swiper-slide-inner">
-                              <div className="elementskit-single-testimonial-slider elementskit-testimonial-slider-block-style elementskit-testimonial-slider-block-style-two   elementor-repeater-item-400ae3a">
-                                <div className="elementskit-commentor-header">
-                                  <ul className="elementskit-stars">
-                                    <li>
-                                      <a>
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          viewBox="0 0 576 512"
-                                        >
-                                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
-                                        </svg>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a>
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          viewBox="0 0 576 512"
-                                        >
-                                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
-                                        </svg>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a>
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          viewBox="0 0 576 512"
-                                        >
-                                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
-                                        </svg>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a>
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          viewBox="0 0 576 512"
-                                        >
-                                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
-                                        </svg>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a>
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          viewBox="0 0 576 512"
-                                        >
-                                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
-                                        </svg>
-                                      </a>
-                                    </li>
-                                  </ul>
-                                  <div className="elementskit-icon-content elementskit-watermark-icon ">
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      width={74}
-                                      height={56}
-                                      viewBox="0 0 74 56"
-                                      fill="none"
-                                    >
-                                      <path
-                                        d="M19.2422 1.37891C24.2407 0.0971544 26.8569 2.27168 27.2949 4.21094C27.5203 5.20886 27.2539 6.32152 26.3193 7.26172C25.3722 8.21444 23.6804 9.03767 21.0176 9.22949C17.331 9.49404 14.9331 10.854 13.5 13.2178C12.1282 15.4805 11.7405 18.5175 11.6348 21.9014L11.6025 22.9326H23.3057C27.8701 22.9328 31.6091 26.6769 31.6094 31.2549V46.3945C31.6032 51.1305 27.7366 55 23.0225 55H9.72559C5.16088 55 1.4209 51.256 1.4209 46.6777C1.4209 41.8895 1.11377 36.8713 1.02344 32.1826C0.931966 27.4343 1.05608 22.9033 1.88867 18.8057C2.71903 14.7192 4.24616 11.1047 6.93262 8.15332C9.61656 5.20479 13.5251 2.84478 19.2422 1.37891ZM60.6377 1.37891C65.6327 0.100071 68.2484 2.2757 68.6865 4.21582C68.9118 5.21394 68.6454 6.32547 67.7119 7.26465C66.8248 8.15708 65.2837 8.93581 62.9014 9.18652L62.4141 9.22949C58.7275 9.49402 56.3296 10.854 54.8965 13.2178C53.5246 15.4805 53.137 18.5175 53.0312 21.9014L52.999 22.9326H64.6953C69.2599 22.9326 72.9998 26.6768 73 31.2549V46.3945C72.9998 51.1298 69.1335 54.9998 64.4189 55H51.1221C46.5574 55 42.8174 51.256 42.8174 46.6777C42.8174 41.8895 42.5103 36.8713 42.4199 32.1826C42.3284 27.4343 42.4526 22.9033 43.2852 18.8057C44.1155 14.7192 45.6426 11.1047 48.3291 8.15332C51.013 5.20485 54.9208 2.84478 60.6377 1.37891Z"
-                                        fill="#24D2DD"
-                                        fillOpacity="0.1"
-                                        stroke="#24D2DD"
-                                        strokeWidth={2}
-                                      />
-                                    </svg>{" "}
-                                  </div>
-                                </div>
-                                <div className="elementskit-commentor-content">
-                                  <p>
-                                    "Ignite Water Sports offers an exhilarating
-                                    aquatic experience in the heart of the city.
-                                    With a diverse range of activities, the team
-                                    makes sure every guest is looked after from
-                                    start to finish."
-                                  </p>
-                                </div>
-                                <div className="elementskit-commentor-bio">
-                                  <div className="elementkit-commentor-details ">
-                                    <div className="elementskit-commentor-image ekit-testimonial--avatar">
-                                      <img
-                                        loading="lazy"
-                                        decoding="async"
-                                        width={55}
-                                        height={55}
-                                        src="/watersports/2026/05/testimonial-profile.png"
-                                        className="attachment-full size-full"
-                                        alt=""
-                                      />{" "}
-                                    </div>
-                                    <div className="elementskit-profile-info">
-                                      <strong className="elementskit-author-name">
-                                        Monika Kumari
-                                      </strong>
-                                      <span className="elementskit-author-des">
-                                        Google review ★ 4.9
-                                      </span>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="swiper-slide">
-                            <div className="swiper-slide-inner">
-                              <div className="elementskit-single-testimonial-slider elementskit-testimonial-slider-block-style elementskit-testimonial-slider-block-style-two   elementor-repeater-item-7b11cab">
-                                <div className="elementskit-commentor-header">
-                                  <ul className="elementskit-stars">
-                                    <li>
-                                      <a>
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          viewBox="0 0 576 512"
-                                        >
-                                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
-                                        </svg>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a>
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          viewBox="0 0 576 512"
-                                        >
-                                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
-                                        </svg>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a>
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          viewBox="0 0 576 512"
-                                        >
-                                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
-                                        </svg>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a>
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          viewBox="0 0 576 512"
-                                        >
-                                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
-                                        </svg>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a>
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          viewBox="0 0 576 512"
-                                        >
-                                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
-                                        </svg>
-                                      </a>
-                                    </li>
-                                  </ul>
-                                  <div className="elementskit-icon-content elementskit-watermark-icon ">
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      width={74}
-                                      height={56}
-                                      viewBox="0 0 74 56"
-                                      fill="none"
-                                    >
-                                      <path
-                                        d="M19.2422 1.37891C24.2407 0.0971544 26.8569 2.27168 27.2949 4.21094C27.5203 5.20886 27.2539 6.32152 26.3193 7.26172C25.3722 8.21444 23.6804 9.03767 21.0176 9.22949C17.331 9.49404 14.9331 10.854 13.5 13.2178C12.1282 15.4805 11.7405 18.5175 11.6348 21.9014L11.6025 22.9326H23.3057C27.8701 22.9328 31.6091 26.6769 31.6094 31.2549V46.3945C31.6032 51.1305 27.7366 55 23.0225 55H9.72559C5.16088 55 1.4209 51.256 1.4209 46.6777C1.4209 41.8895 1.11377 36.8713 1.02344 32.1826C0.931966 27.4343 1.05608 22.9033 1.88867 18.8057C2.71903 14.7192 4.24616 11.1047 6.93262 8.15332C9.61656 5.20479 13.5251 2.84478 19.2422 1.37891ZM60.6377 1.37891C65.6327 0.100071 68.2484 2.2757 68.6865 4.21582C68.9118 5.21394 68.6454 6.32547 67.7119 7.26465C66.8248 8.15708 65.2837 8.93581 62.9014 9.18652L62.4141 9.22949C58.7275 9.49402 56.3296 10.854 54.8965 13.2178C53.5246 15.4805 53.137 18.5175 53.0312 21.9014L52.999 22.9326H64.6953C69.2599 22.9326 72.9998 26.6768 73 31.2549V46.3945C72.9998 51.1298 69.1335 54.9998 64.4189 55H51.1221C46.5574 55 42.8174 51.256 42.8174 46.6777C42.8174 41.8895 42.5103 36.8713 42.4199 32.1826C42.3284 27.4343 42.4526 22.9033 43.2852 18.8057C44.1155 14.7192 45.6426 11.1047 48.3291 8.15332C51.013 5.20485 54.9208 2.84478 60.6377 1.37891Z"
-                                        fill="#24D2DD"
-                                        fillOpacity="0.1"
-                                        stroke="#24D2DD"
-                                        strokeWidth={2}
-                                      />
-                                    </svg>{" "}
-                                  </div>
-                                </div>
-                                <div className="elementskit-commentor-content">
-                                  <p>
-                                    "I recently hosted my daughter’s birthday at
-                                    Ignite and it was so much fun for the kids!
-                                    The instructors were really nice and Paul
-                                    was prompt and responsive, which made the
-                                    booking super easy and convenient."
-                                  </p>
-                                </div>
-                                <div className="elementskit-commentor-bio">
-                                  <div className="elementkit-commentor-details ">
-                                    <div className="elementskit-commentor-image ekit-testimonial--avatar">
-                                      <img
-                                        loading="lazy"
-                                        decoding="async"
-                                        width={55}
-                                        height={55}
-                                        src="/watersports/2026/05/testimonial-profile.png"
-                                        className="attachment-full size-full"
-                                        alt=""
-                                      />{" "}
-                                    </div>
-                                    <div className="elementskit-profile-info">
-                                      <strong className="elementskit-author-name">
-                                        dipi dinesh
-                                      </strong>
-                                      <span className="elementskit-author-des">
-                                        Birthday party host
-                                      </span>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="swiper-slide">
-                            <div className="swiper-slide-inner">
-                              <div className="elementskit-single-testimonial-slider elementskit-testimonial-slider-block-style elementskit-testimonial-slider-block-style-two   elementor-repeater-item-8a9ef76">
-                                <div className="elementskit-commentor-header">
-                                  <ul className="elementskit-stars">
-                                    <li>
-                                      <a>
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          viewBox="0 0 576 512"
-                                        >
-                                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
-                                        </svg>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a>
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          viewBox="0 0 576 512"
-                                        >
-                                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
-                                        </svg>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a>
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          viewBox="0 0 576 512"
-                                        >
-                                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
-                                        </svg>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a>
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          viewBox="0 0 576 512"
-                                        >
-                                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
-                                        </svg>
-                                      </a>
-                                    </li>
-                                    <li>
-                                      <a>
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          viewBox="0 0 576 512"
-                                        >
-                                          <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z" />
-                                        </svg>
-                                      </a>
-                                    </li>
-                                  </ul>
-                                  <div className="elementskit-icon-content elementskit-watermark-icon ">
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      width={74}
-                                      height={56}
-                                      viewBox="0 0 74 56"
-                                      fill="none"
-                                    >
-                                      <path
-                                        d="M19.2422 1.37891C24.2407 0.0971544 26.8569 2.27168 27.2949 4.21094C27.5203 5.20886 27.2539 6.32152 26.3193 7.26172C25.3722 8.21444 23.6804 9.03767 21.0176 9.22949C17.331 9.49404 14.9331 10.854 13.5 13.2178C12.1282 15.4805 11.7405 18.5175 11.6348 21.9014L11.6025 22.9326H23.3057C27.8701 22.9328 31.6091 26.6769 31.6094 31.2549V46.3945C31.6032 51.1305 27.7366 55 23.0225 55H9.72559C5.16088 55 1.4209 51.256 1.4209 46.6777C1.4209 41.8895 1.11377 36.8713 1.02344 32.1826C0.931966 27.4343 1.05608 22.9033 1.88867 18.8057C2.71903 14.7192 4.24616 11.1047 6.93262 8.15332C9.61656 5.20479 13.5251 2.84478 19.2422 1.37891ZM60.6377 1.37891C65.6327 0.100071 68.2484 2.2757 68.6865 4.21582C68.9118 5.21394 68.6454 6.32547 67.7119 7.26465C66.8248 8.15708 65.2837 8.93581 62.9014 9.18652L62.4141 9.22949C58.7275 9.49402 56.3296 10.854 54.8965 13.2178C53.5246 15.4805 53.137 18.5175 53.0312 21.9014L52.999 22.9326H64.6953C69.2599 22.9326 72.9998 26.6768 73 31.2549V46.3945C72.9998 51.1298 69.1335 54.9998 64.4189 55H51.1221C46.5574 55 42.8174 51.256 42.8174 46.6777C42.8174 41.8895 42.5103 36.8713 42.4199 32.1826C42.3284 27.4343 42.4526 22.9033 43.2852 18.8057C44.1155 14.7192 45.6426 11.1047 48.3291 8.15332C51.013 5.20485 54.9208 2.84478 60.6377 1.37891Z"
-                                        fill="#24D2DD"
-                                        fillOpacity="0.1"
-                                        stroke="#24D2DD"
-                                        strokeWidth={2}
-                                      />
-                                    </svg>{" "}
-                                  </div>
-                                </div>
-                                <div className="elementskit-commentor-content">
-                                  <p>
-                                    "Friendly and affordable water activities.
-                                    Great location for exploring the palm on
-                                    double/single kayaks and standing boards.
-                                    Highly recommended."
-                                  </p>
-                                </div>
-                                <div className="elementskit-commentor-bio">
-                                  <div className="elementkit-commentor-details ">
-                                    <div className="elementskit-commentor-image ekit-testimonial--avatar">
-                                      <img
-                                        loading="lazy"
-                                        decoding="async"
-                                        width={55}
-                                        height={55}
-                                        src="/watersports/2026/05/testimonial-profile.png"
-                                        className="attachment-full size-full"
-                                        alt=""
-                                      />{" "}
-                                    </div>
-                                    <div className="elementskit-profile-info">
-                                      <strong className="elementskit-author-name">
-                                        Thang To
-                                      </strong>
-                                      <span className="elementskit-author-des">
-                                        Google review ★ 4.9
-                                      </span>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="swiper-pagination" />
-                      </div>
-                    </div>
-                  </div>{" "}
-                </div>
+                <GoogleReviews />
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
         {/* "Our Awesome Team" is hidden: the profiles are Wavesurfer demo staff
         (James Davis, Robert Garcia, David Taylor), not real IGNITE people.
         Set the guard below to true once real team content exists. */}
