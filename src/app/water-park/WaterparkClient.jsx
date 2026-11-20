@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import SiteHeader from '@/components/layout/SiteHeader';
 import SiteFooter from '@/components/layout/SiteFooter';
+import GoogleReviews from "../GoogleReviews";
 import "dirham/css";
 import { DirhamIcon } from "dirham/react";
 
@@ -62,14 +63,19 @@ const sessionDetails = [
     value: 'Ages 6 to 16, minimum height 110cm',
   },
   {
-    icon: 'pin',
-    label: 'Location',
-    value: 'RIVA Beach Club, Palm Jumeirah',
+    icon: 'lifebuoy',
+    label: 'Safety',
+    value: 'Swimming ability required. Life vest mandatory. Children under 10 need a parent close by',
   },
   {
     icon: 'users',
     label: 'Group size',
     value: 'Maximum 35 children per session',
+  },
+  {
+    icon: 'pin',
+    label: 'Location',
+    value: 'RIVA Beach Club, Palm Jumeirah',
   },
 ];
 
@@ -83,7 +89,7 @@ const whyIgnite = [
   {
     icon: 'wave',
     title: 'Calm, motor-free waters',
-    text: 'Jet skis and motorised boats are prohibited on the Palm. You paddle in complete peace.',
+    text: 'Jet skis and motorised boats are prohibited on the Palm. Kids play in complete peace.',
   },
   {
     icon: 'eye',
@@ -111,10 +117,9 @@ const sessionsAndPrices = [
   },
   {
     title: "Family Fun Time",
-    description: "Kids 3 to 5 years old, with a parent",
-    timing: "Sunday 8am – 12pm",
+    description: "Kids 3 to 5 years old, with a parent. Every Sunday, 8am - 12pm",
     price: 100,
-    priceLabel: "child and accompanying parent",
+    priceLabel: "child and parent",
   },
 ];
 
@@ -129,16 +134,16 @@ const faqs = [
   {
     question: 'What are the age and height requirements?',
     answer:
-      'The water park is for children aged 6 to 16. Children must be at least 110cm tall.',
+      'The water park is for children aged 6 to 16, and they must be at least 110cm tall. Swimming ability is required and a life vest is mandatory. Children under 10 need a parent close by.',
   },
   {
     question: 'Is there a session for younger children?',
     answer:
-      'Yes. Family Fun Time is for kids aged 3 to 5 on Sundays from 8am to 12pm. Parents must accompany their children. The price is AED 100 in total.',
+      'Yes. Family fun time is for kids aged 3 to 5 on Sundays from 8am to 12pm. Parents must accompany their children. The price is AED 100 in total.',
   },
   {
     question: 'Do I need to book in advance?',
-    answer: 'Yes. Family Fun Time bookings are mandatory, as the water park may be booked privately. Please book online before you arrive.',
+    answer: 'Yes. Family fun time bookings are mandatory, as the water park may be booked privately. Please book online before you arrive.',
   },
   {
     question: 'What should we bring?',
@@ -185,6 +190,10 @@ function LineIcon({ name }) {
       return <svg {...common}><path d="M12 3l7 3v5c0 4.5-2.8 7.9-7 10-4.2-2.1-7-5.5-7-10V6l7-3Z"/></svg>;
     case 'star':
       return <svg {...common}><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg>;
+    case 'lifebuoy':
+      return <svg {...common}><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M5.6 5.6 9 9m6 6 3.4 3.4M18.4 5.6 15 9m-6 6-3.4 3.4"/></svg>;
+    case 'droplet':
+      return <svg {...common}><path d="M12 2C9 7 5 10 5 14a7 7 0 0 0 14 0c0-4-4-7-7-12Z"/></svg>;
     case 'shirt':
       return <svg {...common}><path d="M8 5 5 7l-2 4 3 1v7h12v-7l3-1-2-4-3-2c-.5 1.7-2 2.5-4 2.5S8.5 6.7 8 5Z"/></svg>;
     case 'sun':
@@ -378,8 +387,8 @@ export function WaterparkClient() {
 
               <div className="video-features">
                 <div className="video-feature">
-                  <LineIcon name="wave" />
-                  <span>Calm, motor-free waters</span>
+                  <LineIcon name="droplet" />
+                  <span>Inflatable water park on the water</span>
                 </div>
 
                 <div className="video-feature">
@@ -389,12 +398,12 @@ export function WaterparkClient() {
 
                 <div className="video-feature">
                   <LineIcon name="users" />
-                  <span>All levels welcome</span>
+                  <span>For ages 6 to 16</span>
                 </div>
 
                 <div className="video-feature">
                   <LineIcon name="shield" />
-                  <span>Certified instructors on hand</span>
+                  <span>Lifeguard-trained staff on hand</span>
                 </div>
               </div>
             </div>
@@ -403,7 +412,7 @@ export function WaterparkClient() {
               <div className="video-wrapper">
                 <iframe
                   src="https://www.youtube.com/embed/ngMhzqlrWZs?rel=0"
-                  title="IGNITE Water Sports - Stand-Up Paddleboarding"
+                  title="IGNITE Water Sports - Inflatable Water Park"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   loading="lazy"
@@ -413,6 +422,46 @@ export function WaterparkClient() {
           </div>
         </section>
 
+        <div
+          className="elementor-element elementor-element-93c1768 e-con-full e-flex e-con e-parent greviews"
+          data-id="93c1768"
+          data-element_type="container"
+          data-e-type="container"
+        >
+          <div
+            className="elementor-element elementor-element-699767d e-flex e-con-boxed e-con e-child"
+            data-id="699767d"
+            data-element_type="container"
+            data-e-type="container"
+          >
+            <div className="e-con-inner">
+              <div
+                className="elementor-element elementor-element-290344f e-con-full e-flex e-con e-child"
+                data-id="290344f"
+                data-element_type="container"
+                data-e-type="container"
+              >
+                <div
+                  className="elementor-element elementor-element-9f7ef23 sis-heading-animation sis-animation-heading-style-1 elementor-widget elementor-widget-heading"
+                  data-widget_type="heading.default"
+                >
+                  <h3 className="elementor-heading-title elementor-size-default">
+                    Our reviews
+                  </h3>
+                </div>
+                <div
+                  className="elementor-element elementor-element-7854b00 sis-heading-animation sis-animation-heading-style-2 sis-light-title elementor-widget elementor-widget-heading"
+                  data-widget_type="heading.default"
+                >
+                  <h2 className="elementor-heading-title elementor-size-default">
+                    What our guests say
+                  </h2>
+                </div>
+                <GoogleReviews reviewid="bcf6e1f86a18174d3c5688e3b61"/>
+              </div>
+            </div>
+          </div>
+        </div>
                 
         {/* FAQ */}
         <section className="sup-faq-section">
@@ -487,7 +536,7 @@ export function WaterparkClient() {
                     className="related-btn"
                     target='_blank'
                   >
-                    Get a Quote
+                    Learn more
                   </a>
                 </div>
               </article>
@@ -1572,6 +1621,23 @@ export function WaterparkClient() {
             }
           }
 
+          .why-icon {
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: #fff3e7;
+          }
+          .why-icon svg {
+            width: 23px;
+            height: 23px;
+            stroke: #ff9017;
+          }
+          .detail-icon svg {
+            width: 22px;
+            height: 22px;
+          }
           .pricing-list {
             display: flex;
             flex-direction: column;
@@ -1580,7 +1646,7 @@ export function WaterparkClient() {
 
           .pricing-row {
             display: grid;
-            grid-template-columns: minmax(0, 70fr) minmax(0, 30fr);
+            grid-template-columns: minmax(0, 1fr) minmax(90px, 32%);
             align-items: center;
             gap: 10px;
             padding: 16px;
@@ -1638,7 +1704,7 @@ export function WaterparkClient() {
 
           @media (max-width: 767px) {
             .pricing-row {
-              grid-template-columns: minmax(0, 70fr) minmax(0, 30fr);
+              grid-template-columns: minmax(0, 1fr) minmax(90px, 32%);
               gap: 8px;
               padding: 14px 10px;
             }

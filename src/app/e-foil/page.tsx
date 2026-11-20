@@ -8,15 +8,16 @@ import { EfoilClient } from './EfoilClient';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Kayak rental Dubai | Kayaking on Palm Jumeirah",
+  title: "eFoil rental Dubai | Electric hydrofoil on Palm Jumeirah",
 
   description:
-    "Rent a kayak on Palm Jumeirah with IGNITE Water Sports. Calm, motor-free waters, stunning Burj Al Arab views, and certified instructors on hand. From AED 50. Book online in minutes.",
+    "Rent an eFoil on Palm Jumeirah with IGNITE Water Sports. Fly above calm, motor-free waters with lessons for new riders. Weekly offers from AED 300. Book online in minutes.",
 
   openGraph: {
-    title: "Kayak rental Dubai | Kayaking on Palm Jumeirah",
+    title: "eFoil rental Dubai | Electric hydrofoil on Palm Jumeirah",
+
     description:
-      "Rent a kayak on Palm Jumeirah with IGNITE Water Sports. Calm, motor-free waters, stunning Burj Al Arab views, and certified instructors on hand. From AED 50. Book online in minutes.",
+    "Rent an eFoil on Palm Jumeirah with IGNITE Water Sports. Fly above calm, motor-free waters with lessons for new riders. Weekly offers from AED 300. Book online in minutes.",
     type: "website",
     siteName: "IGNITE Water Sports",
     images: [
@@ -31,9 +32,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Kayak rental Dubai | Kayaking on Palm Jumeirah",
+    title: "eFoil rental Dubai | Electric hydrofoil on Palm Jumeirah",
+
     description:
-      "Rent a kayak on Palm Jumeirah with IGNITE Water Sports. Calm, motor-free waters, stunning Burj Al Arab views, and certified instructors on hand. From AED 50. Book online in minutes.",
+    "Rent an eFoil on Palm Jumeirah with IGNITE Water Sports. Fly above calm, motor-free waters with lessons for new riders. Weekly offers from AED 300. Book online in minutes.",
     images: [
       "https://ignitewatersports.com/wp-content/uploads/2024/12/IGNITE_SocialIcon_WhiteWLogo_WaterSports.png",
     ],

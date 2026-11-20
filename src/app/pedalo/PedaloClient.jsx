@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import SiteHeader from '@/components/layout/SiteHeader';
 import SiteFooter from '@/components/layout/SiteFooter';
+import GoogleReviews from "../GoogleReviews";
 import "dirham/css";
 import { DirhamIcon } from "dirham/react";
 
@@ -68,7 +69,7 @@ const whyIgnite = [
   {
     icon: 'wave',
     title: 'Calm, motor-free waters',
-    text: 'Jet skis and motorised boats are prohibited on the Palm. You paddle in complete peace.',
+    text: 'Jet skis and motorised boats are prohibited on the Palm. You cruise in complete peace.',
   },
   {
     icon: 'eye',
@@ -134,7 +135,7 @@ const faqs = [
   {
     question: 'What happens if the weather is bad?',
     answer:
-      'Pedalo sessions depend on weather conditions. If the weather affects your booking, contact our team on WhatsApp at +971 52 249 5311.',
+      'Pedalo sessions depend on weather conditions. If the weather affects your booking, contact our team on WhatsApp at <b><a href="https://wa.me/971522495311">+971 52 249 5311</a></b>.',
   },
   {
     question: 'Is parking available?',
@@ -390,6 +391,46 @@ export function PedaloClient() {
           </div>
         </section>
 
+        <div
+          className="elementor-element elementor-element-93c1768 e-con-full e-flex e-con e-parent greviews"
+          data-id="93c1768"
+          data-element_type="container"
+          data-e-type="container"
+        >
+          <div
+            className="elementor-element elementor-element-699767d e-flex e-con-boxed e-con e-child"
+            data-id="699767d"
+            data-element_type="container"
+            data-e-type="container"
+          >
+            <div className="e-con-inner">
+              <div
+                className="elementor-element elementor-element-290344f e-con-full e-flex e-con e-child"
+                data-id="290344f"
+                data-element_type="container"
+                data-e-type="container"
+              >
+                <div
+                  className="elementor-element elementor-element-9f7ef23 sis-heading-animation sis-animation-heading-style-1 elementor-widget elementor-widget-heading"
+                  data-widget_type="heading.default"
+                >
+                  <h3 className="elementor-heading-title elementor-size-default">
+                    Our reviews
+                  </h3>
+                </div>
+                <div
+                  className="elementor-element elementor-element-7854b00 sis-heading-animation sis-animation-heading-style-2 sis-light-title elementor-widget elementor-widget-heading"
+                  data-widget_type="heading.default"
+                >
+                  <h2 className="elementor-heading-title elementor-size-default">
+                    What our guests say
+                  </h2>
+                </div>
+                <GoogleReviews reviewid="bcf6e1f86a18174d3c5688e3b61"/>
+              </div>
+            </div>
+          </div>
+        </div>
                 
         {/* FAQ */}
         <section className="sup-faq-section">
@@ -456,7 +497,7 @@ export function PedaloClient() {
                   <h3>Kayak rental</h3>
 
                   <p className="related-price">
-                    From <DirhamIcon size="1em" /> 50
+                    From <DirhamIcon size="1em" /> 45
                   </p>
 
                   <a

@@ -61,7 +61,7 @@ const sessionDetails = [
       'Included with the 40 minute session (AED 700), the 4 pack, the Kids E-Foil and the Friday Duo',
   },
   {
-    icon: 'id-card',
+    icon: 'flag',
     label: 'UAE residents',
     value:
       'An extra 10 minutes, including a lesson, on the 20 and 40 minute sessions',
@@ -74,7 +74,7 @@ const sessionDetails = [
 ];
 
 const included = [
-  'E-Foil rental for your session',
+  'eFoil rental for your session',
   'Safety equipment included',
   'Lifeguard-trained staff on hand throughout',
 ];
@@ -84,7 +84,7 @@ const whyIgnite = [
   {
     icon: 'wave',
     title: 'Calm, motor-free waters',
-    text: 'Jet skis and motorised boats are prohibited on the Palm. You paddle in complete peace.',
+    text: 'Jet skis and motorised boats are prohibited on the Palm. You ride in complete peace.',
   },
   {
     icon: 'eye',
@@ -114,12 +114,12 @@ const faqs = [
   {
     question: 'Do I need experience to eFoil?',
     answer:
-      'No. The 40 minute session, the 4 pack, the Kids E-Foil and the Friday Duo each include a lesson, so they are the right choice if you are new to eFoil. The 20 minute session is for experienced riders.',
+      'No. The 40 minute session, the 4 pack, the kids eFoil and the Friday eFoil duo each include a lesson, so they are the right choice if you are new to eFoil. The 20 minute session is for experienced riders.',
   },
   {
     question: 'What are the weekly eFoil offers?',
     answer:
-      'Tuesday is Mermen day and Wednesday is Mermaid day: a 40 minute E-Foil for AED 350. Thursday is a 30 minute E-Foil for AED 300. Friday is the E-Foil Duo: two E-Foils for AED 700 for 40 minutes, taken at the same time, with a lesson.',
+      'Tuesday is Mermen day and Wednesday is Mermaid day: a 40 minute eFoil for AED 350. Thursday is a 30 minute eFoil for AED 300. Friday is the eFoil duo: two eFoils for AED 700 for 40 minutes, taken at the same time, with a lesson.',
   },
   {
     question: 'Is there an eFoil session for kids?',
@@ -182,13 +182,13 @@ const weeklyOffers = [
   },
   {
     day: "Thu",
-    title: "Thursday E-Foil",
+    title: "eFoil day",
     description: "E-Foil, 30 minutes",
     price: 300,
   },
   {
     day: "Fri",
-    title: "E-Foil Duo",
+    title: "eFoil duo",
     description:
       "2 people, 2 E-Foils at the same time, 40 minutes, with a lesson",
     price: 700,
@@ -246,6 +246,8 @@ function LineIcon({ name }) {
         </svg>
       );
 
+    case 'flag':
+      return <svg {...common}><path d="M5 21V4m0 1c5-4 9 4 15 0v11c-6 4-10-4-15 0" /></svg>;
     case 'id-card':
       return (
         <svg {...common}>
@@ -339,7 +341,7 @@ export function EfoilClient() {
 
                         <div className="pricing-amount">
                           <strong>
-                            <DirhamIcon size="1em" /> {item.price}
+                            <DirhamIcon size="1em" /> {item.price.toLocaleString("en-AE")}
                           </strong>
                           {item.priceLabel && <span>{item.priceLabel}</span>}
                         </div>
@@ -490,8 +492,8 @@ export function EfoilClient() {
                 </div>
 
                 <div className="video-feature">
-                  <LineIcon name="users" />
-                  <span>All levels welcome</span>
+                  <LineIcon name="graduation" />
+                  <span>Lessons for new riders</span>
                 </div>
 
                 <div className="video-feature">
@@ -505,7 +507,7 @@ export function EfoilClient() {
               <div className="video-wrapper">
                 <iframe
                   src="https://www.youtube.com/embed/jA4v9jlVjBU?rel=0"
-                  title="IGNITE Water Sports - Stand-Up Paddleboarding"
+                  title="IGNITE Water Sports - eFoil"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   loading="lazy"
@@ -1807,6 +1809,36 @@ export function EfoilClient() {
             }
           }
 
+
+          /* Reference: compact eFoil cards and blue day tags */
+          .weekly-offer-day {
+            background: #e0f6fc;
+            color: #27b6dc;
+          }
+          .weekly-offers-btn {
+            width: fit-content;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 24px;
+            padding-right: 24px;
+          }
+          .pricing-row, .weekly-offer-row {
+            border-color: transparent;
+            box-shadow: none;
+          }
+          .why-icon {
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: #fff4e9;
+          }
+          .why-icon svg { width: 22px; height: 22px; stroke: #ff9017; }
+          .detail-icon svg { width: 20px; height: 20px; }
+          .pricing-amount strong { font-size: 19px; }
+          .weekly-offer-price strong { font-size: 17px; }
 
           /* =====================================
             WEEKLY OFFERS

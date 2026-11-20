@@ -18,7 +18,7 @@ const birthdayPackages = [
     features: [
       'Land-based challenges first, such as sack races and musical hoops',
       "Water games in life vests: Giant SUP, kids' kayaks, blue mats and nipper boards",
-      'Exclusive access to the water park',
+      '60 minutes on the inflatable water park',
     ],
   },
   {
@@ -34,9 +34,10 @@ const birthdayPackages = [
   {
     id: 'water-park', title: 'Water park', age: '6 to 16 years',
     duration: '1 hour', photo: '/watersports/water-park.jpg', color: 'green',
-    description: 'An hour of exclusive access to the IGNITE water park. The park is closed to the public during your event.',
+    description: 'An hour on the IGNITE inflatable water park for your party, run and supervised by the IGNITE team.',
+    price: 120,
     features: [
-      'The whole inflatable water park reserved for your party',
+      'An hour on the inflatable water park',
       'Priced on a minimum of 15 participants',
       'Fully supervised and run by the IGNITE team',
     ],
@@ -66,26 +67,73 @@ const faqs = [
   {
     question: "What ages are the parties for?",
     answer:
-      "The water sports and water park packages are for ages 6 to 16, with activities matched to the age of the group. The Kiddie party is for ages 3 to 5.",
+      "We run parties for ages 3 to 16. The Kiddie party is for ages 3 to 5. Our water sports, water sports and water park, and water park packages are for ages 6 to 16.",
   },
   {
     question: "How long do the parties last?",
     answer:
-      "The water sports and water park package lasts 1.5 hours, usually 30 minutes of water sports followed by 60 minutes on the water park, and the split can be adjusted. The water sports package lasts 1.5 hours. The water park package lasts 1 hour. The Kiddie party lasts 1.5 hours from the start of activities.",
+      "The water sports and water park package and the water sports package last 1.5 hours. The water park package lasts 1 hour. The Kiddie party lasts 1.5 hours from the start of activities.",
+  },
+  {
+    question: "How do I get a price?",
+    answer: `The water park package starts from AED 120 per child. Our team quotes the other packages based on the package and the number of guests. To get your quote, <a href="${QUOTE_URL}" target="_blank" rel="noopener noreferrer">message us on WhatsApp</a> and follow the steps.`,
+  },
+  {
+    question: "How many guests do we need?",
+    answer:
+      "The water park package is priced on a minimum of 15 participants. For the other packages, our team quotes based on the number of guests.",
+  },
+  {
+    question: "What are the guest requirements?",
+    answer:
+      "For guests aged 6 to 16, the minimum height is 110cm, swimming ability is required and a life vest is mandatory. Children under 10 need a parent close by. The Kiddie party for ages 3 to 5 is different, and parents are welcome to join in.",
   },
   {
     question: "Is the water park private for our party?",
     answer:
-      "Yes. During a water park party the park is closed to the public, so it is reserved for your group. Water park pricing is based on a minimum of 15 participants.",
+      "Not by default. The water park is not exclusive to your party unless you choose exclusive hire, which is available at an extra cost. Tell our team when you ask for your quote.",
   },
   {
-    question: "How do I get a price?",
+    question:
+      "How far ahead should I book, and what about deposits and cancellations?",
+    answer: `Book as early as you can to secure your date. <a href="${QUOTE_URL}" target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a> and follow the steps to check availability. Deposit and cancellation terms are confirmed in your quote.`,
+  },
+  {
+    question: "Can we bring our own cake and decorations?",
     answer:
-      "Prices depend on the package, the age group and the number of guests. Message us on WhatsApp and our team will send you a quote.",
+      "Please ask our team when you request your quote, and they will confirm what you can bring.",
   },
   {
-    question: 'Is parking available?',
-    answer: 'Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah. Please park in Building 7 first, then try Building 8 if needed. If Building 8 is full, you will need to do a short loop to return to RIVA. Please make sure you have tried Building 7 first before doing so. <br/> <b>Building 7:</b> After passing Palma Residences, take a sharp right down the ramp to access the basement parking. <br/> <b>Building 8:</b> After passing the RIVA signage, continue to the next building (Building 8), then turn right down the ramp to access the basement parking. <br/><br/><b><a href="https://maps.app.goo.gl/36hc7S4XwKSMNZcb6" target="_blank">Click here for directions to RIVA</a></b>',
+    question: "What happens if the weather is bad?",
+    answer:
+      'Water activities depend on weather conditions. If the weather affects your booking, contact our team on WhatsApp at <a href="https://wa.me/971522495311" target="_blank" rel="noopener noreferrer">+971 52 249 5311</a>.',
+  },
+  {
+    question: "Is parking available?",
+    answer: `
+      <p>Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah.</p>
+
+      <p>Please park in Building 7 first, then try Building 8 if needed.
+      If Building 8 is full, you will need to do a short loop to return to RIVA.
+      Please make sure you have tried Building 7 first before doing so.</p>
+
+      <p><strong>Building 7:</strong> After passing Palma Residences,
+      take a sharp right down the ramp to access the basement parking.</p>
+
+      <p><strong>Building 8:</strong> After passing the RIVA signage,
+      continue to the next building (Building 8), then turn right down
+      the ramp to access the basement parking.</p>
+
+      <p>
+        <a
+          href="https://maps.app.goo.gl/36hc7S4XwKSMNZcb6"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Directions to RIVA
+        </a>
+      </p>
+    `,
   },
 ];
 
@@ -107,9 +155,11 @@ export function KidsbdayClient() {
           <div className="kids-bday-container">
             <p>Water sports and inflatable water park parties for ages 3 to 16, fully supervised by the IGNITE team at RIVA Beach Club.</p>
             <div className="kids-bday-intro-actions">
-              <a className="kids-bday-primary" href={QUOTE_URL} target="_blank" rel="noopener noreferrer">Get a Quote</a>
+              <a className="kids-bday-primary" href={QUOTE_URL} target="_blank" rel="noopener noreferrer">Get a quote</a>
               <a className="kids-bday-guide" href={GUIDE_URL} target="_blank" rel="noopener noreferrer">Download the birthday guide</a>
             </div>
+            <br/>
+            <p>Water park parties from <DirhamIcon/> 120 per child. Message us on WhatsApp and follow the steps to get your quote.</p>
           </div>
         </section>
 
@@ -146,6 +196,9 @@ export function KidsbdayClient() {
                       <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
                       <span>{pkg.duration}</span>
                     </div>
+                    <p className={`birthday-package-price ${pkg.price ? 'birthday-package-price--from' : ''}`}>
+                      {pkg.price ? <>From <DirhamIcon size="1em" /> {pkg.price} per child</> : 'Quoted by our team'}
+                    </p>
                     <p className="birthday-package-description">{pkg.description}</p>
                     <ul className="birthday-package-features">
                       {pkg.features.map((feature) => <li key={feature}><span className="birthday-check" aria-hidden="true">✓</span><span>{feature}</span></li>)}
@@ -154,6 +207,23 @@ export function KidsbdayClient() {
                   </div>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="birthday-exclusive">
+          <div className="kids-bday-container">
+            <div className="birthday-exclusive-card">
+              <div className="birthday-exclusive-content">
+                <span className="birthday-exclusive-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="27" height="27" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1"/></svg>
+                </span>
+                <div>
+                  <h2>Want the water park to yourselves?</h2>
+                  <p>The water park is not exclusive to your party unless you choose exclusive hire. Exclusive hire is available at an extra cost. Tell us when you ask for your quote.</p>
+                </div>
+              </div>
+              <a className="birthday-exclusive-button" href={QUOTE_URL} target="_blank" rel="noopener noreferrer">Ask about exclusive hire</a>
             </div>
           </div>
         </section>
@@ -170,19 +240,17 @@ export function KidsbdayClient() {
                 {safetyItems.map((item) => <li key={item}><span className="birthday-check" aria-hidden="true">✓</span><span>{item}</span></li>)}
               </ul>
             </article>
-          </div>
-        </section>
-
-        <section className="kids-bday-intro">
-          <div className="kids-bday-container">
-            <h1 className="elementor-heading-title elementor-size-default">
-              Plan your party
-            </h1>
-            <p>Tell us the age, the number of guests and the date, and our team will send your quote.</p>
-            <div className="kids-bday-intro-actions">
-              <a className="kids-bday-primary" href={QUOTE_URL} target="_blank" rel="noopener noreferrer">Get a Quote on Whatsapp</a>
-              <a className="kids-bday-guide" href={GUIDE_URL} target="_blank" rel="noopener noreferrer">Download the birthday guide</a>
-            </div>
+            <article className="birthday-extra-panel birthday-guest-panel">
+              <h2>Guest requirements</h2>
+              <p>For guests aged 6 to 16</p>
+              <div className="birthday-requirements-grid">
+                <div className="birthday-requirement"><span aria-hidden="true">📏</span><strong>Minimum height<br/>110cm</strong></div>
+                <div className="birthday-requirement"><span aria-hidden="true">🏊</span><strong>Swimming<br/>ability required</strong></div>
+                <div className="birthday-requirement"><span aria-hidden="true">◉</span><strong>Life vest<br/>mandatory</strong></div>
+                <div className="birthday-requirement"><span aria-hidden="true">♙</span><strong>Children under<br/>10 need a<br/>parent close by</strong></div>
+              </div>
+              <p className="birthday-guest-note">The Kiddie party for ages 3 to 5 is different: parents are welcome to join in.</p>
+            </article>
           </div>
         </section>
 
@@ -226,6 +294,19 @@ export function KidsbdayClient() {
             </div>
           </div>
         </div>
+
+        <section className="kids-bday-intro">
+          <div className="kids-bday-container">
+            <h1 className="elementor-heading-title elementor-size-default">
+              Plan your party
+            </h1>
+            <p>Message us on WhatsApp and follow the steps. Our team will send your quote based on the package and the number of guests.</p>
+            <div className="kids-bday-intro-actions">
+              <a className="kids-bday-primary" href={QUOTE_URL} target="_blank" rel="noopener noreferrer">Get a quote on whatsapp</a>
+              <a className="kids-bday-guide" href={GUIDE_URL} target="_blank" rel="noopener noreferrer">Download the birthday guide</a>
+            </div>
+          </div>
+        </section>
         
         <section className="kids-bday-faq">
           <div className="kids-bday-container">
@@ -426,17 +507,35 @@ export function KidsbdayClient() {
         .birthday-package-features li:last-child,.birthday-safety-list li:last-child{border-bottom:0}
         .birthday-check{flex:0 0 19px;color:#54c8e8;font-size:23px;font-weight:800;line-height:1.2}
         .birthday-package-button{display:flex;align-items:center;justify-content:center;min-height:62px;width:100%;margin-top:auto;padding:15px 22px;border-radius:13px;font-size:18px;font-weight:800;text-align:center;text-decoration:none;transition:background .2s}
+        .birthday-package-price{margin:2px 0 0;color:#999;font-size:19px;font-weight:700}
+        .birthday-package-price--from{color:#ff9012}
+        .birthday-package-price svg{display:inline-block;vertical-align:-.12em}
+        .birthday-package-duration{background:transparent;padding:0;color:#54c8e8;font-size:18px}
+        .birthday-exclusive{padding:5px 0 45px}
+        .birthday-exclusive-card{border:2px solid #e7eaec;border-radius:24px;padding:32px 38px;background:#fff}
+        .birthday-exclusive-content{display:flex;align-items:flex-start;gap:24px}
+        .birthday-exclusive-icon{display:grid;place-items:center;flex:0 0 64px;height:64px;border-radius:16px;background:#fff3e8;color:#ff9012}
+        .birthday-exclusive-content h2{margin:0 0 7px;color:#111;font-size:23px;font-weight:800}
+        .birthday-exclusive-content p{margin:0;color:#777;font-size:16px;line-height:1.8}
+        .birthday-exclusive-button{display:inline-flex;justify-content:center;align-items:center;margin-top:28px;padding:13px 24px;border:2px solid #6c7c83;border-radius:10px;color:#34454e;font-size:16px;font-weight:700;text-decoration:none}
+        .birthday-exclusive-button:hover{background:#f7f8f9;color:#34454e}
         .birthday-extra{padding:20px 0 80px}
         .birthday-extra-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px;align-items:start}
         .birthday-extra-panel{padding:35px 40px;border-radius:23px;background:#f7f8f9}
-        .birthday-extra-panel h2{margin:0 0 24px;color:#92979b;font-size:15px;font-weight:800;letter-spacing:1.8px;}
+        .birthday-extra-panel h2{margin:0 0 24px;color:#92979b;font-size:20px;font-weight:800;}
         .birthday-extra-panel p{margin:0;color:#60676b;font-size:17px;line-height:1.9}
         .birthday-safety-list li{color:#333;font-size:16px}
+        .birthday-guest-panel{grid-column:1/-1}
+        .birthday-requirements-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin:22px 0 24px}
+        .birthday-requirement{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;min-height:165px;padding:20px 12px;border-radius:18px;background:#fff;text-align:center}
+        .birthday-requirement span{color:#54c8e8;font-size:30px;line-height:1.2}
+        .birthday-requirement strong{color:#111;font-size:17px;line-height:1.5}
+        .birthday-extra-panel .birthday-guest-note{font-size:15px;color:#888}
         .kids-bday-faq{padding:65px 0 80px;background:#f7f8f9}
         .kids-bday-faq h2{margin:0 0 28px;font-size:clamp(28px,3vw,38px);color:#182b36}
         .kids-bday-faq-list{display:grid;gap:12px}
         .kids-bday-faq-item{overflow:hidden;border-radius:14px;background:#fff}
-        .kids-bday-faq-item button{display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%;padding:22px 26px;border:0;background:transparent;color:#202d33;font:inherit;font-size:18px;font-weight:700;text-align:left;cursor:pointer}
+        .kids-bday-faq-item button{display:flex;text-transform: capitalize;align-items:center;justify-content:space-between;gap:20px;width:100%;padding:22px 26px;border:0;background:transparent;color:#202d33;font:inherit;font-size:18px;font-weight:700;text-align:left;cursor:pointer}
         .kids-bday-faq-item button span:last-child{font-size:26px;color:#54c8e8}
         .kids-bday-faq-item p,.kids-bday-faq-item div{margin:0;padding:0 26px 24px;color:#647681;line-height:1.7}
         @media(max-width:767px){
@@ -460,6 +559,14 @@ export function KidsbdayClient() {
         .birthday-extra{padding:15px 0 55px}
         .birthday-extra-panel{padding:26px 24px}
         .birthday-extra-panel p{font-size:15px}
+        .birthday-exclusive-card{padding:24px}
+        .birthday-exclusive-content{gap:15px}
+        .birthday-exclusive-icon{flex-basis:48px;height:48px}
+        .birthday-exclusive-content h2{font-size:19px}
+        .birthday-exclusive-content p{font-size:14px}
+        .birthday-requirements-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+        .birthday-requirement{min-height:140px}
+        .birthday-requirement strong{font-size:14px}
         .kids-bday-faq{padding:50px 0}
         .kids-bday-faq-item button{padding:18px;font-size:16px}
         .kids-bday-faq-item p{padding:0 18px 20px;font-size:14px}
