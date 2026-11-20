@@ -8,16 +8,16 @@ import { KidskayakClient } from './KidskayakClient';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Kids kayak on Palm Jumeirah",
+  title: "Kids kayak Dubai | Kayaking for ages 6 to 10 on Palm Jumeirah",
 
   description:
-    "Let your kids explore the calm waters of Palm Jumeirah in a kayak, with lifeguard-trained staff on hand throughout.",
+    "Kids kayak rental on Palm Jumeirah for ages 6 to 10. Calm, motor-free waters and lifeguard-trained staff. AED 50 for 1 hour. Book online in minutes.",
 
   openGraph: {
-    title: "Kids kayak on Palm Jumeirah",
+    title: "Kids kayak Dubai | Kayaking for ages 6 to 10 on Palm Jumeirah",
 
     description:
-    "Let your kids explore the calm waters of Palm Jumeirah in a kayak, with lifeguard-trained staff on hand throughout.",
+    "Kids kayak rental on Palm Jumeirah for ages 6 to 10. Calm, motor-free waters and lifeguard-trained staff. AED 50 for 1 hour. Book online in minutes.",
     type: "website",
     siteName: "IGNITE Water Sports",
     images: [
@@ -32,10 +32,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Kids kayak on Palm Jumeirah",
+    title: "Kids kayak Dubai | Kayaking for ages 6 to 10 on Palm Jumeirah",
 
     description:
-    "Let your kids explore the calm waters of Palm Jumeirah in a kayak, with lifeguard-trained staff on hand throughout.",
+    "Kids kayak rental on Palm Jumeirah for ages 6 to 10. Calm, motor-free waters and lifeguard-trained staff. AED 50 for 1 hour. Book online in minutes.",
     images: [
       "https://ignitewatersports.com/wp-content/uploads/2024/12/IGNITE_SocialIcon_WhiteWLogo_WaterSports.png",
     ],

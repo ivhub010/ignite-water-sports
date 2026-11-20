@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import SiteHeader from '@/components/layout/SiteHeader';
 import SiteFooter from '@/components/layout/SiteFooter';
+import GoogleReviews from "../GoogleReviews";
 import "dirham/css";
 import { DirhamIcon } from "dirham/react";
 
@@ -63,7 +64,7 @@ const sessionDetails = [
     value: 'Ages 6 to 10',
   },
   {
-    icon: 'eye',
+    icon: 'supervision',
     label: 'Supervision',
     value: 'A parent must supervise while children are on the kayak',
   },
@@ -169,6 +170,8 @@ function LineIcon({ name }) {
       return <svg {...common}><path d="M4 17l5-5 3 3 7-8"/><path d="M14 7h5v5"/></svg>;
     case 'wave':
       return <svg {...common}><path d="M3 14c2.2 0 2.2-6 4.4-6s2.2 9 4.4 9 2.2-12 4.4-12 2.2 7 4.8 7"/></svg>;
+    case 'supervision':
+      return <svg {...common}><path d="M2.5 11.5s3.5-5 9.5-5 9.5 5 9.5 5-3.5 5-9.5 5-9.5-5-9.5-5Z"/><circle cx="12" cy="11.5" r="2.5"/><path d="m15.5 19 2 2 4-4"/></svg>;
     case 'eye':
       return <svg {...common}><path d="M2.5 12s3.5-5 9.5-5 9.5 5 9.5 5-3.5 5-9.5 5-9.5-5-9.5-5Z"/><circle cx="12" cy="12" r="2.5"/></svg>;
     case 'shield':
@@ -247,13 +250,22 @@ export function KidskayakClient() {
 
         {/* SESSION INFORMATION */}
         <section className="details-section">
+          <div className="sup-container">
+            <div className="parent-supervision-notice">
+              <span className="parent-supervision-icon"><LineIcon name="supervision" /></span>
+              <div>
+                <h2>A parent must supervise</h2>
+                <p>Children aged 6 to 10 must be supervised by a parent while they are on the kayak.</p>
+              </div>
+            </div>
+          </div>
           <div className="sup-container details-layout">
             <div className="details-column">
               <div className="info-panel">
                 <h2 className="panel-title">Session details</h2>
                 <div className="session-list">
                   {sessionDetails.map((item) => (
-                    <div className="session-row" key={item.label}>
+                    <div className={`session-row ${item.label === "Supervision" ? "supervision-row" : ""}`} key={item.label}>
                       <span className="detail-icon"><LineIcon name={item.icon} /></span>
                       <span className="detail-label">{item.label}</span>
                       <strong>{item.value}</strong>
@@ -322,7 +334,7 @@ export function KidskayakClient() {
           <div className="sup-container booking-strip">
             <div>
               <strong>From <DirhamIcon size="1em" /> 50</strong>
-              <span>60 minutes, instant confirmation</span>
+              <span>1 hour, parent supervision required, instant confirmation</span>
             </div>
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
               Book your session
@@ -355,12 +367,12 @@ export function KidskayakClient() {
 
                 <div className="video-feature">
                   <LineIcon name="users" />
-                  <span>All levels welcome</span>
+                  <span>For ages 6 to 10</span>
                 </div>
 
                 <div className="video-feature">
                   <LineIcon name="shield" />
-                  <span>Certified instructors on hand</span>
+                  <span>Lifeguard-trained staff on hand</span>
                 </div>
               </div>
             </div>
@@ -379,6 +391,47 @@ export function KidskayakClient() {
           </div>
         </section>
 
+
+        <div
+          className="elementor-element elementor-element-93c1768 e-con-full e-flex e-con e-parent greviews"
+          data-id="93c1768"
+          data-element_type="container"
+          data-e-type="container"
+        >
+          <div
+            className="elementor-element elementor-element-699767d e-flex e-con-boxed e-con e-child"
+            data-id="699767d"
+            data-element_type="container"
+            data-e-type="container"
+          >
+            <div className="e-con-inner">
+              <div
+                className="elementor-element elementor-element-290344f e-con-full e-flex e-con e-child"
+                data-id="290344f"
+                data-element_type="container"
+                data-e-type="container"
+              >
+                <div
+                  className="elementor-element elementor-element-9f7ef23 sis-heading-animation sis-animation-heading-style-1 elementor-widget elementor-widget-heading"
+                  data-widget_type="heading.default"
+                >
+                  <h3 className="elementor-heading-title elementor-size-default">
+                    Our reviews
+                  </h3>
+                </div>
+                <div
+                  className="elementor-element elementor-element-7854b00 sis-heading-animation sis-animation-heading-style-2 sis-light-title elementor-widget elementor-widget-heading"
+                  data-widget_type="heading.default"
+                >
+                  <h2 className="elementor-heading-title elementor-size-default">
+                    What our guests say
+                  </h2>
+                </div>
+                <GoogleReviews reviewid="bcf6e1f86a18174d3c5688e3b61"/>
+              </div>
+            </div>
+          </div>
+        </div>
                 
         {/* FAQ */}
         <section className="sup-faq-section">
@@ -777,6 +830,71 @@ export function KidskayakClient() {
           .details-section {
             padding: 70px 0 60px;
             background: #fff;
+          }
+
+          .parent-supervision-notice {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            padding: 28px 36px;
+            margin-bottom: 34px;
+            border: 2px solid #ffcc91;
+            border-radius: 22px;
+            background: #fff5eb;
+          }
+          .parent-supervision-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 72px;
+            width: 72px;
+            height: 72px;
+            border-radius: 16px;
+            background: #ff9017;
+          }
+          .parent-supervision-icon svg {
+            width: 34px;
+            height: 34px;
+            stroke: #fff;
+          }
+          .parent-supervision-notice h2 {
+            margin: 0 0 6px;
+            font-size: 24px;
+            line-height: 1.3;
+            letter-spacing: 0;
+            color: #111;
+          }
+          .parent-supervision-notice p {
+            margin: 0;
+            font-size: 18px;
+            line-height: 1.5;
+            color: #666;
+          }
+          .session-row.supervision-row {
+            padding: 14px 10px;
+            margin: 0 -10px;
+            border-bottom: 0;
+            border-radius: 10px;
+            background: #fff2e5;
+          }
+          .session-row.supervision-row .detail-icon svg {
+            stroke: #ff9017;
+          }
+          @media (max-width: 767px) {
+            .parent-supervision-notice {
+              gap: 14px;
+              padding: 18px;
+              border-radius: 16px;
+            }
+            .parent-supervision-icon {
+              flex-basis: 50px;
+              width: 50px;
+              height: 50px;
+              border-radius: 12px;
+            }
+            .parent-supervision-icon svg { width: 26px; height: 26px; }
+            .parent-supervision-notice h2 { font-size: 18px; }
+            .parent-supervision-notice p { font-size: 14px; }
           }
 
           .details-layout {
