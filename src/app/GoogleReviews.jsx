@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-export default function GoogleReviews() {
+export default function GoogleReviews({reviewid = ""}) {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -15,8 +15,7 @@ export default function GoogleReviews() {
     // Create a fresh Trustindex script
     const script = document.createElement("script");
 
-    script.src =
-      "https://cdn.trustindex.io/loader.js?bcf6e1f86a18174d3c5688e3b61";
+    script.src = `https://cdn.trustindex.io/loader.js?${reviewid}`;
 
     script.async = true;
     script.defer = true;
