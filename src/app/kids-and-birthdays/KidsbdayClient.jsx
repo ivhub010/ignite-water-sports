@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import SiteHeader from '@/components/layout/SiteHeader';
 import SiteFooter from '@/components/layout/SiteFooter';
+import GoogleReviews from "../GoogleReviews";
 import "dirham/css";
 import { DirhamIcon } from "dirham/react";
 
@@ -185,6 +186,47 @@ export function KidsbdayClient() {
           </div>
         </section>
 
+        <div
+          className="elementor-element elementor-element-93c1768 e-con-full e-flex e-con e-parent greviews"
+          data-id="93c1768"
+          data-element_type="container"
+          data-e-type="container"
+        >
+          <div
+            className="elementor-element elementor-element-699767d e-flex e-con-boxed e-con e-child"
+            data-id="699767d"
+            data-element_type="container"
+            data-e-type="container"
+          >
+            <div className="e-con-inner">
+              <div
+                className="elementor-element elementor-element-290344f e-con-full e-flex e-con e-child"
+                data-id="290344f"
+                data-element_type="container"
+                data-e-type="container"
+              >
+                <div
+                  className="elementor-element elementor-element-9f7ef23 sis-heading-animation sis-animation-heading-style-1 elementor-widget elementor-widget-heading"
+                  data-widget_type="heading.default"
+                >
+                  <h3 className="elementor-heading-title elementor-size-default">
+                    Our reviews
+                  </h3>
+                </div>
+                <div
+                  className="elementor-element elementor-element-7854b00 sis-heading-animation sis-animation-heading-style-2 sis-light-title elementor-widget elementor-widget-heading"
+                  data-widget_type="heading.default"
+                >
+                  <h2 className="elementor-heading-title elementor-size-default">
+                    What our guests say
+                  </h2>
+                </div>
+                <GoogleReviews reviewid="44542658628c17746a16d967c50"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        
         <section className="kids-bday-faq">
           <div className="kids-bday-container">
             <h2>Frequently asked questions</h2>
