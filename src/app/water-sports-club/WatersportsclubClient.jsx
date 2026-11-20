@@ -156,18 +156,22 @@ const whyIgnite = [
   },
 ];
 
+
 const faqs = [
   {
     question: 'Is the club running at the moment?',
-    answer: 'No. The club is not running at the moment. <b><a href="https://api.whatsapp.com/send?phone=971522495311&text=I%20would%20like%20more%20information%20on%20your%20club">Message us on WhatsApp</a></b> to ask about the next club.',
+    answer:
+      'No. The club is not running at the moment. <b><a href="https://api.whatsapp.com/send?phone=971522495311&text=I%20would%20like%20more%20information%20on%20your%20club" target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a></b> to ask about the club.',
   },
   {
     question: 'What ages is the club for?',
-    answer: 'The club has two age groups: 3 to 6 years, and 6 years and above, so every activity suits the age of the child.',
+    answer:
+      'The club has two age groups: 3 to 6 years, and 6 years and above, so every activity suits the age of the child.',
   },
   {
     question: 'When does the club meet?',
-    answer: "When it is running, the club meets on Saturdays from 8:30am to 9:30am at RIVA Beach Club.",
+    answer:
+      'When it is running, the club meets on Saturdays from 8:30am to 9:30am at RIVA Beach Club.',
   },
   {
     question: 'What do the kids do?',
@@ -176,9 +180,44 @@ const faqs = [
   },
   {
     question: 'Is parking available?',
-    answer: 'Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah. Please park in Building 7 first, then try Building 8 if needed. If Building 8 is full, you will need to do a short loop to return to RIVA. Please make sure you have tried Building 7 first before doing so. <br/> <b>Building 7:</b> After passing Palma Residences, take a sharp right down the ramp to access the basement parking. <br/> <b>Building 8:</b> After passing the RIVA signage, continue to the next building (Building 8), then turn right down the ramp to access the basement parking. <br/><br/><b><a href="https://maps.app.goo.gl/36hc7S4XwKSMNZcb6" target="_blank">Click here for directions to RIVA</a></b>',
+    answer: `
+      <p>
+        Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah.
+      </p>
+
+      <p>
+        Please park in Building 7 first, then try Building 8 if needed.
+        If Building 8 is full, you will need to do a short loop to return
+        to RIVA. Please make sure you have tried Building 7 first before
+        doing so.
+      </p>
+
+      <p>
+        <b>Building 7:</b> After passing Palma Residences, take a sharp
+        right down the ramp to access the basement parking.
+      </p>
+
+      <p>
+        <b>Building 8:</b> After passing the RIVA signage, continue to
+        the next building (Building 8), then turn right down the ramp
+        to access the basement parking.
+      </p>
+
+      <p>
+        <b>
+          <a
+            href="https://maps.app.goo.gl/36hc7S4XwKSMNZcb6"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Directions to RIVA
+          </a>
+        </b>
+      </p>
+    `,
   },
 ];
+
 
 
 function LineIcon({ name }) {
@@ -400,7 +439,7 @@ export function WatersportsclubClient() {
                   rel="noopener noreferrer"
                   className="sup-booking-btn"
                 >
-                  Book now
+                  Ask about the club
                 </a>
 
                 <span className="sup-booking-price">
@@ -538,7 +577,7 @@ export function WatersportsclubClient() {
 
                 <div className="video-feature">
                   <LineIcon name="heart" />
-                  <span>Run with SUP Kids</span>
+                  <span>Run by IGNITE Water Sports</span>
                 </div>
 
                 <div className="video-feature">
@@ -633,7 +672,7 @@ export function WatersportsclubClient() {
                   <h3>Kids Camp</h3>
 
                   <p className="related-price">
-                    <DirhamIcon size="1em" /> 250, ages 6 to 12
+                   From <DirhamIcon size="1em" /> 250, ages 6 to 12
                   </p>
 
                   <a
@@ -665,7 +704,7 @@ export function WatersportsclubClient() {
                   <h3>Kids Kayak</h3>
 
                   <p className="related-price">
-                    From <DirhamIcon size="1em" /> 50, ages 6 to 10
+                    <DirhamIcon size="1em" /> 50, ages 6 to 10, with a parent
                   </p>
 
                   <a
@@ -697,7 +736,7 @@ export function WatersportsclubClient() {
                   <h3>Inflatable water park</h3>
 
                   <p className="related-price">
-                    From <DirhamIcon size="1em" /> 100 per child
+                     <DirhamIcon size="1em" /> 100 per child
                   </p>
 
                   <a

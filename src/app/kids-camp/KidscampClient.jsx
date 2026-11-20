@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import SiteHeader from '@/components/layout/SiteHeader';
 import SiteFooter from '@/components/layout/SiteFooter';
+import GoogleReviews from "../GoogleReviews";
 import "dirham/css";
 import { DirhamIcon } from "dirham/react";
 
@@ -340,6 +341,13 @@ function LineIcon({ name }) {
 
 export function KidscampClient() {
   const [openFaq, setOpenFaq] = useState(0);
+  const [notifyDetails, setNotifyDetails] = useState({ name: '', phone: '', age: '' });
+
+  const handleNotifySubmit = (event) => {
+    event.preventDefault();
+    const message = `Hello IGNITE, please let me know when the next Kids Camp dates are announced.\nName: ${notifyDetails.name.trim()}\nPhone: ${notifyDetails.phone.trim()}\nChild's age: ${notifyDetails.age}`;
+    window.open(`https://wa.me/971522495311?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <>
@@ -386,7 +394,7 @@ export function KidscampClient() {
                   rel="noopener noreferrer"
                   className="sup-booking-btn"
                 >
-                  Book now
+                  Ask about the next camp
                 </a>
 
                 <span className="sup-booking-price">
@@ -442,6 +450,17 @@ export function KidscampClient() {
                   ))}
                 </div>
               </div>
+              <div className="info-panel">
+                <h2 className="panel-title">Good to know</h2>
+                <div className="good-list">
+                  {goodToKnow.map((item) => (
+                    <div className="good-row" key={item.text}>
+                      <span className="detail-icon"><LineIcon name={item.icon} /></span>
+                      <span>{item.text}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
 
 
@@ -490,24 +509,64 @@ export function KidscampClient() {
                   Online enrolment opens when dates are announced
                 </p>
               </div>
+              <div className="info-panel camp-notify-panel">
+                <h2 className="panel-title">Hear about the next camp first</h2>
+                <p className="camp-notify-intro">
+                  Leave your details and we will get in touch when dates are announced.
+                </p>
+                <form className="camp-notify-form" onSubmit={handleNotifySubmit}>
+                  <div className="camp-notify-fields">
+                    <label>
+                      <span>Your name</span>
+                      <input
+                        type="text"
+                        placeholder="Name"
+                        autoComplete="name"
+                        required
+                        value={notifyDetails.name}
+                        onChange={(e) => setNotifyDetails((prev) => ({ ...prev, name: e.target.value }))}
+                      />
+                    </label>
+                    <label>
+                      <span>Phone</span>
+                      <input
+                        type="tel"
+                        placeholder="Phone number"
+                        autoComplete="tel"
+                        required
+                        value={notifyDetails.phone}
+                        onChange={(e) => setNotifyDetails((prev) => ({ ...prev, phone: e.target.value }))}
+                      />
+                    </label>
+                  </div>
+                  <label>
+                    <span>Child's age</span>
+                    <input
+                      type="number"
+                      min="6"
+                      max="12"
+                      placeholder="Age, from 6 to 12"
+                      required
+                      value={notifyDetails.age}
+                      onChange={(e) => setNotifyDetails((prev) => ({ ...prev, age: e.target.value }))}
+                    />
+                  </label>
+                  <br/>
+                  <br/>
+                  <button type="submit" className="camp-notify-btn">Notify me</button>
+                  <p className="camp-notify-privacy">
+                    We will only use your details to tell you about camp dates.
+                    Submitting opens WhatsApp to send your request.
+                  </p>
+                </form>
+              </div>
               <div className="info-panel">
-                <h2 className="panel-title">What’s included</h2>
+                <h2 className="panel-title">Safety and supervision</h2>
                 <div className="included-list">
                   {included.map((item) => (
                     <div className="included-row" key={item}>
                       <span className="check">✓</span>
                       <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="info-panel">
-                <h2 className="panel-title">Good to know</h2>
-                <div className="good-list">
-                  {goodToKnow.map((item) => (
-                    <div className="good-row" key={item.text}>
-                      <span className="detail-icon"><LineIcon name={item.icon} /></span>
-                      <span>{item.text}</span>
                     </div>
                   ))}
                 </div>
@@ -519,10 +578,10 @@ export function KidscampClient() {
           <div className="sup-container booking-strip">
             <div>
               <strong>From <DirhamIcon size="1em" /> 250</strong>
-              <span>3 hours a day</span>
+              <span>3 hours a day. Dates coming soon</span>
             </div>
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-              Book your session
+              Ask about the next camp
             </a>
           </div>
         </section>
@@ -552,7 +611,7 @@ export function KidscampClient() {
 
                 <div className="video-feature">
                   <LineIcon name="users" />
-                  <span>All levels welcome</span>
+                  <span>For ages 6 to 12</span>
                 </div>
 
                 <div className="video-feature">
@@ -576,7 +635,47 @@ export function KidscampClient() {
           </div>
         </section>
 
-                
+        <div
+          className="elementor-element elementor-element-93c1768 e-con-full e-flex e-con e-parent greviews"
+          data-id="93c1768"
+          data-element_type="container"
+          data-e-type="container"
+        >
+          <div
+            className="elementor-element elementor-element-699767d e-flex e-con-boxed e-con e-child"
+            data-id="699767d"
+            data-element_type="container"
+            data-e-type="container"
+          >
+            <div className="e-con-inner">
+              <div
+                className="elementor-element elementor-element-290344f e-con-full e-flex e-con e-child"
+                data-id="290344f"
+                data-element_type="container"
+                data-e-type="container"
+              >
+                <div
+                  className="elementor-element elementor-element-9f7ef23 sis-heading-animation sis-animation-heading-style-1 elementor-widget elementor-widget-heading"
+                  data-widget_type="heading.default"
+                >
+                  <h3 className="elementor-heading-title elementor-size-default">
+                    Our reviews
+                  </h3>
+                </div>
+                <div
+                  className="elementor-element elementor-element-7854b00 sis-heading-animation sis-animation-heading-style-2 sis-light-title elementor-widget elementor-widget-heading"
+                  data-widget_type="heading.default"
+                >
+                  <h2 className="elementor-heading-title elementor-size-default">
+                    What our guests say
+                  </h2>
+                </div>
+                <GoogleReviews reviewid="bcf6e1f86a18174d3c5688e3b61"/>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* FAQ */}
         <section className="sup-faq-section">
           <div className="sup-container faq-container">
@@ -1922,6 +2021,133 @@ export function KidscampClient() {
           .camp-date-notice svg {
             width: 24px;
             height: 24px;
+          }
+
+          /* CAMP NOTIFICATION FORM */
+
+          .camp-notify-panel {
+            padding: 30px;
+            background: #f7f8f9;
+            border-radius: 22px;
+          }
+
+          .camp-notify-panel .panel-title {
+            margin: 0 0 14px;
+            font-size: 20px;
+            color: #71787c;
+            letter-spacing: 0.5px;
+          }
+
+          .camp-notify-description {
+            margin: 0 0 24px;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #777;
+          }
+
+          .camp-notify-form {
+            display: block !important;
+            width: 100%;
+            margin: 0;
+          }
+
+          .camp-notify-fields {
+            display: grid !important;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            margin-bottom: 18px;
+          }
+
+          .camp-notify-field {
+            display: flex !important;
+            flex-direction: column !important;
+            min-width: 0;
+            gap: 8px;
+          }
+
+          .camp-notify-field-full {
+            grid-column: 1 / -1;
+          }
+
+          .camp-notify-field label {
+            display: block;
+            margin: 0;
+            font-size: 14px;
+            font-weight: 600;
+            color: #30373b;
+          }
+
+          .camp-notify-field input {
+            display: block !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0;
+            height: 54px !important;
+            padding: 12px 16px !important;
+            margin: 0 !important;
+            border: 1px solid #e2e6e8 !important;
+            border-radius: 12px !important;
+            background: #fff !important;
+            color: #30373b !important;
+            font-size: 15px !important;
+            box-sizing: border-box;
+            box-shadow: none !important;
+          }
+
+          .camp-notify-field input:focus {
+            outline: none;
+            border-color: #54c8e8 !important;
+          }
+
+          .camp-notify-btn {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            width: 100% !important;
+            min-height: 56px;
+            padding: 15px 20px !important;
+            margin: 0 !important;
+            border: none !important;
+            border-radius: 12px !important;
+            background: #ff9017 !important;
+            color: #fff !important;
+            font-size: 18px !important;
+            font-weight: 700 !important;
+            text-align: center;
+            cursor: pointer;
+          }
+
+          .camp-notify-btn:hover {
+            background: #ed8000 !important;
+          }
+
+          .camp-notify-note {
+            margin: 14px 0 0 !important;
+            color: #999 !important;
+            font-size: 13px !important;
+            line-height: 1.6;
+            text-align: center;
+          }
+
+          /* MOBILE */
+
+          @media (max-width: 600px) {
+            .camp-notify-panel {
+              padding: 24px 20px;
+            }
+
+            .camp-notify-fields {
+              grid-template-columns: 1fr;
+              gap: 15px;
+            }
+
+            .camp-notify-field-full {
+              grid-column: auto;
+            }
+
+            .camp-notify-btn {
+              font-size: 16px !important;
+            }
           }
 
         `}</style>

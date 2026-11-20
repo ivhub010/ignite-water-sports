@@ -117,6 +117,7 @@ const goodToKnow = [
   { icon: 'car', text: 'Free parking available at RIVA Beach Club' },
 ];
 
+
 const faqs = [
   {
     question: 'What ages is the kids kayak for?',
@@ -125,22 +126,57 @@ const faqs = [
   },
   {
     question: 'How long is a session?',
-    answer: 'Sessions are 1 hour. Arrive 10 minutes before your start time.',
+    answer:
+      'Sessions are 1 hour. Arrive 10 minutes before your start time.',
   },
   {
     question: 'What if my child is older than 10?',
-    answer: "Children aged 6 and over can also use our regular kayaks with an adult supervising. See our <b><a href='/kayak'>kayak rental page</a></b>.",
+    answer:
+      'Children aged 6 and over can also use our regular kayaks with an adult supervising. See our <a href="https://ignitewatersports.onrender.com/kayak" target="_blank" rel="noopener noreferrer"><b>kayak rental page</b></a>.',
   },
   {
     question: 'What should my child bring?',
     answer:
-      'Wear swimwear or clothing your child can get wet. Bring sunscreen, sunglasses, and a water bottle.',
+      'Wear swimwear or clothing your child can get wet. Bring sunscreen, sunglasses and a water bottle.',
   },
   {
     question: 'Is parking available?',
-    answer: 'Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah. Please park in Building 7 first, then try Building 8 if needed. If Building 8 is full, you will need to do a short loop to return to RIVA. Please make sure you have tried Building 7 first before doing so. <br/> <b>Building 7:</b> After passing Palma Residences, take a sharp right down the ramp to access the basement parking. <br/> <b>Building 8:</b> After passing the RIVA signage, continue to the next building (Building 8), then turn right down the ramp to access the basement parking. <br/><br/><b><a href="https://maps.app.goo.gl/36hc7S4XwKSMNZcb6" target="_blank">Click here for directions to RIVA</a></b>',
+    answer: `
+      <p>
+        Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah.
+      </p>
+
+      <p>
+        Please park in Building 7 first, then try Building 8 if needed.
+        If Building 8 is full, you will need to do a short loop to
+        return to RIVA. Please make sure you have tried Building 7
+        first before doing so.
+      </p>
+
+      <p>
+        <b>Building 7:</b> After passing Palma Residences, take a sharp
+        right down the ramp to access the basement parking.
+      </p>
+
+      <p>
+        <b>Building 8:</b> After passing the RIVA signage, continue to
+        the next building (Building 8), then turn right down the ramp
+        to access the basement parking.
+      </p>
+
+      <p>
+        <a
+          href="https://maps.app.goo.gl/36hc7S4XwKSMNZcb6"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <b>Directions to RIVA</b>
+        </a>
+      </p>
+    `,
   },
 ];
+
 
 function LineIcon({ name }) {
   const common = {
