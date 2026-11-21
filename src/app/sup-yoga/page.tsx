@@ -8,16 +8,16 @@ import { SUPyogaClient } from './SUPyogaClient';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SUP yoga on Palm Jumeirah",
+  title: "SUP yoga Dubai | Private group SUP yoga classes on Palm Jumeirah",
 
   description:
-    "Take your yoga practice onto the water. Private group classes led by a certified yoga instructor, for all levels, with a minimum of 10 people.",
+    "Private group SUP yoga classes on Palm Jumeirah for groups of 10 or more. All levels, led by a certified yoga instructor. Ask about packages.",
 
   openGraph: {
-    title: "SUP yoga on Palm Jumeirah",
+    title: "SUP yoga Dubai | Private group SUP yoga classes on Palm Jumeirah",
 
     description:
-    "Take your yoga practice onto the water. Private group classes led by a certified yoga instructor, for all levels, with a minimum of 10 people.",
+    "Private group SUP yoga classes on Palm Jumeirah for groups of 10 or more. All levels, led by a certified yoga instructor. Ask about packages.",
     type: "website",
     siteName: "IGNITE Water Sports",
     images: [
@@ -32,10 +32,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "SUP yoga on Palm Jumeirah",
+    title: "SUP yoga Dubai | Private group SUP yoga classes on Palm Jumeirah",
 
     description:
-    "Take your yoga practice onto the water. Private group classes led by a certified yoga instructor, for all levels, with a minimum of 10 people.",
+    "Private group SUP yoga classes on Palm Jumeirah for groups of 10 or more. All levels, led by a certified yoga instructor. Ask about packages.",
     images: [
       "https://ignitewatersports.com/wp-content/uploads/2024/12/IGNITE_SocialIcon_WhiteWLogo_WaterSports.png",
     ],

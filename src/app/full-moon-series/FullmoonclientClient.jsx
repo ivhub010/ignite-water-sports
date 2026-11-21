@@ -6,7 +6,7 @@ import SiteFooter from '@/components/layout/SiteFooter';
 import "dirham/css";
 import { DirhamIcon } from "dirham/react";
 
-const BOOKING_URL = 'https://book.ignitewatersports.com/?type=classes&section=4';
+const BOOKING_URL = 'https://book.ignitewatersports.com/?type=classes';
 
 const CORPORATE_WHATSAPP_URL =
   'https://wa.me/971522495311?text=' +
@@ -182,7 +182,7 @@ const faqs = [
   },
   {
     question: 'Is parking available?',
-    answer: 'Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah. Please park in Building 7 first, then try Building 8 if needed. If Building 8 is full, you will need to do a short loop to return to RIVA. Please make sure you have tried Building 7 first before doing so. <br/> <b>Building 7:</b> After passing Palma Residences, take a sharp right down the ramp to access the basement parking. <br/> <b>Building 8:</b> After passing the RIVA signage, continue to the next building (Building 8), then turn right down the ramp to access the basement parking. <br/><br/><b><a href="https://maps.app.goo.gl/36hc7S4XwKSMNZcb6" target="_blank">Click here for directions to RIVA</a></b>',
+    answer: 'Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah.<br/><br/>Please park in Building 7 first, then try Building 8 if needed. If Building 8 is full, you will need to do a short loop to return to RIVA. Please make sure you have tried Building 7 first before doing so.<br/><br/><b>Building 7:</b> After passing Palma Residences, take a sharp right down the ramp to access the basement parking.<br/><br/><b>Building 8:</b> After passing the RIVA signage, continue to the next building (Building 8), then turn right down the ramp to access the basement parking. <br/><br/><b><a href="https://maps.app.goo.gl/36hc7S4XwKSMNZcb6" target="_blank">Directions to RIVA</a></b>',
   },
 ];
 
@@ -418,12 +418,12 @@ export function FullmoonclientClient() {
               {/* <h2>SUP rental on Palm Jumeirah</h2> */}
 
               <p>
-                An evening of transformation, once a month under the light of the full moon. Choose Full Moon Yoga, add SUP Sound Healing on calm water under the night sky, or complete the evening with a guided SOMA Breath journey.
+                An evening of transformation, once a month under the light of the full moon. Choose full moon yoga, add SUP sound healing on calm water under the night sky, or complete the evening with a guided SOMA Breath journey.
               </p>
 
               <div className="sup-booking-actions">
                 <a
-                  href={CORPORATE_WHATSAPP_URL}
+                  href={BOOKING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="sup-booking-btn"
@@ -590,11 +590,11 @@ export function FullmoonclientClient() {
             </div>
 
             <a
-              href={CORPORATE_WHATSAPP_URL}
+              href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Book your session
+              Check dates and book
             </a>
           </div>
         </section>
@@ -679,7 +679,7 @@ export function FullmoonclientClient() {
                     </button>
 
                     <div className="faq-answer">
-                      <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
+                      <div className="faq-answer-content" dangerouslySetInnerHTML={{ __html: faq.answer }} />
                     </div>
                   </div>
                 );
@@ -1452,6 +1452,13 @@ export function FullmoonclientClient() {
             transition: max-height 0.35s ease;
           }
 
+          .faq-answer .faq-answer-content {
+            padding: 25px 36px 30px;
+            color: #666;
+            font-size: 18px;
+            line-height: 1.8;
+          }
+
           .faq-answer p {
             margin: 0;
             padding: 25px 36px 30px;
@@ -1464,7 +1471,7 @@ export function FullmoonclientClient() {
 
           /* OPEN FAQ */
           .faq-item.active .faq-answer {
-            max-height: 500px;
+            max-height: 1000px;
           }
 
           .faq-item.active .faq-question {
@@ -1495,6 +1502,7 @@ export function FullmoonclientClient() {
 
           /* MOBILE */
           @media (max-width: 767px) {
+            .faq-answer .faq-answer-content { padding: 18px 20px 24px; font-size: 14px; line-height: 1.7; }
             .sup-faq-section {
               padding: 50px 0 60px;
             }
@@ -2096,7 +2104,7 @@ export function FullmoonclientClient() {
 
           /* FAQ LINKS */
 
-          .faq-answer a {
+          .faq-answer-content a {
             color: #54c8e8;
             font-weight: 700;
             text-decoration: underline;

@@ -186,14 +186,7 @@ export default function SiteHeader({ transparent = false }: SiteHeaderProps) {
                     <span className="elementskit-menu-hamburger-icon" /><span className="elementskit-menu-hamburger-icon" /><span className="elementskit-menu-hamburger-icon" />
                   </button>
                   <div id="ekit-megamenu-divided-right-navigation" className="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-no ekit-nav-dropdown-hover"><ul id="menu-divided-right-navigation" className="elementskit-navbar-nav elementskit-menu-po-left submenu-click-on-icon">
-    <li className="menu-item menu-item-has-children nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"><a href="/our-events" className="ekit-menu-nav-link ekit-menu-dropdown-toggle">Events</a>
-      <ul className="elementskit-dropdown elementskit-submenu-panel">
-        <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/ignite-pink-is-punk-events" className="ekit-menu-nav-link">Pink is Punk</a></li>
-        <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/community-events" className="ekit-menu-nav-link">Community Events</a></li>
-        <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/team-bonding" className="ekit-menu-nav-link">Team Bonding</a></li>
-        <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/ignite-calendar" className="ekit-menu-nav-link">Calendar</a></li>
-      </ul>
-    </li>
+    <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/our-events" className="ekit-menu-nav-link">Events</a></li>
     <li className="menu-item menu-item-has-children nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"><a href="/shop" className="ekit-menu-nav-link ekit-menu-dropdown-toggle">Shop</a>
       <ul className="elementskit-dropdown elementskit-submenu-panel">
         <li className="menu-item nav-item elementskit-mobile-builder-content"><a href="/shop" className="ekit-menu-nav-link">Merch</a></li>

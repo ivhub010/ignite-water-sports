@@ -8,16 +8,16 @@ import { FullmoonclientClient } from './FullmoonclientClient';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Full moon series on Palm Jumeirah",
+  title: "Full moon series Dubai | Yoga, sound healing and breathwork under the full moon",
 
   description:
-    "An evening of transformation, once a month under the light of the full moon. Choose Full Moon Yoga, add SUP Sound Healing on calm water under the night sky, or complete the evening with a guided SOMA Breath journey.",
+    "Monthly full moon evenings on Palm Jumeirah: full moon yoga, SUP sound healing and SOMA Breath under the night sky. From AED 100. Check dates and book.",
 
   openGraph: {
-    title: "Full moon series on Palm Jumeirah",
+    title: "Full moon series Dubai | Yoga, sound healing and breathwork under the full moon",
 
     description:
-    "An evening of transformation, once a month under the light of the full moon. Choose Full Moon Yoga, add SUP Sound Healing on calm water under the night sky, or complete the evening with a guided SOMA Breath journey.",
+    "Monthly full moon evenings on Palm Jumeirah: full moon yoga, SUP sound healing and SOMA Breath under the night sky. From AED 100. Check dates and book.",
     type: "website",
     siteName: "IGNITE Water Sports",
     images: [
@@ -32,10 +32,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Full moon series on Palm Jumeirah",
+    title: "Full moon series Dubai | Yoga, sound healing and breathwork under the full moon",
 
     description:
-    "An evening of transformation, once a month under the light of the full moon. Choose Full Moon Yoga, add SUP Sound Healing on calm water under the night sky, or complete the evening with a guided SOMA Breath journey.",
+    "Monthly full moon evenings on Palm Jumeirah: full moon yoga, SUP sound healing and SOMA Breath under the night sky. From AED 100. Check dates and book.",
     images: [
       "https://ignitewatersports.com/wp-content/uploads/2024/12/IGNITE_SocialIcon_WhiteWLogo_WaterSports.png",
     ],

@@ -46,7 +46,8 @@ const benefits = [
 const sessionDetails = [
   { icon: 'calendar', label: 'Day', value: 'Saturday mornings' },
   { icon: 'clock', label: 'Time', value: 'Changes with the season. See the booking page for the current time' },
-  { icon: 'tag', label: 'Price', value: 'AED 60 per class' },
+  { icon: 'clock', label: 'Duration', value: '1 hour' },
+  { icon: 'tag', label: 'Price', value: <><DirhamIcon size="1em" /> 60 per class</> },
   { icon: 'yoga', label: 'Level', value: 'All levels, from first-timers to seasoned yogis' },
   { icon: 'instructor', label: 'Instructor', value: 'Certified yoga instructor' },
   { icon: 'pin', label: 'Location', value: 'RIVA Beach Club, Palm Jumeirah' },
@@ -67,10 +68,11 @@ const goodToKnow = [
 ];
 
 const campPackages = [
-  { title: 'Single class', description: 'One beach yoga class', price: 60 },
-  { title: '4 pack yoga and coffee', description: '4 yoga sessions and 4 coffee vouchers', price: 250 },
-  { title: 'Yoga, plunge and coffee', description: 'Yoga, an ice plunge, a 1 hour SUP or single kayak rental and a coffee voucher', price: 150 },
-  { title: 'Weekend wellness pack', description: 'Yoga, then an ice plunge, a SUP or kayak and a coffee', price: 200 },
+  { title: 'Single class', description: 'An hour of yoga with a view of the Palm', price: 60 },
+  { title: 'Yoga and paddle', description: 'An hour of yoga and a SUP or single-seater kayak rental', price: 100 },
+  { title: 'Yoga, plunge and coffee', description: 'Yoga, an ice plunge, a SUP or single-seater kayak rental and a coffee voucher', price: 150 },
+  { title: 'Weekend wellness pack', description: 'Yoga, an ice plunge, a SUP or single-seat kayak and a coffee voucher', price: 200 },
+  { title: '4 pack yoga and coffee', description: '4 yoga sessions to use on different days or share with friends, plus 4 coffee vouchers', price: 250 },
 ];
 
 const whyIgnite = [
@@ -99,25 +101,27 @@ const whyIgnite = [
 const faqs = [
   {
     question: 'Do I need yoga experience?',
-    answer:
-      'No. Our beach yoga classes suit all levels, from first-timers to seasoned practitioners. Our certified instructor supports everyone in the class.',
+    answer: 'No. Our beach yoga classes suit all levels, from first-timers to seasoned practitioners. Our certified instructor supports everyone in the class.',
   },
   {
     question: 'When are the classes?',
-    answer: 'Classes run on Saturday mornings. Class times change with the season, so please check the <b><a href="https://book.ignitewatersports.com/?type=classes&section=1">booking page</a></b> for the current time.',
+    answer: `Classes run on Saturday mornings. Class times change with the season, so please check the <b><a href="${BOOKING_URL}" target="_blank" rel="noopener noreferrer">booking page</a></b> for the current time.`,
   },
   {
     question: 'What are the class prices and packages?',
-    answer: "A single class is AED 60. The 4 pack yoga and coffee is AED 250 and includes 4 yoga sessions and 4 coffee vouchers. Yoga, plunge and coffee is AED 150 and includes yoga, an ice plunge, a 1 hour SUP or single kayak rental and a coffee voucher. The weekend wellness pack is AED 200 and includes yoga, then an ice plunge, a SUP or kayak and a coffee.",
+    answer: 'A single class is AED 60 and lasts an hour. Yoga and paddle is AED 100 and includes a SUP or single-seater kayak rental. Yoga, plunge and coffee is AED 150 and includes yoga, an ice plunge, a SUP or single-seater kayak rental and a coffee voucher. The weekend wellness pack is AED 200 and includes yoga, an ice plunge, a SUP or single-seat kayak and a coffee voucher. The 4 pack yoga and coffee is AED 250 and includes 4 yoga sessions and 4 coffee vouchers.',
   },
   {
     question: 'What should I bring?',
-    answer:
-      'Wear comfortable clothing you can stretch in and bring a water bottle.',
+    answer: 'Wear comfortable clothing you can stretch in and bring a water bottle.',
   },
   {
     question: 'Is parking available?',
-    answer: 'Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah. Please park in Building 7 first, then try Building 8 if needed. If Building 8 is full, you will need to do a short loop to return to RIVA. Please make sure you have tried Building 7 first before doing so. <br/> <b>Building 7:</b> After passing Palma Residences, take a sharp right down the ramp to access the basement parking. <br/> <b>Building 8:</b> After passing the RIVA signage, continue to the next building (Building 8), then turn right down the ramp to access the basement parking. <br/><br/><b><a href="https://maps.app.goo.gl/36hc7S4XwKSMNZcb6" target="_blank">Click here for directions to RIVA</a></b>',
+    answer: `<p>Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah.</p>
+      <p>Please park in Building 7 first, then try Building 8 if needed. If Building 8 is full, you will need to do a short loop to return to RIVA. Please make sure you have tried Building 7 first before doing so.</p>
+      <p><b>Building 7:</b> After passing Palma Residences, take a sharp right down the ramp to access the basement parking.</p>
+      <p><b>Building 8:</b> After passing the RIVA signage, continue to the next building (Building 8), then turn right down the ramp to access the basement parking.</p>
+      <p><b><a href="https://maps.app.goo.gl/36hc7S4XwKSMNZcb6" target="_blank" rel="noopener noreferrer">Directions to RIVA</a></b></p>`,
   },
 ];
 
@@ -334,7 +338,7 @@ export function BeachyogaClient() {
                 </a>
 
                 <span className="sup-booking-price">
-                  From <DirhamIcon/> 60 per class. All levels welcome
+                   <DirhamIcon/> 60 per class. All levels welcome
                 </span>
               </div>
             </div>
@@ -420,7 +424,7 @@ export function BeachyogaClient() {
 
               <div className="video-features">
                 <div className="video-feature">
-                  <LineIcon name="calendar" />
+                  <LineIcon name="sun" />
                   <span>Saturday mornings on the beach</span>
                 </div>
 
@@ -430,13 +434,13 @@ export function BeachyogaClient() {
                 </div>
 
                 <div className="video-feature">
-                  <LineIcon name="users" />
+                  <LineIcon name="yoga" />
                   <span>All levels welcome</span>
                 </div>
 
                 <div className="video-feature">
-                  <LineIcon name="shield" />
-                  <span>Led by certified yoga instructor</span>
+                  <LineIcon name="instructor" />
+                  <span>Led by a certified yoga instructor</span>
                 </div>
               </div>
             </div>
@@ -553,7 +557,7 @@ export function BeachyogaClient() {
                   <h3>Kayak rental</h3>
 
                   <p className="related-price">
-                    From <DirhamIcon size="1em" /> 50
+                    From <DirhamIcon size="1em" /> 45
                   </p>
 
                   <a
@@ -1254,25 +1258,36 @@ export function BeachyogaClient() {
 
           /* ANSWER */
           .faq-answer {
-            max-height: 0;
+            display: grid;
+            grid-template-rows: 0fr;
             overflow: hidden;
-            transition: max-height 0.35s ease;
+            transition: grid-template-rows 0.35s ease;
           }
-
-          .faq-answer p {
-            margin: 0;
-            padding: 25px 36px 30px;
-
+          .faq-answer > div {
+            min-height: 0;
+            overflow: hidden;
+            padding: 0 36px;
             color: #666;
             font-size: 18px;
-            font-weight: 400;
             line-height: 1.8;
           }
-
-          /* OPEN FAQ */
           .faq-item.active .faq-answer {
-            max-height: 500px;
+            grid-template-rows: 1fr;
           }
+          .faq-item.active .faq-answer > div {
+            padding-top: 25px;
+            padding-bottom: 30px;
+          }
+          .faq-answer :global(p) {
+            margin: 0 0 15px;
+            padding: 0;
+            color: inherit;
+            font-size: inherit;
+            line-height: inherit;
+          }
+          .faq-answer :global(p:last-child) { margin-bottom: 0; }
+          .faq-answer :global(a) { color: #54c8e8; font-weight: 600; text-decoration: underline; }
+          .faq-answer :global(a:hover) { color: #ff9017; }
 
           .faq-item.active .faq-question {
             border-bottom: 1px solid #ededed;
@@ -1294,10 +1309,7 @@ export function BeachyogaClient() {
               font-size: 18px;
             }
 
-            .faq-answer p {
-              padding: 22px 28px 28px;
-              font-size: 16px;
-            }
+            .faq-answer > div { padding-left: 28px; padding-right: 28px; font-size: 16px; }
           }
 
           /* MOBILE */
@@ -1334,11 +1346,8 @@ export function BeachyogaClient() {
               font-size: 23px;
             }
 
-            .faq-answer p {
-              padding: 18px 20px 24px;
-              font-size: 14px;
-              line-height: 1.7;
-            }
+            .faq-answer > div { padding-left: 20px; padding-right: 20px; font-size: 14px; line-height: 1.7; }
+            .faq-item.active .faq-answer > div { padding-top: 18px; padding-bottom: 24px; }
           }
 
 

@@ -8,16 +8,16 @@ import { SomabreathClient } from './SomabreathClient';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SOMA Breath on Palm Jumeirah",
+  title: "SOMA Breath Dubai | Guided breathwork with music on Palm Jumeirah",
 
   description:
-    "A guided breathwork journey with music and headsets. Learn how SOMA Breath works, then leave feeling calmer, clearer, energised and deeply reset.",
+    "SOMA Breath guided breathwork on Palm Jumeirah. A guided breath journey with music and headsets, on Saturdays. From AED 150. Book online in minutes.",
 
   openGraph: {
-    title: "SOMA Breath on Palm Jumeirah",
+    title: "SOMA Breath Dubai | Guided breathwork with music on Palm Jumeirah",
 
     description:
-    "A guided breathwork journey with music and headsets. Learn how SOMA Breath works, then leave feeling calmer, clearer, energised and deeply reset.",
+    "SOMA Breath guided breathwork on Palm Jumeirah. A guided breath journey with music and headsets, on Saturdays. From AED 150. Book online in minutes.",
     type: "website",
     siteName: "IGNITE Water Sports",
     images: [
@@ -32,10 +32,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "SOMA Breath on Palm Jumeirah",
+    title: "SOMA Breath Dubai | Guided breathwork with music on Palm Jumeirah",
 
     description:
-    "A guided breathwork journey with music and headsets. Learn how SOMA Breath works, then leave feeling calmer, clearer, energised and deeply reset.",
+    "SOMA Breath guided breathwork on Palm Jumeirah. A guided breath journey with music and headsets, on Saturdays. From AED 150. Book online in minutes.",
     images: [
       "https://ignitewatersports.com/wp-content/uploads/2024/12/IGNITE_SocialIcon_WhiteWLogo_WaterSports.png",
     ],

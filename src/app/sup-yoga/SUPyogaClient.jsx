@@ -126,6 +126,7 @@ const whyIgnite = [
   },
 ];
 
+
 const faqs = [
   {
     question: 'Is SUP yoga a private class?',
@@ -135,23 +136,59 @@ const faqs = [
   {
     question: 'Can I join SUP yoga on my own?',
     answer:
-      'SUP yoga is a private class for a minimum of 10 people. To practise on your own, join our <b><a href="/beach-yoga" target="_blank" rel="noopener noreferrer">beach yoga class</a></b>.',
+      'SUP yoga is a private class for a minimum of 10 people. To practise on your own, join our <b><a href="https://ignitewatersports.onrender.com/beach-yoga" target="_blank" rel="noopener noreferrer">beach yoga class</a></b>.',
   },
   {
     question: 'Do I need yoga or paddle boarding experience?',
     answer:
-      `No. SUP yoga welcomes yogis of all levels, from beginners to seasoned practitioners.`,
+      'No. SUP yoga welcomes yogis of all levels, from beginners to seasoned practitioners.',
   },
   {
     question: 'How do I book a class for my group?',
     answer:
-      `<b><a href="${CORPORATE_WHATSAPP_URL}" target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a></b> about our group SUP yoga packages and our team will get back to you.`,
+      'Message us on WhatsApp about our group SUP yoga packages and our team will get back to you.'.replace(
+        'Message us on WhatsApp',
+        '<b><a href="https://wa.me/971522495311?text=Hi%20IGNITE%2C%20I%20would%20like%20to%20enquire%20about%20group%20SUP%20yoga%20packages." target="_blank" rel="noopener noreferrer">Message us on WhatsApp</a></b>'
+      ),
   },
   {
     question: 'Is parking available?',
-    answer: 'Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah. Please park in Building 7 first, then try Building 8 if needed. If Building 8 is full, you will need to do a short loop to return to RIVA. Please make sure you have tried Building 7 first before doing so. <br/> <b>Building 7:</b> After passing Palma Residences, take a sharp right down the ramp to access the basement parking. <br/> <b>Building 8:</b> After passing the RIVA signage, continue to the next building (Building 8), then turn right down the ramp to access the basement parking. <br/><br/><b><a href="https://maps.app.goo.gl/36hc7S4XwKSMNZcb6" target="_blank">Click here for directions to RIVA</a></b>',
+    answer: `
+      Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah.
+
+      <br/><br/>
+
+      Please park in Building 7 first, then try Building 8 if needed.
+      If Building 8 is full, you will need to do a short loop to return
+      to RIVA. Please make sure you have tried Building 7 first before
+      doing so.
+
+      <br/><br/>
+
+      <b>Building 7:</b> After passing Palma Residences, take a sharp
+      right down the ramp to access the basement parking.
+
+      <br/><br/>
+
+      <b>Building 8:</b> After passing the RIVA signage, continue to
+      the next building (Building 8), then turn right down the ramp
+      to access the basement parking.
+
+      <br/><br/>
+
+      <b>
+        <a
+          href="https://maps.app.goo.gl/36hc7S4XwKSMNZcb6"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Directions to RIVA
+        </a>
+      </b>
+    `,
   },
 ];
+
 
 function LineIcon({ name }) {
   const common = {
@@ -362,7 +399,7 @@ export function SUPyogaClient() {
                   rel="noopener noreferrer"
                   className="sup-booking-btn"
                 >
-                  Book now
+                  Ask about group packages
                 </a>
 
                 <span className="sup-booking-price">
@@ -443,9 +480,9 @@ export function SUPyogaClient() {
 
           <div className="sup-container booking-strip">
             <div>
-              <strong>Private SUP Yoga Classes</strong>
+              <strong>Private group classes</strong>
               <span>
-                Groups of 10 or more. Contact us for packages and pricing.
+                Minimum of 10 people. Message us for group packages and prices.
               </span>
             </div>
 

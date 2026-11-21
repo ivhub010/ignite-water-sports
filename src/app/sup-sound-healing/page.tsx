@@ -8,16 +8,16 @@ import { SUPsoundClient } from './SUPsoundClient';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SUP sound healing on Palm Jumeirah",
+  title: "SUP sound healing Dubai | Saturday sound healing on the water, Palm Jumeirah",
 
   description:
-    "Float on calm water while a trained sound healing practitioner guides you through a soothing meditative journey, set to the gentle vibrations of sound healing instruments.",
+    "SUP sound healing on Palm Jumeirah every Saturday morning. A trained practitioner guides a meditative journey on the water. AED 100 offer price. Book online in minutes.",
 
   openGraph: {
-    title: "SUP sound healing on Palm Jumeirah",
+    title: "SUP sound healing Dubai | Saturday sound healing on the water, Palm Jumeirah",
 
     description:
-    "Float on calm water while a trained sound healing practitioner guides you through a soothing meditative journey, set to the gentle vibrations of sound healing instruments.",
+    "SUP sound healing on Palm Jumeirah every Saturday morning. A trained practitioner guides a meditative journey on the water. AED 100 offer price. Book online in minutes.",
     type: "website",
     siteName: "IGNITE Water Sports",
     images: [
@@ -32,10 +32,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "SUP sound healing on Palm Jumeirah",
+    title: "SUP sound healing Dubai | Saturday sound healing on the water, Palm Jumeirah",
 
     description:
-    "Float on calm water while a trained sound healing practitioner guides you through a soothing meditative journey, set to the gentle vibrations of sound healing instruments.",
+    "SUP sound healing on Palm Jumeirah every Saturday morning. A trained practitioner guides a meditative journey on the water. AED 100 offer price. Book online in minutes.",
     images: [
       "https://ignitewatersports.com/wp-content/uploads/2024/12/IGNITE_SocialIcon_WhiteWLogo_WaterSports.png",
     ],

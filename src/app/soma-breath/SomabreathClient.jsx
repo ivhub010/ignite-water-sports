@@ -172,6 +172,7 @@ const somaPackages = [
   },
 ];
 
+
 const faqs = [
   {
     question: 'What is SOMA Breath?',
@@ -186,17 +187,51 @@ const faqs = [
   {
     question: 'What are the sessions and packages?',
     answer:
-      `SOMA Breath is AED 150. SOMA and coffee is AED 170. SOMA and ice plunge is AED 210. SOMA, ice plunge and coffee is AED 230. SOMA, ice plunge, paddle and coffee is AED 270, and includes a SUP or single-seat kayak session.`,
+      'SOMA Breath is AED 150. SOMA and coffee is AED 170. SOMA and ice plunge is AED 210. SOMA, ice plunge and coffee is AED 230. SOMA, ice plunge, paddle and coffee is AED 270, and includes a SUP or single-seat kayak session.',
   },
   {
     question: 'What should I bring?',
-    answer: 'Wear comfortable clothing you can relax in and bring a water bottle. A yoga mat is provided.',
+    answer:
+      'Wear comfortable clothing you can relax in and bring a water bottle. A yoga mat is provided.',
   },
   {
     question: 'Is parking available?',
-    answer: 'Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah. Please park in Building 7 first, then try Building 8 if needed. If Building 8 is full, you will need to do a short loop to return to RIVA. Please make sure you have tried Building 7 first before doing so. <br/> <b>Building 7:</b> After passing Palma Residences, take a sharp right down the ramp to access the basement parking. <br/> <b>Building 8:</b> After passing the RIVA signage, continue to the next building (Building 8), then turn right down the ramp to access the basement parking. <br/><br/><b><a href="https://maps.app.goo.gl/36hc7S4XwKSMNZcb6" target="_blank">Click here for directions to RIVA</a></b>',
+    answer: `
+      Yes. Free parking is available at RIVA Beach Club on Palm Jumeirah.
+
+      <br/><br/>
+
+      Please park in Building 7 first, then try Building 8 if needed.
+      If Building 8 is full, you will need to do a short loop to return
+      to RIVA. Please make sure you have tried Building 7 first before
+      doing so.
+
+      <br/><br/>
+
+      <b>Building 7:</b> After passing Palma Residences, take a sharp
+      right down the ramp to access the basement parking.
+
+      <br/><br/>
+
+      <b>Building 8:</b> After passing the RIVA signage, continue to
+      the next building (Building 8), then turn right down the ramp
+      to access the basement parking.
+
+      <br/><br/>
+
+      <b>
+        <a
+          href="https://maps.app.goo.gl/36hc7S4XwKSMNZcb6"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Directions to RIVA
+        </a>
+      </b>
+    `,
   },
 ];
+
 
 function LineIcon({ name }) {
   const common = {
@@ -521,10 +556,9 @@ export function SomabreathClient() {
 
           <div className="sup-container booking-strip">
             <div>
-              <strong>SOMA Breath Sessions</strong>
+              <strong>From <DirhamIcon/> 150</strong>
               <span>
                 Saturdays, instant confirmation. Check the booking page for the current time
-                Packages from <DirhamIcon/> 150.
               </span>
             </div>
 

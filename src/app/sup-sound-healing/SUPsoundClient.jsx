@@ -386,7 +386,7 @@ export function SUPsoundClient() {
                 </a>
 
                 <span className="sup-booking-price">
-                  From <DirhamIcon/> 100 per class. usually <s><DirhamIcon/> 200</s>
+                  <span className="sound-hero-offer"><span className="sound-offer-badge">Offer</span><span><DirhamIcon size="1em" /> 100 per class, usually <s><DirhamIcon size="1em" /> 200</s></span></span>
                 </span>
               </div>
             </div>
@@ -466,7 +466,7 @@ export function SUPsoundClient() {
                     href={CORPORATE_WHATSAPP_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="camp-message-btn"
+                    className="sound-corporate-btn"
                   >
                     Enquire about a corporate booking
                   </a>
@@ -487,7 +487,7 @@ export function SUPsoundClient() {
 
           <div className="sup-container booking-strip">
             <div>
-              <strong>From <DirhamIcon size="1em" /> 100</strong>
+              <strong><DirhamIcon size="1em" /> 100 per class</strong>
               <span>Offer price, usually <s><DirhamIcon/> 200</s>. Every Saturday, times change with the season</span>
             </div>
             <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
@@ -535,7 +535,7 @@ export function SUPsoundClient() {
               <div className="video-wrapper">
                 <iframe
                   src="https://www.youtube.com/embed/36sgO6gJHC0?rel=0"
-                  title="IGNITE Water Sports - Beach Yoga"
+                  title="IGNITE Water Sports - SUP Sound Healing"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   loading="lazy"
@@ -643,7 +643,7 @@ export function SUPsoundClient() {
                   <h3>Kayak rental</h3>
 
                   <p className="related-price">
-                    From <DirhamIcon size="1em" /> 50
+                    From <DirhamIcon size="1em" /> 45
                   </p>
 
                   <a
@@ -1997,6 +1997,34 @@ export function SUPsoundClient() {
             color: #54c8e8;
             font-weight: 700;
             text-decoration: underline;
+          }
+
+          /* HERO OFFER PILL */
+          .sound-hero-offer {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 16px;
+            border-radius: 12px;
+            background: rgba(255, 144, 23, 0.16);
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.4;
+          }
+          .sound-hero-offer .sound-offer-badge {
+            flex-shrink: 0;
+            text-transform: none;
+            font-size: 13px;
+          }
+          .sound-hero-offer s { opacity: 0.75; }
+          .sup-booking-price { display: inline-flex; align-items: center; }
+          .sound-booking-price { align-items: center; justify-content: space-between; }
+          .sound-booking-price .sound-offer-badge { margin-top: 0; }
+          .sound-price-detail { gap: 5px; }
+          .sound-corporate-panel .sound-corporate-btn { margin-top: 12px; }
+          @media (max-width: 767px) {
+            .sound-hero-offer { flex-wrap: wrap; font-size: 15px; }
           }
 
           /* MOBILE */
