@@ -1419,467 +1419,66 @@ export default function Home() {
           </div>
         </div>
 
-        <div
-          className="elementor-element elementor-element-9322850 e-flex e-con-boxed e-con e-parent"
-          data-id={9322850}
-          data-element_type="container"
-          data-e-type="container"
-          data-settings='{"background_background":"classic"}'
-        >
-          <div className="e-con-inner">
-            <div
-              className="elementor-element elementor-element-b3ef4cf e-con-full e-flex e-con e-child"
-              data-id="b3ef4cf"
-              data-element_type="container"
-              data-e-type="container"
-            >
-              <div
-                className="elementor-element elementor-element-78b4479 e-con-full e-flex e-con e-child"
-                data-id="78b4479"
-                data-element_type="container"
-                data-e-type="container"
-              >
-                <div
-                  className="elementor-element elementor-element-8f76e38 solidblue sis-heading-animation sis-animation-heading-style-1 elementor-widget elementor-widget-heading"
-                  data-id="8f76e38"
-                  data-element_type="widget"
-                  data-e-type="widget"
-                  data-settings='{"ekit_we_effect_on":"none"}'
-                  data-widget_type="heading.default"
-                >
-                  <h3 className="elementor-heading-title elementor-size-default">
-                    Upcoming Events
-                  </h3>{" "}
-                </div>
-                <div
-                  className="elementor-element elementor-element-2c6b421 sis-heading-animation sis-animation-heading-style-2 sis-light-title elementor-widget elementor-widget-heading"
-                  data-id="2c6b421"
-                  data-element_type="widget"
-                  data-e-type="widget"
-                  data-settings='{"ekit_we_effect_on":"none"}'
-                  data-widget_type="heading.default"
-                >
-                  <h2 className="elementor-heading-title elementor-size-default">
-                    What's coming up
-                  </h2>{" "}
-                </div>
-              </div>
-              <div className="elementor-element elementor-element-48f6a35 e-con-full e-flex e-con e-child" data-id="48f6a35" data-element_type="container" data-e-type="container">
-                {/* <div className="elementor-element elementor-element-07c0424 elementor-invisible elementor-widget elementor-widget-text-editor" data-id="07c0424" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:50,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
-                  <p>Be part of thrilling water adventures and exclusive beach events. From high-energy competitions to relaxing ocean experiences, discover activities designed for every explorer.</p>								</div> */}
-                <div className="elementor-element elementor-element-7e638e8 elementor-invisible elementor-widget elementor-widget-button" data-id="7e638e8" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;ekit_we_effect_on&quot;:&quot;none&quot;}" data-widget_type="button.default">
-                  <a className="elementor-button elementor-button-link elementor-size-sm orangebtn" href="/our-events" target="_blank">
-                    <span className="elementor-button-content-wrapper">
-                      <span className="elementor-button-text" style={{textTransform:"initial"}}>View all events</span>
-                    </span>
-                  </a>
-                </div>
-              </div>
+        <section className="home-upcoming" aria-labelledby="home-upcoming-title">
+          <style>{`
+            .home-upcoming { max-width: 1240px; margin: 0 auto; padding: 64px 24px; }
+            .home-upcoming-head { display:flex; justify-content:space-between; align-items:flex-end; gap:20px; margin-bottom:32px; }
+            .home-upcoming-kicker { color:#54c8e8; font-weight:700; margin:0 0 8px; }
+            .home-upcoming h2 { font-size:clamp(28px,4vw,42px); line-height:1.15; margin:0; color:#111; }
+            .home-upcoming-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+            .home-upcoming-card { background:#f5f6f7; border-radius:20px; padding:20px; display:flex; flex-direction:column; min-width:0; }
+            .home-upcoming-poster { position:relative; aspect-ratio:1; overflow:hidden; border-radius:12px; }
+            .home-upcoming-poster img { display:block; width:100%; height:100%; object-fit:cover; }
+            .home-upcoming-tag { position:absolute; top:12px; left:12px; background:#202d33; color:white; border-radius:30px; padding:5px 12px; font-size:13px; font-weight:600; }
+            .home-upcoming-card h3 { font-size:26px; line-height:1.15; color:#111; margin:20px 0 12px; }
+            .home-upcoming-meta { display:flex; align-items:flex-start; gap:10px; color:#626a70; line-height:1.45; margin:0 0 10px; }
+            .home-upcoming-meta svg { width:20px; height:20px; flex:0 0 20px; color:#54c8e8; margin-top:2px; }
+            .home-upcoming-price { color:#ff9017; font-size:19px; font-weight:700; margin:8px 0 16px; }
+            .home-upcoming-btn { display:block; text-align:center; background:#ff9017; color:#fff!important; border:2px solid #ff9017; border-radius:12px; padding:14px 18px; font-weight:700; line-height:1.3; text-decoration:none; }
+            .home-upcoming-btn:hover { background:#e77b00; border-color:#e77b00; }
+            .home-upcoming-outline { background:transparent; color:#202d33!important; border-color:#202d33; }
+            .home-upcoming-outline:hover { background:#202d33; color:white!important; border-color:#202d33; }
+            .home-upcoming-more { background:#202d33; justify-content:center; padding:36px; }
+            .home-upcoming-more h3 { color:white; margin:0 0 20px; }
+            .home-upcoming-more p { color:#c3cbd0; line-height:1.65; margin:0 0 24px; }
+            .home-upcoming-more .home-upcoming-btn { align-self:flex-start; }
+            @media(max-width:900px) { .home-upcoming-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .home-upcoming-more { grid-column:1/-1; } }
+            @media(max-width:600px) { .home-upcoming { padding:40px 16px; } .home-upcoming-grid { grid-template-columns:1fr; } .home-upcoming-head { align-items:flex-start; flex-direction:column; } .home-upcoming-more { grid-column:auto; } }
+          `}</style>
+          <div className="home-upcoming-head">
+            <div>
+              <p className="home-upcoming-kicker">Upcoming events</p>
+              <h2 id="home-upcoming-title">What's coming up</h2>
             </div>
-            <div
-              className="elementor-element elementor-element-6ba2e01 e-con-full e-flex e-con e-child"
-              data-id="6ba2e01"
-              data-element_type="container"
-              data-e-type="container"
-            >
-              <div
-                className="elementor-element elementor-element-e726980 elementor-grid-2 sis-eventlist-home3 elementor-grid-tablet-2 elementor-grid-mobile-1 sis-event-gutter-30 elementor-invisible elementor-widget elementor-widget-IGNITE Water Sports-event"
-                data-id="e726980"
-                data-element_type="widget"
-                data-e-type="widget"
-                data-settings='{"grid_layout":"info_on_hover","columns":"2","_animation":"fadeInUp","aspect_ratio":{"unit":"px","size":1,"sizes":[]},"columns_tablet":"2","columns_mobile":"1","ekit_we_effect_on":"none"}'
-                data-widget_type="IGNITE Water Sports-event.default"
-              >
-                <div className="elementor-widget-container">
-                  <div
-                    id="sis-event-e726980"
-                    className="sis-event-widget sis-event-layout-info_on_hover"
-                    data-config='{"rtl":false,"id":"e726980","layout":"info_on_hover","item_spacing":"30","show_filter_bar":false}'
-                    data-settings='{"grid_layout":"info_on_hover","columns":"2","posts_per_page":2,"show_image":"yes","filter_all_label":null,"show_location":"yes","show_event_date":"yes","IGNITE Water Sports_event_posts_btn_text":"View Details","wrapper_border_type":"none","ekit_all_conditions_list":null,"ekit_badge_label":null,"ekit_adv_tooltip_content":null,"ekit_cursor_text_label":null,"show_event_time":"yes","IGNITE Water Sports_event_posts_btn_icons":{"value":"icon icon-right-arrow","library":"ekiticons"},"read_more_bg_color":"#02010100","read_more_border_radius":{"unit":"px","size":0,"sizes":[]},"read_more_padding":{"unit":"px","top":"0","right":"0","bottom":"0","left":"0","isLinked":true},"_css_classes":"sis-eventlist-home3","__globals__":{"read_more_text_color":"globals\/colors?id=accent","title_typography_typography":"globals\/typography?id=secondary","title_color":"globals\/colors?id=primary"},"show_meta_icons":"yes","_animation":"fadeInUp","_padding":{"unit":"px","top":"0","right":"0","bottom":"0","left":"0","isLinked":true},"IGNITE Water Sports_events_posts_enable_slider":"no","aspect_ratio":{"unit":"px","size":1,"sizes":[]},"columns_tablet":"2","columns_mobile":"1","item_design":"1","item_spacing":"30","title_tag":"h4","show_filter_bar":"","filter_design":null,"show_all_filter_label":null,"show_excerpt":"","excerpt_limit":null,"IGNITE Water Sports_event_posts_is_pagination":"no","IGNITE Water Sports_event_posts_read_more":"yes","loop":null,"autoplay":null,"autoplay_delay":null,"slides_per_view":null,"slides_per_view_tablet":null,"slides_per_view_mobile":null,"space_between":null,"enable_slider_pagination":null,"enable_slider_navigation":null,"swiper_pagination_type":null,"swiper_pagination_clickable":null,"IGNITE Water Sports_event_posts_btn_show_label":"yes","IGNITE Water Sports_event_posts_btn_icons__switch":"yes","IGNITE Water Sports_event_posts_btn_class":"","IGNITE Water Sports_event_posts_btn_id":"","_title":"","_element_width":"","_element_width_tablet":"","_element_width_mobile":"","_position":"","_element_id":"","_element_cache":"","ekit_condition_enable":"","ekit_condition_relation":null,"ekit_we_effect_on":"none","ekit_we_on_test_mode":null,"ekit_we_tilt_maxtilt":null,"ekit_we_tilt_scale":null,"ekit_we_tilt_disableaxis":null,"ekit_we_mousemove_parallax_speed":null,"ekit_we_scroll_animation":null,"ekit_we_scroll_animation_value":null,"ekit_we_scroll_smoothness":null,"ekit_we_scroll_offsettop":null,"ekit_we_scroll_offsetbottom":null,"ekit_enable_badge":"","ekit_badge_preset":null,"ekit_badge_icon_type":null,"ekit_badge_icon":null,"ekit_badge_image":null,"ekit_badge_lottie_source":null,"ekit_badge_lottie_json":null,"ekit_badge_lottie_url":null,"ekit_badge_lottie_loop":null,"ekit_badge_lottie_reverse":null,"ekit_badge_floating_effects":null,"ekit_badge_floating_effects_opacity":null,"ekit_badge_floating_effects_opacity_value":null,"ekit_badge_floating_effects_opacity_speed":null,"ekit_badge_floating_effects_blur":null,"ekit_badge_floating_effects_blur_value":null,"ekit_badge_floating_effects_blur_speed":null,"ekit_badge_floating_effects_grayscale":null,"ekit_badge_floating_effects_grayscale_value":null,"ekit_badge_floating_effects_grayscale_speed":null,"ekit_badge_size":null,"ekit_badge_position":null,"ekit_badge_horizontal_position":null,"ekit_badge_vertical_position":null,"ekit_badge_rotate":null,"ekit_badge_ribbon":null,"ekit_badge_Outline":null,"ekit_badge_label_horizontal_position":null,"ekit_badge_label_vertical_position":null,"ekit_badge_label_rotate":null,"ekit_badge_background_gradient_color":null,"ekit_badge_background_gradient_color_b":null,"ekit_badge_background_gradient_image":null,"ekit_badge_background_gradient_video_link":null,"ekit_badge_background_gradient_video_start":null,"ekit_badge_background_gradient_video_end":null,"ekit_badge_background_gradient_play_once":null,"ekit_badge_background_gradient_play_on_mobile":null,"ekit_badge_background_gradient_privacy_mode":null,"ekit_badge_background_gradient_slideshow_gallery":null,"ekit_badge_background_gradient_slideshow_loop":null,"ekit_badge_background_gradient_slideshow_slide_duration":null,"ekit_badge_background_gradient_slideshow_slide_transition":null,"ekit_badge_background_gradient_slideshow_transition_duration":null,"ekit_badge_background_gradient_slideshow_lazyload":null,"ekit_badge_background_gradient_slideshow_ken_burns":null,"ekit_badge_background_gradient_slideshow_ken_burns_zoom_direction":null,"ekit_sticky":"","ekit_sticky_until":null,"ekit_sticky_offset":null,"ekit_sticky_offset_tablet":null,"ekit_sticky_offset_mobile":null,"ekit_sticky_on_desktop":null,"ekit_sticky_on_tablet":null,"ekit_sticky_on_mobile":null,"ekit_sticky_effect_offset":null,"ekit_sticky_effect_offset_tablet":null,"ekit_sticky_effect_offset_mobile":null,"ekit_adv_tooltip_enable":"","ekit_adv_tooltip_subcontent":null,"ekit_adv_tooltip_image":null,"ekit_adv_tooltip_position":null,"ekit_adv_tooltip_animation":null,"ekit_adv_tooltip_arrow":null,"ekit_adv_tooltip_trigger":null,"ekit_adv_tooltip_width":null,"ekit_adv_tooltip_bg_color":null,"ekit_adv_tooltip_bg_color_b":null,"ekit_adv_tooltip_bg_video_link":null,"ekit_adv_tooltip_bg_video_start":null,"ekit_adv_tooltip_bg_video_end":null,"ekit_adv_tooltip_bg_play_once":null,"ekit_adv_tooltip_bg_play_on_mobile":null,"ekit_adv_tooltip_bg_privacy_mode":null,"ekit_adv_tooltip_bg_slideshow_gallery":null,"ekit_adv_tooltip_bg_slideshow_loop":null,"ekit_adv_tooltip_bg_slideshow_slide_duration":null,"ekit_adv_tooltip_bg_slideshow_slide_transition":null,"ekit_adv_tooltip_bg_slideshow_transition_duration":null,"ekit_adv_tooltip_bg_slideshow_lazyload":null,"ekit_adv_tooltip_bg_slideshow_ken_burns":null,"ekit_adv_tooltip_bg_slideshow_ken_burns_zoom_direction":null,"ekit_adv_tooltip_offset_x":null,"ekit_adv_tooltip_offset_y":null,"elementskit_wrapper_link_enable":"no","elementskit_wrapper_link":null,"ekit_glass_morphism":"","ekit_cursor_show":"","ekit_cursor_type":null,"ekit_cursor_image_src":null,"ekit_cursor_icons":null,"ekit_cursor_text_background_color":null,"ekit_cursor_text_background_color_b":null,"ekit_cursor_text_background_video_link":null,"ekit_cursor_text_background_video_start":null,"ekit_cursor_text_background_video_end":null,"ekit_cursor_text_background_play_once":null,"ekit_cursor_text_background_play_on_mobile":null,"ekit_cursor_text_background_privacy_mode":null,"ekit_cursor_text_background_slideshow_gallery":null,"ekit_cursor_text_background_slideshow_loop":null,"ekit_cursor_text_background_slideshow_slide_duration":null,"ekit_cursor_text_background_slideshow_slide_transition":null,"ekit_cursor_text_background_slideshow_transition_duration":null,"ekit_cursor_text_background_slideshow_lazyload":null,"ekit_cursor_text_background_slideshow_ken_burns":null,"ekit_cursor_text_background_slideshow_ken_burns_zoom_direction":null,"ekit_cursor_icon_background_color":null,"ekit_cursor_icon_background_color_b":null,"ekit_cursor_icon_background_video_link":null,"ekit_cursor_icon_background_video_start":null,"ekit_cursor_icon_background_video_end":null,"ekit_cursor_icon_background_play_once":null,"ekit_cursor_icon_background_play_on_mobile":null,"ekit_cursor_icon_background_privacy_mode":null,"ekit_cursor_icon_background_slideshow_gallery":null,"ekit_cursor_icon_background_slideshow_loop":null,"ekit_cursor_icon_background_slideshow_slide_duration":null,"ekit_cursor_icon_background_slideshow_slide_transition":null,"ekit_cursor_icon_background_slideshow_transition_duration":null,"ekit_cursor_icon_background_slideshow_lazyload":null,"ekit_cursor_icon_background_slideshow_ken_burns":null,"ekit_cursor_icon_background_slideshow_ken_burns_zoom_direction":null,"ekit_liquid_glass_enable":"no","ekit_liquid_glass_preset":null,"ekit_liquid_glass_shadow":null,"scroll_reveal_enable":"","scroll_reveal_direction":null,"scroll_reveal_delay":null,"scroll_reveal_duration":null,"scroll_reveal_image_overlay":null,"scroll_reveal_overlay":null,"scroll_reveal_bg_primary":null,"scroll_reveal_repeat":null,"_animation_tablet":"","_animation_mobile":"","animation_duration":"","_animation_delay":"","_transform_rotate_popover":"","_transform_rotateZ_effect":null,"_transform_rotateZ_effect_tablet":null,"_transform_rotateZ_effect_mobile":null,"_transform_rotate_3d":null,"_transform_rotateX_effect":null,"_transform_rotateX_effect_tablet":null,"_transform_rotateX_effect_mobile":null,"_transform_rotateY_effect":null,"_transform_rotateY_effect_tablet":null,"_transform_rotateY_effect_mobile":null,"_transform_perspective_effect":null,"_transform_perspective_effect_tablet":null,"_transform_perspective_effect_mobile":null,"_transform_translate_popover":"","_transform_translateX_effect":null,"_transform_translateX_effect_tablet":null,"_transform_translateX_effect_mobile":null,"_transform_translateY_effect":null,"_transform_translateY_effect_tablet":null,"_transform_translateY_effect_mobile":null,"_transform_scale_popover":"","_transform_keep_proportions":"yes","_transform_scale_effect":null,"_transform_scale_effect_tablet":null,"_transform_scale_effect_mobile":null,"_transform_scaleX_effect":null,"_transform_scaleX_effect_tablet":null,"_transform_scaleX_effect_mobile":null,"_transform_scaleY_effect":null,"_transform_scaleY_effect_tablet":null,"_transform_scaleY_effect_mobile":null,"_transform_skew_popover":"","_transform_skewX_effect":null,"_transform_skewX_effect_tablet":null,"_transform_skewX_effect_mobile":null,"_transform_skewY_effect":null,"_transform_skewY_effect_tablet":null,"_transform_skewY_effect_mobile":null,"_transform_flipX_effect":"","_transform_flipY_effect":"","_transform_rotate_popover_hover":"","_transform_rotateZ_effect_hover":null,"_transform_rotateZ_effect_hover_tablet":null,"_transform_rotateZ_effect_hover_mobile":null,"_transform_rotate_3d_hover":null,"_transform_rotateX_effect_hover":null,"_transform_rotateX_effect_hover_tablet":null,"_transform_rotateX_effect_hover_mobile":null,"_transform_rotateY_effect_hover":null,"_transform_rotateY_effect_hover_tablet":null,"_transform_rotateY_effect_hover_mobile":null,"_transform_perspective_effect_hover":null,"_transform_perspective_effect_hover_tablet":null,"_transform_perspective_effect_hover_mobile":null,"_transform_translate_popover_hover":"","_transform_translateX_effect_hover":null,"_transform_translateX_effect_hover_tablet":null,"_transform_translateX_effect_hover_mobile":null,"_transform_translateY_effect_hover":null,"_transform_translateY_effect_hover_tablet":null,"_transform_translateY_effect_hover_mobile":null,"_transform_scale_popover_hover":"","_transform_keep_proportions_hover":"yes","_transform_scale_effect_hover":null,"_transform_scale_effect_hover_tablet":null,"_transform_scale_effect_hover_mobile":null,"_transform_scaleX_effect_hover":null,"_transform_scaleX_effect_hover_tablet":null,"_transform_scaleX_effect_hover_mobile":null,"_transform_scaleY_effect_hover":null,"_transform_scaleY_effect_hover_tablet":null,"_transform_scaleY_effect_hover_mobile":null,"_transform_skew_popover_hover":"","_transform_skewX_effect_hover":null,"_transform_skewX_effect_hover_tablet":null,"_transform_skewX_effect_hover_mobile":null,"_transform_skewY_effect_hover":null,"_transform_skewY_effect_hover_tablet":null,"_transform_skewY_effect_hover_mobile":null,"_transform_flipX_effect_hover":"","_transform_flipY_effect_hover":"","_background_color":null,"_background_color_b":null,"_background_image":null,"_background_video_link":null,"_background_video_start":null,"_background_video_end":null,"_background_play_once":null,"_background_play_on_mobile":null,"_background_privacy_mode":null,"_background_slideshow_gallery":null,"_background_slideshow_loop":null,"_background_slideshow_slide_duration":null,"_background_slideshow_slide_transition":null,"_background_slideshow_transition_duration":null,"_background_slideshow_lazyload":null,"_background_slideshow_ken_burns":null,"_background_slideshow_ken_burns_zoom_direction":null,"_background_hover_color":null,"_background_hover_color_b":null,"_background_hover_image":null,"_background_hover_video_link":null,"_background_hover_video_start":null,"_background_hover_video_end":null,"_background_hover_play_once":null,"_background_hover_play_on_mobile":null,"_background_hover_privacy_mode":null,"_background_hover_slideshow_gallery":null,"_background_hover_slideshow_loop":null,"_background_hover_slideshow_slide_duration":null,"_background_hover_slideshow_slide_transition":null,"_background_hover_slideshow_transition_duration":null,"_background_hover_slideshow_lazyload":null,"_background_hover_slideshow_ken_burns":null,"_background_hover_slideshow_ken_burns_zoom_direction":null,"_mask_switch":"","hide_desktop":"","hide_tablet":"","hide_mobile":""}'
-                  >
-                    <div className="sis-event-grid elementor-grid sis-event-layout-info_on_hover sis-event-item-design-1">
-                      <article className="sis-event-grid-item post-2628 events type-events status-publish has-post-thumbnail hentry events-category-surfing">
-                        <div className="sis-event-grid-item__wrapper">
-                          <div className="sis-event-grid-item__media">
-                            <div className="sis-event-grid-item__img-wrap">
-                              <div className="sis-event-grid-item__img">
-                                <a
-                                  className="sis-event-grid-item__link"
-                                  href="#"
-                                >
-                                  <img
-                                    decoding="async"
-                                    src="https://ignitewatersports.com/wp-content/uploads/2025/06/Swim_Run-11th-Oct-25-grid-post-2048x2048.png"
-                                    alt="IGNITE Reset Club"
-                                  />
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="sis-event-grid-item__content">
-                            <div className="sis-event-grid-title__wrap">
-                              <a
-                                className="sis-event-grid-item__link"
-                                href="#"
-                              >
-                                <h4 className="sis-event-grid-item__title">
-                                  Pink is Punk
-                                </h4>
-                              </a>
-                            </div>
-                            <div className="sis-event-grid-item__location">
-                              <div className="sis-event-item-location sis-event-location">
-                                <div className="elementor-icon sis-elementor-icon">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="e-font-icon-svg e-fas-map"
-                                    width={19}
-                                    height={23}
-                                    viewBox="0 0 19 23"
-                                    fill="none"
-                                  >
-                                    <path
-                                      d="M9.16667 22C13.25 17.8 17.3333 14.0391 17.3333 9.4C17.3333 4.76081 13.677 1 9.16667 1C4.65635 1 1 4.76081 1 9.4C1 14.0391 5.08333 17.8 9.16667 22Z"
-                                      stroke="#24D2DD"
-                                      strokeWidth={2}
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                    />
-                                    <path
-                                      d="M9.16699 12.667C11.1 12.667 12.667 11.1 12.667 9.16699C12.667 7.234 11.1 5.66699 9.16699 5.66699C7.23394 5.66699 5.66699 7.234 5.66699 9.16699C5.66699 11.1 7.23394 12.667 9.16699 12.667Z"
-                                      stroke="#24D2DD"
-                                      strokeWidth={2}
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                    />
-                                  </svg>
-                                </div>
-                                <span>RIVA Beach Club, Palm Jumeirah</span>
-                              </div>
-                            </div>
-                            <div className="sis-event-grid-item__event_date">
-                              <div className="sis-event-item-event-date sis-event-date">
-                                <div className="elementor-icon sis-elementor-icon">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="e-font-icon-svg e-fas-calender"
-                                    width={21}
-                                    height={21}
-                                    viewBox="0 0 21 21"
-                                    fill="none"
-                                  >
-                                    <path
-                                      d="M10.335 12.402C10.5394 12.402 10.7392 12.3414 10.9092 12.2278C11.0791 12.1143 11.2116 11.9529 11.2898 11.764C11.3681 11.5752 11.3885 11.3674 11.3486 11.1669C11.3088 10.9664 11.2103 10.7822 11.0658 10.6377C10.9213 10.4932 10.7371 10.3947 10.5366 10.3549C10.3361 10.315 10.1283 10.3354 9.9395 10.4137C9.75065 10.4919 9.58924 10.6244 9.47568 10.7943C9.36211 10.9643 9.3015 11.1641 9.3015 11.3685C9.3015 11.6426 9.41039 11.9055 9.60421 12.0993C9.79802 12.2931 10.0609 12.402 10.335 12.402ZM15.5025 12.402C15.7069 12.402 15.9067 12.3414 16.0767 12.2278C16.2466 12.1143 16.3791 11.9529 16.4573 11.764C16.5356 11.5752 16.556 11.3674 16.5161 11.1669C16.4763 10.9664 16.3778 10.7822 16.2333 10.6377C16.0888 10.4932 15.9046 10.3947 15.7041 10.3549C15.5036 10.315 15.2958 10.3354 15.107 10.4137C14.9181 10.4919 14.7567 10.6244 14.6432 10.7943C14.5296 10.9643 14.469 11.1641 14.469 11.3685C14.469 11.6426 14.5779 11.9055 14.7717 12.0993C14.9655 12.2931 15.2284 12.402 15.5025 12.402ZM10.335 16.536C10.5394 16.536 10.7392 16.4754 10.9092 16.3618C11.0791 16.2483 11.2116 16.0868 11.2898 15.898C11.3681 15.7092 11.3885 15.5014 11.3486 15.3009C11.3088 15.1004 11.2103 14.9162 11.0658 14.7717C10.9213 14.6272 10.7371 14.5287 10.5366 14.4889C10.3361 14.449 10.1283 14.4694 9.9395 14.5477C9.75065 14.6259 9.58924 14.7584 9.47568 14.9283C9.36211 15.0983 9.3015 15.2981 9.3015 15.5025C9.3015 15.7766 9.41039 16.0395 9.60421 16.2333C9.79802 16.4271 10.0609 16.536 10.335 16.536ZM15.5025 16.536C15.7069 16.536 15.9067 16.4754 16.0767 16.3618C16.2466 16.2483 16.3791 16.0868 16.4573 15.898C16.5356 15.7092 16.556 15.5014 16.5161 15.3009C16.4763 15.1004 16.3778 14.9162 16.2333 14.7717C16.0888 14.6272 15.9046 14.5287 15.7041 14.4889C15.5036 14.449 15.2958 14.4694 15.107 14.5477C14.9181 14.6259 14.7567 14.7584 14.6432 14.9283C14.5296 15.0983 14.469 15.2981 14.469 15.5025C14.469 15.7766 14.5779 16.0395 14.7717 16.2333C14.9655 16.4271 15.2284 16.536 15.5025 16.536ZM5.1675 12.402C5.37191 12.402 5.57172 12.3414 5.74168 12.2278C5.91164 12.1143 6.04411 11.9529 6.12233 11.764C6.20055 11.5752 6.22102 11.3674 6.18114 11.1669C6.14126 10.9664 6.04283 10.7822 5.89829 10.6377C5.75376 10.4932 5.5696 10.3947 5.36913 10.3549C5.16865 10.315 4.96084 10.3354 4.772 10.4137C4.58315 10.4919 4.42174 10.6244 4.30818 10.7943C4.19461 10.9643 4.134 11.1641 4.134 11.3685C4.134 11.6426 4.24289 11.9055 4.43671 12.0993C4.63052 12.2931 4.8934 12.402 5.1675 12.402ZM17.5695 2.067H16.536V1.0335C16.536 0.759399 16.4271 0.496524 16.2333 0.302705C16.0395 0.108886 15.7766 0 15.5025 0C15.2284 0 14.9655 0.108886 14.7717 0.302705C14.5779 0.496524 14.469 0.759399 14.469 1.0335V2.067H6.201V1.0335C6.201 0.759399 6.09211 0.496524 5.89829 0.302705C5.70448 0.108886 5.4416 0 5.1675 0C4.8934 0 4.63052 0.108886 4.43671 0.302705C4.24289 0.496524 4.134 0.759399 4.134 1.0335V2.067H3.1005C2.2782 2.067 1.48957 2.39366 0.908116 2.97512C0.326659 3.55657 0 4.3452 0 5.1675V17.5695C0 18.3918 0.326659 19.1804 0.908116 19.7619C1.48957 20.3433 2.2782 20.67 3.1005 20.67H17.5695C18.3918 20.67 19.1804 20.3433 19.7619 19.7619C20.3433 19.1804 20.67 18.3918 20.67 17.5695V5.1675C20.67 4.3452 20.3433 3.55657 19.7619 2.97512C19.1804 2.39366 18.3918 2.067 17.5695 2.067ZM18.603 17.5695C18.603 17.8436 18.4941 18.1065 18.3003 18.3003C18.1065 18.4941 17.8436 18.603 17.5695 18.603H3.1005C2.8264 18.603 2.56352 18.4941 2.36971 18.3003C2.17589 18.1065 2.067 17.8436 2.067 17.5695V8.268H18.603V17.5695ZM18.603 6.201H2.067V5.1675C2.067 4.8934 2.17589 4.63052 2.36971 4.43671C2.56352 4.24289 2.8264 4.134 3.1005 4.134H17.5695C17.8436 4.134 18.1065 4.24289 18.3003 4.43671C18.4941 4.63052 18.603 4.8934 18.603 5.1675V6.201ZM5.1675 16.536C5.37191 16.536 5.57172 16.4754 5.74168 16.3618C5.91164 16.2483 6.04411 16.0868 6.12233 15.898C6.20055 15.7092 6.22102 15.5014 6.18114 15.3009C6.14126 15.1004 6.04283 14.9162 5.89829 14.7717C5.75376 14.6272 5.5696 14.5287 5.36913 14.4889C5.16865 14.449 4.96084 14.4694 4.772 14.5477C4.58315 14.6259 4.42174 14.7584 4.30818 14.9283C4.19461 15.0983 4.134 15.2981 4.134 15.5025C4.134 15.7766 4.24289 16.0395 4.43671 16.2333C4.63052 16.4271 4.8934 16.536 5.1675 16.536Z"
-                                      fill="#24D2DD"
-                                    />
-                                  </svg>
-                                </div>
-                                Launching October
-                              </div>
-                            </div>
-                            <div className="sis-event-grid-item__event_time">
-                              <div className="sis-event-item-event-time sis-event-time">
-                                <div className="elementor-icon sis-elementor-icon">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="e-font-icon-svg e-fas-clock"
-                                    width={22}
-                                    height={22}
-                                    viewBox="0 0 22 22"
-                                    fill="none"
-                                  >
-                                    <path
-                                      d="M11 6.55518V10.9996L14.3333 14.333"
-                                      stroke="#24D2DD"
-                                      strokeWidth={2}
-                                      strokeLinecap="round"
-                                    />
-                                    <path
-                                      d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z"
-                                      stroke="#24D2DD"
-                                      strokeWidth={2}
-                                    />
-                                  </svg>
-                                </div>
-                                Book online, spaces are limited
-                              </div>
-                            </div>
-                            <div className="btn-wraper">
-                              <a
-                                className="elementor-button sis-btn"
-                                href="#"
-                              >
-                                <span className="elementor-button-text">
-                                  Book now
-                                </span>
-                                <span className="elementor-button-icon elementor-align-icon-right">
-                                  <i
-                                    aria-hidden="true"
-                                    className="icon icon-right-arrow"
-                                  />
-                                </span>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </article>
-                      <article className="sis-event-grid-item post-2628 events type-events status-publish has-post-thumbnail hentry events-category-surfing">
-                        <div className="sis-event-grid-item__wrapper">
-                          <div className="sis-event-grid-item__media">
-                            <div className="sis-event-grid-item__img-wrap">
-                              <div className="sis-event-grid-item__img">
-                                <a
-                                  className="sis-event-grid-item__link"
-                                  href="#"
-                                >
-                                  <img
-                                    decoding="async"
-                                    src="/watersports/2026/04/IGNITE-Reset-Club-Website-768x768.jpg"
-                                    alt="IGNITE Reset Club"
-                                  />
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="sis-event-grid-item__content">
-                            <div className="sis-event-grid-title__wrap">
-                              <a
-                                className="sis-event-grid-item__link"
-                                href="#"
-                              >
-                                <h4 className="sis-event-grid-item__title">
-                                  IGNITE Reset Club
-                                </h4>
-                              </a>
-                            </div>
-                            <div className="sis-event-grid-item__location">
-                              <div className="sis-event-item-location sis-event-location">
-                                <div className="elementor-icon sis-elementor-icon">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="e-font-icon-svg e-fas-map"
-                                    width={19}
-                                    height={23}
-                                    viewBox="0 0 19 23"
-                                    fill="none"
-                                  >
-                                    <path
-                                      d="M9.16667 22C13.25 17.8 17.3333 14.0391 17.3333 9.4C17.3333 4.76081 13.677 1 9.16667 1C4.65635 1 1 4.76081 1 9.4C1 14.0391 5.08333 17.8 9.16667 22Z"
-                                      stroke="#24D2DD"
-                                      strokeWidth={2}
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                    />
-                                    <path
-                                      d="M9.16699 12.667C11.1 12.667 12.667 11.1 12.667 9.16699C12.667 7.234 11.1 5.66699 9.16699 5.66699C7.23394 5.66699 5.66699 7.234 5.66699 9.16699C5.66699 11.1 7.23394 12.667 9.16699 12.667Z"
-                                      stroke="#24D2DD"
-                                      strokeWidth={2}
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                    />
-                                  </svg>
-                                </div>
-                                <span>RIVA Beach Club, Palm Jumeirah</span>
-                              </div>
-                            </div>
-                            <div className="sis-event-grid-item__event_date">
-                              <div className="sis-event-item-event-date sis-event-date">
-                                <div className="elementor-icon sis-elementor-icon">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="e-font-icon-svg e-fas-calender"
-                                    width={21}
-                                    height={21}
-                                    viewBox="0 0 21 21"
-                                    fill="none"
-                                  >
-                                    <path
-                                      d="M10.335 12.402C10.5394 12.402 10.7392 12.3414 10.9092 12.2278C11.0791 12.1143 11.2116 11.9529 11.2898 11.764C11.3681 11.5752 11.3885 11.3674 11.3486 11.1669C11.3088 10.9664 11.2103 10.7822 11.0658 10.6377C10.9213 10.4932 10.7371 10.3947 10.5366 10.3549C10.3361 10.315 10.1283 10.3354 9.9395 10.4137C9.75065 10.4919 9.58924 10.6244 9.47568 10.7943C9.36211 10.9643 9.3015 11.1641 9.3015 11.3685C9.3015 11.6426 9.41039 11.9055 9.60421 12.0993C9.79802 12.2931 10.0609 12.402 10.335 12.402ZM15.5025 12.402C15.7069 12.402 15.9067 12.3414 16.0767 12.2278C16.2466 12.1143 16.3791 11.9529 16.4573 11.764C16.5356 11.5752 16.556 11.3674 16.5161 11.1669C16.4763 10.9664 16.3778 10.7822 16.2333 10.6377C16.0888 10.4932 15.9046 10.3947 15.7041 10.3549C15.5036 10.315 15.2958 10.3354 15.107 10.4137C14.9181 10.4919 14.7567 10.6244 14.6432 10.7943C14.5296 10.9643 14.469 11.1641 14.469 11.3685C14.469 11.6426 14.5779 11.9055 14.7717 12.0993C14.9655 12.2931 15.2284 12.402 15.5025 12.402ZM10.335 16.536C10.5394 16.536 10.7392 16.4754 10.9092 16.3618C11.0791 16.2483 11.2116 16.0868 11.2898 15.898C11.3681 15.7092 11.3885 15.5014 11.3486 15.3009C11.3088 15.1004 11.2103 14.9162 11.0658 14.7717C10.9213 14.6272 10.7371 14.5287 10.5366 14.4889C10.3361 14.449 10.1283 14.4694 9.9395 14.5477C9.75065 14.6259 9.58924 14.7584 9.47568 14.9283C9.36211 15.0983 9.3015 15.2981 9.3015 15.5025C9.3015 15.7766 9.41039 16.0395 9.60421 16.2333C9.79802 16.4271 10.0609 16.536 10.335 16.536ZM15.5025 16.536C15.7069 16.536 15.9067 16.4754 16.0767 16.3618C16.2466 16.2483 16.3791 16.0868 16.4573 15.898C16.5356 15.7092 16.556 15.5014 16.5161 15.3009C16.4763 15.1004 16.3778 14.9162 16.2333 14.7717C16.0888 14.6272 15.9046 14.5287 15.7041 14.4889C15.5036 14.449 15.2958 14.4694 15.107 14.5477C14.9181 14.6259 14.7567 14.7584 14.6432 14.9283C14.5296 15.0983 14.469 15.2981 14.469 15.5025C14.469 15.7766 14.5779 16.0395 14.7717 16.2333C14.9655 16.4271 15.2284 16.536 15.5025 16.536ZM5.1675 12.402C5.37191 12.402 5.57172 12.3414 5.74168 12.2278C5.91164 12.1143 6.04411 11.9529 6.12233 11.764C6.20055 11.5752 6.22102 11.3674 6.18114 11.1669C6.14126 10.9664 6.04283 10.7822 5.89829 10.6377C5.75376 10.4932 5.5696 10.3947 5.36913 10.3549C5.16865 10.315 4.96084 10.3354 4.772 10.4137C4.58315 10.4919 4.42174 10.6244 4.30818 10.7943C4.19461 10.9643 4.134 11.1641 4.134 11.3685C4.134 11.6426 4.24289 11.9055 4.43671 12.0993C4.63052 12.2931 4.8934 12.402 5.1675 12.402ZM17.5695 2.067H16.536V1.0335C16.536 0.759399 16.4271 0.496524 16.2333 0.302705C16.0395 0.108886 15.7766 0 15.5025 0C15.2284 0 14.9655 0.108886 14.7717 0.302705C14.5779 0.496524 14.469 0.759399 14.469 1.0335V2.067H6.201V1.0335C6.201 0.759399 6.09211 0.496524 5.89829 0.302705C5.70448 0.108886 5.4416 0 5.1675 0C4.8934 0 4.63052 0.108886 4.43671 0.302705C4.24289 0.496524 4.134 0.759399 4.134 1.0335V2.067H3.1005C2.2782 2.067 1.48957 2.39366 0.908116 2.97512C0.326659 3.55657 0 4.3452 0 5.1675V17.5695C0 18.3918 0.326659 19.1804 0.908116 19.7619C1.48957 20.3433 2.2782 20.67 3.1005 20.67H17.5695C18.3918 20.67 19.1804 20.3433 19.7619 19.7619C20.3433 19.1804 20.67 18.3918 20.67 17.5695V5.1675C20.67 4.3452 20.3433 3.55657 19.7619 2.97512C19.1804 2.39366 18.3918 2.067 17.5695 2.067ZM18.603 17.5695C18.603 17.8436 18.4941 18.1065 18.3003 18.3003C18.1065 18.4941 17.8436 18.603 17.5695 18.603H3.1005C2.8264 18.603 2.56352 18.4941 2.36971 18.3003C2.17589 18.1065 2.067 17.8436 2.067 17.5695V8.268H18.603V17.5695ZM18.603 6.201H2.067V5.1675C2.067 4.8934 2.17589 4.63052 2.36971 4.43671C2.56352 4.24289 2.8264 4.134 3.1005 4.134H17.5695C17.8436 4.134 18.1065 4.24289 18.3003 4.43671C18.4941 4.63052 18.603 4.8934 18.603 5.1675V6.201ZM5.1675 16.536C5.37191 16.536 5.57172 16.4754 5.74168 16.3618C5.91164 16.2483 6.04411 16.0868 6.12233 15.898C6.20055 15.7092 6.22102 15.5014 6.18114 15.3009C6.14126 15.1004 6.04283 14.9162 5.89829 14.7717C5.75376 14.6272 5.5696 14.5287 5.36913 14.4889C5.16865 14.449 4.96084 14.4694 4.772 14.5477C4.58315 14.6259 4.42174 14.7584 4.30818 14.9283C4.19461 15.0983 4.134 15.2981 4.134 15.5025C4.134 15.7766 4.24289 16.0395 4.43671 16.2333C4.63052 16.4271 4.8934 16.536 5.1675 16.536Z"
-                                      fill="#24D2DD"
-                                    />
-                                  </svg>
-                                </div>
-                                Launching October
-                              </div>
-                            </div>
-                            <div className="sis-event-grid-item__event_time">
-                              <div className="sis-event-item-event-time sis-event-time">
-                                <div className="elementor-icon sis-elementor-icon">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="e-font-icon-svg e-fas-clock"
-                                    width={22}
-                                    height={22}
-                                    viewBox="0 0 22 22"
-                                    fill="none"
-                                  >
-                                    <path
-                                      d="M11 6.55518V10.9996L14.3333 14.333"
-                                      stroke="#24D2DD"
-                                      strokeWidth={2}
-                                      strokeLinecap="round"
-                                    />
-                                    <path
-                                      d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z"
-                                      stroke="#24D2DD"
-                                      strokeWidth={2}
-                                    />
-                                  </svg>
-                                </div>
-                                Book online, spaces are limited
-                              </div>
-                            </div>
-                            <div className="btn-wraper">
-                              <a
-                                className="elementor-button sis-btn"
-                                href="#"
-                              >
-                                <span className="elementor-button-text">
-                                  Book now
-                                </span>
-                                <span className="elementor-button-icon elementor-align-icon-right">
-                                  <i
-                                    aria-hidden="true"
-                                    className="icon icon-right-arrow"
-                                  />
-                                </span>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </article>
-                      <article className="sis-event-grid-item post-2627 events type-events status-publish has-post-thumbnail hentry events-category-diving events-category-jet-skiing events-category-surfing">
-                        <div className="sis-event-grid-item__wrapper">
-                          <div className="sis-event-grid-item__media">
-                            <div className="sis-event-grid-item__img-wrap">
-                              <div className="sis-event-grid-item__img">
-                                <a
-                                  className="sis-event-grid-item__link"
-                                  href="#"
-                                >
-                                  <img
-                                    decoding="async"
-                                    src="/watersports/2026/08/globalheartday1-768x768.png"
-                                    alt="Global Heart Day"
-                                  />
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="sis-event-grid-item__content">
-                            <div className="sis-event-grid-title__wrap">
-                              <a
-                                className="sis-event-grid-item__link"
-                                href="#"
-                              >
-                                <h4 className="sis-event-grid-item__title">
-                                  Global Heart Day
-                                </h4>
-                              </a>
-                            </div>
-                            <div className="sis-event-grid-item__location">
-                              <div className="sis-event-item-location sis-event-location">
-                                <div className="elementor-icon sis-elementor-icon">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="e-font-icon-svg e-fas-map"
-                                    width={19}
-                                    height={23}
-                                    viewBox="0 0 19 23"
-                                    fill="none"
-                                  >
-                                    <path
-                                      d="M9.16667 22C13.25 17.8 17.3333 14.0391 17.3333 9.4C17.3333 4.76081 13.677 1 9.16667 1C4.65635 1 1 4.76081 1 9.4C1 14.0391 5.08333 17.8 9.16667 22Z"
-                                      stroke="#24D2DD"
-                                      strokeWidth={2}
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                    />
-                                    <path
-                                      d="M9.16699 12.667C11.1 12.667 12.667 11.1 12.667 9.16699C12.667 7.234 11.1 5.66699 9.16699 5.66699C7.23394 5.66699 5.66699 7.234 5.66699 9.16699C5.66699 11.1 7.23394 12.667 9.16699 12.667Z"
-                                      stroke="#24D2DD"
-                                      strokeWidth={2}
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                    />
-                                  </svg>
-                                </div>
-                                <span>RIVA Beach Club, Palm Jumeirah</span>
-                              </div>
-                            </div>
-                            <div className="sis-event-grid-item__event_date">
-                              <div className="sis-event-item-event-date sis-event-date">
-                                <div className="elementor-icon sis-elementor-icon">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="e-font-icon-svg e-fas-calender"
-                                    width={21}
-                                    height={21}
-                                    viewBox="0 0 21 21"
-                                    fill="none"
-                                  >
-                                    <path
-                                      d="M10.335 12.402C10.5394 12.402 10.7392 12.3414 10.9092 12.2278C11.0791 12.1143 11.2116 11.9529 11.2898 11.764C11.3681 11.5752 11.3885 11.3674 11.3486 11.1669C11.3088 10.9664 11.2103 10.7822 11.0658 10.6377C10.9213 10.4932 10.7371 10.3947 10.5366 10.3549C10.3361 10.315 10.1283 10.3354 9.9395 10.4137C9.75065 10.4919 9.58924 10.6244 9.47568 10.7943C9.36211 10.9643 9.3015 11.1641 9.3015 11.3685C9.3015 11.6426 9.41039 11.9055 9.60421 12.0993C9.79802 12.2931 10.0609 12.402 10.335 12.402ZM15.5025 12.402C15.7069 12.402 15.9067 12.3414 16.0767 12.2278C16.2466 12.1143 16.3791 11.9529 16.4573 11.764C16.5356 11.5752 16.556 11.3674 16.5161 11.1669C16.4763 10.9664 16.3778 10.7822 16.2333 10.6377C16.0888 10.4932 15.9046 10.3947 15.7041 10.3549C15.5036 10.315 15.2958 10.3354 15.107 10.4137C14.9181 10.4919 14.7567 10.6244 14.6432 10.7943C14.5296 10.9643 14.469 11.1641 14.469 11.3685C14.469 11.6426 14.5779 11.9055 14.7717 12.0993C14.9655 12.2931 15.2284 12.402 15.5025 12.402ZM10.335 16.536C10.5394 16.536 10.7392 16.4754 10.9092 16.3618C11.0791 16.2483 11.2116 16.0868 11.2898 15.898C11.3681 15.7092 11.3885 15.5014 11.3486 15.3009C11.3088 15.1004 11.2103 14.9162 11.0658 14.7717C10.9213 14.6272 10.7371 14.5287 10.5366 14.4889C10.3361 14.449 10.1283 14.4694 9.9395 14.5477C9.75065 14.6259 9.58924 14.7584 9.47568 14.9283C9.36211 15.0983 9.3015 15.2981 9.3015 15.5025C9.3015 15.7766 9.41039 16.0395 9.60421 16.2333C9.79802 16.4271 10.0609 16.536 10.335 16.536ZM15.5025 16.536C15.7069 16.536 15.9067 16.4754 16.0767 16.3618C16.2466 16.2483 16.3791 16.0868 16.4573 15.898C16.5356 15.7092 16.556 15.5014 16.5161 15.3009C16.4763 15.1004 16.3778 14.9162 16.2333 14.7717C16.0888 14.6272 15.9046 14.5287 15.7041 14.4889C15.5036 14.449 15.2958 14.4694 15.107 14.5477C14.9181 14.6259 14.7567 14.7584 14.6432 14.9283C14.5296 15.0983 14.469 15.2981 14.469 15.5025C14.469 15.7766 14.5779 16.0395 14.7717 16.2333C14.9655 16.4271 15.2284 16.536 15.5025 16.536ZM5.1675 12.402C5.37191 12.402 5.57172 12.3414 5.74168 12.2278C5.91164 12.1143 6.04411 11.9529 6.12233 11.764C6.20055 11.5752 6.22102 11.3674 6.18114 11.1669C6.14126 10.9664 6.04283 10.7822 5.89829 10.6377C5.75376 10.4932 5.5696 10.3947 5.36913 10.3549C5.16865 10.315 4.96084 10.3354 4.772 10.4137C4.58315 10.4919 4.42174 10.6244 4.30818 10.7943C4.19461 10.9643 4.134 11.1641 4.134 11.3685C4.134 11.6426 4.24289 11.9055 4.43671 12.0993C4.63052 12.2931 4.8934 12.402 5.1675 12.402ZM17.5695 2.067H16.536V1.0335C16.536 0.759399 16.4271 0.496524 16.2333 0.302705C16.0395 0.108886 15.7766 0 15.5025 0C15.2284 0 14.9655 0.108886 14.7717 0.302705C14.5779 0.496524 14.469 0.759399 14.469 1.0335V2.067H6.201V1.0335C6.201 0.759399 6.09211 0.496524 5.89829 0.302705C5.70448 0.108886 5.4416 0 5.1675 0C4.8934 0 4.63052 0.108886 4.43671 0.302705C4.24289 0.496524 4.134 0.759399 4.134 1.0335V2.067H3.1005C2.2782 2.067 1.48957 2.39366 0.908116 2.97512C0.326659 3.55657 0 4.3452 0 5.1675V17.5695C0 18.3918 0.326659 19.1804 0.908116 19.7619C1.48957 20.3433 2.2782 20.67 3.1005 20.67H17.5695C18.3918 20.67 19.1804 20.3433 19.7619 19.7619C20.3433 19.1804 20.67 18.3918 20.67 17.5695V5.1675C20.67 4.3452 20.3433 3.55657 19.7619 2.97512C19.1804 2.39366 18.3918 2.067 17.5695 2.067ZM18.603 17.5695C18.603 17.8436 18.4941 18.1065 18.3003 18.3003C18.1065 18.4941 17.8436 18.603 17.5695 18.603H3.1005C2.8264 18.603 2.56352 18.4941 2.36971 18.3003C2.17589 18.1065 2.067 17.8436 2.067 17.5695V8.268H18.603V17.5695ZM18.603 6.201H2.067V5.1675C2.067 4.8934 2.17589 4.63052 2.36971 4.43671C2.56352 4.24289 2.8264 4.134 3.1005 4.134H17.5695C17.8436 4.134 18.1065 4.24289 18.3003 4.43671C18.4941 4.63052 18.603 4.8934 18.603 5.1675V6.201ZM5.1675 16.536C5.37191 16.536 5.57172 16.4754 5.74168 16.3618C5.91164 16.2483 6.04411 16.0868 6.12233 15.898C6.20055 15.7092 6.22102 15.5014 6.18114 15.3009C6.14126 15.1004 6.04283 14.9162 5.89829 14.7717C5.75376 14.6272 5.5696 14.5287 5.36913 14.4889C5.16865 14.449 4.96084 14.4694 4.772 14.5477C4.58315 14.6259 4.42174 14.7584 4.30818 14.9283C4.19461 15.0983 4.134 15.2981 4.134 15.5025C4.134 15.7766 4.24289 16.0395 4.43671 16.2333C4.63052 16.4271 4.8934 16.536 5.1675 16.536Z"
-                                      fill="#24D2DD"
-                                    />
-                                  </svg>
-                                </div>
-                                26 September, 2026
-                              </div>
-                            </div>
-                            <div className="sis-event-grid-item__event_time">
-                              <div className="sis-event-item-event-time sis-event-time">
-                                <div className="elementor-icon sis-elementor-icon">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="e-font-icon-svg e-fas-clock"
-                                    width={22}
-                                    height={22}
-                                    viewBox="0 0 22 22"
-                                    fill="none"
-                                  >
-                                    <path
-                                      d="M11 6.55518V10.9996L14.3333 14.333"
-                                      stroke="#24D2DD"
-                                      strokeWidth={2}
-                                      strokeLinecap="round"
-                                    />
-                                    <path
-                                      d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z"
-                                      stroke="#24D2DD"
-                                      strokeWidth={2}
-                                    />
-                                  </svg>
-                                </div>
-                                Book online, spaces are limited
-                              </div>
-                            </div>
-                            <div className="btn-wraper">
-                              <a
-                                className="elementor-button sis-btn"
-                                href="#"
-                              >
-                                <span className="elementor-button-text">
-                                  Book now
-                                </span>
-                                <span className="elementor-button-icon elementor-align-icon-right">
-                                  <i
-                                    aria-hidden="true"
-                                    className="icon icon-right-arrow"
-                                  />
-                                </span>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </article>
-                    </div>
-                  </div>{" "}
-                </div>
-              </div>
-            </div>
+            <a className="home-upcoming-btn home-upcoming-outline" href="/our-events">View all events</a>
           </div>
-        </div>
+          <div className="home-upcoming-grid">
+            {[
+              { title: "IGNITE Christmas", tag: "Community", image: "https://ignitewatersports.com/wp-content/uploads/2026/11/AED-99-Christmas-FREE.png", date: "Saturday 19 December 2026, 7:00am start", price: "Free", button: "Book now", href: "/our-events/ignite-christmas/#booking" },
+              { title: "Full moon series", tag: "Wellness", image: "https://ignitewatersports.com/wp-content/uploads/2025/06/Pink-Moonlit-Yoga-13th-Oct-25-grid-post.png", date: "Monthly, date to be confirmed", price: "100", button: "Check dates and book", href: "/full-moon-series" },
+            ].map((event) => (
+              <article className="home-upcoming-card" key={event.title}>
+                <div className="home-upcoming-poster">
+                  <img src={event.image} alt={`${event.title} poster`} loading="lazy" />
+                  <span className="home-upcoming-tag">{event.tag}</span>
+                </div>
+                <h3>{event.title}</h3>
+                <p className="home-upcoming-meta"><CalendarIcon /><span>{event.date}</span></p>
+                <p className="home-upcoming-meta">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>RIVA Beach Club, Palm Jumeirah</span>
+                </p>
+                <p className="home-upcoming-price">{event.price === "Free" ? "Free" : <>From <DirhamIcon size="1em" /> {event.price}</>}</p>
+                <a className="home-upcoming-btn" href={event.href}>{event.button}</a>
+              </article>
+            ))}
+            <article className="home-upcoming-card home-upcoming-more">
+              <h3>More events on the way</h3>
+              <p>See every upcoming event, and what you missed, on our events page.</p>
+              <a className="home-upcoming-btn" href="/our-events">See all events</a>
+            </article>
+          </div>
+        </section>
 
         <div
           className="elementor-element elementor-element-93c1768 e-con-full e-flex e-con e-parent"

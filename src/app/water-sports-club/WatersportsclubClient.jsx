@@ -48,7 +48,7 @@ const sessionDetails = [
   {
     icon: 'users',
     label: 'Ages',
-    value: 'Two age groups: 3 to 6 years, and 6 years and above',
+    value: 'From 3 to 11',
   },
   {
     icon: 'calendar',
@@ -166,7 +166,7 @@ const faqs = [
   {
     question: 'What ages is the club for?',
     answer:
-      'The club has two age groups: 3 to 6 years, and 6 years and above, so every activity suits the age of the child.',
+      'The club has two age groups: 3 to 5 years, and 6 to 11 years, so every activity suits the age of the child.',
   },
   {
     question: 'When does the club meet?',
@@ -429,7 +429,7 @@ export function WatersportsclubClient() {
               {/* <h2>SUP rental on Palm Jumeirah</h2> */}
 
               <p>
-                Saturday sessions at RIVA Beach Club for kids aged 3 and above. The club is not running at the moment.
+                Saturday sessions at RIVA Beach Club for kids aged 3 to 11. The club is not running at the moment.
               </p>
 
               <div className="sup-booking-actions">
@@ -455,7 +455,7 @@ export function WatersportsclubClient() {
           <div className="sup-container details-layout">
             <div className="details-column">
               <div className="info-panel">
-                <h2 className="panel-title">Camp details</h2>
+                <h2 className="panel-title">Club details</h2>
                 <div className="session-list">
                   {sessionDetails.map((item) => (
                     <div className="session-row" key={item.label}>
@@ -582,7 +582,7 @@ export function WatersportsclubClient() {
 
                 <div className="video-feature">
                   <LineIcon name="users" />
-                  <span>Kids aged 3 and above</span>
+                  <span>Kids aged 3 to 11</span>
                 </div>
 
                 <div className="video-feature">

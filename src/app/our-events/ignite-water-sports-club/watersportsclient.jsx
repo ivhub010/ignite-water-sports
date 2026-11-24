@@ -1,17 +1,17 @@
 'use client';
 
-import { useState } from 'react';
 import SiteHeader from '@/components/layout/SiteHeader';
 import SiteFooter from '@/components/layout/SiteFooter';
-import "dirham/css";
-import { DirhamIcon } from "dirham/react";
 
 export default function WatersportsClient() {
-  const [clubPackage, setClubPackage] = useState("term");
-  const [clubRegistration, setClubRegistration] = useState(false);
-
-  const clubPackagePrice = clubPackage === "term" ? 1200 : 130;
-  const clubTotal = clubPackagePrice + (clubRegistration ? 250 : 0);
+  const whatsapp = "https://wa.me/971522495311?text=";
+  const enquiry = whatsapp + encodeURIComponent("Hi IGNITE, I would like more information about the Water Sports Club.");
+  function notify(event) {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    const message = `Hi IGNITE, please notify me when the Water Sports Club returns.\nName: ${data.get("name")}\nPhone: ${data.get("phone")}\nChild's age: ${data.get("age")}`;
+    window.open(whatsapp + encodeURIComponent(message), "_blank", "noopener,noreferrer");
+  }
 
   return (
     <>
@@ -48,19 +48,18 @@ export default function WatersportsClient() {
           <div className="ignite-club-header">
             <div className="ignite-club-header-content">
               <span className="ignite-club-eyebrow">
-                KIDS & BIRTHDAY · WATER SPORTS CLUB
+                KIDS AND BIRTHDAY
               </span>
 
               <h1>IGNITE Water Sports Club</h1>
 
               <p>
-                Every Saturday at RIVA Beach Club — outdoor activities and water
-                sports for kids aged 6 and above. In partnership with SUP Kids.
+                Saturday sessions at RIVA Beach Club for kids aged 3 to 11. The club is not running at the moment.
               </p>
 
               <div className="ignite-club-badges">
                 <span className="ignite-club-badge">
-                  📅 Saturdays · 8:30am – 9:30am
+                  📅 Saturdays · 8:30am – 9:30am when running
                 </span>
 
                 <span className="ignite-club-badge">
@@ -68,11 +67,11 @@ export default function WatersportsClient() {
                 </span>
 
                 <span className="ignite-club-badge age">
-                  Ages 6+
+                  Ages 3 to 11
                 </span>
 
-                <span className="ignite-club-badge price">
-                  From <DirhamIcon/> 130
+                <span className="ignite-club-badge">
+                  Not running at the moment
                 </span>
               </div>
             </div>
@@ -84,212 +83,49 @@ export default function WatersportsClient() {
             {/* LEFT COLUMN */}
             <div className="ignite-club-left">
 
-              {/* ACTIVITIES */}
+              <div className="ignite-club-panel ignite-club-photo">
+                <img src="https://ignitewatersports.com/wp-content/uploads/2024/08/Water-sports-club-1.png" alt="Children at IGNITE Water Sports Club" loading="lazy" />
+              </div>
               <div className="ignite-club-panel">
-                <h3 className="ignite-club-panel-title">
-                  WHAT THEY'LL DO
-                </h3>
-
+                <h3 className="ignite-club-panel-title">WHAT KIDS DO</h3>
                 <div className="ignite-club-activities">
-                  {[
-                    "SUP",
-                    "Kayak",
-                    "Beach games",
-                    "Water skills",
-                    "Water safety",
-                    "Team activities",
-                  ].map((activity) => (
-                    <div className="ignite-club-activity" key={activity}>
-                      <span className="ignite-club-activity-icon">♒</span>
-                      <span>{activity}</span>
-                    </div>
+                  {[["Standup paddle boarding","≋"],["Kayaking","⚒"],["Water park","♧"],["Snorkelling","▣"],["Games and challenges","⚑"],["Swim-rescue skills","⊕"],["Beach clean-ups","♧"],["Fitness activities","☆"]].map(([activity, icon]) => (
+                    <div className="ignite-club-activity" key={activity}><span className="ignite-club-activity-icon" aria-hidden="true">{icon}</span><span>{activity}</span></div>
                   ))}
                 </div>
+                <p className="ignite-club-copy">Outdoor adventures and water activities designed to develop skills, boost confidence and promote teamwork.</p>
               </div>
-
-              {/* INCLUDED */}
               <div className="ignite-club-panel">
-                <h3 className="ignite-club-panel-title">
-                  WHAT'S INCLUDED
-                </h3>
-
-                <div className="ignite-club-included">
-                  {[
-                    {
-                      title: "All equipment provided",
-                      description: "SUP boards, kayaks, paddles, life jackets",
-                    },
-                    {
-                      title: "Certified instructors",
-                      description: "Lifeguard and first aid trained",
-                    },
-                    {
-                      title: "IGNITE club kit",
-                      description: "Included in annual registration fee",
-                    },
-                    {
-                      title: "Water safety training",
-                      description: "Taught every session",
-                    },
-                  ].map((item) => (
-                    <div className="ignite-club-included-row" key={item.title}>
-                      <span className="ignite-club-check">✓</span>
-
-                      <div>
-                        <strong>{item.title}</strong>
-                        <p>{item.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                <h3 className="ignite-club-panel-title">WHAT KIDS GAIN</h3>
+                <div className="ignite-club-kit">{["Friendships","Teamwork","Cooperation","Leadership","Communication","Confidence"].map(item => <span key={item}>{item}</span>)}</div>
               </div>
-
-              {/* GOOD TO KNOW */}
               <div className="ignite-club-panel">
-                <h3 className="ignite-club-panel-title">
-                  GOOD TO KNOW
-                </h3>
-
-                <div className="ignite-club-good-list">
-                  {[
-                    "Advance payment required — no payments on the day",
-                    "Spots are limited — book early",
-                    "Bring swimwear, sunscreen, and a water bottle",
-                    "Confirmation email sent instantly on booking",
-                  ].map((item) => (
-                    <div className="ignite-club-good-row" key={item}>
-                      <span className="ignite-club-square">□</span>
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
+                <h3 className="ignite-club-panel-title">GOOD TO KNOW</h3>
+                <div className="ignite-club-good-list">{["Bring swimwear, sunscreen, and a water bottle","Free parking available at RIVA Beach Club"].map(item => <div className="ignite-club-good-row" key={item}><span className="ignite-club-check">✓</span>{item}</div>)}</div>
               </div>
             </div>
-
-            {/* RIGHT COLUMN */}
             <div className="ignite-club-right">
-              <div className="ignite-club-panel ignite-club-booking">
-
-                <h3 className="ignite-club-panel-title">
-                  CHOOSE YOUR OPTION
-                </h3>
-
-                {/* PACKAGE OPTIONS */}
-                <div className="ignite-club-options">
-
-                  <label
-                    className={`ignite-club-option ${
-                      clubPackage === "term" ? "selected" : ""
-                    }`}
-                  >
-                    <input
-                      type="radio"
-                      name="clubPackage"
-                      value="term"
-                      checked={clubPackage === "term"}
-                      onChange={() => setClubPackage("term")}
-                    />
-
-                    <div className="ignite-club-option-info">
-                      <strong>12-week term</strong>
-                      <span>12 Saturdays · best value</span>
-                    </div>
-
-                    <strong className="ignite-club-option-price">
-                      <DirhamIcon/> 1,200
-                    </strong>
-                  </label>
-
-                  <label
-                    className={`ignite-club-option ${
-                      clubPackage === "casual" ? "selected" : ""
-                    }`}
-                  >
-                    <input
-                      type="radio"
-                      name="clubPackage"
-                      value="casual"
-                      checked={clubPackage === "casual"}
-                      onChange={() => setClubPackage("casual")}
-                    />
-
-                    <div className="ignite-club-option-info">
-                      <strong>Casual session</strong>
-                      <span>Single Saturday drop-in</span>
-                    </div>
-
-                    <strong className="ignite-club-option-price">
-                      <DirhamIcon/> 130
-                    </strong>
-                  </label>
-                </div>
-
-                {/* ANNUAL REGISTRATION */}
-                <div className="ignite-club-registration">
-                  <h3 className="ignite-club-panel-title">
-                    ANNUAL REGISTRATION
-                  </h3>
-
-                  <label className="ignite-club-registration-row">
-                    <input
-                      type="checkbox"
-                      checked={clubRegistration}
-                      onChange={(e) =>
-                        setClubRegistration(e.target.checked)
-                      }
-                    />
-
-                    <div className="ignite-club-registration-info">
-                      <div className="ignite-club-registration-heading">
-                        <strong>Yearly registration & kit fee</strong>
-                        <strong><DirhamIcon/> 250</strong>
-                      </div>
-
-                      <p>
-                        Required for new members. Kit includes:
-                      </p>
-
-                      <div className="ignite-club-kit">
-                        {[
-                          "Shorts",
-                          "T-shirt",
-                          "Bag",
-                          "Goggles",
-                          "Cap",
-                          "Rash guard",
-                        ].map((item) => (
-                          <span key={item}>{item}</span>
-                        ))}
-                      </div>
-                    </div>
-                  </label>
-                </div>
-
-                {/* TOTAL */}
-                <div className="ignite-club-total">
-                  <span>Total (inc. VAT)</span>
-                  <strong>
-                    <DirhamIcon/> {clubTotal.toLocaleString("en-AE")}
-                  </strong>
-                </div>
-
-                {/* BOOKING BUTTON */}
-                <button
-                  type="button"
-                  className="ignite-club-book-btn"
-                  onClick={() => {
-                    // Replace with your Water Sports Club booking URL.
-                    // Pass clubPackage and clubRegistration to your checkout
-                    // integration when it is ready.
-                  }}
-                >
-                  Enrol now
-                </button>
-
-                <p className="ignite-club-booking-note">
-                  Confirmation email sent to you instantly on booking
-                </p>
-
+              <div className="ignite-club-panel">
+                <h3 className="ignite-club-panel-title">CLUB STATUS</h3>
+                <div className="ignite-club-status"><span aria-hidden="true">▦</span> Not running at the moment</div>
+                <p className="ignite-club-copy">Enrolment is closed while the club is not running. Message us to ask about the club.</p>
+                <a className="ignite-club-book-btn" href={enquiry} target="_blank" rel="noopener noreferrer">Message us about the club</a>
+                <p className="ignite-club-booking-note">Online enrolment opens when the club returns</p>
+              </div>
+              <div className="ignite-club-panel">
+                <h3 className="ignite-club-panel-title">HEAR ABOUT THE CLUB FIRST</h3>
+                <p className="ignite-club-copy">Leave your details and we will get in touch when the club returns.</p>
+                <form className="ignite-club-form" onSubmit={notify}>
+                  <label>Your name<input name="name" placeholder="Name" autoComplete="name" required /></label>
+                  <label>Phone<input name="phone" type="tel" placeholder="Phone number" autoComplete="tel" required /></label>
+                  <label className="club-full">Child's age<input name="age" type="number" min="3" max="11" step="1" placeholder="Age, from 3 to 11" required /></label>
+                  <button className="ignite-club-book-btn club-full" type="submit">Notify me</button>
+                </form>
+                <p className="ignite-club-booking-note">We will only use your details to tell you about the club. Submitting opens WhatsApp to send your request.</p>
+              </div>
+              <div className="ignite-club-panel">
+                <h3 className="ignite-club-panel-title">SAFETY AND SUPERVISION</h3>
+                {["Certified instructors and experienced staff","Latest safety equipment and protocols","Lifeguard and first aid trained staff","Dubai Maritime Authority licensed"].map(item => <div className="ignite-club-included-row" key={item}><span className="ignite-club-check">✓</span><strong>{item}</strong></div>)}
               </div>
             </div>
           </div>
@@ -311,7 +147,7 @@ export default function WatersportsClient() {
           .sup{
             display: flex !important;
             min-height: 420px !important;
-            background-image: url("https://ignitewatersports.com/wp-content/uploads/2025/08/20b0d2aa-29b1-4331-b7dc-dacd2bcd656c-scaled.jpg") !important;
+            background-image: url("/watersports/IWS-New-Website-Banner-1.png") !important;
             background-position: center;
 
             .e-con-inner{
@@ -535,121 +371,6 @@ export default function WatersportsClient() {
             line-height: 1;
           }
 
-          /* BOOKING PANEL */
-
-          .ignite-club-booking {
-            padding: 25px;
-          }
-
-          .ignite-club-options {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-          }
-
-          .ignite-club-option {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            min-height: 78px;
-            padding: 16px 18px;
-            background: transparent;
-            border: 1px solid #e5e5e5;
-            border-radius: 13px;
-            cursor: pointer;
-            transition: 0.25s ease;
-          }
-
-          .ignite-club-option.selected {
-            border: 2px solid #ff9417;
-            background: #faf7f3;
-          }
-
-          .ignite-club-option input[type="radio"] {
-            position: absolute;
-            opacity: 0;
-            width: 1px;
-            height: 1px;
-          }
-
-          .ignite-club-option-info {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-          }
-
-          .ignite-club-option-info strong {
-            color: #303b40;
-            font-size: 16px;
-            font-weight: 800;
-          }
-
-          .ignite-club-option-info span {
-            color: #858585;
-            font-size: 13px;
-          }
-
-          .ignite-club-option-price {
-            color: #ff9417;
-            font-size: 18px;
-            font-weight: 800;
-            white-space: nowrap;
-          }
-
-          /* ANNUAL REGISTRATION */
-
-          .ignite-club-registration {
-            margin-top: 22px;
-            padding-top: 22px;
-            border-top: 1px solid #e7e7e7;
-          }
-
-          .ignite-club-registration-row {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            padding: 12px 8px;
-            cursor: pointer;
-          }
-
-          .ignite-club-registration-row input {
-            width: 18px;
-            height: 18px;
-            flex: 0 0 18px;
-            margin-top: 3px;
-            accent-color: #ff9417;
-            cursor: pointer;
-          }
-
-          .ignite-club-registration-info {
-            flex: 1;
-            min-width: 0;
-          }
-
-          .ignite-club-registration-heading {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 15px;
-          }
-
-          .ignite-club-registration-heading strong {
-            color: #303b40;
-            font-size: 15px;
-            font-weight: 800;
-          }
-
-          .ignite-club-registration-heading strong:last-child {
-            white-space: nowrap;
-          }
-
-          .ignite-club-registration-info p {
-            margin: 7px 0 10px;
-            color: #858585;
-            font-size: 13px;
-          }
-
           .ignite-club-kit {
             display: flex;
             flex-wrap: wrap;
@@ -664,31 +385,6 @@ export default function WatersportsClient() {
             color: #777;
             font-size: 12px;
             line-height: 1.2;
-          }
-
-          /* TOTAL */
-
-          .ignite-club-total {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 15px;
-            margin-top: 25px;
-            padding: 17px 20px;
-            background: #eeeeee;
-            border-radius: 12px;
-          }
-
-          .ignite-club-total span {
-            color: #777;
-            font-size: 14px;
-          }
-
-          .ignite-club-total strong {
-            color: #26343b;
-            font-size: 25px;
-            font-weight: 800;
-            white-space: nowrap;
           }
 
           /* ENROL BUTTON */
@@ -774,31 +470,21 @@ export default function WatersportsClient() {
               font-size: 13px;
             }
 
-            .ignite-club-option {
-              padding: 14px 12px;
-            }
-
-            .ignite-club-option-info strong {
-              font-size: 14px;
-            }
-
-            .ignite-club-option-info span {
-              font-size: 12px;
-            }
-
-            .ignite-club-option-price {
-              font-size: 15px;
-            }
-
-            .ignite-club-registration-heading strong {
-              font-size: 13px;
-            }
-
-            .ignite-club-total strong {
-              font-size: 21px;
-            }
           }
 
+          .ignite-club-right { display:flex; flex-direction:column; gap:16px; min-width:0; }
+          .ignite-club-photo { padding:16px; }
+          .ignite-club-photo img { display:block; width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:12px; }
+          .ignite-club-copy { font-size:15px; line-height:1.65; color:#656565; margin:16px 0 0; }
+          .ignite-club-status { display:flex; gap:12px; align-items:center; background:#fff; border-radius:10px; padding:14px; font-weight:700; }
+          .ignite-club-status span { color:#ff9417; }
+          .ignite-club-book-btn { display:flex; align-items:center; justify-content:center; text-align:center; text-decoration:none; color:#fff !important; }
+          .ignite-club-form { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:16px; }
+          .ignite-club-form label { display:flex; flex-direction:column; gap:6px; font-size:14px; font-weight:600; min-width:0; }
+          .ignite-club-form input { width:100%; min-width:0; height:48px; padding:10px 12px; border:1px solid #dce1e3; border-radius:9px; background:#fff; font:inherit; font-weight:400; color:#26343b; margin:0; }
+          .ignite-club-form .club-full { grid-column:1/-1; }
+          .ignite-club-form button { margin-top:0; }
+          @media(max-width:480px) { .ignite-club-form { grid-template-columns:1fr; } }
       `}</style>
       </main>
       <SiteFooter />

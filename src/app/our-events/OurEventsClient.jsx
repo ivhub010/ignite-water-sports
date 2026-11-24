@@ -6,6 +6,7 @@ import SiteFooter from "@/components/layout/SiteFooter";
 import "dirham/css";
 import { DirhamIcon } from "dirham/react";
 
+const CHRISTMAS_URL = "/our-events/ignite-christmas/";
 const MOVEMBER_URL = "/our-events/ignite-movember/";
 const FULL_MOON_URL = "/full-moon-series";
 const CLUB_URL = "/our-events/ignite-water-sports-club";
@@ -19,20 +20,10 @@ const WHATSAPP_URL =
 const MOVEMBER_REEL_URL =
     "https://www.instagram.com/reel/Df4U_eex1Ou/";
 
-// Add the original 1080 x 1080 poster URL when available.
-const NEXT_EVENT_POSTER = "";
+// IGNITE Christmas event poster.
+const NEXT_EVENT_POSTER = "https://ignitewatersports.com/wp-content/uploads/2026/11/AED-99-Christmas-FREE.png";
 
 const upcoming = [
-    {
-        title: "IGNITE Christmas",
-        category: "Community",
-        date: "Date to be confirmed",
-        location: "RIVA Beach Club, Palm Jumeirah",
-        price: 99,
-        poster: "https://ignitewatersports.com/wp-content/uploads/2025/10/ignite-christmas.jpeg",
-        button: "Details coming soon",
-        href: "#",
-    },
     {
         title: "Full moon series",
         category: "Wellness",
@@ -75,7 +66,7 @@ const hostOptions = [
         href: WHATSAPP_URL,
     },
     {
-        image: "https://ignitewatersports.com/wp-content/uploads/2024/08/Swim_Run-5th-Oct-24.png",
+        image: "https://ignitewatersports.com/wp-content/uploads/2026/11/Fitness-challengs-gatherings-scaled.jpg",
         photoLabel: "a fitness morning on the beach",
         title: "Fitness community gatherings",
         description:
@@ -208,7 +199,7 @@ export default function OurEventsClient() {
                                 <div className="oe-featured-art">
                                     {NEXT_EVENT_POSTER ? (
                                         <button type="button" className="oe-featured-poster-button" aria-label="Open full-size event poster" onClick={() => posterDialog.current?.showModal()}>
-                                            <img src={NEXT_EVENT_POSTER} alt="Next event poster" />
+                                            <img src={NEXT_EVENT_POSTER} alt="IGNITE Christmas 2026 event poster" />
                                         </button>
                                     ) : (
                                         <Poster label="Next event poster goes here" large />
@@ -216,24 +207,36 @@ export default function OurEventsClient() {
                                 </div>
                                 <div className="oe-featured-copy">
                                     <span className="oe-pill">Next event</span>
-                                    <h2>Next event to be announced</h2>
+                                    <h2>IGNITE Christmas</h2>
                                     <p className="oe-meta">
-                                        <span>▦</span>Date to be confirmed
+                                        <span>▦</span>Saturday 19 December 2026
                                     </p>
                                     <p className="oe-meta">
-                                        <span>◷</span>Time to be confirmed
+                                        <span>◷</span>7:00am start
                                     </p>
                                     <p className="oe-meta">
                                         <span>⌖</span>RIVA Beach Club, Palm
                                         Jumeirah
                                     </p>
-                                    <p>
-                                        Watch this space for our next IGNITE
-                                        community event.
+                                    <p className="oe-meta oe-featured-free">
+                                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                                            <rect x="3" y="8" width="18" height="4" rx="1" />
+                                            <path d="M5 12v9h14v-9M12 8v13M12 8H8a3 3 0 1 1 3-3l1 3Zm0 0h4a3 3 0 1 0-3-3l-1 3Z" />
+                                        </svg>
+                                        <strong>Free</strong>
                                     </p>
-                                    <span className="oe-btn oe-btn-disabled">
-                                        Details coming soon
-                                    </span>
+                                    <p className="oe-featured-description">
+                                        Merry Christmas from IGNITE. Mat pilates, SUP sound healing,
+                                        beach yoga, boot camp, ice plunges and a SUP or kayak rental.
+                                    </p>
+                                    <div className="oe-featured-actions">
+                                        <a className="oe-btn oe-btn-orange" href={`${CHRISTMAS_URL}#booking`}>
+                                            Book now
+                                        </a>
+                                        <a className="oe-btn oe-btn-outline" href={CHRISTMAS_URL}>
+                                            See details
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                             <div className="oe-card-grid">
@@ -386,7 +389,7 @@ export default function OurEventsClient() {
                 {NEXT_EVENT_POSTER && (
                     <dialog ref={posterDialog} className="oe-poster-dialog" aria-label="Full-size event poster" onClick={(event) => { if (event.target === event.currentTarget) event.currentTarget.close(); }}>
                         <button type="button" className="oe-poster-close" aria-label="Close poster" onClick={() => posterDialog.current?.close()}>×</button>
-                        <img src={NEXT_EVENT_POSTER} alt="Next event poster" />
+                        <img src={NEXT_EVENT_POSTER} alt="IGNITE Christmas 2026 event poster" />
                     </dialog>
                 )}
             </main>
@@ -395,7 +398,7 @@ export default function OurEventsClient() {
         .our-events-page{--oe-orange:#ff9017;--oe-blue:#54c8e8;--oe-dark:#223138;color:#243239;background:#fff;font-family:inherit}
         .our-events-page *{box-sizing:border-box}.oe-wrap{width:min(1180px,calc(100% - 36px));margin:auto}.oe-hero{padding:85px 0;display: flex; align-content: center; align-items: center;min-height: 420px !important;background:#20363f url('https://ignitewatersports.com/wp-content/uploads/2026/02/banner11-1.png') center/cover;color:white;text-align:center}.oe-hero h1{color:white;font-size:clamp(32px,4vw,52px);margin:0 0 14px}.oe-hero p{max-width:740px;margin:auto;color:white;font-size:17px;line-height:1.6}
         .oe-tabs{display:flex;gap:12px;margin:35px 0 40px}.oe-tabs button{border:1px solid #e6e8e9;background:#f7f8f9;color:#555;border-radius:40px;padding:13px 31px;font:inherit;font-weight:700;cursor:pointer}.oe-tabs button.active{background:var(--oe-orange);color:white;border-color:var(--oe-orange)}
-        .oe-featured{background:#f7f8f9;border-radius:28px;padding:28px;display:grid;grid-template-columns:380px minmax(0,1fr);align-items:center;gap:36px;margin-bottom:34px}.oe-poster{aspect-ratio:1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:9px;padding:20px;text-align:center;border:2px dashed var(--oe-orange);border-radius:22px;background:linear-gradient(135deg,#e4edf1,#c4d8e2);color:var(--oe-orange)}.oe-poster strong{color:#25333a;font-size:17px}.oe-poster small{font-size:12px;font-style:italic;color:#718089}.oe-poster-muted{border-color:#bfc3c5;background:linear-gradient(135deg,#ededed,#d4d4d4);color:#999}.oe-featured-copy h2{font-size:32px;line-height:1.14;color:#101517;margin:14px 0}.oe-featured-copy>p:not(.oe-meta){color:#6e7478;line-height:1.7}.oe-pill{display:inline-block;background:var(--oe-orange);border-radius:30px;color:white;font-weight:800;padding:6px 19px}.oe-meta{display:flex;align-items:flex-start;gap:12px;color:#67737a;font-size:15px;line-height:1.5;margin:12px 0}.oe-meta span{color:var(--oe-blue);font-size:22px;line-height:1}.oe-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;border-radius:13px;text-decoration:none!important;text-align:center;font-weight:800;font-size:15px}.oe-btn-orange{background:var(--oe-orange);color:#fff!important}.oe-btn-orange:hover{background:#ed7e00}.oe-btn-disabled{background:#e8edee;color:#8a9296;cursor:default}.oe-btn-outline{border:2px solid #89989d;color:#fff!important}.oe-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}.oe-card{background:#f7f8f9;border-radius:25px;padding:25px;display:flex;flex-direction:column;align-items:flex-start}.oe-card>a{max-height: 320px;overflow: hidden;}.oe-card>a:first-child{display:block;width:100%}.oe-card .oe-poster{width:100%}.oe-card h3{font-size:25px;line-height:1.2;color:#101719;margin:28px 0 9px}.oe-card .oe-price{font-size:22px;color:var(--oe-orange);font-weight:800;margin:13px 0}.oe-description{color:#68757a;line-height:1.5}.oe-card>.oe-btn{margin-top:auto}.oe-card>.oe-meta{margin:8px 0}
+        .oe-featured{background:#f7f8f9;border-radius:28px;padding:28px;display:grid;grid-template-columns:380px minmax(0,1fr);align-items:center;gap:36px;margin-bottom:34px}.oe-poster{aspect-ratio:1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:9px;padding:20px;text-align:center;border:2px dashed var(--oe-orange);border-radius:22px;background:linear-gradient(135deg,#e4edf1,#c4d8e2);color:var(--oe-orange)}.oe-poster strong{color:#25333a;font-size:17px}.oe-poster small{font-size:12px;font-style:italic;color:#718089}.oe-poster-muted{border-color:#bfc3c5;background:linear-gradient(135deg,#ededed,#d4d4d4);color:#999}.oe-featured-copy h2{font-size:32px;line-height:1.14;color:#101517;margin:14px 0}.oe-featured-copy>p:not(.oe-meta){color:#6e7478;line-height:1.7}.oe-pill{display:inline-block;background:var(--oe-orange);border-radius:30px;color:white;font-weight:800;padding:6px 19px}.oe-meta{display:flex;align-items:flex-start;gap:12px;color:#67737a;font-size:15px;line-height:1.5;margin:12px 0}.oe-meta span{color:var(--oe-blue);font-size:22px;line-height:1}.oe-btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 22px;border-radius:13px;text-decoration:none!important;text-align:center;font-weight:800;font-size:15px}.oe-btn-orange{background:var(--oe-orange);color:#fff!important}.oe-btn-orange:hover{background:#ed7e00}.oe-btn-disabled{background:#e8edee;color:#8a9296;cursor:default}.oe-btn-outline{border:2px solid #89989d;color:#fff!important}.oe-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px}.oe-card{background:#f7f8f9;border-radius:25px;padding:25px;display:flex;flex-direction:column;align-items:flex-start}.oe-card>a{max-height: 320px;overflow: hidden;}.oe-card>a:first-child{display:block;width:100%}.oe-card .oe-poster{width:100%}.oe-card h3{font-size:25px;line-height:1.2;color:#101719;margin:28px 0 9px}.oe-card .oe-price{font-size:22px;color:var(--oe-orange);font-weight:800;margin:13px 0}.oe-description{color:#68757a;line-height:1.5}.oe-card>.oe-btn{margin-top:auto}.oe-card>.oe-meta{margin:8px 0}
         .oe-past{background:#f7f8f9;padding:55px;border-radius:20px;margin-bottom:40px}.oe-kicker{color:var(--oe-blue);font-weight:800;margin:0 0 10px}.oe-past h2,.oe-host h2{font-size:clamp(28px,3vw,40px);color:#111;margin:0 0 14px}.oe-past>p:not(.oe-kicker),.oe-host-intro{color:#777;font-size:17px}.oe-past-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:32px;gap:22px}.oe-past-card{background:#fff;border-radius:20px;padding:20px}.oe-past-card>a:first-child{display:block}.oe-past-pill{display:inline-block;background:#e6e9ea;color:#8b9194;border-radius:30px;padding:4px 12px;font-size:12px;font-weight:800;margin-top:18px}.oe-past-card h3{font-size:24px;margin:12px 0}.oe-text-link{font-weight:800;color:#26363c;text-decoration:underline}.oe-host{padding:70px 0 80px}.oe-host-intro{max-width:850px;line-height:1.65;margin-bottom:35px}.oe-host-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px} .oe-host-card{background:#243138;color:white;border-radius:24px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
         .oe-host-photo{width:100%;aspect-ratio:1200/750;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:20px;background:linear-gradient(135deg,#405965,#30454f);border-bottom:3px dashed var(--oe-orange);color:var(--oe-orange)}
         .oe-host-photo strong{color:#fff;font-size:15px}.oe-host-photo small{color:#bdc5c8;font-size:12px;font-style:italic}
@@ -414,6 +417,13 @@ export default function OurEventsClient() {
         .oe-featured-copy .oe-meta span{font-size:16px;color:var(--oe-blue);flex-shrink:0}
         .oe-featured-copy>p:not(.oe-meta){font-size:14px;line-height:1.5;margin:14px 0}
         .oe-featured-copy .oe-btn{font-size:14px;min-height:40px;padding:10px 18px}
+        .oe-featured-free{align-items:center;color:var(--oe-orange)}
+        .oe-featured-free svg{color:var(--oe-blue);flex-shrink:0}
+        .oe-featured-free strong{font-weight:800;color:var(--oe-orange)}
+        .oe-featured-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+        .oe-featured-actions .oe-btn-outline{border-color:var(--oe-dark);color:var(--oe-dark)!important;background:transparent}
+        .oe-featured-actions .oe-btn-outline:hover{background:#e8edee}
+        @media(max-width:540px){.oe-featured-actions .oe-btn{flex:1 1 130px}}
         .oe-poster-dialog{position:fixed;inset:0;margin:auto;padding:0;border:0;background:transparent;max-width:calc(100vw - 32px);max-height:calc(100dvh - 32px);overflow:auto}
         .oe-poster-dialog::backdrop{background:rgba(0,0,0,.85)}
         .oe-poster-dialog img{display:block;width:auto;height:auto;max-width:100%;max-height:calc(100dvh - 32px);object-fit:contain}
