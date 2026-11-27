@@ -57,7 +57,7 @@ const hostOptions = [
         action: "Learn more",
     },
     {
-        image: "https://ignitewatersports.com/wp-content/uploads/2025/10/iceplunge.jpeg",
+        image: "/watersports/Meals-on-me-brand-activation.jpg",
         photoLabel: "a brand activation at RIVA",
         title: "Brand launches and activations",
         description:
@@ -402,7 +402,7 @@ export default function OurEventsClient() {
         .oe-past{background:#f7f8f9;padding:55px;border-radius:20px;margin-bottom:40px}.oe-kicker{color:var(--oe-blue);font-weight:800;margin:0 0 10px}.oe-past h2,.oe-host h2{font-size:clamp(28px,3vw,40px);color:#111;margin:0 0 14px}.oe-past>p:not(.oe-kicker),.oe-host-intro{color:#777;font-size:17px}.oe-past-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:32px;gap:22px}.oe-past-card{background:#fff;border-radius:20px;padding:20px}.oe-past-card>a:first-child{display:block}.oe-past-pill{display:inline-block;background:#e6e9ea;color:#8b9194;border-radius:30px;padding:4px 12px;font-size:12px;font-weight:800;margin-top:18px}.oe-past-card h3{font-size:24px;margin:12px 0}.oe-text-link{font-weight:800;color:#26363c;text-decoration:underline}.oe-host{padding:70px 0 80px}.oe-host-intro{max-width:850px;line-height:1.65;margin-bottom:35px}.oe-host-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px} .oe-host-card{background:#243138;color:white;border-radius:24px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
         .oe-host-photo{width:100%;aspect-ratio:1200/750;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;text-align:center;padding:20px;background:linear-gradient(135deg,#405965,#30454f);border-bottom:3px dashed var(--oe-orange);color:var(--oe-orange)}
         .oe-host-photo strong{color:#fff;font-size:15px}.oe-host-photo small{color:#bdc5c8;font-size:12px;font-style:italic}
-        .oe-host-photo.has-image{padding:0;border-bottom:0;overflow:hidden}.oe-host-photo img{display:block;width:100%;height:100%;object-fit:cover}
+        .oe-host-photo.has-image{padding:0;border-bottom:0;overflow:hidden}.oe-host-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position: 50% 60%;}
         .oe-host-content{padding:28px 30px 30px;display:flex;flex-direction:column;flex:1}
         .oe-host-card h3{color:#fff;font-size:25px;line-height:1.25;margin:0 0 7px}.oe-host-card p{color:#bdc5c8;line-height:1.6;margin:0;font-size:16px}
         .oe-host-bottom{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:auto;padding-top:20px}.oe-host-bottom strong{color:var(--oe-orange);font-size:16px}.oe-host-card:nth-child(2) .oe-host-bottom strong,.oe-host-card:nth-child(3) .oe-host-bottom strong{color:#aab5ba}

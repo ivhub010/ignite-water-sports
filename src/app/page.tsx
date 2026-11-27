@@ -810,8 +810,8 @@ export default function Home() {
                     decoding="async"
                     width={191}
                     height={293}
-                    src="/watersports/iw2.jpg"
-                    style={{border:"5px solid #fff",borderRadius:"15px"}}
+                    src="/watersports/Single-seat-Kayak.jpg"
+                    style={{border:"5px solid #fff",borderRadius:"15px",width:"191px",height:"293px"}}
                     className="attachment-full size-full wp-image-5448"
                     alt=""
                   />{" "}
@@ -1033,7 +1033,7 @@ export default function Home() {
                     <img
                       src="https://ignitewatersports.com/wp-content/uploads/2025/10/R5CC1400-scaled.jpg"
                       alt="eFoil"
-                      style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                      style={{ width: "100%", height: "120%", objectFit: "cover" }}
                     />
                   </div>
                   <h3 style={{ fontSize: "22px", fontWeight: "700", marginBottom: "6px", color: "#111827" }}>
@@ -1253,7 +1253,7 @@ export default function Home() {
                   </h3>
                   <div style={{ width: "100%", height: "220px", borderRadius: "10px", overflow: "hidden", marginBottom: "20px" }}>
                     <img
-                      src="https://ignitewatersports.com/wp-content/uploads/2024/02/IWS-New-Website-Image-2-1.png"
+                      src="/watersports/SUP-daily-IGNITE-offers-Dubai.jpg"
                       alt="Explore the Palm by paddle"
                       style={{ width: "100%", height: "100%", objectFit: "cover" }}
                     />

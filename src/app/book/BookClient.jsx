@@ -307,7 +307,7 @@ var PRODUCTS = {
             dur: "1 hour",
             price: 250,
             unit: "packs",
-            note: "2 water park passes (ages 6+, min. 110 cm) plus 2 SUPs, 2 single kayaks or a 2-seater kayak",
+            note: "2 water park passes (ages 6 to 16, min. 110 cm) plus 2 SUPs, 2 single kayaks or a 2-seater kayak",
             tag: "Save up to Ð 100",
             vLabel: "Choose your paddle",
             vPrompt: "Choose your paddle to continue",
@@ -338,7 +338,7 @@ var PRODUCTS = {
             dur: "1 hour",
             price: 100,
             unit: "guests",
-            note: "Ages 6+, min. height 110 cm, life vest provided",
+            note: "Ages 6 to 16, min. height 110 cm, life vest provided",
         },
         {
             id: "w2",
